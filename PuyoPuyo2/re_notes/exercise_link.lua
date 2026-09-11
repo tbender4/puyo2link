@@ -1,6 +1,6 @@
 -- Optional input-only live exercise; never writes emulated memory.
 -- Launch with -autoboot_script PuyoPuyo2\re_notes\exercise_link.lua
--- and PUYO2_AUTO_INPUT=0. Screenshots and input records identify what
+-- Screenshots and input records identify what
 -- actually happened; this is not an assertion that linked play succeeded.
 -- PUYO2_EXERCISE_RANDOM_ONLY=1 on B replaces the exercise with random
 -- Left/Right/Button 1 on both local players, only while pieces are active.

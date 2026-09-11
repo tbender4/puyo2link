@@ -91,7 +91,7 @@ end
 
 local function cabinet(side, directory, manual, diagnostics)
 	local c = { ram = {}, taps = {}, handles = {}, removed = 0, side = side, epoch = 0,
-		diagnostics = diagnostics == true }
+		diagnostics = diagnostics == true, input_accesses = 0 }
 	c.out = directory .. '\\' .. side .. '_to_' .. (side == 'A' and 'B' or 'A') .. '.bin'
 	c.in_wire = directory .. '\\' .. (side == 'A' and 'B' or 'A') .. '_to_' .. side .. '.bin.wire'
 	c.log = directory .. '\\proto_' .. side .. '.log'
@@ -126,13 +126,15 @@ local function cabinet(side, directory, manual, diagnostics)
 		os = { getenv = function(key)
 			if key == 'PUYO2_LINK_SIDE' then return side end
 			if key == 'PUYO2_LINK_DIR' then return directory end
-			if key == 'PUYO2_AUTO_INPUT' then return '0' end
 			if key == 'PUYO2_LINK_DEBUG' and c.diagnostics then return '1' end
 		end },
 		lfs = { mkdir = function() return true end },
 		manager = { machine = {
 			devices = { [':maincpu'] = c.cpu },
-			ioport = { ports = { [':SERVICE'] = { fields = {} } } },
+			ioport = setmetatable({}, { __index = function()
+				c.input_accesses = c.input_accesses + 1
+				error('communication plugin must not access player inputs')
+			end }),
 		} },
 		emu = {
 			time = function() return 0 end,
@@ -545,6 +547,8 @@ check(active_taps(quiet) == 11, 'debug mode did not restore investigation taps')
 quiet.diagnostics = false
 quiet.prestart(); quiet:boot()
 check(quiet.removed == 17 and active_taps(quiet) == 3, 'debug-to-quiet reset leaked taps')
+check(quiet.input_accesses == 0 and race.input_accesses == 0,
+	'communication plugin accessed player inputs in quiet or debug mode')
 
 print(string.format('PASS: %d callback assertions (%s); no MAME/gameplay execution', checks, _VERSION))
 os.exit(0)

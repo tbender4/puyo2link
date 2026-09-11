@@ -18,9 +18,13 @@ incrementally, testing live as we go.
 
 ## Where things stand (as of this handoff)
 
-**Latest: plugin 0.6.1 unchanged, spec Update 13 (section 18). Linked
+**Latest: plugin 0.6.2 cleanup, spec Update 14 (section 19). Linked
 gameplay, garbage and normal-speed mid-match joining are user-confirmed
 working. Both reported gameplay issues are closed.**
+
+- Built-in timed coin/start automation and `PUYO2_AUTO_INPUT` are removed.
+  The communication plugin never accesses player controls. Optional
+  input-only exercise scripts remain separate and explicitly launched.
 
 - After `run_midjoin_manual_20260911_162947`, the user confirmed:
   "joining midgame is stable. pressing down was what had me confused."
@@ -119,7 +123,6 @@ Two terminals, one per "cabinet" (PowerShell):
 cd C:\Users\tbend\mame
 $env:PUYO2_LINK_SIDE = "A"          # "B" in the other terminal
 $env:PUYO2_LINK_DIR = "C:\Users\tbend\mame\PuyoPuyo2\run_manual_01" # SAME new folder in both terminals
-$env:PUYO2_AUTO_INPUT = "0"         # disables auto coin/start for full manual control; omit to let it auto-play through the first coin+1P+2P start
 .\mame.exe puyopuy2 -plugin puyo2link -window -skip_gameinfo
 ```
 For quick automated/headless correctness checks (not for watching the
@@ -130,7 +133,7 @@ each process pair; **do not delete old logs**. A new process refuses an
 existing nonempty outgoing stream. Service/F3 reset in the same process
 preserves append offsets. The legacy default `PuyoPuyo2\link_ipc` contains
 historical logs and should not be reused.
-Both cabinets should use 0.6.1. Preserve `.bin.wire` journals too: those are
+Both cabinets should use 0.6.2. Preserve `.bin.wire` journals too: those are
 now the authoritative generation-tagged transport, while `.bin` files
 retain the raw payload bytes for analysis. Missing peers leave FE waiting.
 
@@ -140,7 +143,7 @@ dumps are disabled; raw streams and the real packet-acceptance counter
 are still retained. No debug switch changes protocol or gameplay.
 
 For manual A versus random inputs on B, set `PUYO2_EXERCISE_RANDOM_ONLY=1`
-on **B only**, keep `PUYO2_AUTO_INPUT=0`, and add
+on **B only**, and add
 `-autoboot_delay 0 -autoboot_script PuyoPuyo2\re_notes\exercise_link.lua`
 to B's launch. Both B players get random Left/Right/Button 1 during
 active piece control; coin/start, menus and Down stay manual. A must
@@ -155,7 +158,7 @@ Callback-only regression command (does not launch MAME):
 ## Key files
 
 - `PuyoPuyo2/re_notes/COMM_PROTOCOL_SPEC.md` — the full technical record.
-  Read this fully; it has 18 numbered sections/updates, each documenting
+  Read this fully; it has 19 numbered sections/updates, each documenting
   what was found, what was wrong initially and corrected, and why. Keep
   appending new "Update N" sections here rather than starting fresh notes
   elsewhere — this is the project's memory across sessions.

@@ -58,7 +58,6 @@ previous session's files.
 ```powershell
 $env:PUYO2_LINK_SIDE = "A"
 $env:PUYO2_LINK_DIR = "$PWD\puyo2-session-001"
-$env:PUYO2_AUTO_INPUT = "0"
 .\mame.exe puyopuy2 -plugin puyo2link -window -skip_gameinfo -speed 1
 ```
 
@@ -67,7 +66,6 @@ $env:PUYO2_AUTO_INPUT = "0"
 ```powershell
 $env:PUYO2_LINK_SIDE = "B"
 $env:PUYO2_LINK_DIR = "$PWD\puyo2-session-001"
-$env:PUYO2_AUTO_INPUT = "0"
 .\mame.exe puyopuy2 -plugin puyo2link -window -skip_gameinfo -speed 1
 ```
 

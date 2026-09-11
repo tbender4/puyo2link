@@ -1954,3 +1954,18 @@ as a separate limitation; the normal-speed manual confirmation neither
 proves it fixed nor makes it the cause of this resolved report.
 Plugin version remains 0.6.1. Only the handoff and technical record were
 updated; repository staging was left unchanged.
+
+## 19. Update 14 (2026-09-11): approved runtime simplification
+
+Plugin 0.6.2 removes the obsolete timed coin/start state machine,
+`PUYO2_AUTO_INPUT`, and SERVICE-field discovery. The communication plugin
+does not access input ports; explicitly launched exercise scripts still
+provide optional automation. Old launch commands setting
+`PUYO2_AUTO_INPUT=0` remain harmless, but no longer need that variable.
+
+The bounded TX queue now uses `string.char(table.unpack(out_queue))`
+instead of a temporary character table. Slot initialization explicitly
+includes key zero; the export alias and unnecessary forward declaration
+are removed. Mailbox semantics, credit limits, reset handling and error
+checks are unchanged. The existing callback harness covers transport
+and now rejects input-port access in quiet and debug modes.

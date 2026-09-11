@@ -34,17 +34,15 @@
 --   PUYO2_LINK_SIDE = "A" or "B"   (which cabinet this instance is)
 --   PUYO2_LINK_DIR  = shared folder both instances can read/write
 --                     (use a fresh folder for each process pair)
---   PUYO2_AUTO_INPUT = "0" disables the legacy coin/start automation
 --   PUYO2_LINK_DEBUG = "1" enables detailed game/protection/packet traces
 
 local exports = {
 	name = 'puyo2link',
-	version = '0.6.1',
+	version = '0.6.2',
 	description = 'Puyo Puyo 2 (arcade) 4-player link emulation',
 	license = 'CC0',
 	author = { name = 'reverse-engineered, see PuyoPuyo2/re_notes' } }
 
-local puyo2link = exports
 local transport_factory = require('puyo2link.transport')
 local link
 
@@ -77,10 +75,7 @@ local side, peer_side, link_dir, out_path, in_path
 -- loopback handler looked fine but slot[0] was never actually set,
 -- so the game read back garbage/unmapped forever instead of our answer).
 local function fresh_slots(v0)
-	local s = {}
-	for i = 0, 7 do s[i] = 0 end
-	if v0 ~= nil then s[0] = v0 end
-	return s
+	return { [0] = v0 or 0, 0, 0, 0, 0, 0, 0, 0 }
 end
 
 local slot = fresh_slots()
@@ -90,9 +85,6 @@ local rx_bank = {}
 local rx_write, rx_count, rx_ack = 0, 0, 0
 local bank_block = 0
 local current_bank = 'cmd'          -- 'cmd' | 'tx' | 'rx'
-local auto_input_stage = 0
-local auto_input_at = 0
-local auto_input_enabled = true   -- set from PUYO2_AUTO_INPUT env var in do_prestart
 local diagnostics_enabled = false
 -- FE success, rather than bank alone, separates handshake responses from
 -- runtime credit: the ROM selects CONTROL ($FF) immediately before RxCredit.
@@ -100,7 +92,6 @@ local established_seen = false
 local out_queue = {}                -- exact mailbox payload bytes, waiting for durable file output
 local frame_count = 0
 local stats = {}
-local fill_rx_banks
 local last_tasks, last_gameplay
 local io_error_seen = false
 local active = false
@@ -287,9 +278,7 @@ local function flush_and_poll()
 	link:poll()
 	if link.failed then active = false; return end
 	if #out_queue > 0 and link:valid() then
-		local chars = {}
-		for i, b in ipairs(out_queue) do chars[i] = string.char(b) end
-		local sent = link:send(table.concat(chars))
+		local sent = link:send(string.char(table.unpack(out_queue)))
 		if sent > 0 then
 			stats.flushed = stats.flushed + sent
 			-- TxCredit reads committed, unflushed occupancy directly.
@@ -316,7 +305,6 @@ local function do_prestart()
 		return
 	end
 
-	auto_input_enabled = (os.getenv('PUYO2_AUTO_INPUT') ~= '0')
 	diagnostics_enabled = os.getenv('PUYO2_LINK_DEBUG') == '1'
 	side = os.getenv('PUYO2_LINK_SIDE') or 'A'
 	if side ~= 'A' and side ~= 'B' then error('PUYO2_LINK_SIDE must be A or B') end
@@ -362,8 +350,6 @@ local function do_prestart()
 	current_bank = 'cmd'
 	established_seen = false
 	frame_count = 0
-	auto_input_stage = 0
-	auto_input_at = 0
 	stats = { tx_bytes = 0, rx_bytes = 0, flushed = 0, tx_bursts = 0,
 		pump_reads = 0, accepted = 0, payloads = { [2] = 0, [3] = 0, [4] = 0, [5] = 0 },
 		cmd_fc = 0, cmd_fd = 0, cmd_fe = 0 }
@@ -496,18 +482,9 @@ local function do_prestart()
 
 	active = true
 	log('taps installed; out=' .. out_path .. ' in=' .. in_path)
-
-	if not diagnostics_enabled then return end
-	local ok, err = pcall(function()
-		local port = manager.machine.ioport.ports[':SERVICE']
-		local names = {}
-		for name, _ in pairs(port.fields) do names[#names + 1] = name end
-		log('SERVICE port fields: ' .. table.concat(names, ' | '))
-	end)
-	if not ok then log('SERVICE port enum failed: ' .. tostring(err)) end
 end
 
-fill_rx_banks = function()
+local function fill_rx_banks()
 	local in_queue = link.queue
 	if #in_queue == 0 then return end
 	if not established_seen then return end
@@ -520,61 +497,12 @@ fill_rx_banks = function()
 	rx_count = rx_count + n
 end
 
--- Legacy opt-out exercise: auto-press Coin 1 then 1 Player Start once the link has been
--- established for a bit, so both cabinets reach the mode-select screen at
--- roughly the same time without needing precise human timing across two
--- windows. See COMM_PROTOCOL_SPEC.md section 9.
-local function drive_auto_input()
-	if auto_input_stage == 0 then
-		if established_seen and frame_count > 180 then
-			local ok, err = pcall(function()
-				manager.machine.ioport.ports[':SERVICE'].fields['Coin 1']:set_value(1)
-			end)
-			log('auto-input: press Coin 1 ' .. (ok and 'ok' or ('FAILED: ' .. tostring(err))))
-			auto_input_stage = 1
-			auto_input_at = frame_count
-		end
-	elseif auto_input_stage == 1 and frame_count > auto_input_at + 3 then
-		pcall(function() manager.machine.ioport.ports[':SERVICE'].fields['Coin 1']:clear_value() end)
-		auto_input_stage = 2
-		auto_input_at = frame_count
-	elseif auto_input_stage == 2 and frame_count > auto_input_at + 30 then
-		local ok, err = pcall(function()
-			manager.machine.ioport.ports[':SERVICE'].fields['1 Player Start']:set_value(1)
-		end)
-		log('auto-input: press 1P Start ' .. (ok and 'ok' or ('FAILED: ' .. tostring(err))))
-		auto_input_stage = 3
-		auto_input_at = frame_count
-	elseif auto_input_stage == 3 and frame_count > auto_input_at + 3 then
-		pcall(function() manager.machine.ioport.ports[':SERVICE'].fields['1 Player Start']:clear_value() end)
-		auto_input_stage = 4
-		auto_input_at = frame_count
-	elseif auto_input_stage == 4 and frame_count > auto_input_at + 900 then
-		-- ~15s gap: enough time for a human to do the manual "reset the
-		-- other cabinet after this one is already sitting at mode-select"
-		-- dance that was found live to actually trigger the link invite
-		-- (simultaneous auto-start on both sides did NOT reliably trigger
-		-- it). Press the local 2P Start to exercise the recruiting input;
-		-- this blind timer is not a state-aware four-player test.
-		local ok, err = pcall(function()
-			manager.machine.ioport.ports[':SERVICE'].fields['2 Players Start']:set_value(1)
-		end)
-		log('auto-input: press 2P Start ' .. (ok and 'ok' or ('FAILED: ' .. tostring(err))))
-		auto_input_stage = 5
-		auto_input_at = frame_count
-	elseif auto_input_stage == 5 and frame_count > auto_input_at + 3 then
-		pcall(function() manager.machine.ioport.ports[':SERVICE'].fields['2 Players Start']:clear_value() end)
-		auto_input_stage = 6
-	end
-end
-
 local function do_frame()
 	if not active then return end
 	frame_count = frame_count + 1
 	flush_and_poll()
 	if not active then return end
 	fill_rx_banks()
-	if auto_input_enabled then drive_auto_input() end
 	if not diagnostics_enabled then
 		if (frame_count % 300) == 0 then
 			log(string.format('[transport] captured=%d flushed=%d received=%d accepted=%d ready=%s txcredit=%d rxcredit=%d',
@@ -667,10 +595,10 @@ local function do_stop()
 	active = false
 end
 
-function puyo2link.startplugin()
+function exports.startplugin()
 	prestart_sub = emu.register_prestart(do_prestart)
 	frame_sub = emu.add_machine_frame_notifier(do_frame)
 	stop_sub = emu.add_machine_stop_notifier(do_stop)
 end
 
-return puyo2link
+return exports
