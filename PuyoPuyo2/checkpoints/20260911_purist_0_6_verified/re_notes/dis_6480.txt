@@ -1,0 +1,46 @@
+06480: 222a 0004                 move.l  ($4,A2), D1
+06484: 45f9 00ff a4e2            lea     $ffa4e2.l, A2
+0648a: 2480                      move.l  D0, (A2)
+0648c: 2541 0004                 move.l  D1, ($4,A2)
+06490: 7200                      moveq   #$0, D1
+06492: 7004                      moveq   #$4, D0
+06494: 4eb9 0000 0a5e            jsr     $a5e.l
+0649a: 1432 1000                 move.b  (A2,D1.w), D2
+0649e: 15b2 0000 1000            move.b  (A2,D0.w), (A2,D1.w)
+064a4: 1582 0000                 move.b  D2, (A2,D0.w)
+064a8: 5241                      addq.w  #1, D1
+064aa: 0c41 0005                 cmpi.w  #$5, D1
+064ae: 66e2                      bne     $6492
+064b0: 4e75                      rts
+064b2: 0c39 0082 00ff a500       cmpi.b  #-$7e, $ffa500.l
+064ba: 6700 0096                 beq     $6552
+064be: 6100 4046                 bsr     $a506
+064c2: 1039 00ff a7ac            move.b  $ffa7ac.l, D0
+064c8: 0200 0010                 andi.b  #$10, D0
+064cc: 6700 ffa6                 beq     $6474
+064d0: 4239 00ff a7ac            clr.b   $ffa7ac.l
+064d6: 6100 402e                 bsr     $a506
+064da: 0839 0005 00ff a502       btst    #$5, $ffa502.l
+064e2: 6600 ff90                 bne     $6474
+064e6: 43f9 00ff ad00            lea     $ffad00.l, A1
+064ec: 45f9 00ff a537            lea     $ffa537.l, A2
+064f2: 3028 0026                 move.w  ($26,A0), D0
+064f6: 14c0                      move.b  D0, (A2)+
+064f8: eb40                      asl.w   #5, D0
+064fa: 720f                      moveq   #$f, D1
+064fc: 1431 0000                 move.b  (A1,D0.w), D2
+06500: e902                      asl.b   #4, D2
+06502: 8431 0001                 or.b    ($1,A1,D0.w), D2
+06506: 14c2                      move.b  D2, (A2)+
+06508: 5440                      addq.w  #2, D0
+0650a: 51c9 fff0                 dbra    D1, $64fc
+0650e: 08f9 0005 00ff a502       bset    #$5, $ffa502.l
+06516: 5268 0026                 addq.w  #1, ($26,A0)
+0651a: 0c68 0018 0026            cmpi.w  #$18, ($26,A0)
+06520: 6600 ff52                 bne     $6474
+06524: 6100 4022                 bsr     $a548
+06528: 13fc 0026 00ff a530       move.b  #$26, $ffa530.l
+06530: 13f9 00ff a118 00ff a531  move.b  $ffa118.l, $ffa531.l
+0653a: 08f9 0002 00ff a502       bset    #$2, $ffa502.l
+06542: 6100 0076                 bsr     $65ba
+06546: 4239 00ff a055            clr.b   $ffa055.l

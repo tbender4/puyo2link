@@ -1,0 +1,64 @@
+Attempting load of mame.ini
+Attempting load of mame.ini
+Attempting load of horizont.ini
+Attempting load of raster.ini
+Parsing ini/presets\raster.ini
+Attempting load of source\segac2.ini
+Attempting load of puyopuy2.ini
+Starting plugin data...
+Starting plugin layout...
+Starting plugin puyo2link...
+Attempting load of mame.ini
+Attempting load of mame.ini
+Attempting load of horizont.ini
+Attempting load of raster.ini
+Parsing ini/presets\raster.ini
+Attempting load of source\segac2.ini
+Attempting load of puyopuy2.ini
+Video: Monitor 65636 = "\\.\DISPLAY1" (primary)
+Video: Monitor 131073 = "\\.\DISPLAY2" 
+Input: Adding keyboard #1: HID Keyboard Device (device id: \\?\HID#VID_046A&PID_0330&MI_00#8&1943966f&0&0000#{884b96c3-56ef-11d1-bc8c-00a0c91405dd})
+Input: Adding keyboard #2: HID Keyboard Device (device id: \\?\HID#VID_4B42&PID_0011&MI_02&Col04#8&3acf23c3&0&0003#{884b96c3-56ef-11d1-bc8c-00a0c91405dd})
+Input: Adding keyboard #3: HID Keyboard Device (device id: \\?\HID#VID_4B42&PID_0011&MI_00#8&25949238&0&0000#{884b96c3-56ef-11d1-bc8c-00a0c91405dd})
+Input: Adding mouse #1: HID-compliant mouse (device id: \\?\HID#VID_4B42&PID_0011&MI_02&Col01#8&3acf23c3&0&0000#{378de44c-56ef-11d1-bc8c-00a0c91405dd})
+Input: Adding mouse #2: HID-compliant mouse (device id: \\?\HID#VID_046A&PID_0330&MI_02#8&d2fe4f2&0&0000#{378de44c-56ef-11d1-bc8c-00a0c91405dd})
+Input: Adding lightgun #1: HID-compliant mouse (device id: \\?\HID#VID_4B42&PID_0011&MI_02&Col01#8&3acf23c3&0&0000#{378de44c-56ef-11d1-bc8c-00a0c91405dd})
+Input: Adding lightgun #2: HID-compliant mouse (device id: \\?\HID#VID_046A&PID_0330&MI_02#8&d2fe4f2&0&0000#{378de44c-56ef-11d1-bc8c-00a0c91405dd})
+unzip: opened archive file roms\puyopuy2.zip
+unzip: found roms\puyopuy2.zip ECD at 980
+unzip: roms\puyopuy2.zip has no ZIP64 ECD locator
+unzip: read roms\puyopuy2.zip central directory
+unzip: closing archive file roms\puyopuy2.zip and sending to cache
+unzip: found roms\puyopuy2.zip in cache
+unzip: opened archive file roms\puyopuy2.zip
+unzip: closing archive file roms\puyopuy2.zip and sending to cache
+unzip: found roms\puyopuy2.zip in cache
+unzip: opened archive file roms\puyopuy2.zip
+unzip: closing archive file roms\puyopuy2.zip and sending to cache
+Optional memory region ':nvram' not found
+Optional memory region ':screen' not found
+Starting Puyo Puyo 2 (Japan) ':'
+  (missing dependencies; rescheduling)
+Starting Motorola MC68000 ':maincpu'
+Starting NVRAM ':nvram'
+Starting Sega 315-5296 I/O ':io'
+Starting Sega 315-5313 Megadrive VDP ':gen_vdp'
+  (missing dependencies; rescheduling)
+Starting palette ':gen_vdp:palette_lut'
+Starting Sega VDP PSG ':gen_vdp:snsnd'
+Starting palette ':gen_vdp:gfx_palette'
+Starting palette ':gen_vdp:gfx_palette_shadow'
+Starting palette ':gen_vdp:gfx_palette_hilight'
+Starting Timer ':scantimer'
+Starting Video Screen ':screen'
+Starting palette ':palette'
+Starting Speaker ':mono'
+Starting YM3438 OPN2C ':ymsnd'
+Starting NEC uPD7759 ':upd'
+Starting Puyo Puyo 2 (Japan) ':'
+  (missing dependencies; rescheduling)
+Starting Sega 315-5313 Megadrive VDP ':gen_vdp'
+Starting Puyo Puyo 2 (Japan) ':'
+Attempting to parse: default.cfg
+Attempting to parse: puyopuy2.cfg
+Average speed: 1305.77% (1 seconds)

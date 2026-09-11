@@ -1,0 +1,352 @@
+ 
+ 
+ 
+ 
+ Puyo Puyo Tsu/Reverse Engineering Process - Puyo Nexus Wiki 
+ (function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )puyonexus_mw_mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"fc3a124a42a3012ef28361cc","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Puyo_Puyo_Tsu/Reverse_Engineering_Process","wgTitle":"Puyo Puyo Tsu/Reverse Engineering Process","wgCurRevisionId":205759,"wgRevisionId":205759,"wgArticleId":1250,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Reverse Engineering"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Puyo_Puyo_Tsu/Reverse_Engineering_Process","wgRelevantArticleId":1250,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCargoDefaultQueryLimit":100,"wgCargoMapClusteringMinimum":80,"wgCargoMonthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready","skins.vectornexus.styles.legacy":"ready","ext.embedVideo.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.js","ext.checkUser.clientHints","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.notify.desktop","ext.cargo.purge"]; 
+ (RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});}); 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Puyo Nexus 
+ 
+ 
+ 
+ 
+ Wiki 
+ Forum 
+ Chain Simulator 
+ 
+ 
+ 
+ Search 
+ 
+ <div id="simpleSearch"
+ class="vector-search-box-inner"
+ data-search-loc="header-navigation">
+ <input class="vector-search-box-input"
+ type="search" name="search" placeholder="Search Puyo Nexus Wiki" aria-label="Search Puyo Nexus Wiki" autocapitalize="sentences" title="Search Puyo Nexus Wiki [f]" accesskey="f" id="searchInput"
+ >
+ 
+ <input id="mw-searchButton"
+ class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+ <input id="searchButton"
+ class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <h3
+ id="p-navigation-label"
+ 
+ class="vector-menu-heading "
+ >
+ Navigation 
+ 
+ 
+ 
+ 
+ 
+ 
+ Main page Tools Links Recent changes Random page Random image Help 
+ 
+ 
+ 
+ 
+
+ 
+ <h3
+ id="p-Puyo_Puyo-label"
+ 
+ class="vector-menu-heading "
+ >
+ Puyo Puyo 
+ 
+ 
+ 
+ 
+ 
+ 
+ Characters Games Puyo Puyo!! Quest Database Other media Game Modes Game Rules Guides 
+ 
+ 
+ 
+ 
+ 
+ <h3
+ id="p-tb-label"
+ 
+ class="vector-menu-heading "
+ >
+ Tools 
+ 
+ 
+ 
+ 
+ 
+ 
+ What links here Related changes Special pages Printable version Permanent link Page information Cargo data 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ <h3
+ id="p-personal-label"
+ 
+ class="vector-menu-heading "
+ >
+ Personal tools 
+ 
+ 
+ 
+ 
+ 
+ 
+ Create account Log in 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ <h3
+ id="p-namespaces-label"
+ 
+ class="vector-menu-heading "
+ >
+ Namespaces 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page Discussion 
+ 
+ 
+ 
+ 
+
+ 
+ <input type="checkbox"
+ id="p-variants-checkbox"
+ role="button"
+ aria-haspopup="true"
+ data-event-name="ui.dropdown-p-variants"
+ class="vector-menu-checkbox"
+ aria-labelledby="p-variants-label"
+ >
+ <label
+ id="p-variants-label"
+ 
+ class="vector-menu-heading "
+ >
+ English 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ <h3
+ id="p-views-label"
+ 
+ class="vector-menu-heading "
+ >
+ Views 
+ 
+ 
+ 
+ 
+ 
+ 
+ Read View source View history 
+ 
+ 
+ 
+ 
+
+ 
+ <input type="checkbox"
+ id="p-cactions-checkbox"
+ role="button"
+ aria-haspopup="true"
+ data-event-name="ui.dropdown-p-cactions"
+ class="vector-menu-checkbox"
+ aria-labelledby="p-cactions-label"
+ >
+ <label
+ id="p-cactions-label"
+ 
+ class="vector-menu-heading "
+ >
+ More 
+ 
+ 
+ 
+ 
+ 
+ 
+ Purge cache 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Puyo Puyo Tsu/Reverse Engineering Process 
+ 
+ From Puyo Nexus Wiki 
+ &lt; Puyo Puyo Tsu 
+ 
+ 
+ 
+ Jump to navigation 
+ Jump to search 
+ Reverse engineering a program means figuring out various things:
+ 
+ where and how data gets stored: for instance, where is stored the current state of each player's board or how is it represented; 
+ what computations are done with those data: what algorithm computes the next pair a player will get? how is the score calculated? 
+ To do so, one needs to read the program code, which will reveal the algorithms, but memory observation is also of importance, mainly with regards to RAM memory where variables, parameters and various states are stored while the system is running.
+ 
+ Use of debugging tools 
+ Debuggers come in handy:
+ 
+ one can run the program and see the actual code that gets executed at the same time; 
+ one can stop the program execution when some condition is met: a particular instruction has been reached, specific address in memory have been read from or written to. Complicated conditional expressions can be evaluated to trigger breakpoints upon writing or reading specific values at specific addresses; 
+ one can slowly run the program by single-stepping through the code, pausing after each instruction. This enables the understanding of every bit of an algorithm by watching it unfold. Any required amount of time can be spent on manually figuring out how things went. 
+ Original Author's Notes 
+ Here are the original reverser's notes on the process, quoted from the forums.
+ From http://puyonexus.com/forum/viewtopic.php?p=41606#p41606 
+ 
+ 
+ So I did exactly that: I've set watchpoints at various memory addresses to figure out which program functions were writing/reading there (by noting the value of the PC register when execution stopped). Then went to IDA Pro to analyze that part of the code, then single-stepped my way through the rest of the function. 
+ 
+ 
+ 
+ At times, I used the tracing capability of the emulator: it writes a text file whose lines will each describe the successive instructions that were actually executed, along with their location. That helped figuring out where functions were called from. Indeed, old programming tricks used by game developers at the time make it painful to analyze ROMs statically, and automated tools have a hard time figuring everything out as well. So you have to tell IDA to interpret parts of the ROM as code or data. 
+ 
+ 
+ From http://puyonexus.com/forum/viewtopic.php?p=41615#p41615 &#160;:
+ 
+ 
+ [Replying to] Wizzkidwas : it's been 2 weeks since I've first looked at how I would actually proceed. I've spent a week doing nothing, trying out the emulator, debugger... then a full week seriously looking at that stuff on my spare time (about 5 hours a day). I got lucky and literally stumbled upon the board buffers in memory, while looking through areas that were touched during a battle. Once I got that, making my way to the RNG was a matter of hours. 
+ 
+ 
+ 
+ In the meantime, I had another process going on: I traced the CPU execution from powerup to the beginning of a battle, then identified all code paths that had been executed only once. I hoped to exclude most of the sound and video related code this way, and found about 30 interesting subroutines. Turns out one of those did initialize the RNG and I would have spotted the stuff this way. 
+ 
+ 
+ 
+ But this is nothing exceptionally difficult. I inferred the game mechanics before looking at the code, so I had a few hypothesis at how it could work. For instance, I guessed some function would be called every time you place a pair to pick a new one from a random pool. Also, looking at the game, I knew something was going on with different pools for different color-subsets but some overwriting was going on to make the first pairs the same. 
+ 
+ 
+ 
+ Now the hard work is mainly identifying every object (variable, buffer) in memory (RAM), and what role does it play (which setting it is, score, counter, buffer...). Once that is done, you're pretty much through, as you will easily get a list of every routine that touches them, and what their algorithms are. 
+ 
+ 
+ 
+ The only painful stuff is something I'll talk about in a future post: how the RNG is pseudo-randomly iterated between battles, based on CPU interrupts (VBLANK, VINT, HINT, player inputs...) and various events I have yet to figure out. 
+ 
+ 
+<!-- 
+NewPP limit report
+Cached time: 20260911115734
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.002 seconds
+Real time usage: 0.003 seconds
+Preprocessor visited node count: 6/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 0.000 1 -total
+-->
+
+<!-- Saved in parser cache with key puyonexus-mw_:pcache:idhash:1250-0!canonical and timestamp 20260911115734 and revision id 205759. Rendering was triggered because: page-view
+ -->
+ 
+ Retrieved from " https://puyonexus.com/mediawiki/index.php?title=Puyo_Puyo_Tsu/Reverse_Engineering_Process&oldid=205759 " 
+ Category : Reverse Engineering 
+ 
+ 
+
+ 
+ 
+ 
+ This page was last edited on 10 November 2023, at 16:58. 
+ 
+
+ 
+ Privacy policy 
+ About Puyo Nexus Wiki 
+ Disclaimers 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+
+
+
+ 
+ 

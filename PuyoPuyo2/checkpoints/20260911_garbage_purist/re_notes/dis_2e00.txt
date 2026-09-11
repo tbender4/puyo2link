@@ -1,0 +1,376 @@
+02e00: 5e33 432e       addq.b  #7, INVALID 33
+02e04: 522e 542e       addq.b  #1, ($542e,A6)
+02e08: 2054            movea.l (A4), A0
+02e0a: 4553            dc.w    $4553; ILLEGAL
+02e0c: 54fe            dc.w    $54fe; ILLEGAL
+02e0e: 0408            dc.w    $0408; ILLEGAL
+02e10: 5e33 534f       addq.b  #7, INVALID 33
+02e14: 554e            subq.w  #2, A6
+02e16: 4420            neg.b   -(A0)
+02e18: 5445            addq.w  #2, D5
+02e1a: 5354            subq.w  #1, (A4)
+02e1c: fe00            dc.w    $fe00; opcode 1111
+02e1e: 0508 5e33       movep.w ($5e33,A0), D2
+02e22: 434f            dc.w    $434f; ILLEGAL
+02e24: 4d4d            dc.w    $4d4d; ILLEGAL
+02e26: 554e            subq.w  #2, A6
+02e28: 4943            dc.w    $4943; ILLEGAL
+02e2a: 4154            dc.w    $4154; ILLEGAL
+02e2c: 494f            dc.w    $494f; ILLEGAL
+02e2e: 4e20            dc.w    $4e20; ILLEGAL
+02e30: 5445            addq.w  #2, D5
+02e32: 5354            subq.w  #1, (A4)
+02e34: fe00            dc.w    $fe00; opcode 1111
+02e36: 0608            dc.w    $0608; ILLEGAL
+02e38: 5e33 5345       addq.b  #7, INVALID 33
+02e3c: 4154            dc.w    $4154; ILLEGAL
+02e3e: 2054            movea.l (A4), A0
+02e40: 4553            dc.w    $4553; ILLEGAL
+02e42: 54fe            dc.w    $54fe; ILLEGAL
+02e44: 0c04 5e32       cmpi.b  #$32, D4
+02e48: 5345            subq.w  #1, D5
+02e4a: 4c45            dc.w    $4c45; ILLEGAL
+02e4c: 4354            dc.w    $4354; ILLEGAL
+02e4e: 2042            movea.l D2, A0
+02e50: 5920            subq.b  #4, -(A0)
+02e52: 5345            subq.w  #1, D5
+02e54: 5256            addq.w  #1, (A6)
+02e56: 4943            dc.w    $4943; ILLEGAL
+02e58: 4520            dc.w    $4520; ILLEGAL
+02e5a: 4255            clr.w   (A5)
+02e5c: 5454            addq.w  #2, (A4)
+02e5e: 4f4e            dc.w    $4f4e; ILLEGAL
+02e60: fe00            dc.w    $fe00; opcode 1111
+02e62: 0d08 5e32       movep.w ($5e32,A0), D6
+02e66: 414e            dc.w    $414e; ILLEGAL
+02e68: 4420            neg.b   -(A0)
+02e6a: 5055            addq.w  #8, (A5)
+02e6c: 5348            subq.w  #1, A0
+02e6e: 2054            movea.l (A4), A0
+02e70: 4553            dc.w    $4553; ILLEGAL
+02e72: 5420            addq.b  #2, -(A0)
+02e74: 4f52            dc.w    $4f52; ILLEGAL
+02e76: 2053            movea.l (A3), A0
+02e78: 5441            addq.w  #2, D1
+02e7a: 5254            addq.w  #1, (A4)
+02e7c: 2042            movea.l D2, A0
+02e7e: 5554            subq.w  #2, (A4)
+02e80: 544f            addq.w  #2, A7
+02e82: 4eff            dc.w    $4eff; ILLEGAL
+02e84: 0014 5e31       ori.b   #$31, (A4)
+02e88: 4449            dc.w    $4449; ILLEGAL
+02e8a: 5053            addq.w  #8, (A3)
+02e8c: 5720            subq.b  #3, -(A0)
+02e8e: 4153            dc.w    $4153; ILLEGAL
+02e90: 5349            subq.w  #1, A1
+02e92: 474e            dc.w    $474e; ILLEGAL
+02e94: 4d45            dc.w    $4d45; ILLEGAL
+02e96: 4e54 53fe       link    A4, #$53fe
+02e9a: 0118            btst    D0, (A0)+
+02e9c: 5e33 3120       addq.b  #7, INVALID 33
+02ea0: 2032 2020       move.l  ($20,A2,D2.w), D0
+02ea4: 3320            move.w  -(A0), -(A1)
+02ea6: 2034 2020       move.l  ($20,A4,D2.w), D0
+02eaa: 3520            move.w  -(A0), -(A2)
+02eac: 2036 2020       move.l  ($20,A6,D2.w), D0
+02eb0: 3720            move.w  -(A0), -(A3)
+02eb2: 2038 fe00       move.l  $fe00.w, D0
+02eb6: 0204 5e33       andi.b  #$33, D4
+02eba: 4449            dc.w    $4449; ILLEGAL
+02ebc: 5020            addq.b  #8, -(A0)
+02ebe: 5357            subq.w  #1, (A7)
+02ec0: 2e23            move.l  -(A3), D7
+02ec2: 31fe            dc.w    $31fe; ILLEGAL
+02ec4: 0304            btst    D1, D4
+02ec6: 5e33 4449       addq.b  #7, INVALID 33
+02eca: 5020            addq.b  #8, -(A0)
+02ecc: 5357            subq.w  #1, (A7)
+02ece: 2e23            move.l  -(A3), D7
+02ed0: 32fe            dc.w    $32fe; ILLEGAL
+02ed2: 0402 5e33       subi.b  #$33, D2
+02ed6: 2331 2d31       move.l  INVALID 31, -(A1)
+02eda: 3233 343a       move.w  INVALID 33, D1
+02ede: 434f            dc.w    $434f; ILLEGAL
+02ee0: 494e            dc.w    $494e; ILLEGAL
+02ee2: 2053            movea.l (A3), A0
+02ee4: 572e 31fe       subq.b  #3, ($31fe,A6)
+02ee8: 0502            btst    D2, D2
+02eea: 5e33 2331       addq.b  #7, INVALID 33
+02eee: 2d35 3637       move.l  INVALID 35, -(A6)
+02ef2: 383a 434f       move.w  ($7243,PC), D4
+02ef6: 494e            dc.w    $494e; ILLEGAL
+02ef8: 2053            movea.l (A3), A0
+02efa: 572e 32fe       subq.b  #3, ($32fe,A6)
+02efe: 0602 5e33       addi.b  #$33, D2
+02f02: 2332 2d31       move.l  INVALID 32, -(A1)
+02f06: 2020            move.l  -(A0), D0
+02f08: 203a 5241       move.l  ($814b,PC), D0
+02f0c: 4e4e            trap    #$e
+02f0e: 5955            subq.w  #4, (A5)
+02f10: 204f            movea.l A7, A0
+02f12: 4646            not.w   D6
+02f14: 2042            movea.l D2, A0
+02f16: 5554            subq.w  #2, (A4)
+02f18: 544f            addq.w  #2, A7
+02f1a: 4efe            dc.w    $4efe; ILLEGAL
+02f1c: 0702            btst    D3, D2
+02f1e: 5e33 2332       addq.b  #7, INVALID 33
+02f22: 2d32 2020       move.l  ($20,A2,D2.w), -(A6)
+02f26: 203a 4144       move.l  ($706c,PC), D0
+02f2a: 5645            addq.w  #3, D5
+02f2c: 5254            addq.w  #1, (A4)
+02f2e: 4953            dc.w    $4953; ILLEGAL
+02f30: 4520            dc.w    $4520; ILLEGAL
+02f32: 534f            subq.w  #1, A7
+02f34: 554e            subq.w  #2, A6
+02f36: 44fe            dc.w    $44fe; ILLEGAL
+02f38: 0802 5e33       btst    #$33, D2
+02f3c: 2332 2d33       move.l  INVALID 32, -(A1)
+02f40: 2020            move.l  -(A0), D0
+02f42: 203a 5455       move.l  ($8399,PC), D0
+02f46: 524e            addq.w  #1, A6
+02f48: 2044            movea.l D4, A0
+02f4a: 4952            dc.w    $4952; ILLEGAL
+02f4c: 4543            dc.w    $4543; ILLEGAL
+02f4e: 5449            addq.w  #2, A1
+02f50: 4f4e            dc.w    $4f4e; ILLEGAL
+02f52: fe00            dc.w    $fe00; opcode 1111
+02f54: 0902            btst    D4, D2
+02f56: 5e33 2332       addq.b  #7, INVALID 33
+02f5a: 2d34 3520       move.l  INVALID 34, -(A6)
+02f5e: 203a 3150       move.l  ($60b0,PC), D0
+02f62: 204d            movea.l A5, A0
+02f64: 4f44            dc.w    $4f44; ILLEGAL
+02f66: 4520            dc.w    $4520; ILLEGAL
+02f68: 4449            dc.w    $4449; ILLEGAL
+02f6a: 4646            not.w   D6
+02f6c: 4943            dc.w    $4943; ILLEGAL
+02f6e: 554c            subq.w  #2, A4
+02f70: 5459            addq.w  #2, (A1)+
+02f72: fe00            dc.w    $fe00; opcode 1111
+02f74: 0a02 5e33       eori.b  #$33, D2
+02f78: 2332 2d36       move.l  INVALID 32, -(A1)
+02f7c: 3720            move.w  -(A0), -(A3)
+02f7e: 203a 5653       move.l  ($85d3,PC), D0
+02f82: 204d            movea.l A5, A0
+02f84: 4f44            dc.w    $4f44; ILLEGAL
+02f86: 4520            dc.w    $4520; ILLEGAL
+02f88: 4d41            dc.w    $4d41; ILLEGAL
+02f8a: 5443            addq.w  #2, D3
+02f8c: 482f 3150       nbcd    ($3150,A7)
+02f90: 4c41            dc.w    $4c41; ILLEGAL
+02f92: 59fe            dc.w    $59fe; ILLEGAL
+02f94: 0b02            btst    D5, D2
+02f96: 5e33 2332       addq.b  #7, INVALID 33
+02f9a: 2d38 2020       move.l  $2020.w, -(A6)
+02f9e: 203a 4241       move.l  ($71e1,PC), D0
+02fa2: 5454            addq.w  #2, (A4)
+02fa4: 4c45            dc.w    $4c45; ILLEGAL
+02fa6: 2053            movea.l (A3), A0
+02fa8: 5441            addq.w  #2, D1
+02faa: 5254            addq.w  #1, (A4)
+02fac: 2043            movea.l D3, A0
+02fae: 5245            addq.w  #1, D5
+02fb0: 4449            dc.w    $4449; ILLEGAL
+02fb2: 54fe            dc.w    $54fe; ILLEGAL
+02fb4: 0d90            bclr    D6, (A0)
+02fb6: 5e32 5055       addq.b  #7, ($55,A2,D5.w)
+02fba: 5348            subq.w  #1, A0
+02fbc: 2054            movea.l (A4), A0
+02fbe: 4553            dc.w    $4553; ILLEGAL
+02fc0: 5420            addq.b  #2, -(A0)
+02fc2: 4255            clr.w   (A5)
+02fc4: 5454            addq.w  #2, (A4)
+02fc6: 4f4e            dc.w    $4f4e; ILLEGAL
+02fc8: 2054            movea.l (A4), A0
+02fca: 4f20            dc.w    $4f20; ILLEGAL
+02fcc: 4558            dc.w    $4558; ILLEGAL
+02fce: 4954            dc.w    $4954; ILLEGAL
+02fd0: ff00            dc.w    $ff00; opcode 1111
+02fd2: 0094 5e31 4241  ori.l   #$5e314241, (A4)
+02fd8: 434b            dc.w    $434b; ILLEGAL
+02fda: 2055            movea.l (A5), A0
+02fdc: 5020            addq.b  #8, -(A0)
+02fde: 4441            neg.w   D1
+02fe0: 5441            addq.w  #2, D1
+02fe2: 2043            movea.l D3, A0
+02fe4: 4c45            dc.w    $4c45; ILLEGAL
+02fe6: 4152            dc.w    $4152; ILLEGAL
+02fe8: fe00            dc.w    $fe00; opcode 1111
+02fea: 0208            dc.w    $0208; ILLEGAL
+02fec: 5e33 4e4f       addq.b  #7, INVALID 33
+02ff0: 2020            move.l  -(A0), D0
+02ff2: 2843            movea.l D3, A4
+02ff4: 414e            dc.w    $414e; ILLEGAL
+02ff6: 4345            dc.w    $4345; ILLEGAL
+02ff8: 4c29            dc.w    $4c29; ILLEGAL
+02ffa: fe00            dc.w    $fe00; opcode 1111
+02ffc: 0388 5e33       movep.w D1, ($5e33,A0)
+03000: 5945            subq.w  #4, D5
+03002: 5320            subq.b  #1, -(A0)
+03004: 2843            movea.l D3, A4
+03006: 4c45            dc.w    $4c45; ILLEGAL
+03008: 4152            dc.w    $4152; ILLEGAL
+0300a: 29fe            dc.w    $29fe; ILLEGAL
+0300c: 0c04 5e32       cmpi.b  #$32, D4
+03010: 5345            subq.w  #1, D5
+03012: 4c45            dc.w    $4c45; ILLEGAL
+03014: 4354            dc.w    $4354; ILLEGAL
+03016: 2042            movea.l D2, A0
+03018: 5920            subq.b  #4, -(A0)
+0301a: 5345            subq.w  #1, D5
+0301c: 5256            addq.w  #1, (A6)
+0301e: 4943            dc.w    $4943; ILLEGAL
+03020: 4520            dc.w    $4520; ILLEGAL
+03022: 4255            clr.w   (A5)
+03024: 5454            addq.w  #2, (A4)
+03026: 4f4e            dc.w    $4f4e; ILLEGAL
+03028: fe00            dc.w    $fe00; opcode 1111
+0302a: 0d08 5e32       movep.w ($5e32,A0), D6
+0302e: 414e            dc.w    $414e; ILLEGAL
+03030: 4420            neg.b   -(A0)
+03032: 5055            addq.w  #8, (A5)
+03034: 5348            subq.w  #1, A0
+03036: 2054            movea.l (A4), A0
+03038: 4553            dc.w    $4553; ILLEGAL
+0303a: 5420            addq.b  #2, -(A0)
+0303c: 4f52            dc.w    $4f52; ILLEGAL
+0303e: 2053            movea.l (A3), A0
+03040: 5441            addq.w  #2, D1
+03042: 5254            addq.w  #1, (A4)
+03044: 2042            movea.l D2, A0
+03046: 5554            subq.w  #2, (A4)
+03048: 544f            addq.w  #2, A7
+0304a: 4eff            dc.w    $4eff; ILLEGAL
+0304c: 0208            dc.w    $0208; ILLEGAL
+0304e: 2020            move.l  -(A0), D0
+03050: 2020            move.l  -(A0), D0
+03052: 2020            move.l  -(A0), D0
+03054: 2020            move.l  -(A0), D0
+03056: 2020            move.l  -(A0), D0
+03058: 2020            move.l  -(A0), D0
+0305a: fe00            dc.w    $fe00; opcode 1111
+0305c: 0508 5e31       movep.w ($5e31,A0), D2
+03060: 4441            neg.w   D1
+03062: 5441            addq.w  #2, D1
+03064: 2043            movea.l D3, A0
+03066: 4c45            dc.w    $4c45; ILLEGAL
+03068: 4152            dc.w    $4152; ILLEGAL
+0306a: 2043            movea.l D3, A0
+0306c: 4f4d            dc.w    $4f4d; ILLEGAL
+0306e: 504c            addq.w  #8, A4
+03070: 4554            dc.w    $4554; ILLEGAL
+03072: 4544            dc.w    $4544; ILLEGAL
+03074: 2eff            dc.w    $2eff; ILLEGAL
+03076: 0094 5e31 4d4f  ori.l   #$5e314d4f, (A4)
+0307c: 4445            neg.w   D5
+0307e: 2053            movea.l (A3), A0
+03080: 454c            dc.w    $454c; ILLEGAL
+03082: 4543            dc.w    $4543; ILLEGAL
+03084: 54fe            dc.w    $54fe; ILLEGAL
+03086: 0208            dc.w    $0208; ILLEGAL
+03088: 5e33 4558       addq.b  #7, INVALID 33
+0308c: 4954            dc.w    $4954; ILLEGAL
+0308e: fe00            dc.w    $fe00; opcode 1111
+03090: 0308 5e33       movep.w ($5e33,A0), D1
+03094: 554e            subq.w  #2, A6
+03096: 4954            dc.w    $4954; ILLEGAL
+03098: fe00            dc.w    $fe00; opcode 1111
+0309a: 0408            dc.w    $0408; ILLEGAL
+0309c: 5e33 4c49       addq.b  #7, INVALID 33
+030a0: 4e4b            trap    #$b
+030a2: 2056            movea.l (A6), A0
+030a4: 4f4c            dc.w    $4f4c; ILLEGAL
+030a6: 4dfe            dc.w    $4dfe; ILLEGAL
+030a8: 0508 5e33       movep.w ($5e33,A0), D2
+030ac: 4841            swap    D1
+030ae: 5244            addq.w  #1, D4
+030b0: fe00            dc.w    $fe00; opcode 1111
+030b2: 0608            dc.w    $0608; ILLEGAL
+030b4: 5e33 5052       addq.b  #7, ($52,A3,D5.w)
+030b8: 4943            dc.w    $4943; ILLEGAL
+030ba: 45fe            dc.w    $45fe; ILLEGAL
+030bc: 0708 5e33       movep.w ($5e33,A0), D3
+030c0: 4f4a            dc.w    $4f4a; ILLEGAL
+030c2: 414d            dc.w    $414d; ILLEGAL
+030c4: 4120            dc.w    $4120; ILLEGAL
+030c6: 5343            subq.w  #1, D3
+030c8: 4f52            dc.w    $4f52; ILLEGAL
+030ca: 45fe            dc.w    $45fe; ILLEGAL
+030cc: 0808            dc.w    $0808; ILLEGAL
+030ce: 5e33 5241       addq.b  #7, INVALID 33
+030d2: 5445            addq.w  #2, D5
+030d4: 2054            movea.l (A4), A0
+030d6: 5950            subq.w  #4, (A0)
+030d8: 45fe            dc.w    $45fe; ILLEGAL
+030da: 0908 5e33       movep.w ($5e33,A0), D4
+030de: 4350            dc.w    $4350; ILLEGAL
+030e0: 5520            subq.b  #2, -(A0)
+030e2: 504c            addq.w  #8, A4
+030e4: 4159            dc.w    $4159; ILLEGAL
+030e6: 4552            dc.w    $4552; ILLEGAL
+030e8: fe00            dc.w    $fe00; opcode 1111
+030ea: 0a08            dc.w    $0a08; ILLEGAL
+030ec: 5e33 5a53       addq.b  #7, INVALID 33
+030f0: 5441            addq.w  #2, D1
+030f2: 4745            dc.w    $4745; ILLEGAL
+030f4: fe00            dc.w    $fe00; opcode 1111
+030f6: 0b08 5e33       movep.w ($5e33,A0), D5
+030fa: 4d4f            dc.w    $4d4f; ILLEGAL
+030fc: 4e53 5445       link    A3, #$5445
+03100: 52fe            dc.w    $52fe; ILLEGAL
+03102: 0c08            dc.w    $0c08; ILLEGAL
+03104: 5e33 464c       addq.b  #7, INVALID 33
+03108: 414d            dc.w    $414d; ILLEGAL
+0310a: 45fe            dc.w    $45fe; ILLEGAL
+0310c: 0d10            btst    D6, (A0)
+0310e: 5e32 5055       addq.b  #7, ($55,A2,D5.w)
+03112: 5348            subq.w  #1, A0
+03114: 2054            movea.l (A4), A0
+03116: 4553            dc.w    $4553; ILLEGAL
+03118: 5420            addq.b  #2, -(A0)
+0311a: 4255            clr.w   (A5)
+0311c: 5454            addq.w  #2, (A4)
+0311e: 4f4e            dc.w    $4f4e; ILLEGAL
+03120: 2054            movea.l (A4), A0
+03122: 4f20            dc.w    $4f20; ILLEGAL
+03124: 4558            dc.w    $4558; ILLEGAL
+03126: 4954            dc.w    $4954; ILLEGAL
+03128: ff00            dc.w    $ff00; opcode 1111
+0312a: 0094 5e31 534f  ori.l   #$5e31534f, (A4)
+03130: 554e            subq.w  #2, A6
+03132: 4420            neg.b   -(A0)
+03134: 5445            addq.w  #2, D5
+03136: 5354            subq.w  #1, (A4)
+03138: fe00            dc.w    $fe00; opcode 1111
+0313a: 0208            dc.w    $0208; ILLEGAL
+0313c: 5e33 4558       addq.b  #7, INVALID 33
+03140: 4954            dc.w    $4954; ILLEGAL
+03142: fe00            dc.w    $fe00; opcode 1111
+03144: 0308 5e33       movep.w ($5e33,A0), D1
+03148: 534f            subq.w  #1, A7
+0314a: 554e            subq.w  #2, A6
+0314c: 44fe            dc.w    $44fe; ILLEGAL
+0314e: 0408            dc.w    $0408; ILLEGAL
+03150: 5e33 564f       addq.b  #7, INVALID 33
+03154: 4943            dc.w    $4943; ILLEGAL
+03156: 45fe            dc.w    $45fe; ILLEGAL
+03158: 0b04            btst    D5, D4
+0315a: 5e32 5345       addq.b  #7, INVALID 32
+0315e: 4c45            dc.w    $4c45; ILLEGAL
+03160: 4354            dc.w    $4354; ILLEGAL
+03162: 2042            movea.l D2, A0
+03164: 5920            subq.b  #4, -(A0)
+03166: 5354            subq.w  #1, (A4)
+03168: 4943            dc.w    $4943; ILLEGAL
+0316a: 4bfe            dc.w    $4bfe; ILLEGAL
+0316c: 0c04 5e32       cmpi.b  #$32, D4
+03170: 504c            addq.w  #8, A4
+03172: 4159            dc.w    $4159; ILLEGAL
+03174: 2042            movea.l D2, A0
+03176: 5920            subq.b  #4, -(A0)
+03178: 5354            subq.w  #1, (A4)
+0317a: 4152            dc.w    $4152; ILLEGAL
+0317c: 5420            addq.b  #2, -(A0)
+0317e: 4f52            dc.w    $4f52; ILLEGAL
+03180: 2031 2042       move.l  ($42,A1,D2.w), D0

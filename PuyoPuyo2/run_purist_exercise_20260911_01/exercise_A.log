@@ -1,0 +1,156 @@
+:COINAGE Coin B
+:COINAGE Coin A
+:DSW Battle Start credit
+:DSW Demo Sounds
+:DSW Difficulty
+:DSW VS Mode Match/1 Play
+:DSW Turn Direction
+:DSW Rannyu Off Button
+:P1 P1 Up
+:P1 P1 Down
+:P1 P1 Left
+:P1 P1 Button 2
+:P1 P1 Right
+:P1 P1 Button 1
+:P2 P2 Button 1
+:P2 P2 Up
+:P2 P2 Button 2
+:P2 P2 Left
+:P2 P2 Right
+:P2 P2 Down
+:SERVICE Coin 1
+:SERVICE 2 Players Start
+:SERVICE Coin 2
+:SERVICE 1 Player Start
+:SERVICE Service Mode
+:SERVICE Service 1
+60 :SERVICE Coin 1
+75 :SERVICE Coin 1
+90 :SERVICE Coin 1
+105 :SERVICE Coin 1
+150 :SERVICE 1 Player Start
+150 :SERVICE 2 Players Start
+210 :SERVICE 1 Player Start
+210 :SERVICE 2 Players Start
+270 :P1 P1 Button 1
+270 :P2 P2 Button 1
+360 :P1 P1 Button 1
+360 :P2 P2 Button 1
+450 :P1 P1 Button 1
+450 :P2 P2 Button 1
+540 :P1 P1 Button 1
+540 :P2 P2 Button 1
+state frame=600 mode=01 match=04 command=1301 protection=00
+630 :P1 P1 Button 1
+630 :P2 P2 Button 1
+720 :P1 P1 Button 1
+720 :P2 P2 Button 1
+810 :P1 P1 Button 1
+810 :P2 P2 Button 1
+900 :P1 P1 Button 1
+900 :P2 P2 Button 1
+990 :P1 P1 Button 1
+990 :P2 P2 Button 1
+1080 :P1 P1 Button 1
+1080 :P2 P2 Button 1
+1170 :P1 P1 Button 1
+1170 :P2 P2 Button 1
+state frame=1200 mode=01 match=04 command=8400 protection=00
+1260 :P1 P1 Button 1
+1260 :P2 P2 Button 1
+1350 :P1 P1 Button 1
+1350 :P2 P2 Button 1
+1440 :P1 P1 Button 1
+1440 :P2 P2 Button 1
+1530 :P1 P1 Button 1
+1530 :P2 P2 Button 1
+1620 :P1 P1 Button 1
+1620 :P2 P2 Button 1
+1710 :P1 P1 Button 1
+1710 :P2 P2 Button 1
+1800 :P1 P1 Button 1
+1800 :P2 P2 Button 1
+state frame=1800 mode=01 match=04 command=0b22 protection=00
+1890 :P1 P1 Button 1
+1890 :P2 P2 Button 1
+1980 :P1 P1 Button 1
+1980 :P2 P2 Button 1
+2070 :P1 P1 Button 1
+2070 :P2 P2 Button 1
+2160 :P1 P1 Button 1
+2160 :P2 P2 Button 1
+2250 :P1 P1 Button 1
+2250 :P2 P2 Button 1
+2340 :P1 P1 Button 1
+2340 :P2 P2 Button 1
+state frame=2400 mode=01 match=04 command=0b22 protection=00
+2430 :P1 P1 Button 1
+2430 :P2 P2 Button 1
+2520 :P1 P1 Button 1
+2520 :P2 P2 Button 1
+2610 :P1 P1 Button 1
+2610 :P2 P2 Button 1
+2700 :P1 P1 Button 1
+2700 :P2 P2 Button 1
+2790 :P1 P1 Button 1
+2790 :P2 P2 Button 1
+2880 :P1 P1 Button 1
+2880 :P2 P2 Button 1
+2970 :P1 P1 Button 1
+2970 :P2 P2 Button 1
+state frame=3000 mode=01 match=04 command=0d02 protection=00
+3060 :P1 P1 Button 1
+3060 :P2 P2 Button 1
+3150 :P1 P1 Button 1
+3150 :P2 P2 Button 1
+3240 :P1 P1 Button 1
+3240 :P2 P2 Button 1
+3330 :P1 P1 Button 1
+3330 :P2 P2 Button 1
+3420 :P1 P1 Button 1
+3420 :P2 P2 Button 1
+3510 :P1 P1 Button 1
+3510 :P2 P2 Button 1
+3600 :P1 P1 Button 1
+3600 :P2 P2 Button 1
+state frame=3600 mode=01 match=04 command=6c02 protection=00
+3690 :P1 P1 Button 1
+3690 :P2 P2 Button 1
+3780 :P1 P1 Button 1
+3780 :P2 P2 Button 1
+3870 :P1 P1 Button 1
+3870 :P2 P2 Button 1
+3960 :P1 P1 Button 1
+3960 :P2 P2 Button 1
+4050 :P1 P1 Button 1
+4050 :P2 P2 Button 1
+4140 :P1 P1 Button 1
+4140 :P2 P2 Button 1
+state frame=4200 mode=01 match=04 command=0302 protection=00
+4230 :P1 P1 Button 1
+4230 :P2 P2 Button 1
+4320 :P1 P1 Button 1
+4320 :P2 P2 Button 1
+4410 :P1 P1 Button 1
+4410 :P2 P2 Button 1
+4500 :P1 P1 Button 1
+4500 :P2 P2 Button 1
+4590 :P1 P1 Button 1
+4590 :P2 P2 Button 1
+4680 :P1 P1 Button 1
+4680 :P2 P2 Button 1
+4770 :P1 P1 Button 1
+4770 :P2 P2 Button 1
+state frame=4800 mode=00 match=04 command=4302 protection=00
+4860 :P1 P1 Button 1
+4860 :P2 P2 Button 1
+4950 :P1 P1 Button 1
+4950 :P2 P2 Button 1
+5040 :P1 P1 Button 1
+5040 :P2 P2 Button 1
+5130 :P1 P1 Button 1
+5130 :P2 P2 Button 1
+5220 :P1 P1 Button 1
+5220 :P2 P2 Button 1
+5310 :P1 P1 Button 1
+5310 :P2 P2 Button 1

@@ -1,0 +1,408 @@
+ 
+ 
+ 
+ 
+ Puyo Puyo Tsu/Reverse Engineering - Puyo Nexus Wiki 
+ (function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )puyonexus_mw_mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"c2898019900db2ff7d459af9","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Puyo_Puyo_Tsu/Reverse_Engineering","wgTitle":"Puyo Puyo Tsu/Reverse Engineering","wgCurRevisionId":6173,"wgRevisionId":6173,"wgArticleId":1244,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Reverse Engineering"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Puyo_Puyo_Tsu/Reverse_Engineering","wgRelevantArticleId":1244,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCargoDefaultQueryLimit":100,"wgCargoMapClusteringMinimum":80,"wgCargoMonthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready","skins.vectornexus.styles.legacy":"ready","ext.embedVideo.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.checkUser.clientHints","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.notify.desktop","ext.cargo.purge"]; 
+ (RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});}); 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Puyo Nexus 
+ 
+ 
+ 
+ 
+ Wiki 
+ Forum 
+ Chain Simulator 
+ 
+ 
+ 
+ Search 
+ 
+ <div id="simpleSearch"
+ class="vector-search-box-inner"
+ data-search-loc="header-navigation">
+ <input class="vector-search-box-input"
+ type="search" name="search" placeholder="Search Puyo Nexus Wiki" aria-label="Search Puyo Nexus Wiki" autocapitalize="sentences" title="Search Puyo Nexus Wiki [f]" accesskey="f" id="searchInput"
+ >
+ 
+ <input id="mw-searchButton"
+ class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+ <input id="searchButton"
+ class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <h3
+ id="p-navigation-label"
+ 
+ class="vector-menu-heading "
+ >
+ Navigation 
+ 
+ 
+ 
+ 
+ 
+ 
+ Main page Tools Links Recent changes Random page Random image Help 
+ 
+ 
+ 
+ 
+
+ 
+ <h3
+ id="p-Puyo_Puyo-label"
+ 
+ class="vector-menu-heading "
+ >
+ Puyo Puyo 
+ 
+ 
+ 
+ 
+ 
+ 
+ Characters Games Puyo Puyo!! Quest Database Other media Game Modes Game Rules Guides 
+ 
+ 
+ 
+ 
+ 
+ <h3
+ id="p-tb-label"
+ 
+ class="vector-menu-heading "
+ >
+ Tools 
+ 
+ 
+ 
+ 
+ 
+ 
+ What links here Related changes Special pages Printable version Permanent link Page information Cargo data 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ <h3
+ id="p-personal-label"
+ 
+ class="vector-menu-heading "
+ >
+ Personal tools 
+ 
+ 
+ 
+ 
+ 
+ 
+ Create account Log in 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ <h3
+ id="p-namespaces-label"
+ 
+ class="vector-menu-heading "
+ >
+ Namespaces 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page Discussion 
+ 
+ 
+ 
+ 
+
+ 
+ <input type="checkbox"
+ id="p-variants-checkbox"
+ role="button"
+ aria-haspopup="true"
+ data-event-name="ui.dropdown-p-variants"
+ class="vector-menu-checkbox"
+ aria-labelledby="p-variants-label"
+ >
+ <label
+ id="p-variants-label"
+ 
+ class="vector-menu-heading "
+ >
+ English 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ <h3
+ id="p-views-label"
+ 
+ class="vector-menu-heading "
+ >
+ Views 
+ 
+ 
+ 
+ 
+ 
+ 
+ Read View source View history 
+ 
+ 
+ 
+ 
+
+ 
+ <input type="checkbox"
+ id="p-cactions-checkbox"
+ role="button"
+ aria-haspopup="true"
+ data-event-name="ui.dropdown-p-cactions"
+ class="vector-menu-checkbox"
+ aria-labelledby="p-cactions-label"
+ >
+ <label
+ id="p-cactions-label"
+ 
+ class="vector-menu-heading "
+ >
+ More 
+ 
+ 
+ 
+ 
+ 
+ 
+ Purge cache 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Puyo Puyo Tsu/Reverse Engineering 
+ 
+ From Puyo Nexus Wiki 
+ &lt; Puyo Puyo Tsu 
+ 
+ 
+ 
+ Jump to navigation 
+ Jump to search 
+ The accurate Puyo Puyo Tsu game mechanics and algorithms are currently being determined through a reverse engineering effort on the Genesis and Arcade version of the game (which are mostly the same with respect to all major aspects of gameplay).
+ This page summarizes the various aspects of the game that have been or are currently being analyzed, as well as various technical information about the platform and the process of reverse engineering.
+ Forum post are provided for reference, as they were what started this documentation effort. They may not be accurate and/or up to date.
+ 
+ Contents 
+ 
+ 1 Introduction 
+ 2 Game memory 
+ 3 Frame data tables 
+ 4 Game mechanics 
+ 5 Game modification 
+ 6 Areas of interest 
+ 7 History 
+ 
+ 
+
+ Introduction 
+ People willing to pursue a reverse engineering effort on Puyo Puyo Tsu might find interesting pointers throughout the following pages:
+ 
+ Puyo Puyo Tsu/Hardware Platforms 
+ Puyo Puyo Tsu/Debugging and Reverse Engineering Tools 
+ Puyo Puyo Tsu/Reverse Engineering Process 
+ Puyo Puyo Tsu/Software Architecture 
+ And on the forums:
+ The hardware: Genesis/Mega Drive and System C-2/Arcade, tools of the trade 
+ Game memory 
+ These pages explain stuff related to memory management, data structures and locations of interest:
+ 
+ Puyo Puyo Tsu/Memory Mappings 
+ Puyo Puyo Tsu/Memory Structures (includes value definitions, such as color codes) 
+ Puyo Puyo Tsu/Memory Allocator 
+ Puyo Puyo Tsu/Game Options Variables 
+ On the forums:
+ Puyo Puyo Tsuu fundamentals: memory mappings 
+ Frame data tables 
+ The frame data tables are available on a dedicated page:
+ 
+ Puyo Puyo Tsu/Frame Data Tables 
+ Direct access to the various subtables is provided below:
+ 
+ Gamepad Input Repeat 
+ Rotation 
+ Drop speed 
+ Control lockout grace period 
+ Bouncing animation 
+ Pair split speed 
+ Free fall speed (gravity) 
+ Game mechanics 
+ So far, these game mechanics have been covered.
+ On randomization:
+ 
+ Puyo Puyo Tsu/Random Number Generator 
+ Puyo Puyo Tsu/Upcoming Pair Randomizer 
+ Puyo Puyo Tsu/Falling Pair Spawning Process 
+ On input handling:
+ 
+ Puyo Puyo Tsu/Gamepad Input 
+ On game physics while controlling the falling puyos:
+ 
+ Puyo Puyo Tsu/Falling Pair Control 
+ Puyo Puyo Tsu/Pair Lateral Movement 
+ Puyo Puyo Tsu/Rotation, collision and push back 
+ Puyo Puyo Tsu/Soft Drop (with regular drop, bouncing animation and control lockout grace period) 
+ Puyo Puyo Tsu/Free fall 
+ And the historical posts on the forums are:
+ Random numbers: how it's done 
+ Upcoming pairs: how they are picked 
+ How baby puyos are made: from random generation to the board 
+ Memory allocation and memory structures 
+ 
+ Game modification 
+ Patches and Game Genie codes that modify the gameplay in interesting ways are discussed below:
+ 
+ Puyo Puyo Tsu/Game Genie Codes 
+ On the forums:
+ Bonus round: game genie codes and elite 1-chain 
+ Codes to set falling speed and color set 
+ 
+ Areas of interest 
+ Those are upcoming topics of a particular interest about the game mechanics:
+ 
+ Random number generation (RNG) throughout the game 
+ RNG biases and issues 
+ Score calculation 
+ Identification of routines implementing game mechanics 
+ Distribution algorithm of ojama puyos accross a row 
+ Frame data and timings for various game sequences
+ chain resolving time with respect to column height and splitting 
+ pair split / falloff speed 
+ input lock period after pair placement (bouncing animation) 
+ upcoming pair display lag 
+ upcoming pair control lag 
+ rotation timings 
+ grace period before garbage (ojama) drop 
+ soft drop speed modifier (down arrow) 
+ margin time: impact on garbage sent 
+ margin time: when does it occur / takes effect 
+ drop speed increase after x seconds 
+ motion cancel 
+ History 
+ This project started out of curiosity about the randomization algorithm used in Puyo Puyo Tsu , and was published on the forums on August 27, 2013. The efforts evolved into analyzing various game mechanics in order to have an accurate understanding of the game's internals.
+ 
+<!-- 
+NewPP limit report
+Cached time: 20260911115734
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.006 seconds
+Real time usage: 0.006 seconds
+Preprocessor visited node count: 49/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 0.000 1 -total
+-->
+
+<!-- Saved in parser cache with key puyonexus-mw_:pcache:idhash:1244-0!canonical and timestamp 20260911115734 and revision id 6173. Rendering was triggered because: page-view
+ -->
+ 
+ Retrieved from " https://puyonexus.com/mediawiki/index.php?title=Puyo_Puyo_Tsu/Reverse_Engineering&oldid=6173 " 
+ Category : Reverse Engineering 
+ 
+ 
+
+ 
+ 
+ 
+ This page was last edited on 20 January 2014, at 03:05. 
+ 
+
+ 
+ Privacy policy 
+ About Puyo Nexus Wiki 
+ Disclaimers 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+
+
+
+ 
+ 

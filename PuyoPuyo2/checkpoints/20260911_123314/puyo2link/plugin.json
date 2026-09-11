@@ -1,0 +1,10 @@
+{
+  "plugin": {
+    "name": "puyo2link",
+    "description": "Puyo Puyo 2 (arcade) 4-player link emulation - diagnostic build",
+    "version": "0.0.1",
+    "author": "reverse-engineered, see PuyoPuyo2/re_notes",
+    "type": "plugin",
+    "start": "false"
+  }
+}

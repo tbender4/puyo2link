@@ -1,0 +1,10 @@
+
+Algorithm Hash                                                             Path
+--------- ----                                                             ----
+SHA256    9762F04CB7796502EBF1AB4122018485AB292CB2D5619A0B64AA77B693ED845B C:\Users\tbend\mame\plugins\puyo2link\init.lua
+SHA256    EB5DAB2CC35B2315EB8F9BEAF96F86682E3BDCB5F7E1D1DFCB0A2B87A34602FD C:\Users\tbend\mame\plugins\puyo2link\transport.lua
+SHA256    57EF1CD7FD719ECF3FA64BB3C46A2E71DA56EC3BC025018F39519687E763DC2C C:\Users\tbend\mame\roms\puyopuy2.zip
+SHA256    9D86941E9712A250E08862B6E53DB0E398847E258AA3DC5E309E4BBDD5BAC411 C:\Users\tbend\mame\nvram\puyopuy2\nvram
+SHA256    421AC3C4B3024E98FA20E496AFDC6F13994F40425F95739B67DE427C1C1AE48B C:\Users\tbend\mame\cfg\puyopuy2.cfg
+
+

@@ -1,0 +1,211 @@
+0 0.000 mapping :SERVICE Service 1 KEYCODE_UNKNOWN_SWITCH
+0 0.000 mapping :SERVICE Service Mode KEYCODE_UNKNOWN_SWITCH
+0 0.000 mapping :SERVICE Coin 2 KEYCODE_UNKNOWN_SWITCH OR JOYCODE_2_UNKNOWN_SWITCH
+0 0.000 mapping :SERVICE Coin 1 KEYCODE_UNKNOWN_SWITCH OR JOYCODE_1_UNKNOWN_SWITCH
+0 0.000 mapping :SERVICE 2 Players Start KEYCODE_UNKNOWN_SWITCH OR JOYCODE_2_UNKNOWN_SWITCH
+0 0.000 mapping :SERVICE 1 Player Start KEYCODE_UNKNOWN_SWITCH OR JOYCODE_1_UNKNOWN_SWITCH
+0 0.000 mapping :P1 P1 Left KEYCODE_UNKNOWN_SWITCH
+0 0.000 mapping :P1 P1 Button 1 KEYCODE_UNKNOWN_SWITCH OR MOUSECODE_1_UNKNOWN_SWITCH OR GUNCODE_1_BUTTON1
+0 0.000 mapping :P1 P1 Up KEYCODE_UNKNOWN_SWITCH
+0 0.000 mapping :P1 P1 Right KEYCODE_UNKNOWN_SWITCH
+0 0.000 mapping :P1 P1 Button 2 KEYCODE_UNKNOWN_SWITCH OR MOUSECODE_1_UNKNOWN_SWITCH OR GUNCODE_1_BUTTON2
+0 0.000 mapping :P1 P1 Down KEYCODE_UNKNOWN_SWITCH
+0 0.000 mapping :P2 P2 Button 1 KEYCODE_UNKNOWN_SWITCH OR MOUSECODE_2_UNKNOWN_SWITCH OR GUNCODE_2_BUTTON1
+0 0.000 mapping :P2 P2 Right KEYCODE_UNKNOWN_SWITCH
+0 0.000 mapping :P2 P2 Up KEYCODE_UNKNOWN_SWITCH
+0 0.000 mapping :P2 P2 Button 2 KEYCODE_UNKNOWN_SWITCH OR MOUSECODE_2_UNKNOWN_SWITCH OR GUNCODE_2_BUTTON2
+0 0.000 mapping :P2 P2 Down KEYCODE_UNKNOWN_SWITCH
+0 0.000 mapping :P2 P2 Left KEYCODE_UNKNOWN_SWITCH
+0 0.010 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+1 0.017 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f48 flow=00010034 menu=00000000 flags=c7 offer=00 header=54/54 choice=0 done=0 selector=1 active=false/false
+2 0.033 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f70 flow=00010034 menu=00000000 flags=00 offer=00 header=00/00 choice=0 done=0 selector=1 active=false/false
+5 0.083 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f7e flow=00010034 menu=00000000 flags=00 offer=00 header=00/00 choice=0 done=0 selector=1 active=false/false
+10 0.167 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f80 flow=00010034 menu=00000000 flags=00 offer=00 header=00/00 choice=0 done=0 selector=1 active=false/false
+60 1.001 input :SERVICE Coin 1
+75 1.252 input :SERVICE Coin 1
+90 1.502 input :SERVICE Coin 1
+105 1.752 input :SERVICE Coin 1
+150 2.503 input :SERVICE 1 Player Start
+191 3.187 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f84 flow=00010034 menu=00000000 flags=00 offer=00 header=00/00 choice=0 done=0 selector=1 active=false/false
+195 3.254 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f86 flow=00010034 menu=00000000 flags=00 offer=00 header=00/00 choice=0 done=0 selector=1 active=false/false
+195 3.255 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+195 3.262 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+196 3.271 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019fc8 flow=00010034 menu=00000000 flags=09 offer=00 header=01/00 choice=0 done=0 selector=1 active=false/false
+197 3.288 mode=00 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019ff2 flow=00010034 menu=00000000 flags=09 offer=00 header=01/00 choice=0 done=0 selector=1 active=false/false
+198 3.304 mode=00 match=04 mask=05 players=2 command=0b22 peer=0000 script=0001a002 flow=00010034 menu=00000000 flags=09 offer=00 header=01/00 choice=0 done=0 selector=1 active=false/false
+199 3.321 mode=00 match=04 mask=05 players=2 command=0b22 peer=0000 script=0001a004 flow=00010034 menu=00000000 flags=09 offer=00 header=01/00 choice=0 done=0 selector=1 active=false/false
+210 3.505 input :SERVICE 1 Player Start
+212 3.538 mode=00 match=04 mask=05 players=2 command=0b22 peer=0000 script=0001a004 flow=00010034 menu=00000000 flags=09 offer=00 header=11/00 choice=0 done=0 selector=1 active=false/false
+213 3.555 mode=00 match=04 mask=05 players=2 command=0b22 peer=0000 script=0001a008 flow=00010034 menu=00000000 flags=09 offer=00 header=11/00 choice=0 done=0 selector=1 active=false/false
+214 3.571 mode=00 match=04 mask=05 players=2 command=0b22 peer=0000 script=0001a008 flow=00010034 menu=00000000 flags=09 offer=00 header=11/10 choice=0 done=0 selector=1 active=false/false
+215 3.588 mode=00 match=04 mask=05 players=2 command=0b22 peer=0000 script=0001a008 flow=00010034 menu=00000000 flags=09 offer=00 header=11/00 choice=0 done=0 selector=1 active=false/false
+217 3.621 mode=00 match=04 mask=05 players=2 command=0b22 peer=0000 script=0001a008 flow=00010034 menu=00000000 flags=09 offer=00 header=11/10 choice=0 done=0 selector=1 active=false/false
+246 4.105 mode=00 match=04 mask=05 players=2 command=0b22 peer=0000 script=0001a00a flow=00010034 menu=00000000 flags=09 offer=00 header=11/10 choice=0 done=0 selector=1 active=false/false
+246 4.106 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+246 4.113 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+246 4.120 menu-write pc=00a48a data=0000 mask=ffff oldchoice=0 done=0
+247 4.122 mode=01 match=04 mask=01 players=1 command=0322 peer=0000 script=0001a3ee flow=00010034 menu=000188fc flags=08 offer=00 header=11/10 choice=0 done=0 selector=1 active=false/false
+249 4.155 mode=01 match=04 mask=01 players=1 command=0322 peer=0000 script=0001a3ee flow=00010034 menu=000189c6 flags=08 offer=00 header=13/10 choice=0 done=0 selector=1 active=false/false
+270 4.506 input :SERVICE 2 Players Start
+270 4.506 input :P1 P1 Button 1
+270 4.506 input :P2 P2 Button 1
+290 4.840 mode=01 match=04 mask=01 players=1 command=0322 peer=0000 script=0001a3ee flow=00010034 menu=00018a40 flags=08 offer=00 header=13/10 choice=0 done=0 selector=1 active=false/false
+330 5.507 input :SERVICE 2 Players Start
+332 5.540 mode=01 match=04 mask=03 players=2 command=0322 peer=0000 script=0001a3ee flow=00010034 menu=00018a40 flags=08 offer=00 header=13/10 choice=0 done=0 selector=1 active=false/false
+360 6.008 input :P1 P1 Button 1
+360 6.008 input :P2 P2 Button 1
+385 6.425 mode=01 match=04 mask=03 players=2 command=0322 peer=0000 script=0001a3ee flow=00010034 menu=00018a40 flags=08 offer=00 header=13/11 choice=0 done=0 selector=1 active=false/false
+396 6.609 mode=01 match=04 mask=03 players=2 command=3322 peer=0000 script=0001a3ee flow=00010034 menu=00018a40 flags=08 offer=00 header=13/13 choice=0 done=0 selector=1 active=false/false
+450 7.510 input :P1 P1 Button 1
+450 7.510 input :P2 P2 Button 1
+540 9.012 input :P1 P1 Button 1
+540 9.012 input :P2 P2 Button 1
+630 10.514 input :P1 P1 Button 1
+630 10.514 input :P2 P2 Button 1
+720 12.015 input :P1 P1 Button 1
+720 12.015 input :P2 P2 Button 1
+810 13.517 input :P1 P1 Button 1
+810 13.517 input :P2 P2 Button 1
+877 14.636 mode=01 match=04 mask=03 players=2 command=7322 peer=0000 script=0001a3ee flow=00010034 menu=00018b84 flags=08 offer=00 header=13/13 choice=0 done=0 selector=1 active=false/false
+877 14.640 recruit-peer-read pc=018bda data=0322 mask=ff00 localmask=03
+878 14.652 mode=01 match=04 mask=03 players=2 command=7322 peer=0000 script=0001a3ee flow=00010034 menu=00018db6 flags=08 offer=00 header=10/13 choice=0 done=0 selector=1 active=false/false
+882 14.719 mode=01 match=04 mask=03 players=2 command=7322 peer=0000 script=0001a3ee flow=00010034 menu=00018db6 flags=08 offer=00 header=10/10 choice=0 done=0 selector=1 active=false/false
+897 14.969 mode=01 match=04 mask=03 players=2 command=7322 peer=0000 script=0001a3ee flow=00010034 menu=00018dd8 flags=08 offer=00 header=10/10 choice=0 done=0 selector=1 active=false/false
+898 14.986 mode=01 match=04 mask=03 players=2 command=7322 peer=0000 script=0001a3ee flow=00010034 menu=00018e08 flags=08 offer=00 header=10/10 choice=0 done=0 selector=1 active=false/false
+900 15.019 input :P1 P1 Button 1
+900 15.019 input :P2 P2 Button 1
+902 15.053 mode=01 match=04 mask=03 players=2 command=7322 peer=0000 script=0001a3ee flow=00010034 menu=00018e0e flags=08 offer=00 header=10/10 choice=0 done=0 selector=1 active=false/false
+903 15.069 mode=01 match=04 mask=03 players=2 command=7322 peer=0000 script=0001a3ee flow=00010034 menu=00018e40 flags=08 offer=00 header=10/10 choice=0 done=0 selector=1 active=false/false
+906 15.124 menu-write pc=00a4f0 data=0000 mask=ffff oldchoice=0 done=0
+907 15.136 mode=01 match=04 mask=03 players=2 command=7322 peer=0000 script=0001a3ee flow=00010034 menu=00000000 flags=08 offer=00 header=10/10 choice=0 done=0 selector=1 active=false/false
+907 15.139 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+907 15.146 menu-write pc=00a36c data=0000 mask=ffff oldchoice=0 done=0
+908 15.153 mode=01 match=02 mask=03 players=2 command=7322 peer=0000 script=0001f7bc flow=00010034 menu=00000000 flags=82 offer=00 header=54/10 choice=0 done=0 selector=1 active=false/false
+909 15.170 mode=01 match=02 mask=03 players=2 command=7322 peer=0000 script=0001f7d2 flow=00010034 menu=00000000 flags=82 offer=00 header=54/10 choice=0 done=0 selector=1 active=false/false
+926 15.453 mode=01 match=02 mask=03 players=2 command=7322 peer=0000 script=0001f7de flow=00010034 menu=00000000 flags=82 offer=00 header=54/10 choice=0 done=0 selector=1 active=false/false
+928 15.487 mode=01 match=02 mask=03 players=2 command=7322 peer=0000 script=0001f7f6 flow=00010034 menu=00000000 flags=82 offer=00 header=54/10 choice=0 done=0 selector=1 active=false/false
+990 16.521 input :P1 P1 Button 1
+990 16.521 input :P2 P2 Button 1
+1041 17.372 mode=01 match=02 mask=03 players=2 command=7322 peer=0000 script=0001f7fc flow=00010034 menu=00000000 flags=82 offer=00 header=54/10 choice=0 done=0 selector=1 active=false/false
+1073 17.906 mode=01 match=02 mask=03 players=2 command=7322 peer=0000 script=0001f7fe flow=00010034 menu=00000000 flags=82 offer=00 header=54/10 choice=0 done=0 selector=1 active=false/false
+1073 17.909 menu-write pc=00a36c data=0000 mask=ffff oldchoice=0 done=0
+1074 17.923 mode=01 match=02 mask=03 players=2 command=7322 peer=0000 script=0001a49e flow=00010034 menu=00000000 flags=82 offer=00 header=54/10 choice=0 done=0 selector=1 active=false/false
+1075 17.940 mode=01 match=02 mask=03 players=2 command=7322 peer=0000 script=0001a4b0 flow=00010034 menu=00000000 flags=82 offer=00 header=54/10 choice=0 done=0 selector=1 active=false/false
+1080 18.023 input :P1 P1 Button 1
+1080 18.023 input :P2 P2 Button 1
+1088 18.157 mode=01 match=02 mask=03 players=2 command=7322 peer=0000 script=0001a4b6 flow=00010034 menu=00000000 flags=82 offer=00 header=54/10 choice=0 done=0 selector=1 active=false/false
+1104 18.424 mode=01 match=02 mask=03 players=2 command=7322 peer=0000 script=0001a4d8 flow=00010034 menu=00000000 flags=82 offer=00 header=54/11 choice=0 done=0 selector=1 active=false/false
+1107 18.474 mode=01 match=02 mask=03 players=2 command=7322 peer=0000 script=0001a4da flow=00010034 menu=00000000 flags=82 offer=00 header=54/11 choice=0 done=0 selector=1 active=false/false
+1108 18.490 mode=01 match=02 mask=03 players=2 command=7322 peer=0000 script=0001a510 flow=00010034 menu=00000000 flags=82 offer=00 header=54/11 choice=0 done=0 selector=1 active=false/false
+1108 18.503 menu-write pc=00a48a data=0000 mask=ffff oldchoice=0 done=0
+1109 18.507 mode=01 match=02 mask=03 players=2 command=7322 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/11 choice=0 done=0 selector=1 active=false/false
+1170 19.525 input :P1 P1 Button 1
+1170 19.525 input :P2 P2 Button 1
+1260 21.027 input :P1 P1 Button 1
+1260 21.027 input :P2 P2 Button 1
+1262 21.060 mode=01 match=02 mask=03 players=2 command=7822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/11 choice=0 done=0 selector=1 active=false/false
+1265 21.111 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/11 choice=0 done=0 selector=1 active=false/false
+1271 21.211 A actual local gameplay; releasing B join schedule
+1271 21.211 piece player=0 count=1 mode=1 match=2 mask=03
+1271 21.211 piece player=1 count=1 mode=1 match=2 mask=03
+1271 21.211 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/11 choice=0 done=0 selector=1 active=true/true
+1350 22.529 input :P1 P1 Button 1
+1350 22.529 input :P2 P2 Button 1
+1440 24.031 input :P1 P1 Button 1
+1440 24.031 input :P2 P2 Button 1
+1479 24.682 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/11 choice=0 done=0 selector=1 active=false/false
+1503 25.082 piece player=0 count=2 mode=1 match=2 mask=03
+1503 25.082 piece player=1 count=2 mode=1 match=2 mask=03
+1503 25.082 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/11 choice=0 done=0 selector=1 active=true/true
+1530 25.533 input :P1 P1 Button 1
+1530 25.533 input :P2 P2 Button 1
+1597 26.651 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/10 choice=0 done=0 selector=1 active=true/true
+1620 27.035 input :P1 P1 Button 1
+1620 27.035 input :P2 P2 Button 1
+1710 28.537 input :P1 P1 Button 1
+1710 28.537 input :P2 P2 Button 1
+1711 28.553 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/10 choice=0 done=0 selector=1 active=false/false
+1735 28.954 piece player=0 count=3 mode=1 match=2 mask=03
+1735 28.954 piece player=1 count=3 mode=1 match=2 mask=03
+1735 28.954 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/10 choice=0 done=0 selector=1 active=true/true
+1800 30.039 input :P1 P1 Button 1
+1800 30.039 input :P2 P2 Button 1
+1890 31.541 input :P1 P1 Button 1
+1890 31.541 input :P2 P2 Button 1
+1936 32.308 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=true/true
+1943 32.425 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/11 choice=0 done=0 selector=1 active=false/false
+1967 32.826 piece player=0 count=4 mode=1 match=2 mask=03
+1967 32.826 piece player=1 count=4 mode=1 match=2 mask=03
+1967 32.826 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/11 choice=0 done=0 selector=1 active=true/true
+1980 33.043 input :P1 P1 Button 1
+1980 33.043 input :P2 P2 Button 1
+2070 34.544 input :P1 P1 Button 1
+2070 34.544 input :P2 P2 Button 1
+2160 36.046 input :P1 P1 Button 1
+2160 36.046 input :P2 P2 Button 1
+2191 36.564 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/11 choice=0 done=0 selector=1 active=false/false
+2215 36.964 piece player=0 count=5 mode=1 match=2 mask=03
+2215 36.964 piece player=1 count=5 mode=1 match=2 mask=03
+2215 36.964 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/11 choice=0 done=0 selector=1 active=true/true
+2250 37.548 input :P1 P1 Button 1
+2250 37.548 input :P2 P2 Button 1
+2340 39.050 input :P1 P1 Button 1
+2340 39.050 input :P2 P2 Button 1
+2407 40.168 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/11 choice=0 done=0 selector=1 active=false/false
+2423 40.435 piece player=0 count=6 mode=1 match=2 mask=03
+2423 40.435 piece player=1 count=6 mode=1 match=2 mask=03
+2423 40.435 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/11 choice=0 done=0 selector=1 active=true/true
+2430 40.552 input :P1 P1 Button 1
+2430 40.552 input :P2 P2 Button 1
+2487 41.503 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/10 choice=0 done=0 selector=1 active=true/true
+2520 42.054 input :P1 P1 Button 1
+2520 42.054 input :P2 P2 Button 1
+2599 43.373 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=true/true
+2610 43.556 input :P1 P1 Button 1
+2610 43.556 input :P2 P2 Button 1
+2631 43.907 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=false/false
+2655 44.307 piece player=0 count=7 mode=1 match=2 mask=03
+2655 44.307 piece player=1 count=7 mode=1 match=2 mask=03
+2655 44.307 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=true/true
+2700 45.058 input :P1 P1 Button 1
+2700 45.058 input :P2 P2 Button 1
+2790 46.560 input :P1 P1 Button 1
+2790 46.560 input :P2 P2 Button 1
+2831 47.244 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=false/false
+2847 47.511 piece player=0 count=8 mode=1 match=2 mask=03
+2847 47.511 piece player=1 count=8 mode=1 match=2 mask=03
+2847 47.511 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=true/true
+2880 48.062 input :P1 P1 Button 1
+2880 48.062 input :P2 P2 Button 1
+2970 49.564 input :P1 P1 Button 1
+2970 49.564 input :P2 P2 Button 1
+3023 50.448 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=false/true
+3044 50.799 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=false/false
+3047 50.849 piece player=0 count=9 mode=1 match=2 mask=03
+3047 50.849 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=true/false
+3060 51.066 input :P1 P1 Button 1
+3060 51.066 input :P2 P2 Button 1
+3068 51.199 piece player=1 count=9 mode=1 match=2 mask=03
+3068 51.199 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=true/true
+3150 52.568 input :P1 P1 Button 1
+3150 52.568 input :P2 P2 Button 1
+3223 53.786 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=false/true
+3240 54.070 input :P1 P1 Button 1
+3240 54.070 input :P2 P2 Button 1
+3247 54.186 piece player=0 count=10 mode=1 match=2 mask=03
+3247 54.186 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=true/true
+3268 54.537 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=true/false
+3284 54.804 piece player=1 count=10 mode=1 match=2 mask=03
+3284 54.804 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=true/true
+3330 55.572 input :P1 P1 Button 1
+3330 55.572 input :P2 P2 Button 1
+3420 57.073 input :P1 P1 Button 1
+3420 57.073 input :P2 P2 Button 1
+3439 57.391 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=false/true
+3466 57.841 piece player=0 count=11 mode=1 match=2 mask=03
+3466 57.841 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=true/true
+3476 58.008 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=true/false
+3492 58.275 piece player=1 count=11 mode=1 match=2 mask=03
+3492 58.275 mode=01 match=02 mask=03 players=2 command=f822 peer=0000 script=0001a51a flow=00010034 menu=0000daca flags=82 offer=00 header=54/54 choice=0 done=0 selector=1 active=true/true
+3510 58.575 input :P1 P1 Button 1
+3510 58.575 input :P2 P2 Button 1

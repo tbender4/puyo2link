@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Puyo Puyo Tsu/Reverse Engineering - Puyo Nexus Wiki</title>
+<script>(function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )puyonexus_mw_mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"c2898019900db2ff7d459af9","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Puyo_Puyo_Tsu/Reverse_Engineering","wgTitle":"Puyo Puyo Tsu/Reverse Engineering","wgCurRevisionId":6173,"wgRevisionId":6173,"wgArticleId":1244,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Reverse Engineering"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Puyo_Puyo_Tsu/Reverse_Engineering","wgRelevantArticleId":1244,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCargoDefaultQueryLimit":100,"wgCargoMapClusteringMinimum":80,"wgCargoMonthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready","skins.vectornexus.styles.legacy":"ready","ext.embedVideo.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.checkUser.clientHints","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.notify.desktop","ext.cargo.purge"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="https://puyonexus.com/mediawiki/load.php?lang=en&amp;modules=ext.embedVideo.styles%7Cskins.vector.styles.legacy%7Cskins.vectornexus.styles.legacy&amp;only=styles&amp;skin=vectornexus">
+<script async="" src="https://puyonexus.com/mediawiki/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vectornexus"></script>
+<link rel="stylesheet" href="/assets/css/common.css" media="screen">
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://puyonexus.com/mediawiki/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vectornexus">
+<meta name="generator" content="MediaWiki 1.43.3">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="https://puyonexus.com/mediawiki/rest.php/v1/search" title="Puyo Nexus Wiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://puyonexus.com/mediawiki/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Puyo Nexus Wiki Atom feed" href="https://puyonexus.com/mediawiki/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="skin-vector-legacy skin-vectornexus-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Puyo_Puyo_Tsu_Reverse_Engineering rootpage-Puyo_Puyo_Tsu skin-vectornexus action-view skin--responsive"><header id="pn-header" class="noprint">
+	<nav id="pn-navbar">
+		<div class="container">
+			<h1 id="pn-navbar-brand">
+				<a href="/">Puyo Nexus</a>
+			</h1>
+			<button class="pn-navbar-toggle collapsed"><span class="pn-navbar-toggle-icon" aria-hidden="true"></span></button>
+			<div class="pn-navbar-collapse collapse">
+				<ul class="pn-nav">
+					<li class="active"><a href="/wiki/">Wiki</a></li>
+					<li><a href="/forum/">Forum</a></li>
+					<li><a href="/chainsim/">Chain Simulator</a></li>
+				</ul>
+				
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Search</h3>
+	<form action="https://puyonexus.com/mediawiki/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Search Puyo Nexus Wiki" aria-label="Search Puyo Nexus Wiki" autocapitalize="sentences" title="Search Puyo Nexus Wiki [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+			</div>
+		</div>
+	</nav>
+</header>
+<div id="mw-head" class="noprint">
+	<div class="container">
+		<div id="mw-panel" class="vector-legacy-sidebar">
+	<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu-portal portal vector-menu" aria-labelledby="p-navigation-label"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+		<a href="#" tabindex="-1" style="z-index: auto;"></a>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-Tools" class="mw-list-item"><a href="/wiki/Category:Tools"><span>Tools</span></a></li><li id="n-Links" class="mw-list-item"><a href="/wiki/PuyoNexus:Links"><span>Links</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li><li id="n-Random-image" class="mw-list-item"><a href="/wiki/Special:Random/image"><span>Random image</span></a></li><li id="n-help" class="mw-list-item"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out"><span>Help</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	<nav id="p-Puyo_Puyo" class="mw-portlet mw-portlet-Puyo_Puyo vector-menu-portal portal vector-menu" aria-labelledby="p-Puyo_Puyo-label"  >
+	<h3
+		id="p-Puyo_Puyo-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Puyo Puyo</span>
+		<a href="#" tabindex="-1" style="z-index: auto;"></a>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-Characters" class="mw-list-item"><a href="/wiki/List_of_Characters"><span>Characters</span></a></li><li id="n-Games" class="mw-list-item"><a href="/wiki/List_of_games"><span>Games</span></a></li><li id="n-Puyo-Puyo!!-Quest-Database" class="mw-list-item"><a href="/wiki/PPQ:Portal"><span>Puyo Puyo!! Quest Database</span></a></li><li id="n-Other-media" class="mw-list-item"><a href="/wiki/List_of_other_media"><span>Other media</span></a></li><li id="n-Game-Modes" class="mw-list-item"><a href="/wiki/Category:Game_Modes"><span>Game Modes</span></a></li><li id="n-Game-Rules" class="mw-list-item"><a href="/wiki/Category:Rules"><span>Game Rules</span></a></li><li id="n-Guides" class="mw-list-item"><a href="/wiki/Category:Guides"><span>Guides</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+		<a href="#" tabindex="-1" style="z-index: auto;"></a>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/Puyo_Puyo_Tsu/Reverse_Engineering" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/Puyo_Puyo_Tsu/Reverse_Engineering" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://puyonexus.com/mediawiki/index.php?title=Puyo_Puyo_Tsu/Reverse_Engineering&amp;oldid=6173" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://puyonexus.com/mediawiki/index.php?title=Puyo_Puyo_Tsu/Reverse_Engineering&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cargopagevalueslink" class="mw-list-item"><a href="https://puyonexus.com/mediawiki/index.php?title=Puyo_Puyo_Tsu/Reverse_Engineering&amp;action=pagevalues" rel="cargo-pagevalues"><span>Cargo data</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+		<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+		<a href="#" tabindex="-1" style="z-index: auto;"></a>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="mw-list-item"><a href="https://puyonexus.com/mediawiki/index.php?title=Special:CreateAccount&amp;returnto=Puyo+Puyo+Tsu%2FReverse+Engineering" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://puyonexus.com/mediawiki/index.php?title=Special:UserLogin&amp;returnto=Puyo+Puyo+Tsu%2FReverse+Engineering" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+
+	</div>
+	<div class="container">
+		<div id="left-navigation">
+			<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+		<a href="#" tabindex="-1" style="z-index: auto;"></a>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="/wiki/Puyo_Puyo_Tsu/Reverse_Engineering" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://puyonexus.com/mediawiki/index.php?title=Talk:Puyo_Puyo_Tsu/Reverse_Engineering&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+		<a href="#" tabindex="-1" style="z-index: auto;"></a>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+		<a href="#" tabindex="-1" style="z-index: auto;"></a>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected mw-list-item"><a href="/wiki/Puyo_Puyo_Tsu/Reverse_Engineering"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://puyonexus.com/mediawiki/index.php?title=Puyo_Puyo_Tsu/Reverse_Engineering&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://puyonexus.com/mediawiki/index.php?title=Puyo_Puyo_Tsu/Reverse_Engineering&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			<nav id="p-cactions" class="mw-portlet mw-portlet-cactions vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+		<a href="#" tabindex="-1" style="z-index: auto;"></a>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-cargo-purge" class="mw-list-item"><a href="https://puyonexus.com/mediawiki/index.php?title=Puyo_Puyo_Tsu/Reverse_Engineering&amp;action=purge"><span>Purge cache</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+	</div>
+</div>
+<div id="content" class="mw-body container" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Puyo Puyo Tsu/Reverse Engineering</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Puyo Nexus Wiki</div>
+		<div id="contentSub"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="/wiki/Puyo_Puyo_Tsu" title="Puyo Puyo Tsu">Puyo Puyo Tsu</a></bdi></div></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p>The accurate <a href="/wiki/Puyo_Puyo_Tsu" title="Puyo Puyo Tsu">Puyo Puyo Tsu</a> game mechanics and algorithms are currently being determined through a reverse engineering effort on the Genesis and Arcade version of the game (which are mostly the same with respect to all major aspects of gameplay).
+</p><p>This page summarizes the various aspects of the game that have been or are currently being analyzed, as well as various technical information about the platform and the process of reverse engineering.
+</p><p>Forum post are provided for reference, as they were what started this documentation effort. They may not be accurate and/or up to date.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Game_memory"><span class="tocnumber">2</span> <span class="toctext">Game memory</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Frame_data_tables"><span class="tocnumber">3</span> <span class="toctext">Frame data tables</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Game_mechanics"><span class="tocnumber">4</span> <span class="toctext">Game mechanics</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Game_modification"><span class="tocnumber">5</span> <span class="toctext">Game modification</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Areas_of_interest"><span class="tocnumber">6</span> <span class="toctext">Areas of interest</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#History"><span class="tocnumber">7</span> <span class="toctext">History</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>People willing to pursue a reverse engineering effort on <a href="/wiki/Puyo_Puyo_Tsu" title="Puyo Puyo Tsu">Puyo Puyo Tsu</a> might find interesting pointers throughout the following pages:
+</p>
+<ul><li><a href="/wiki/Puyo_Puyo_Tsu/Hardware_Platforms" title="Puyo Puyo Tsu/Hardware Platforms">Puyo Puyo Tsu/Hardware Platforms</a></li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Debugging_and_Reverse_Engineering_Tools" title="Puyo Puyo Tsu/Debugging and Reverse Engineering Tools">Puyo Puyo Tsu/Debugging and Reverse Engineering Tools</a></li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Reverse_Engineering_Process" title="Puyo Puyo Tsu/Reverse Engineering Process">Puyo Puyo Tsu/Reverse Engineering Process</a></li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Software_Architecture" title="Puyo Puyo Tsu/Software Architecture">Puyo Puyo Tsu/Software Architecture</a></li></ul>
+<p><small>And on the forums:
+</small></p><small></small><ul><small></small><li><small><a rel="nofollow" class="external text" href="http://puyonexus.net/forum/viewtopic.php?p=41606#p41606">The hardware: Genesis/Mega Drive and System C-2/Arcade, tools of the trade</a></small></li></ul>
+<h2><span class="mw-headline" id="Game_memory">Game memory</span></h2>
+<p>These pages explain stuff related to memory management, data structures and locations of interest:
+</p>
+<ul><li><a href="/wiki/Puyo_Puyo_Tsu/Memory_Mappings" title="Puyo Puyo Tsu/Memory Mappings">Puyo Puyo Tsu/Memory Mappings</a></li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Memory_Structures" title="Puyo Puyo Tsu/Memory Structures">Puyo Puyo Tsu/Memory Structures</a> (includes value definitions, such as color codes)</li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Memory_Allocator" title="Puyo Puyo Tsu/Memory Allocator">Puyo Puyo Tsu/Memory Allocator</a></li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Game_Options_Variables" title="Puyo Puyo Tsu/Game Options Variables">Puyo Puyo Tsu/Game Options Variables</a></li></ul>
+<p><small>On the forums:
+</small></p><small></small><ul><small></small><li><small><a rel="nofollow" class="external text" href="http://puyonexus.net/forum/viewtopic.php?p=41607#p41607">Puyo Puyo Tsuu fundamentals: memory mappings</a></small></li></ul>
+<h2><span class="mw-headline" id="Frame_data_tables">Frame data tables</span></h2>
+<p>The frame data tables are available on a dedicated page:
+</p>
+<ul><li><a href="/wiki/Puyo_Puyo_Tsu/Frame_Data_Tables" title="Puyo Puyo Tsu/Frame Data Tables">Puyo Puyo Tsu/Frame Data Tables</a></li></ul>
+<p>Direct access to the various subtables is provided below:
+</p>
+<ul><li><a href="/wiki/Puyo_Puyo_Tsu/Frame_Data_Tables#Gamepad_Input_Repeat" title="Puyo Puyo Tsu/Frame Data Tables">Gamepad Input Repeat</a></li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Frame_Data_Tables#Rotation" title="Puyo Puyo Tsu/Frame Data Tables">Rotation</a></li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Frame_Data_Tables#Drop_speed" title="Puyo Puyo Tsu/Frame Data Tables">Drop speed</a></li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Frame_Data_Tables#Grace_period" title="Puyo Puyo Tsu/Frame Data Tables">Control lockout grace period</a></li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Frame_Data_Tables#Bouncing_animation" title="Puyo Puyo Tsu/Frame Data Tables">Bouncing animation</a></li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Frame_Data_Tables#Pair_split_speed" title="Puyo Puyo Tsu/Frame Data Tables">Pair split speed</a></li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Frame_Data_Tables#Free_fall_speed" title="Puyo Puyo Tsu/Frame Data Tables">Free fall speed</a> (gravity)</li></ul>
+<h2><span class="mw-headline" id="Game_mechanics">Game mechanics</span></h2>
+<p>So far, these game mechanics have been covered.
+</p><p>On randomization:
+</p>
+<ul><li><a href="/wiki/Puyo_Puyo_Tsu/Random_Number_Generator" title="Puyo Puyo Tsu/Random Number Generator">Puyo Puyo Tsu/Random Number Generator</a></li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Upcoming_Pair_Randomizer" title="Puyo Puyo Tsu/Upcoming Pair Randomizer">Puyo Puyo Tsu/Upcoming Pair Randomizer</a></li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Falling_Pair_Spawning_Process" title="Puyo Puyo Tsu/Falling Pair Spawning Process">Puyo Puyo Tsu/Falling Pair Spawning Process</a></li></ul>
+<p>On input handling:
+</p>
+<ul><li><a href="/wiki/Puyo_Puyo_Tsu/Gamepad_Input" title="Puyo Puyo Tsu/Gamepad Input">Puyo Puyo Tsu/Gamepad Input</a></li></ul>
+<p>On game physics while controlling the falling puyos:
+</p>
+<ul><li><a href="/wiki/Puyo_Puyo_Tsu/Falling_Pair_Control" title="Puyo Puyo Tsu/Falling Pair Control">Puyo Puyo Tsu/Falling Pair Control</a></li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Pair_Lateral_Movement" title="Puyo Puyo Tsu/Pair Lateral Movement">Puyo Puyo Tsu/Pair Lateral Movement</a></li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Rotation,_collision_and_push_back" title="Puyo Puyo Tsu/Rotation, collision and push back">Puyo Puyo Tsu/Rotation, collision and push back</a></li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Soft_Drop" title="Puyo Puyo Tsu/Soft Drop">Puyo Puyo Tsu/Soft Drop</a> (with regular drop, bouncing animation and control lockout grace period)</li>
+<li><a href="/wiki/Puyo_Puyo_Tsu/Free_fall" title="Puyo Puyo Tsu/Free fall">Puyo Puyo Tsu/Free fall</a></li></ul>
+<p><small>And the historical posts on the forums are:
+</small></p><small><ul><li><a rel="nofollow" class="external text" href="http://puyonexus.net/forum/viewtopic.php?p=41608#p41608">Random numbers: how it's done</a></li>
+<li><a rel="nofollow" class="external text" href="http://puyonexus.net/forum/viewtopic.php?p=41609#p41609">Upcoming pairs: how they are picked</a></li>
+<li><a rel="nofollow" class="external text" href="http://puyonexus.net/forum/viewtopic.php?p=41669#p41669">How baby puyos are made: from random generation to the board</a></li>
+<li><a rel="nofollow" class="external text" href="http://puyonexus.net/forum/viewtopic.php?p=41670#p41670">Memory allocation and memory structures</a></li></ul></small><small></small><p><small></small>
+</p>
+<h2><span class="mw-headline" id="Game_modification">Game modification</span></h2>
+<p>Patches and Game Genie codes that modify the gameplay in interesting ways are discussed below:
+</p>
+<ul><li><a href="/wiki/Puyo_Puyo_Tsu/Game_Genie_Codes" title="Puyo Puyo Tsu/Game Genie Codes">Puyo Puyo Tsu/Game Genie Codes</a></li></ul>
+<p><small>On the forums:
+</small></p><small><ul><li><a rel="nofollow" class="external text" href="http://puyonexus.net/forum/viewtopic.php?p=41688#p41688">Bonus round: game genie codes and elite 1-chain</a></li>
+<li><a rel="nofollow" class="external text" href="http://puyonexus.net/forum/viewtopic.php?p=41959#p41959">Codes to set falling speed and color set</a></li></ul></small><small></small><p><small></small>
+</p>
+<h2><span class="mw-headline" id="Areas_of_interest">Areas of interest</span></h2>
+<p>Those are upcoming topics of a particular interest about the game mechanics:
+</p>
+<ul><li>Random number generation (RNG) throughout the game</li>
+<li>RNG biases and issues</li>
+<li>Score calculation</li>
+<li>Identification of routines implementing game mechanics</li>
+<li>Distribution algorithm of ojama puyos accross a row</li>
+<li>Frame data and timings for various game sequences
+<ul><li>chain resolving time with respect to column height and splitting</li>
+<li><strike>pair split / falloff speed</strike></li>
+<li><strike>input lock period after pair placement (bouncing animation)</strike></li>
+<li>upcoming pair display lag</li>
+<li>upcoming pair control lag</li>
+<li><strike>rotation timings</strike></li>
+<li>grace period before garbage (ojama) drop</li>
+<li><strike>soft drop speed modifier (down arrow)</strike></li>
+<li>margin time: impact on garbage sent</li>
+<li>margin time: when does it occur / takes effect</li>
+<li>drop speed increase after x seconds</li>
+<li><strike><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=dIKpoQN-7_w">motion cancel</a></strike></li></ul></li></ul>
+<h2><span class="mw-headline" id="History">History</span></h2>
+<p>This project started out of curiosity about the randomization algorithm used in <a href="/wiki/Puyo_Puyo_Tsu" title="Puyo Puyo Tsu">Puyo Puyo Tsu</a>, and was published <a rel="nofollow" class="external text" href="http://puyonexus.net/forum/viewtopic.php?f=40&amp;t=2304">on the forums</a> on August 27, 2013. The efforts evolved into analyzing various game mechanics in order to have an accurate understanding of the game's internals.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260911115734
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.006 seconds
+Real time usage: 0.006 seconds
+Preprocessor visited node count: 49/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key puyonexus-mw_:pcache:idhash:1244-0!canonical and timestamp 20260911115734 and revision id 6173. Rendering was triggered because: page-view
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://puyonexus.com/mediawiki/index.php?title=Puyo_Puyo_Tsu/Reverse_Engineering&amp;oldid=6173">https://puyonexus.com/mediawiki/index.php?title=Puyo_Puyo_Tsu/Reverse_Engineering&amp;oldid=6173</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Reverse_Engineering" title="Category:Reverse Engineering">Reverse Engineering</a></li></ul></div></div>
+	</div>
+</div>
+
+<footer id="footer" class="mw-footer" >
+    <div class="container">
+		<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 20 January 2014, at 03:05.</li>
+</ul>
+
+		<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="/wiki/PuyoNexus:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/PuyoNexus:About">About Puyo Nexus Wiki</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/PuyoNexus:General_disclaimer">Disclaimers</a></li>
+</ul>
+
+		<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="https://puyonexus.com/mediawiki/resources/assets/poweredby_mediawiki.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></li>
+</ul>
+
+	</div>
+</footer>
+
+<script src="/assets/js/common.min.js"></script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":41,"wgPageParseReport":{"limitreport":{"cputime":"0.006","walltime":"0.006","ppvisitednodes":{"value":49,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260911115734","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+[   0.000] === session start, version=0.6.1 side=A debug=false ===
+[   0.000] taps installed; out=C:\Users\tbend\mame\PuyoPuyo2\run_cleanup_20260911_0_6_1\A_to_B.bin in=C:\Users\tbend\mame\PuyoPuyo2\run_cleanup_20260911_0_6_1\B_to_A.bin
+[   0.162] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[   0.162] [reset] discarded tx=0 rx=0
+[   0.162] [epoch-reset] local=1 peer=0 queued_rx=0
+[   0.584] [peer-reset] old=0 new=1 local=1 queued_rx=0
+[   0.852] [epoch-ready] local=1 peer=1
+[   0.852] CMD $FE -> cabinet role=1 (ROM linkflag=81)
+[   5.006] [transport] captured=30 flushed=30 received=36 accepted=12 ready=true txcredit=0 rxcredit=0
+[  10.013] [transport] captured=57 flushed=57 received=66 accepted=21 ready=true txcredit=0 rxcredit=0
+[  15.003] === session stop ===

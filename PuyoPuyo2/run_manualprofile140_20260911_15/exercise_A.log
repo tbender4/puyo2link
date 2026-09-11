@@ -1,0 +1,185 @@
+:COINAGE Coin A
+:COINAGE Coin B
+:DSW Demo Sounds
+:DSW Difficulty
+:DSW Rannyu Off Button
+:DSW Turn Direction
+:DSW Battle Start credit
+:DSW VS Mode Match/1 Play
+:P1 P1 Up
+:P1 P1 Button 1
+:P1 P1 Right
+:P1 P1 Left
+:P1 P1 Button 2
+:P1 P1 Down
+:P2 P2 Button 1
+:P2 P2 Down
+:P2 P2 Button 2
+:P2 P2 Right
+:P2 P2 Left
+:P2 P2 Up
+:SERVICE Coin 2
+:SERVICE Service 1
+:SERVICE 1 Player Start
+:SERVICE Service Mode
+:SERVICE 2 Players Start
+:SERVICE Coin 1
+60 :SERVICE Coin 1
+75 :SERVICE Coin 1
+90 :SERVICE Coin 1
+105 :SERVICE Coin 1
+150 :SERVICE 1 Player Start
+210 :SERVICE 1 Player Start
+270 :SERVICE 2 Players Start
+270 :P1 P1 Button 1
+270 :P2 P2 Button 1
+330 :SERVICE 2 Players Start
+360 :P1 P1 Button 1
+360 :P2 P2 Button 1
+450 :P1 P1 Button 1
+450 :P2 P2 Button 1
+540 :P1 P1 Button 1
+540 :P2 P2 Button 1
+state frame=600 mode=01 match=04 command=3323 protection=00
+630 :P1 P1 Button 1
+630 :P2 P2 Button 1
+720 :P1 P1 Button 1
+720 :P2 P2 Button 1
+difficulty frame=756 current=0 target=2
+756 :P1 P1 Left
+difficulty frame=792 current=2 target=2
+792 :P1 P1 Button 1
+900 :P1 P1 Button 1
+900 :P2 P2 Button 1
+960 :SERVICE 2 Players Start
+990 :P1 P1 Button 1
+990 :P2 P2 Button 1
+1080 :P1 P1 Button 1
+1080 :P2 P2 Button 1
+1170 :P1 P1 Button 1
+1170 :P2 P2 Button 1
+state frame=1200 mode=01 match=04 command=0b22 protection=00
+placement frame=1200 player=1 pair=1 colors=d,d target=1
+placement frame=1200 player=2 pair=1 colors=d,d target=2
+placement frame=1240 player=2 pair=2 colors=d,b target=4
+placement frame=1243 player=1 pair=2 colors=d,b target=3
+placement frame=1300 player=1 pair=3 colors=c,d target=4
+placement frame=1304 player=2 pair=3 colors=c,d target=5
+placement frame=1364 player=1 pair=4 colors=8,c target=5
+placement frame=1370 player=2 pair=4 colors=8,c target=0
+placement frame=1430 player=1 pair=5 colors=b,b target=2
+placement frame=1434 player=2 pair=5 colors=b,b target=3
+placement frame=1483 player=1 pair=6 colors=d,b target=1
+placement frame=1489 player=2 pair=6 colors=d,b target=2
+placement frame=1596 player=1 pair=7 colors=8,8 target=1
+placement frame=1600 player=2 pair=7 colors=8,8 target=1
+placement frame=1653 player=1 pair=8 colors=c,8 target=2
+placement frame=1657 player=2 pair=8 colors=c,8 target=2
+placement frame=1766 player=1 pair=9 colors=c,b target=3
+state frame=1800 mode=01 match=04 command=0b22 protection=00
+placement frame=1823 player=1 pair=10 colors=8,c target=0
+placement frame=1852 player=2 pair=9 colors=c,b target=4
+placement frame=1916 player=2 pair=10 colors=8,c target=3
+placement frame=1967 player=1 pair=11 colors=8,c target=1
+placement frame=1973 player=2 pair=11 colors=8,c target=0
+placement frame=2024 player=1 pair=12 colors=b,b target=2
+placement frame=2033 player=2 pair=12 colors=b,b target=4
+placement frame=2077 player=1 pair=13 colors=d,c target=0
+placement frame=2159 player=2 pair=13 colors=d,c target=1
+placement frame=2195 player=1 pair=14 colors=b,b target=1
+placement frame=2214 player=2 pair=14 colors=b,b target=5
+placement frame=2306 player=1 pair=15 colors=b,8 target=3
+placement frame=2332 player=2 pair=15 colors=b,8 target=4
+placement frame=2361 player=1 pair=16 colors=c,8 target=2
+placement frame=2392 player=2 pair=16 colors=c,8 target=2
+state frame=2400 mode=01 match=04 command=0b22 protection=00
+placement frame=2441 player=2 pair=17 colors=8,b target=5
+placement frame=2497 player=1 pair=17 colors=8,b target=2
+placement frame=2501 player=2 pair=18 colors=b,d target=4
+placement frame=2612 player=2 pair=19 colors=b,c target=3
+placement frame=2634 player=1 pair=18 colors=b,d target=1
+placement frame=2661 player=2 pair=20 colors=b,8 target=5
+placement frame=2691 player=1 pair=19 colors=b,c target=2
+placement frame=2826 player=1 pair=20 colors=b,8 target=3
+placement frame=2883 player=1 pair=21 colors=d,d target=1
+placement frame=2885 player=2 pair=21 colors=d,d target=3
+placement frame=2940 player=2 pair=22 colors=c,8 target=0
+state frame=3000 mode=01 match=04 command=0b22 protection=00
+placement frame=3000 player=2 pair=23 colors=c,b target=2
+placement frame=3049 player=2 pair=24 colors=c,c target=1
+placement frame=3098 player=2 pair=25 colors=8,b target=5
+placement frame=3100 player=1 pair=22 colors=c,8 target=1
+placement frame=3155 player=1 pair=23 colors=c,b target=2
+placement frame=3204 player=1 pair=24 colors=c,c target=0
+placement frame=3242 player=2 pair=26 colors=d,b target=3
+placement frame=3262 player=1 pair=25 colors=8,b target=1
+placement frame=3311 player=1 pair=26 colors=d,b target=3
+placement frame=3360 player=1 pair=27 colors=b,d target=2
+placement frame=3429 player=2 pair=27 colors=b,d target=4
+placement frame=3489 player=1 pair=28 colors=c,b target=1
+placement frame=3571 player=2 pair=28 colors=c,b target=3
+placement frame=3591 player=1 pair=29 colors=c,8 target=2
+state frame=3600 mode=01 match=04 command=0b22 protection=00
+placement frame=3626 player=2 pair=29 colors=c,8 target=4
+placement frame=3686 player=2 pair=30 colors=d,8 target=5
+placement frame=3720 player=1 pair=30 colors=d,8 target=3
+placement frame=3745 player=2 pair=31 colors=c,8 target=2
+placement frame=3769 player=1 pair=31 colors=c,8 target=0
+placement frame=3792 player=2 pair=32 colors=8,d target=3
+placement frame=3827 player=1 pair=32 colors=8,d target=2
+placement frame=3841 player=2 pair=33 colors=c,d target=1
+placement frame=3872 player=1 pair=33 colors=c,d target=5
+placement frame=3981 player=1 pair=34 colors=c,c target=4
+placement frame=4028 player=2 pair=34 colors=c,c target=1
+placement frame=4035 player=1 pair=35 colors=8,b target=3
+placement frame=4077 player=2 pair=35 colors=8,b target=4
+state frame=4200 mode=01 match=04 command=0b22 protection=00
+placement frame=4217 player=2 pair=36 colors=c,b target=5
+placement frame=4248 player=1 pair=36 colors=c,b target=2
+placement frame=4297 player=1 pair=37 colors=c,b target=3
+placement frame=4337 player=2 pair=37 colors=c,b target=1
+placement frame=4346 player=1 pair=38 colors=d,d target=2
+placement frame=4384 player=2 pair=38 colors=d,d target=3
+placement frame=4391 player=1 pair=39 colors=b,8 target=0
+placement frame=4431 player=2 pair=39 colors=b,8 target=4
+placement frame=4445 player=1 pair=40 colors=8,c target=1
+placement frame=4485 player=2 pair=40 colors=8,c target=2
+placement frame=4490 player=1 pair=41 colors=b,d target=3
+placement frame=4530 player=2 pair=41 colors=b,d target=0
+placement frame=4535 player=1 pair=42 colors=c,d target=4
+placement frame=4582 player=2 pair=42 colors=c,d target=5
+placement frame=4583 player=1 pair=43 colors=8,d target=0
+placement frame=4631 player=1 pair=44 colors=b,8 target=2
+placement frame=4635 player=2 pair=43 colors=8,d target=4
+placement frame=4670 player=1 pair=45 colors=c,d target=5
+placement frame=4683 player=2 pair=44 colors=b,8 target=1
+placement frame=4726 player=2 pair=45 colors=c,d target=2
+placement frame=4765 player=2 pair=46 colors=c,d target=3
+state frame=4800 mode=01 match=04 command=0b22 protection=00
+placement frame=4805 player=1 pair=46 colors=c,d target=4
+placement frame=4808 player=2 pair=47 colors=c,d target=0
+placement frame=4902 player=2 pair=48 colors=c,b target=1
+placement frame=4907 player=1 pair=47 colors=c,d target=5
+placement frame=4941 player=2 pair=49 colors=d,d target=2
+placement frame=4956 player=1 pair=48 colors=c,b target=1
+placement frame=4995 player=1 pair=49 colors=d,d target=3
+placement frame=5034 player=1 pair=50 colors=d,8 target=4
+placement frame=5036 player=2 pair=50 colors=d,8 target=3
+placement frame=5075 player=2 pair=51 colors=c,b target=2
+placement frame=5209 player=1 pair=51 colors=c,b target=3
+placement frame=5248 player=1 pair=52 colors=d,d target=4
+placement frame=5284 player=2 pair=52 colors=d,d target=2
+placement frame=5334 player=1 pair=53 colors=8,b target=2
+placement frame=5371 player=1 pair=54 colors=c,d target=0
+state frame=5400 mode=01 match=04 command=0b22 protection=00
+placement frame=5412 player=2 pair=53 colors=8,b target=3
+placement frame=5415 player=1 pair=55 colors=8,8 target=1
+placement frame=5452 player=1 pair=56 colors=b,d target=4
+placement frame=5494 player=1 pair=57 colors=c,c target=5
+placement frame=5543 player=2 pair=54 colors=c,d target=2
+placement frame=5588 player=1 pair=58 colors=8,8 target=2
+placement frame=5676 player=2 pair=55 colors=8,8 target=2
+placement frame=5721 player=2 pair=56 colors=b,d target=3
+placement frame=5768 player=2 pair=57 colors=c,c target=4
+placement frame=5817 player=2 pair=58 colors=8,8 target=1
+placement frame=5920 player=2 pair=59 colors=b,8 target=2

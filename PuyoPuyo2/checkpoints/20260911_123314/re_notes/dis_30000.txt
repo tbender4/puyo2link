@@ -1,0 +1,2370 @@
+30000: 002c 0034 003c       ori.b   #$34, ($3c,A4)
+30006: 003c 007c            ori     #$7c, CCR
+3000a: 0084 008c 0094       ori.l   #$8c0094, D4
+30010: 009c 00a4 002c       ori.l   #$a4002c, (A4)+
+30016: 004c                 dc.w    $004c; ILLEGAL
+30018: 0044 0054            ori.w   #$54, D4
+3001c: 005c 0064            ori.w   #$64, (A4)+
+30020: 006c 0074 00bc       ori.w   #$74, ($bc,A4)
+30026: 00c4                 dc.w    $00c4; ILLEGAL
+30028: 00ac 00b4 c000 0000  ori.l   #$b4c000, ($0,A4)
+30030: 00cc                 dc.w    $00cc; ILLEGAL
+30032: ffff                 dc.w    $ffff; opcode 1111
+30034: c000                 and.b   D0, D0
+30036: 0000 049b            ori.b   #$9b, D0
+3003a: ffff                 dc.w    $ffff; opcode 1111
+3003c: c000                 and.b   D0, D0
+3003e: 0000 2543            ori.b   #$43, D0
+30042: ffff                 dc.w    $ffff; opcode 1111
+30044: c000                 and.b   D0, D0
+30046: 0000 3d2a            ori.b   #$2a, D0
+3004a: ffff                 dc.w    $ffff; opcode 1111
+3004c: c000                 and.b   D0, D0
+3004e: 0000 2860            ori.b   #$60, D0
+30052: ffff                 dc.w    $ffff; opcode 1111
+30054: c000                 and.b   D0, D0
+30056: 0000 5e49            ori.b   #$49, D0
+3005a: ffff                 dc.w    $ffff; opcode 1111
+3005c: c000                 and.b   D0, D0
+3005e: 0000 631d            ori.b   #$1d, D0
+30062: ffff                 dc.w    $ffff; opcode 1111
+30064: c000                 and.b   D0, D0
+30066: 0000 63fe            ori.b   #$fe, D0
+3006a: ffff                 dc.w    $ffff; opcode 1111
+3006c: c000                 and.b   D0, D0
+3006e: 0000 6c0a            ori.b   #$a, D0
+30072: ffff                 dc.w    $ffff; opcode 1111
+30074: c000                 and.b   D0, D0
+30076: 0000 6d29            ori.b   #$29, D0
+3007a: ffff                 dc.w    $ffff; opcode 1111
+3007c: c000                 and.b   D0, D0
+3007e: 0000 785d            ori.b   #$5d, D0
+30082: ffff                 dc.w    $ffff; opcode 1111
+30084: c000                 and.b   D0, D0
+30086: 0000 7bc3            ori.b   #$c3, D0
+3008a: ffff                 dc.w    $ffff; opcode 1111
+3008c: c000                 and.b   D0, D0
+3008e: 0000 aa7c            ori.b   #$7c, D0
+30092: ffff                 dc.w    $ffff; opcode 1111
+30094: c000                 and.b   D0, D0
+30096: 0000 b10c            ori.b   #$c, D0
+3009a: ffff                 dc.w    $ffff; opcode 1111
+3009c: c000                 and.b   D0, D0
+3009e: 0000 c248            ori.b   #$48, D0
+300a2: ffff                 dc.w    $ffff; opcode 1111
+300a4: c000                 and.b   D0, D0
+300a6: 0000 c996            ori.b   #$96, D0
+300aa: ffff                 dc.w    $ffff; opcode 1111
+300ac: c000                 and.b   D0, D0
+300ae: 0000 dbb9            ori.b   #$b9, D0
+300b2: ffff                 dc.w    $ffff; opcode 1111
+300b4: c000                 and.b   D0, D0
+300b6: 0000 e3bb            ori.b   #$bb, D0
+300ba: ffff                 dc.w    $ffff; opcode 1111
+300bc: c000                 and.b   D0, D0
+300be: 0000 eaff            ori.b   #$ff, D0
+300c2: ffff                 dc.w    $ffff; opcode 1111
+300c4: c000                 and.b   D0, D0
+300c6: 0000 ee26            ori.b   #$26, D0
+300ca: ffff                 dc.w    $ffff; opcode 1111
+300cc: 0100                 btst    D0, D0
+300ce: cb00                 abcd    D0, D5
+300d0: 0101                 btst    D0, D1
+300d2: 9003                 sub.b   D3, D0
+300d4: 0117                 btst    D0, (A7)
+300d6: 8403                 or.b    D3, D2
+300d8: 0111                 btst    D0, (A1)
+300da: 806b 0110            or.w    ($110,A3), D0
+300de: 9737 0101            sub.b   D3, INVALID 37
+300e2: 8027                 or.b    -(A7), D0
+300e4: 1917                 move.b  (A7), -(A4)
+300e6: 4400                 neg.b   D0
+300e8: 0174 4800            bchg    D0, (A4,D4.l)
+300ec: 0188 7700            movep.w D0, ($7700,A0)
+300f0: 1787 1100            move.b  D7, INVALID 33
+300f4: 1871                 dc.w    $1871; ILLEGAL
+300f6: 7701                 dc.w    $7701; ILLEGAL
+300f8: 7717                 dc.w    $7717; ILLEGAL
+300fa: 1701                 move.b  D1, -(A3)
+300fc: 7177                 dc.w    $7177; ILLEGAL
+300fe: 8203                 or.b    D3, D1
+30100: 0617 7177            addi.b  #$77, (A7)
+30104: 7117                 dc.w    $7117; ILLEGAL
+30106: 1780 1805            move.b  D0, ($5,A3,D1.l)
+3010a: 7717                 dc.w    $7717; ILLEGAL
+3010c: 8811                 or.b    (A1), D4
+3010e: 7880                 moveq   #-$80, D4
+30110: 1b1f                 move.b  (A7)+, -(A5)
+30112: 8477 1117            or.w    INVALID 37, D2
+30116: 4817                 nbcd    (A7)
+30118: 7118                 dc.w    $7118; ILLEGAL
+3011a: d717                 add.b   D3, (A7)
+3011c: 711d                 dc.w    $711d; ILLEGAL
+3011e: 4717                 dc.w    $4717; ILLEGAL
+30120: 177d                 dc.w    $177d; ILLEGAL
+30122: 8178 1784            or.w    D0, $1784.w
+30126: 7178                 dc.w    $7178; ILLEGAL
+30128: 1748                 dc.w    $1748; ILLEGAL
+3012a: 7188                 dc.w    $7188; ILLEGAL
+3012c: 1141 7188            move.b  D1, ($7188,A0)
+30130: 1780 0317            move.b  D0, INVALID 33
+30134: 1481                 move.b  D1, (A2)
+30136: 1787 1471            move.b  D7, INVALID 33
+3013a: 1781 7110            move.b  D1, INVALID 33
+3013e: 1781 7710            move.b  D1, INVALID 33
+30142: 1771 7100 1777       move.b  INVALID 31, ($1777,A3)
+30148: 7100                 dc.w    $7100; ILLEGAL
+3014a: 0180                 bclr    D0, D0
+3014c: 0302                 btst    D1, D2
+3014e: 0011 868b            ori.b   #$8b, (A1)
+30152: 0f11                 btst    D7, (A1)
+30154: 1001                 move.b  D1, D0
+30156: 1148                 dc.w    $1148; ILLEGAL
+30158: 7112                 dc.w    $7112; ILLEGAL
+3015a: ff87                 dc.w    $ff87; opcode 1111
+3015c: 1225                 move.b  -(A5), D1
+3015e: 5671 2211            addq.w  #3, INVALID 31
+30162: 8000                 or.b    D0, D0
+30164: 1777 7178 4448       move.b  INVALID 37, ($4448,A3)
+3016a: 7777                 dc.w    $7777; ILLEGAL
+3016c: 78dd                 moveq   #-$23, D4
+3016e: 4877 844d            pea     INVALID 37
+30172: dd78 4488            add.w   D6, $4488.w
+30176: 4478 8784            neg.w   $8784.w
+3017a: 8877 8100            or.w    INVALID 37, D4
+3017e: 1374 7771 71d7       move.b  INVALID 34, ($71d7,A1)
+30184: 1d17                 move.b  (A7), -(A6)
+30186: 1481                 move.b  D1, (A2)
+30188: d81d                 add.b   (A5)+, D4
+3018a: 7471                 moveq   #$71, D2
+3018c: 4714                 dc.w    $4714; ILLEGAL
+3018e: 8714                 or.b    D3, (A4)
+30190: 8178 8003            or.w    D0, $8003.w
+30194: 0588 7174            movep.w D2, ($7174,A0)
+30198: 7187                 dc.w    $7187; ILLEGAL
+3019a: 807a 0371            or.w    ($3050d,PC), D0
+3019e: 7177                 dc.w    $7177; ILLEGAL
+301a0: 813f                 dc.w    $813f; ILLEGAL
+301a2: 0811 3f11            btst    #$11, (A1)
+301a6: 8111                 or.b    D0, (A1)
+301a8: 1717                 move.b  (A7), -(A3)
+301aa: 4780                 chk.w   D0, D3
+301ac: 031f                 btst    D1, (A7)+
+301ae: 441d                 neg.b   (A5)+
+301b0: d741                 addx.w  D1, D3
+301b2: 4471 1111            neg.w   INVALID 31
+301b6: 74dd                 moveq   #-$23, D2
+301b8: 9977 174d            sub.w   D4, INVALID 37
+301bc: 9977 7114            sub.w   D4, INVALID 37
+301c0: d977 7711            add.w   D4, INVALID 37
+301c4: 1811                 move.b  (A1), D4
+301c6: 1333 1111            move.b  INVALID 33, -(A1)
+301ca: 35ee                 dc.w    $35ee; ILLEGAL
+301cc: e181                 asl.l   #8, D1
+301ce: ff81                 dc.w    $ff81; opcode 1111
+301d0: 8801                 or.b    D1, D4
+301d2: 6180                 bsr     $30154
+301d4: 8d02                 sbcd    D2, D6
+301d6: 6521                 bcs     $301f9
+301d8: 8095                 or.l    (A5), D0
+301da: 0511                 btst    D2, (A1)
+301dc: 1110                 move.b  (A0), -(A0)
+301de: 1777 8063 0117       move.b  ($63,A7,A0.w), ($117,A3)
+301e4: 806e 0871            or.w    ($871,A6), D0
+301e8: 7888                 moveq   #-$78, D4
+301ea: 4877 1778            pea     INVALID 37
+301ee: 8482                 or.l    D2, D2
+301f0: 7883                 moveq   #-$7d, D4
+301f2: 0401 1780            subi.b  #-$80, D1
+301f6: 0128 d878            btst    D0, (-$2788,A0)
+301fa: 1178 481d 1817       move.b  $481d.w, ($1817,A0)
+30200: 871d                 or.b    D3, (A5)+
+30202: 1481                 move.b  D1, (A2)
+30204: 8114                 or.b    D0, (A4)
+30206: 1441                 dc.w    $1441; ILLEGAL
+30208: 1818                 move.b  (A0)+, D4
+3020a: 1d48                 dc.w    $1d48; ILLEGAL
+3020c: 1417                 move.b  (A7), D2
+3020e: 1d48                 dc.w    $1d48; ILLEGAL
+30210: 8441                 or.w    D1, D2
+30212: 8dd4                 divs.w  (A4), D6
+30214: 11d1 d9d8            move.b  (A1), $d9d8.w
+30218: 131d                 move.b  (A5)+, -(A1)
+3021a: 99d1                 suba.l  (A1), A4
+3021c: 7f99                 dc.w    $7f99; ILLEGAL
+3021e: 9991                 sub.l   D4, (A1)
+30220: 8503                 sbcd    D3, D2
+30222: 05f9 9999 9d99       bset    D2, $99999d99.l
+30228: 8500                 sbcd    D0, D2
+3022a: 07d8                 bset    D3, (A0)+
+3022c: 1199 d999            move.b  (A1)+, INVALID 30
+30230: 9987                 subx.l  D7, D4
+30232: 81e5                 divs.w  -(A5), D0
+30234: 0478 4481 3181       subi.w  #$4481, $3181.w
+3023a: ff8d                 dc.w    $ff8d; opcode 1111
+3023c: 0301                 btst    D1, D1
+3023e: 1180 9401            move.b  D0, INVALID 30
+30242: 7780                 dc.w    $7780; ILLEGAL
+30244: 0401 8780            subi.b  #-$80, D1
+30248: b601                 cmp.b   D1, D3
+3024a: 8880                 or.l    D0, D4
+3024c: 7180                 dc.w    $7180; ILLEGAL
+3024e: f801                 dc.w    $f801; opcode 1111
+30250: 7480                 moveq   #-$80, D2
+30252: 9281                 sub.l   D1, D1
+30254: fe01                 dc.w    $fe01; opcode 1111
+30256: 1181 0636            move.b  D1, INVALID 30
+3025a: 8778 1788            or.w    D3, $1788.w
+3025e: 4817                 nbcd    (A7)
+30260: 8178 8d71            or.w    D0, $8d71.w
+30264: 8717                 or.b    D3, (A7)
+30266: 74d1                 moveq   #-$2f, D2
+30268: 7817                 moveq   #$17, D4
+3026a: 1847                 dc.w    $1847; ILLEGAL
+3026c: 1871                 dc.w    $1871; ILLEGAL
+3026e: 1787 1871            move.b  D7, ($71,A3,D1.l)
+30272: 4111                 dc.w    $4111; ILLEGAL
+30274: 1710                 move.b  (A0), -(A3)
+30276: 1187 1100            move.b  D7, INVALID 30
+3027a: f111                 dc.w    $f111; opcode 1111
+3027c: 7110                 dc.w    $7110; ILLEGAL
+3027e: 1141 7110            move.b  D1, ($7110,A0)
+30282: 7141                 dc.w    $7141; ILLEGAL
+30284: 7171                 dc.w    $7171; ILLEGAL
+30286: 71d1                 dc.w    $71d1; ILLEGAL
+30288: 1181 17d1            move.b  D1, INVALID 30
+3028c: 1781 9d87            move.b  D1, INVALID 33
+30290: 8003                 or.b    D3, D0
+30292: 0817 1181            btst    #$81, (A7)
+30296: d177 1171            add.w   D0, INVALID 37
+3029a: 1781 2706            move.b  D1, INVALID 33
+3029e: 2521                 move.l  -(A1), -(A2)
+302a0: 0012 2664            ori.b   #$64, (A2)
+302a4: 81fa 9a02            divs.w  ($29ca8,PC), D0
+302a8: 818b                 dc.w    $818b; ILLEGAL
+302aa: 0147                 bchg    D0, D7
+302ac: 8025                 or.b    -(A5), D0
+302ae: 0d44                 bchg    D6, D4
+302b0: 7100                 dc.w    $7100; ILLEGAL
+302b2: 0074 8100 0017       ori.w   #$8100, ($17,A4,D0.w)
+302b8: 8000                 or.b    D0, D0
+302ba: 0071 800b 0187       ori.w   #$800b, INVALID 31
+302c0: 8039 8103 0188       or.b    $81030188.l, D0
+302c6: 8017                 or.b    (A7), D0
+302c8: 0178 801b            bchg    D0, $801b.w
+302cc: 0177 8049            bchg    D0, ($49,A7,A0.w)
+302d0: 81b7 b002            or.l    D0, ($2,A7,A3.w)
+302d4: 0101                 btst    D0, D1
+302d6: 80ff                 dc.w    $80ff; ILLEGAL
+302d8: 0112                 btst    D0, (A2)
+302da: 83f6 0201            divs.w  INVALID 36, D1
+302de: d980                 addx.l  D0, D4
+302e0: 0e80                 dc.w    $0e80; ILLEGAL
+302e2: fe06                 dc.w    $fe06; opcode 1111
+302e4: 1252                 dc.w    $1252; ILLEGAL
+302e6: 0000 1565            ori.b   #$65, D0
+302ea: 800a                 dc.w    $800a; ILLEGAL
+302ec: 0912                 btst    D4, (A2)
+302ee: 0001 8d41            ori.b   #$41, D1
+302f2: 0001 99d4            ori.b   #$d4, D1
+302f6: 801a                 or.b    (A2)+, D0
+302f8: 0141                 bchg    D0, D1
+302fa: 808d                 dc.w    $808d; ILLEGAL
+302fc: 8027                 or.b    -(A7), D0
+302fe: 0201 2284            andi.b  #$84, D1
+30302: 9689                 sub.l   A1, D3
+30304: 3f85 4389            move.w  D5, INVALID 37
+30308: 0381                 bclr    D1, D1
+3030a: 5749                 subq.w  #3, A1
+3030c: 0025 21ee            ori.b   #$ee, -(A5)
+30310: fe56                 dc.w    $fe56; opcode 1111
+30312: 521e                 addq.b  #1, (A6)+
+30314: ff12                 dc.w    $ff12; opcode 1111
+30316: 551e                 subq.b  #2, (A6)+
+30318: ff41                 dc.w    $ff41; opcode 1111
+3031a: 121e                 move.b  (A6)+, D1
+3031c: ffd4                 dc.w    $ffd4; opcode 1111
+3031e: 121f                 move.b  (A7)+, D1
+30320: ff18                 dc.w    $ff18; opcode 1111
+30322: 113f                 dc.w    $113f; ILLEGAL
+30324: ff21                 dc.w    $ff21; opcode 1111
+30326: 13ef fe22 113e e321  move.b  (-$1de,A7), $113ee321.l
+3032e: 2211                 move.l  (A1), D1
+30330: 1112                 move.b  (A2), -(A0)
+30332: 2255                 movea.l (A5), A1
+30334: 6522                 bcs     $30358
+30336: 2555 f522            move.l  (A5), (-$ade,A2)
+3033a: 5556                 subq.w  #2, (A6)
+3033c: f625                 dc.w    $f625; opcode 1111
+3033e: 5556                 subq.w  #2, (A6)
+30340: ff12                 dc.w    $ff12; opcode 1111
+30342: 2556 ff11            move.l  (A6), (-$ef,A2)
+30346: 1125                 move.b  -(A5), -(A0)
+30348: 6f14                 ble     $3035e
+3034a: d811                 add.b   (A1), D4
+3034c: 114d                 dc.w    $114d; ILLEGAL
+3034e: 999d                 sub.l   D4, (A5)+
+30350: 4417                 neg.b   (A7)
+30352: 84d4                 divu.w  (A4), D2
+30354: 4880                 ext.w   D0
+30356: 260d                 move.l  A5, D3
+30358: 1125                 move.b  -(A5), -(A0)
+3035a: 6665                 bne     $303c1
+3035c: 2156 ff55            move.l  (A6), (-$ab,A0)
+30360: 1056                 dc.w    $1056; ILLEGAL
+30362: f552                 unknown instruction: f552
+30364: 1080                 move.b  D0, (A0)
+30366: 0e82                 dc.w    $0e82; ILLEGAL
+30368: ed80                 asl.l   #6, D0
+3036a: 1620                 move.b  -(A0), D3
+3036c: 14e1                 move.b  -(A1), (A2)+
+3036e: 2551 4aff            move.l  (A1), ($4aff,A2)
+30372: 3111                 move.w  (A1), -(A0)
+30374: a5ff                 dc.w    $a5ff; opcode 1010
+30376: fee1                 dc.w    $fee1; opcode 1111
+30378: a2ff                 dc.w    $a2ff; opcode 1010
+3037a: fffe                 dc.w    $fffe; opcode 1111
+3037c: 1afe                 dc.w    $1afe; ILLEGAL
+3037e: fff3                 dc.w    $fff3; opcode 1111
+30380: 143e                 dc.w    $143e; ILLEGAL
+30382: ffe1                 dc.w    $ffe1; opcode 1111
+30384: a1ef                 dc.w    $a1ef; opcode 1010
+30386: fe1a                 dc.w    $fe1a; opcode 1111
+30388: 413e                 dc.w    $413e; ILLEGAL
+3038a: e1a4                 asl.l   D0, D4
+3038c: 8039 0311 2552       or.b    $3112552.l, D0
+30392: 8054                 or.w    (A4), D0
+30394: 1052                 dc.w    $1052; ILLEGAL
+30396: 2122                 move.l  -(A2), -(A0)
+30398: 5655                 addq.w  #3, (A5)
+3039a: 2122                 move.l  -(A2), -(A0)
+3039c: 2565 5212            move.l  -(A5), ($5212,A2)
+303a0: 55f6 5555            scs     INVALID 36
+303a4: 5581                 subq.l  #2, D1
+303a6: 1804                 move.b  D4, D4
+303a8: 1018                 move.b  (A0)+, D0
+303aa: 4d99                 chk.w   (A1)+, D6
+303ac: 8003                 or.b    D3, D0
+303ae: 01d9                 bset    D0, (A1)+
+303b0: 8148                 dc.w    $8148; ILLEGAL
+303b2: 0100                 btst    D0, D0
+303b4: 8078 8203            or.w    $8203.w, D0
+303b8: 0301                 btst    D1, D1
+303ba: 2225                 move.l  -(A5), D1
+303bc: 8159                 or.w    D0, (A1)+
+303be: 81e3                 divs.w  -(A3), D0
+303c0: 31a1 2441            move.w  -(A1), INVALID 30
+303c4: 0052 1110            ori.w   #$1110, (A2)
+303c8: 006f 2110 0056       ori.w   #$2110, ($56,A7)
+303ce: 2181 0025            move.l  D1, ($25,A0,D0.w)
+303d2: 5141                 subq.w  #8, D1
+303d4: 00aa 1921 0011 1221  ori.l   #$19210011, ($1221,A2)
+303dc: 00e1                 dc.w    $00e1; ILLEGAL
+303de: 1222                 move.b  -(A2), D1
+303e0: 1012                 move.b  (A2), D0
+303e2: 2149 1052            move.l  A1, ($1052,A0)
+303e6: 2211                 move.l  (A1), D1
+303e8: 0055 2210            ori.w   #$2210, (A5)
+303ec: 0065 5221            ori.w   #$5221, -(A5)
+303f0: 0066 8103            ori.w   #$8103, -(A6)
+303f4: 0462 1100            subi.w  #$1100, -(A2)
+303f8: 5180                 subq.l  #8, D0
+303fa: 9e05                 sub.b   D5, D7
+303fc: 1410                 move.b  (A0), D2
+303fe: 0000 9984            ori.b   #$84, D0
+30402: 0380                 bclr    D1, D0
+30404: 4202                 clr.b   D2
+30406: 00f5                 dc.w    $00f5; ILLEGAL
+30408: 8403                 or.b    D3, D2
+3040a: 0266 2185            andi.w  #$2185, -(A6)
+3040e: 5d06                 subq.b  #6, D6
+30410: 0000 8714            ori.b   #$14, D0
+30414: 8178 8003            or.w    D0, $8003.w
+30418: 0b88 7174            movep.w D5, ($7174,A0)
+3041c: 7187                 dc.w    $7187; ILLEGAL
+3041e: 7178                 dc.w    $7178; ILLEGAL
+30420: 1771 7177 81ae       move.b  INVALID 31, (-$7e52,A3)
+30426: 1644                 dc.w    $1644; ILLEGAL
+30428: dd11                 add.b   D6, (A1)
+3042a: 84dd                 divu.w  (A5)+, D2
+3042c: dd17                 add.b   D6, (A7)
+3042e: 4481                 neg.l   D1
+30430: 1117                 move.b  (A7), -(A0)
+30432: 4711                 dc.w    $4711; ILLEGAL
+30434: 1141 44dd            move.b  D1, ($44dd,A0)
+30438: d911                 add.b   D4, (A1)
+3043a: 74dd                 moveq   #-$23, D2
+3043c: 9983                 subx.l  D3, D4
+3043e: 318b 0517            move.w  A3, INVALID 30
+30442: 8114                 or.b    D0, (A4)
+30444: 1441                 dc.w    $1441; ILLEGAL
+30446: 1818                 move.b  (A0)+, D4
+30448: 1d48                 dc.w    $1d48; ILLEGAL
+3044a: 1417                 move.b  (A7), D2
+3044c: 1d48                 dc.w    $1d48; ILLEGAL
+3044e: 8441                 or.w    D1, D2
+30450: 8dd4                 divs.w  (A4), D6
+30452: 4dd1                 lea     (A1), A6
+30454: d9dd                 adda.l  (A5)+, A4
+30456: dddd                 adda.l  (A5)+, A6
+30458: 9980                 subx.l  D0, D4
+3045a: 0207 999d            andi.b  #$9d, D7
+3045e: 1799 9991            move.b  (A1)+, INVALID 33
+30462: 1180 0301            move.b  D0, INVALID 30
+30466: 9984                 subx.l  D4, D4
+30468: 0091 3f2c 74d1       ori.l   #$3f2c74d1, (A1)
+3046e: 7817                 moveq   #$17, D4
+30470: 1847                 dc.w    $1847; ILLEGAL
+30472: 1871                 dc.w    $1871; ILLEGAL
+30474: 1787 1871            move.b  D7, ($71,A3,D1.l)
+30478: 4111                 dc.w    $4111; ILLEGAL
+3047a: 1710                 move.b  (A0), -(A3)
+3047c: 4187                 chk.w   D7, D0
+3047e: 1100                 move.b  D0, -(A0)
+30480: 4411                 neg.b   (A1)
+30482: 7110                 dc.w    $7110; ILLEGAL
+30484: dd81                 addx.l  D1, D6
+30486: 7110                 dc.w    $7110; ILLEGAL
+30488: 1741 7171            move.b  D1, ($7171,A3)
+3048c: 1181 1181            move.b  D1, INVALID 30
+30490: 99d1                 suba.l  (A1), A4
+30492: 1781 9d87            move.b  D1, INVALID 33
+30496: 1781 913f            move.b  D1, INVALID 33
+3049a: 0001 0084            ori.b   #$84, D1
+3049e: 0011 9994            ori.b   #$94, (A1)
+304a2: 11d9 9941            move.b  (A1)+, $9941.w
+304a6: 7719                 dc.w    $7719; ILLEGAL
+304a8: 9d17                 sub.b   D6, (A7)
+304aa: 8719                 or.b    D3, (A1)+
+304ac: dd18                 add.b   D6, (A0)+
+304ae: 8717                 or.b    D3, (A7)
+304b0: 1180 0004            move.b  D0, ($4,A0,D0.w)
+304b4: 7844                 moveq   #$44, D4
+304b6: 8131 861f            or.b    D0, INVALID 31
+304ba: 0511                 btst    D2, (A1)
+304bc: 1119                 move.b  (A1)+, -(A0)
+304be: 9917                 sub.b   D4, (A7)
+304c0: 841f                 or.b    (A7)+, D2
+304c2: 0381                 bclr    D1, D1
+304c4: 8177 851f            or.w    D0, INVALID 37
+304c8: 0487 1481 7880       subi.l  #$14817880, D7
+304ce: 030a 8871            movep.w ($8871,A2), D1
+304d2: 7471                 moveq   #$71, D2
+304d4: 8771 7817            or.w    D3, ($17,A1,D7.l)
+304d8: 7171                 dc.w    $7171; ILLEGAL
+304da: 8219                 or.b    (A1)+, D1
+304dc: 4144                 dc.w    $4144; ILLEGAL
+304de: dd11                 add.b   D6, (A1)
+304e0: 84dd                 divu.w  (A5)+, D2
+304e2: dd17                 add.b   D6, (A7)
+304e4: 4481                 neg.l   D1
+304e6: 1117                 move.b  (A7), -(A0)
+304e8: 4711                 dc.w    $4711; ILLEGAL
+304ea: 1141 44dd            move.b  D1, ($44dd,A0)
+304ee: d911                 add.b   D4, (A1)
+304f0: 74dd                 moveq   #-$23, D2
+304f2: 9977 174d            sub.w   D4, INVALID 37
+304f6: 9977 7114            sub.w   D4, INVALID 37
+304fa: d977 7711            add.w   D4, INVALID 37
+304fe: 1811                 move.b  (A1), D4
+30500: 1333 1111            move.b  INVALID 33, -(A1)
+30504: 35ee                 dc.w    $35ee; ILLEGAL
+30506: e181                 asl.l   #8, D1
+30508: 1414                 move.b  (A4), D2
+3050a: 4118                 dc.w    $4118; ILLEGAL
+3050c: 181d                 move.b  (A5)+, D4
+3050e: 4814                 nbcd    (A4)
+30510: 171d                 move.b  (A5)+, -(A3)
+30512: 4884                 ext.w   D4
+30514: 418d                 dc.w    $418d; ILLEGAL
+30516: d44d                 add.w   A5, D2
+30518: d1d9                 adda.l  (A1)+, A0
+3051a: dddd                 adda.l  (A5)+, A6
+3051c: dd99                 add.l   D6, (A1)+
+3051e: 8002                 or.b    D2, D0
+30520: 0799                 bclr    D3, (A1)+
+30522: 9d17                 sub.b   D6, (A7)
+30524: 9999                 sub.l   D4, (A1)+
+30526: 9111                 sub.b   D0, (A1)
+30528: 8003                 or.b    D3, D0
+3052a: 0199                 bclr    D0, (A1)+
+3052c: 8900                 sbcd    D0, D4
+3052e: 0781                 bclr    D3, D1
+30530: 1149                 dc.w    $1149; ILLEGAL
+30532: d418                 add.b   (A0)+, D2
+30534: 8187                 dc.w    $8187; ILLEGAL
+30536: 859f                 or.l    D2, (A7)+
+30538: 2a74 d178            movea.l INVALID 34, A5
+3053c: 1718                 move.b  (A0)+, -(A3)
+3053e: 4718                 dc.w    $4718; ILLEGAL
+30540: 7117                 dc.w    $7117; ILLEGAL
+30542: 8718                 or.b    D3, (A0)+
+30544: 7141                 dc.w    $7141; ILLEGAL
+30546: 1117                 move.b  (A7), -(A0)
+30548: 1041                 dc.w    $1041; ILLEGAL
+3054a: 8711                 or.b    D3, (A1)
+3054c: 0044 1171            ori.w   #$1171, D4
+30550: 10dd                 move.b  (A5)+, (A0)+
+30552: 8171 1017            or.w    D0, ($17,A1,D1.w)
+30556: 4171                 dc.w    $4171; ILLEGAL
+30558: 7111                 dc.w    $7111; ILLEGAL
+3055a: 8111                 or.b    D0, (A1)
+3055c: 8199                 or.l    D0, (A1)+
+3055e: d117                 add.b   D0, (A7)
+30560: 819d                 or.l    D0, (A5)+
+30562: 8780                 dc.w    $8780; ILLEGAL
+30564: 0308 1711            movep.w ($1711,A0), D1
+30568: 81d1                 divs.w  (A1), D0
+3056a: 7711                 dc.w    $7711; ILLEGAL
+3056c: 7117                 dc.w    $7117; ILLEGAL
+3056e: 8027                 or.b    -(A7), D0
+30570: 0811 2521            btst    #$21, (A1)
+30574: 0012 2664            ori.b   #$64, (A2)
+30578: 1085                 move.b  D5, (A0)
+3057a: ff8f                 dc.w    $ff8f; opcode 1111
+3057c: 070d 0330            movep.w ($330,A5), D3
+30580: efe3                 dc.w    $efe3; ILLEGAL
+30582: fff3                 dc.w    $fff3; opcode 1111
+30584: 03ff                 dc.w    $03ff; ILLEGAL
+30586: 03fe                 dc.w    $03fe; ILLEGAL
+30588: 0000 0e80            ori.b   #$80, D0
+3058c: 0306                 btst    D1, D6
+3058e: eff3                 dc.w    $eff3; ILLEGAL
+30590: 0003 efe0            ori.b   #$e0, D3
+30594: 972f 8f49            sub.b   D3, (-$70b7,A7)
+30598: 083e                 dc.w    $083e; ILLEGAL
+3059a: e303                 asl.b   #1, D3
+3059c: 3000                 move.w  D0, D0
+3059e: 03ee f380            bset    D1, (-$c80,A6)
+305a2: 4b01                 dc.w    $4b01; ILLEGAL
+305a4: ef80                 asl.l   #7, D0
+305a6: 6780                 beq     $30528
+305a8: 0301                 btst    D1, D1
+305aa: 03aa 3f03            bclr    D1, ($3f03,A2)
+305ae: 0003 e382            ori.b   #$82, D3
+305b2: 8781                 dc.w    $8781; ILLEGAL
+305b4: 8c80                 or.l    D0, D6
+305b6: a701                 dc.w    $a701; opcode 1010
+305b8: 0f80                 bclr    D7, D0
+305ba: ab80                 dc.w    $ab80; opcode 1010
+305bc: 8b01                 sbcd    D1, D5
+305be: 00ab 4303 0000 0188  ori.l   #$43030000, ($188,A3)
+305c6: 0301                 btst    D1, D1
+305c8: 1784 0301            move.b  D4, INVALID 33
+305cc: 1184 0389            move.b  D4, INVALID 30
+305d0: 1381 1b01            move.b  D1, INVALID 31
+305d4: 1880                 move.b  D0, (A4)
+305d6: 2e01                 move.l  D1, D7
+305d8: 7480                 moveq   #-$80, D2
+305da: 3201                 move.w  D1, D1
+305dc: 7d88                 dc.w    $7d88; ILLEGAL
+305de: 0381                 bclr    D1, D1
+305e0: 0f01                 btst    D7, D1
+305e2: 7880                 moveq   #-$80, D4
+305e4: 4601                 not.b   D1
+305e6: 7180                 dc.w    $7180; ILLEGAL
+305e8: fb01                 dc.w    $fb01; opcode 1111
+305ea: 1084                 move.b  D4, (A0)
+305ec: 038d 6221            movep.w D1, ($6221,A5)
+305f0: 1100                 move.b  D0, -(A0)
+305f2: 0117                 btst    D0, (A7)
+305f4: 4800                 nbcd    D0
+305f6: 1744 8701            move.b  D4, (-$78ff,A3)
+305fa: 7448                 moveq   #$48, D2
+305fc: 7101                 dc.w    $7101; ILLEGAL
+305fe: 8877 1117            or.w    INVALID 37, D4
+30602: 8711                 or.b    D3, (A1)
+30604: 7818                 moveq   #$18, D4
+30606: 7177                 dc.w    $7177; ILLEGAL
+30608: 7777                 dc.w    $7777; ILLEGAL
+3060a: 1717                 move.b  (A7), -(A3)
+3060c: 7771                 dc.w    $7771; ILLEGAL
+3060e: 7717                 dc.w    $7717; ILLEGAL
+30610: 7883                 moveq   #-$7d, D4
+30612: 0380                 bclr    D1, D0
+30614: 0902                 btst    D4, D2
+30616: 1787 8013            move.b  D7, ($13,A3,A0.w)
+3061a: 0288                 dc.w    $0288; ILLEGAL
+3061c: 7180                 dc.w    $7180; ILLEGAL
+3061e: 100a                 dc.w    $100a; ILLEGAL
+30620: 1474                 dc.w    $1474; ILLEGAL
+30622: 7711                 dc.w    $7711; ILLEGAL
+30624: 7484                 moveq   #-$7c, D2
+30626: 1771 8748 8003       move.b  INVALID 31, (-$7ffd,A3)
+3062c: 0ad7                 dc.w    $0ad7; ILLEGAL
+3062e: 1717                 move.b  (A7), -(A3)
+30630: 71d7                 dc.w    $71d7; ILLEGAL
+30632: 1817                 move.b  (A7), D4
+30634: 7141                 dc.w    $7141; ILLEGAL
+30636: 7880                 moveq   #-$80, D4
+30638: 0306                 btst    D1, D6
+3063a: 8811                 or.b    (A1), D4
+3063c: 1181 4817            move.b  D1, ($17,A0,D4.l)
+30640: 8003                 or.b    D3, D0
+30642: 0414 1771            subi.b  #$71, (A4)
+30646: 4780                 chk.w   D0, D3
+30648: 0308 8171            movep.w ($8171,A0), D1
+3064c: 4111                 dc.w    $4111; ILLEGAL
+3064e: 8177 1101            or.w    D0, INVALID 37
+30652: 804c                 dc.w    $804c; ILLEGAL
+30654: 0100                 btst    D0, D0
+30656: 8027                 or.b    -(A7), D0
+30658: 8203                 or.b    D3, D1
+3065a: 0101                 btst    D0, D1
+3065c: 81c3                 divs.w  D3, D0
+3065e: 0201 5281            andi.b  #$81, D1
+30662: ff0e                 dc.w    $ff0e; opcode 1111
+30664: 1001                 move.b  D1, D0
+30666: 1110                 move.b  (A0), -(A0)
+30668: 7112                 dc.w    $7112; ILLEGAL
+3066a: ff61                 dc.w    $ff61; opcode 1111
+3066c: 1225                 move.b  -(A5), D1
+3066e: 5665                 addq.w  #3, -(A5)
+30670: 2211                 move.l  (A1), D1
+30672: 8000                 or.b    D0, D0
+30674: 1677                 dc.w    $1677; ILLEGAL
+30676: 7117                 dc.w    $7117; ILLEGAL
+30678: 4448                 dc.w    $4448; ILLEGAL
+3067a: 7771                 dc.w    $7771; ILLEGAL
+3067c: 78dd                 moveq   #-$23, D4
+3067e: 4877 844d            pea     INVALID 37
+30682: dd48                 addx.w  -(A0), -(A6)
+30684: 4488                 dc.w    $4488; ILLEGAL
+30686: 4484                 neg.l   D4
+30688: 8784                 dc.w    $8784; ILLEGAL
+3068a: 8880                 or.l    D0, D4
+3068c: 8c03                 or.b    D3, D6
+3068e: 7777                 dc.w    $7777; ILLEGAL
+30690: 7480                 moveq   #-$80, D2
+30692: 1b08                 dc.w    $1b08; ILLEGAL
+30694: d71d                 add.b   D3, (A5)+
+30696: 17d8                 dc.w    $17d8; ILLEGAL
+30698: 81d8                 divs.w  (A0)+, D0
+3069a: 1d48                 dc.w    $1d48; ILLEGAL
+3069c: 805b                 or.w    (A3)+, D0
+3069e: 0d87                 bclr    D6, D7
+306a0: 1481                 move.b  D1, (A2)
+306a2: 7881                 moveq   #-$7f, D4
+306a4: 1481                 move.b  D1, (A2)
+306a6: 8818                 or.b    (A0)+, D4
+306a8: 7471                 moveq   #$71, D2
+306aa: 8714                 or.b    D3, (A4)
+306ac: 807a 3184            or.w    ($33832,PC), D0
+306b0: 7711                 dc.w    $7711; ILLEGAL
+306b2: 1184 1111            move.b  D4, INVALID 30
+306b6: 3e11                 move.w  (A1), D7
+306b8: 8111                 or.b    D0, (A1)
+306ba: 1773 4711 177f       move.b  INVALID 33, ($177f,A3)
+306c0: 441d                 neg.b   (A5)+
+306c2: d77f                 dc.w    $d77f; ILLEGAL
+306c4: 4471 11f9            neg.w   INVALID 31
+306c8: 74dd                 moveq   #-$23, D2
+306ca: 9999                 sub.l   D4, (A1)+
+306cc: 174d                 dc.w    $174d; ILLEGAL
+306ce: 9999                 sub.l   D4, (A1)+
+306d0: 7114                 dc.w    $7114; ILLEGAL
+306d2: d99d                 add.l   D4, (A5)+
+306d4: 7711                 dc.w    $7711; ILLEGAL
+306d6: 18dd                 move.b  (A5)+, (A4)+
+306d8: 1131 1111            move.b  INVALID 31, -(A0)
+306dc: 13e1 14dd 83ff       move.b  -(A1), $14dd83ff.l
+306e2: 8083                 or.l    D3, D0
+306e4: 8088                 dc.w    $8088; ILLEGAL
+306e6: 0121                 btst    D0, -(A1)
+306e8: 808c                 dc.w    $808c; ILLEGAL
+306ea: 0911                 btst    D4, (A1)
+306ec: 1110                 move.b  (A0), -(A0)
+306ee: 0077 7771 1117       ori.w   #$7771, INVALID 37
+306f4: 806e 0471            or.w    ($471,A6), D0
+306f8: 7888                 moveq   #-$78, D4
+306fa: 8780                 dc.w    $8780; ILLEGAL
+306fc: fa81                 dc.w    $fa81; opcode 1111
+306fe: 7883                 moveq   #-$7d, D4
+30700: 7c81                 moveq   #-$7f, D6
+30702: 812b 1777            or.b    D0, ($1777,A3)
+30706: 7778                 dc.w    $7778; ILLEGAL
+30708: 1178 871d 1817       move.b  $871d.w, ($1817,A0)
+3070e: 481d                 nbcd    (A5)+
+30710: 1481                 move.b  D1, (A2)
+30712: 8d14                 or.b    D6, (A4)
+30714: 1441                 dc.w    $1441; ILLEGAL
+30716: 7418                 moveq   #$18, D2
+30718: 1d48                 dc.w    $1d48; ILLEGAL
+3071a: 1817                 move.b  (A7), D4
+3071c: 1d48                 dc.w    $1d48; ILLEGAL
+3071e: 1741 8dd4            move.b  D1, (-$722c,A3)
+30722: 41d1                 lea     (A1), A0
+30724: d9d4                 adda.l  (A4), A4
+30726: 111d                 move.b  (A5)+, -(A0)
+30728: 99d1                 suba.l  (A1), A4
+3072a: e199                 rol.l   #8, D1
+3072c: 9991                 sub.l   D4, (A1)
+3072e: 1180 0301            move.b  D0, INVALID 30
+30732: 7183                 dc.w    $7183; ILLEGAL
+30734: 0312                 btst    D1, (A2)
+30736: 9d17                 sub.b   D6, (A7)
+30738: 9411                 sub.b   (A1), D2
+3073a: d99d                 add.l   D4, (A5)+
+3073c: 4177                 dc.w    $4177; ILLEGAL
+3073e: 199d 1787            move.b  (A5)+, INVALID 34
+30742: 1941 1887            move.b  D1, ($1887,A4)
+30746: 1712                 move.b  (A2), -(A3)
+30748: 80e6                 divu.w  -(A6), D0
+3074a: 0556                 bchg    D2, (A6)
+3074c: 8111                 or.b    D0, (A1)
+3074e: 1255                 dc.w    $1255; ILLEGAL
+30750: 857f                 dc.w    $857f; ILLEGAL
+30752: 8d07                 sbcd    D7, D6
+30754: 0111                 btst    D0, (A1)
+30756: 8098                 or.l    (A0)+, D0
+30758: 0471 1111 0080       subi.w  #$1111, (-$80,A1,D0.w)
+3075e: 6f01                 ble     $30761
+30760: 1180 f50a            move.b  D0, INVALID 30
+30764: 4777                 dc.w    $4777; ILLEGAL
+30766: 7177                 dc.w    $7177; ILLEGAL
+30768: 4477 7711            neg.w   INVALID 37
+3076c: 7471                 moveq   #$71, D2
+3076e: 8081                 or.l    D1, D0
+30770: 0d78 1788            bchg    D6, $1788.w
+30774: 7117                 dc.w    $7117; ILLEGAL
+30776: 8178 8771            or.w    D0, $8771.w
+3077a: 8717                 or.b    D3, (A7)
+3077c: 87d1                 divs.w  (A1), D3
+3077e: 800c                 dc.w    $800c; ILLEGAL
+30780: 0d47                 bchg    D6, D7
+30782: 1871                 dc.w    $1871; ILLEGAL
+30784: 7887                 moveq   #-$79, D4
+30786: 1871                 dc.w    $1871; ILLEGAL
+30788: 7711                 dc.w    $7711; ILLEGAL
+3078a: 1710                 move.b  (A0), -(A3)
+3078c: 1187 8038            move.b  D7, ($38,A0,A0.w)
+30790: 0511                 btst    D2, (A1)
+30792: 7110                 dc.w    $7110; ILLEGAL
+30794: 0041 8203            ori.w   #$8203, D1
+30798: 0b71 00d1            bchg    D5, (-$2f,A1,D0.w)
+3079c: 1181 00d1            move.b  D1, (-$2f,A0,D0.w)
+307a0: 1781 0087            move.b  D1, (-$79,A3,D0.w)
+307a4: 8003                 or.b    D3, D0
+307a6: 0117                 btst    D0, (A7)
+307a8: 800b                 dc.w    $800b; ILLEGAL
+307aa: 1011                 move.b  (A1), D0
+307ac: 1171 0065 2111       move.b  ($65,A1,D0.w), ($2111,A0)
+307b2: 1162 4418            move.b  -(A2), ($4418,A0)
+307b6: d924                 add.b   D4, -(A4)
+307b8: 114d                 dc.w    $114d; ILLEGAL
+307ba: 8795                 or.l    D3, (A5)
+307bc: 7f89                 dc.w    $7f89; ILLEGAL
+307be: 9701                 subx.b  D1, D3
+307c0: 1081                 move.b  D1, (A0)
+307c2: 8b80                 dc.w    $8b80; ILLEGAL
+307c4: a801                 dc.w    $a801; opcode 1010
+307c6: 8180                 dc.w    $8180; ILLEGAL
+307c8: ac01                 dc.w    $ac01; opcode 1010
+307ca: 8084                 or.l    D4, D0
+307cc: 0b81                 bclr    D5, D1
+307ce: 1385 1785            move.b  D5, INVALID 31
+307d2: 0fa5                 bclr    D7, -(A5)
+307d4: 0281 db01 4186       andi.l  #$db014186, D1
+307da: 3331 1552            move.w  INVALID 31, -(A1)
+307de: 0000 0121            ori.b   #$21, D0
+307e2: 0000 1411            ori.b   #$11, D0
+307e6: 0001 1d13            ori.b   #$13, D1
+307ea: 0012 511e            ori.b   #$1e, (A2)
+307ee: 0115                 btst    D0, (A5)
+307f0: 621f                 bhi     $30811
+307f2: 1841                 dc.w    $1841; ILLEGAL
+307f4: 221e                 move.l  (A6)+, D1
+307f6: 14d4                 move.b  (A4), (A2)+
+307f8: 1211                 move.b  (A1), D1
+307fa: 0144                 bchg    D0, D4
+307fc: 1122                 move.b  -(A2), -(A0)
+307fe: 0011 1255            ori.b   #$55, (A1)
+30802: 0001 2255            ori.b   #$55, D1
+30806: 0012 2555            ori.b   #$55, (A2)
+3080a: 0011 2280            ori.b   #$80, (A1)
+3080e: 2f80 1302            move.l  D0, INVALID 37
+30812: 0001 80e9            ori.b   #$e9, D1
+30816: 0201 8480            andi.b  #$80, D1
+3081a: 3b01                 move.w  D1, -(A5)
+3081c: 1483                 move.b  D3, (A2)
+3081e: 3f01                 move.w  D1, -(A7)
+30820: 0180                 bclr    D0, D0
+30822: 1301                 move.b  D1, -(A1)
+30824: 1281                 move.b  D1, (A1)
+30826: 0301                 btst    D1, D1
+30828: 2583 0381            move.l  D3, INVALID 32
+3082c: 1f14                 move.b  (A4), -(A7)
+3082e: 0000 3ef1            ori.b   #$f1, D0
+30832: 2111                 move.l  (A1), -(A0)
+30834: eff3                 dc.w    $eff3; ILLEGAL
+30836: 2552 fffe            move.l  (A2), (-$2,A2)
+3083a: 3111                 move.w  (A1), -(A0)
+3083c: ffff                 dc.w    $ffff; opcode 1111
+3083e: feee                 dc.w    $feee; opcode 1111
+30840: ffee                 dc.w    $ffee; opcode 1111
+30842: 8005                 or.b    D5, D0
+30844: 433e                 dc.w    $433e; ILLEGAL
+30846: fffe                 dc.w    $fffe; opcode 1111
+30848: e3ee ffe1            lsl.w   (-$1f,A6)
+3084c: 33ef f11a 1111 14a1  move.w  (-$ee6,A7), $111114a1.l
+30854: 5211                 addq.b  #1, (A1)
+30856: 1111                 move.b  (A1), -(A0)
+30858: 2125                 move.l  -(A5), -(A0)
+3085a: f652                 dc.w    $f652; opcode 1111
+3085c: 1256                 dc.w    $1256; ILLEGAL
+3085e: f655                 dc.w    $f655; opcode 1111
+30860: 256f 6555 56ff       move.l  ($6555,A7), ($56ff,A2)
+30866: 6555                 bcs     $308bd
+30868: 1256                 dc.w    $1256; ILLEGAL
+3086a: 6552                 bcs     $308be
+3086c: 8111                 or.b    D0, (A1)
+3086e: 1222                 move.b  -(A2), D1
+30870: d999                 add.l   D4, (A1)+
+30872: 4111                 dc.w    $4111; ILLEGAL
+30874: 14d9                 move.b  (A1)+, (A2)+
+30876: d100                 addx.b  D0, D0
+30878: 2111                 move.l  (A1), -(A0)
+3087a: 1100                 move.b  D0, -(A0)
+3087c: 5666                 addq.w  #3, -(A6)
+3087e: 5100                 subq.b  #8, D0
+30880: 6ff5                 ble     $30877
+30882: 2100                 move.l  D0, -(A0)
+30884: 6f55                 ble     $308db
+30886: 1000                 move.b  D0, D0
+30888: 800e                 dc.w    $800e; ILLEGAL
+3088a: 83cb                 dc.w    $83cb; ILLEGAL
+3088c: 2211                 move.l  (A1), D1
+3088e: 1144 2144            move.b  D4, ($2144,A0)
+30892: 4411                 neg.b   (A1)
+30894: 14f6 5241            move.b  INVALID 36, (A2)+
+30898: 1456                 dc.w    $1456; ILLEGAL
+3089a: 52a1                 addq.l  #1, -(A1)
+3089c: 3425                 move.w  -(A5), D2
+3089e: 22a1                 move.l  -(A1), (A1)
+308a0: 114a                 dc.w    $114a; ILLEGAL
+308a2: a411                 dc.w    $a411; opcode 1010
+308a4: a411                 dc.w    $a411; opcode 1010
+308a6: 113e                 dc.w    $113e; ILLEGAL
+308a8: 41e3                 dc.w    $41e3; ILLEGAL
+308aa: ffee                 dc.w    $ffee; opcode 1111
+308ac: 1ef3 e380            move.b  INVALID 33, (A7)+
+308b0: 5d0a                 dc.w    $5d0a; ILLEGAL
+308b2: 1122                 move.b  -(A2), -(A0)
+308b4: 2221                 move.l  -(A1), D1
+308b6: 2522                 move.l  -(A2), -(A2)
+308b8: 5221                 addq.b  #1, -(A1)
+308ba: 5652                 addq.w  #3, (A2)
+308bc: 8064                 or.w    -(A4), D0
+308be: 0952                 bchg    D4, (A2)
+308c0: 2215                 move.l  (A5), D1
+308c2: 6655                 bne     $30919
+308c4: 1125                 move.b  -(A5), -(A0)
+308c6: 6522                 bcs     $308ea
+308c8: 8010                 or.b    (A0), D0
+308ca: 8079 0614 d418       or.w    $614d418.l, D0
+308d0: 4d94                 chk.w   (A4), D6
+308d2: 8180                 dc.w    $8180; ILLEGAL
+308d4: 8209                 dc.w    $8209; ILLEGAL
+308d6: 1201                 move.b  D1, D1
+308d8: 2256                 movea.l (A6), A1
+308da: 6f01                 ble     $308dd
+308dc: 2225                 move.l  -(A5), D1
+308de: 6f80                 ble     $30860
+308e0: c680                 and.l   D0, D3
+308e2: ef83                 asl.l   #7, D3
+308e4: 6115                 bsr     $308fb
+308e6: 4114                 dc.w    $4114; ILLEGAL
+308e8: 114d                 dc.w    $114d; ILLEGAL
+308ea: 1214                 move.b  (A4), D1
+308ec: d919                 add.b   D4, (A1)+
+308ee: 1518                 move.b  (A0)+, -(A2)
+308f0: d887                 add.l   D7, D4
+308f2: 1521                 move.b  -(A1), -(A2)
+308f4: 8411                 or.b    (A1), D2
+308f6: 4122                 dc.w    $4122; ILLEGAL
+308f8: 1100                 move.b  D0, -(A0)
+308fa: 2480                 move.l  D0, (A2)
+308fc: f981                 dc.w    $f981; opcode 1111
+308fe: dc01                 add.b   D1, D6
+30900: 1083                 move.b  D3, (A0)
+30902: 8282                 or.l    D2, D1
+30904: 0701                 btst    D3, D1
+30906: 2184 0301            move.l  D4, INVALID 30
+3090a: 2280                 move.l  D0, (A1)
+3090c: 1481                 move.b  D1, (A2)
+3090e: 0301                 btst    D1, D1
+30910: 1180 1c81            move.b  D0, INVALID 30
+30914: 1f89                 dc.w    $1f89; ILLEGAL
+30916: 1b01                 move.b  D1, -(A5)
+30918: 5280                 addq.l  #1, D0
+3091a: 3001                 move.w  D1, D0
+3091c: f284                 dc.w    $f284; opcode 1111
+3091e: 0384                 bclr    D1, D4
+30920: be86                 cmp.l   D6, D7
+30922: 2385 4bec            move.l  D5, INVALID 31
+30926: 0601 0184            addi.b  #-$7c, D1
+3092a: 0301                 btst    D1, D1
+3092c: 1787 0302            move.b  D7, INVALID 33
+30930: 0177 8016            bchg    D0, ($16,A7,A0.w)
+30934: 0171 80fb            bchg    D0, (-$5,A1,A0.w)
+30938: 81ff                 dc.w    $81ff; ILLEGAL
+3093a: 8117                 or.b    D0, (A7)
+3093c: 0118                 btst    D0, (A0)+
+3093e: 80ea 0114            divu.w  ($114,A2), D0
+30942: 802a 017d            or.b    ($17d,A2), D0
+30946: 802e 018d            or.b    ($18d,A6), D0
+3094a: 8032 0144            or.b    INVALID 32, D0
+3094e: 802e 01d8            or.b    ($1d8,A6), D0
+30952: 8303                 sbcd    D3, D1
+30954: 0218 4780            andi.b  #$80, (A0)+
+30958: 1e01                 move.b  D1, D7
+3095a: 8780                 dc.w    $8780; ILLEGAL
+3095c: 2280                 move.l  D0, (A1)
+3095e: 3301                 move.w  D1, -(A1)
+30960: 1784 d581            move.b  D4, INVALID 33
+30964: 528e                 addq.l  #1, A6
+30966: 6620                 bne     $30988
+30968: 1100                 move.b  D0, -(A0)
+3096a: 0117                 btst    D0, (A7)
+3096c: 4800                 nbcd    D0
+3096e: 1744 8701            move.b  D4, (-$78ff,A3)
+30972: 7448                 moveq   #$48, D2
+30974: 7117                 dc.w    $7117; ILLEGAL
+30976: 8877 1118            or.w    INVALID 37, D4
+3097a: 8711                 or.b    D3, (A1)
+3097c: 7878                 moveq   #$78, D4
+3097e: 7177                 dc.w    $7177; ILLEGAL
+30980: 7787                 dc.w    $7787; ILLEGAL
+30982: 1717                 move.b  (A7), -(A3)
+30984: 7781                 dc.w    $7781; ILLEGAL
+30986: 7717                 dc.w    $7717; ILLEGAL
+30988: 800a                 dc.w    $800a; ILLEGAL
+3098a: 8103                 sbcd    D3, D0
+3098c: 8005                 or.b    D5, D0
+3098e: 0717                 btst    D3, (A7)
+30990: 8777 7717            or.w    D3, INVALID 37
+30994: 8871 801b            or.w    ($1b,A1,A0.w), D4
+30998: 0a14 8477            eori.b  #$77, (A4)
+3099c: 1184 d417            move.b  D4, INVALID 30
+309a0: 7187                 dc.w    $7187; ILLEGAL
+309a2: d880                 add.l   D0, D4
+309a4: 221a                 move.l  (A2)+, D1
+309a6: 4177                 dc.w    $4177; ILLEGAL
+309a8: 1871                 dc.w    $1871; ILLEGAL
+309aa: 8178 1871            or.w    D0, $1871.w
+309ae: 7184                 dc.w    $7184; ILLEGAL
+309b0: 1771 1748 1111       move.b  INVALID 31, ($1111,A3)
+309b6: 1748                 dc.w    $1748; ILLEGAL
+309b8: 1711                 move.b  (A1), -(A3)
+309ba: 1447                 dc.w    $1447; ILLEGAL
+309bc: 1417                 move.b  (A7), D2
+309be: 1487                 move.b  D7, (A2)
+309c0: 8003                 or.b    D3, D0
+309c2: 0971 7141            bchg    D4, INVALID 31
+309c6: 1871                 dc.w    $1871; ILLEGAL
+309c8: 7711                 dc.w    $7711; ILLEGAL
+309ca: 1717                 move.b  (A7), -(A3)
+309cc: 813f                 dc.w    $813f; ILLEGAL
+309ce: 0871 7701 1711       bchg    #$1, INVALID 31
+309d4: 7700                 dc.w    $7700; ILLEGAL
+309d6: 1081                 move.b  D1, (A0)
+309d8: bf02                 eor.b   D7, D2
+309da: 0152                 bchg    D0, (A2)
+309dc: 81ff                 dc.w    $81ff; ILLEGAL
+309de: 0e10                 dc.w    $0e10; ILLEGAL
+309e0: 0111                 btst    D0, (A1)
+309e2: 1071                 dc.w    $1071; ILLEGAL
+309e4: 12ff                 dc.w    $12ff; ILLEGAL
+309e6: 6112                 bsr     $309fa
+309e8: 2556 6522            move.l  (A6), ($6522,A2)
+309ec: 1180 0017            move.b  D0, ($17,A0,D0.w)
+309f0: 7771                 dc.w    $7771; ILLEGAL
+309f2: 1744 4877            move.b  D4, ($4877,A3)
+309f6: 7178                 dc.w    $7178; ILLEGAL
+309f8: dd48                 addx.w  -(A0), -(A6)
+309fa: 7784                 dc.w    $7784; ILLEGAL
+309fc: 4ddd                 dc.w    $4ddd; ILLEGAL
+309fe: 4844                 swap    D4
+30a00: 8844                 or.w    D4, D4
+30a02: 8487                 or.l    D7, D2
+30a04: 8488                 dc.w    $8488; ILLEGAL
+30a06: 7781                 dc.w    $7781; ILLEGAL
+30a08: 0001 7480            ori.b   #$80, D1
+30a0c: 1b1b                 move.b  (A3)+, -(A5)
+30a0e: d71d                 add.b   D3, (A5)+
+30a10: 17d8                 dc.w    $17d8; ILLEGAL
+30a12: 81d8                 divs.w  (A0)+, D0
+30a14: 1d48                 dc.w    $1d48; ILLEGAL
+30a16: 1841                 dc.w    $1841; ILLEGAL
+30a18: 7481                 moveq   #-$7f, D2
+30a1a: 1481                 move.b  D1, (A2)
+30a1c: 4817                 nbcd    (A7)
+30a1e: 7481                 moveq   #-$7f, D2
+30a20: 4818                 nbcd    (A0)+
+30a22: 8417                 or.b    (A7), D2
+30a24: 8174 8817            or.w    D0, ($17,A4,A0.l)
+30a28: 7180                 dc.w    $7180; ILLEGAL
+30a2a: 9222                 sub.b   -(A2), D1
+30a2c: 1184 1111            move.b  D4, INVALID 30
+30a30: 3e11                 move.w  (A1), D7
+30a32: 8111                 or.b    D0, (A1)
+30a34: 1773 4711 177f       move.b  INVALID 33, ($177f,A3)
+30a3a: 441d                 neg.b   (A5)+
+30a3c: d77f                 dc.w    $d77f; ILLEGAL
+30a3e: 4471 11f9            neg.w   INVALID 31
+30a42: 74dd                 moveq   #-$23, D2
+30a44: 9999                 sub.l   D4, (A1)+
+30a46: 174d                 dc.w    $174d; ILLEGAL
+30a48: 9999                 sub.l   D4, (A1)+
+30a4a: 7114                 dc.w    $7114; ILLEGAL
+30a4c: d99d                 add.l   D4, (A5)+
+30a4e: 80dd                 divu.w  (A5)+, D0
+30a50: 09dd                 bset    D4, (A5)+
+30a52: 1131 1111            move.b  INVALID 31, -(A0)
+30a56: 13e1 14dd 83ff       move.b  -(A1), $14dd83ff.l
+30a5c: 8083                 or.l    D3, D0
+30a5e: 8088                 dc.w    $8088; ILLEGAL
+30a60: 0121                 btst    D0, -(A1)
+30a62: 808c                 dc.w    $808c; ILLEGAL
+30a64: 0911                 btst    D4, (A1)
+30a66: 1110                 move.b  (A0), -(A0)
+30a68: 0077 7771 1117       ori.w   #$7771, INVALID 37
+30a6e: 806e 0471            or.w    ($471,A6), D0
+30a72: 7888                 moveq   #-$78, D4
+30a74: 8780                 dc.w    $8780; ILLEGAL
+30a76: fa81                 dc.w    $fa81; opcode 1111
+30a78: 7883                 moveq   #-$7d, D4
+30a7a: 7c81                 moveq   #-$7f, D6
+30a7c: 8106                 sbcd    D6, D0
+30a7e: 1777 7778 1178       move.b  INVALID 37, ($1178,A3)
+30a84: 80d5                 divu.w  (A5), D0
+30a86: 2218                 move.l  (A0)+, D1
+30a88: 481d                 nbcd    (A5)+
+30a8a: 1817                 move.b  (A7), D4
+30a8c: 8d1d                 or.b    D6, (A5)+
+30a8e: 1471                 dc.w    $1471; ILLEGAL
+30a90: 8d14                 or.b    D6, (A4)
+30a92: 1d81 7418            move.b  D1, INVALID 36
+30a96: 8d47                 dc.w    $8d47; ILLEGAL
+30a98: 1811                 move.b  (A1), D4
+30a9a: ddd8                 adda.l  (A0)+, A6
+30a9c: 1718                 move.b  (A0)+, -(A3)
+30a9e: d9d4                 adda.l  (A4), A4
+30aa0: 111d                 move.b  (A5)+, -(A0)
+30aa2: 99d1                 suba.l  (A1), A4
+30aa4: e199                 rol.l   #8, D1
+30aa6: 9991                 sub.l   D4, (A1)
+30aa8: 1180 0301            move.b  D0, INVALID 30
+30aac: 7183                 dc.w    $7183; ILLEGAL
+30aae: 0312                 btst    D1, (A2)
+30ab0: 9d17                 sub.b   D6, (A7)
+30ab2: 9411                 sub.b   (A1), D2
+30ab4: d99d                 add.l   D4, (A5)+
+30ab6: 4177                 dc.w    $4177; ILLEGAL
+30ab8: 199d 1787            move.b  (A5)+, INVALID 34
+30abc: 1941 1887            move.b  D1, ($1887,A4)
+30ac0: 1712                 move.b  (A2), -(A3)
+30ac2: 80e6                 divu.w  -(A6), D0
+30ac4: 0556                 bchg    D2, (A6)
+30ac6: 8111                 or.b    D0, (A1)
+30ac8: 1255                 dc.w    $1255; ILLEGAL
+30aca: 857f                 dc.w    $857f; ILLEGAL
+30acc: 8d07                 sbcd    D7, D6
+30ace: 0111                 btst    D0, (A1)
+30ad0: 8098                 or.l    (A0)+, D0
+30ad2: 0171 818b            bchg    D0, INVALID 31
+30ad6: 0717                 btst    D3, (A7)
+30ad8: 7110                 dc.w    $7110; ILLEGAL
+30ada: 7777                 dc.w    $7777; ILLEGAL
+30adc: 8471 808c            or.w    (-$74,A1,A0.w), D2
+30ae0: 0147                 bchg    D0, D7
+30ae2: 807c 1584            or.w    #$1584, D0
+30ae6: 7178                 dc.w    $7178; ILLEGAL
+30ae8: 7177                 dc.w    $7177; ILLEGAL
+30aea: 7817                 moveq   #$17, D4
+30aec: 8717                 or.b    D3, (A7)
+30aee: 1771 8811 7181       move.b  ($11,A1,A0.l), ($7181,A3)
+30af4: 7871                 moveq   #$71, D4
+30af6: 8187                 dc.w    $8187; ILLEGAL
+30af8: 1881                 move.b  D1, (A4)
+30afa: 8103                 sbcd    D3, D0
+30afc: 1971 7718 7117       move.b  INVALID 31, ($7117,A4)
+30b02: 1117                 move.b  (A7), -(A0)
+30b04: 1087                 move.b  D7, (A0)
+30b06: 1101                 move.b  D1, -(A0)
+30b08: 0011 7100            ori.b   #$0, (A1)
+30b0c: 0041 7110            ori.w   #$7110, D1
+30b10: 0041 1710            ori.w   #$1710, D1
+30b14: 00d1                 dc.w    $00d1; ILLEGAL
+30b16: 8103                 sbcd    D3, D0
+30b18: 0478 1000 8780       subi.w  #$1000, $8780.w
+30b1e: 0303                 btst    D1, D3
+30b20: 1777 1080 df0e       move.b  (-$80,A7,D1.w), (-$20f2,A3)
+30b26: 0000 6521            ori.b   #$21, D0
+30b2a: 1111                 move.b  (A1), -(A0)
+30b2c: 6244                 bhi     $30b72
+30b2e: 18d9                 move.b  (A1)+, (A4)+
+30b30: 2411                 move.l  (A1), D2
+30b32: 4d87                 chk.w   D7, D6
+30b34: 957f                 dc.w    $957f; ILLEGAL
+30b36: 8d97                 or.l    D6, (A7)
+30b38: 0110                 btst    D0, (A0)
+30b3a: 8c03                 or.b    D3, D6
+30b3c: b902                 eor.b   D4, D2
+30b3e: 81db                 divs.w  (A3)+, D0
+30b40: 0141                 bchg    D0, D1
+30b42: 8453                 or.w    (A3), D2
+30b44: 2314                 move.l  (A4), -(A1)
+30b46: 8178 8114            or.w    D0, $8114.w
+30b4a: 8188                 dc.w    $8188; ILLEGAL
+30b4c: 1874                 dc.w    $1874; ILLEGAL
+30b4e: 7187                 dc.w    $7187; ILLEGAL
+30b50: 1478                 dc.w    $1478; ILLEGAL
+30b52: 1771 8477 1111       move.b  INVALID 31, ($1111,A3)
+30b58: 4d11                 dc.w    $4d11; ILLEGAL
+30b5a: 44dd                 move    (A5)+, CCR
+30b5c: dd84                 addx.l  D4, D6
+30b5e: dddd                 adda.l  (A5)+, A6
+30b60: dd44                 addx.w  D4, D6
+30b62: 8111                 or.b    D0, (A1)
+30b64: 1747 1111            move.b  D7, ($1111,A3)
+30b68: 800e                 dc.w    $800e; ILLEGAL
+30b6a: 02d9                 dc.w    $02d9; ILLEGAL
+30b6c: 9995                 sub.l   D4, (A5)
+30b6e: a720                 dc.w    $a720; opcode 1010
+30b70: 1414                 move.b  (A4), D2
+30b72: 4174                 dc.w    $4174; ILLEGAL
+30b74: 181d                 move.b  (A5)+, D4
+30b76: 4818                 nbcd    (A0)+
+30b78: 171d                 move.b  (A5)+, -(A3)
+30b7a: 4817                 nbcd    (A7)
+30b7c: 418d                 dc.w    $418d; ILLEGAL
+30b7e: d441                 add.w   D1, D2
+30b80: d1d9                 adda.l  (A1)+, A0
+30b82: dd41                 addx.w  D1, D6
+30b84: dd99                 add.l   D6, (A1)+
+30b86: dd44                 addx.w  D4, D6
+30b88: 9999                 sub.l   D4, (A1)+
+30b8a: 9ddd                 suba.l  (A5)+, A6
+30b8c: 9999                 sub.l   D4, (A1)+
+30b8e: 9117                 sub.b   D0, (A7)
+30b90: 8003                 or.b    D3, D0
+30b92: 0211 9980            andi.b  #$80, (A1)
+30b96: 0095 e711 d178       ori.l   #$e711d178, (A5)
+30b9c: 1788                 dc.w    $1788; ILLEGAL
+30b9e: 4718                 dc.w    $4718; ILLEGAL
+30ba0: 7178                 dc.w    $7178; ILLEGAL
+30ba2: 8718                 or.b    D3, (A0)+
+30ba4: 7177                 dc.w    $7177; ILLEGAL
+30ba6: 1117                 move.b  (A7), -(A0)
+30ba8: 1011                 move.b  (A1), D0
+30baa: 8780                 dc.w    $8780; ILLEGAL
+30bac: 9c05                 sub.b   D5, D6
+30bae: 1171 1000 8180       move.b  (A1,D1.w), (-$7e80,A0)
+30bb4: 030b 4171            movep.w ($4171,A3), D1
+30bb8: 7100                 dc.w    $7100; ILLEGAL
+30bba: 8111                 or.b    D0, (A1)
+30bbc: 8100                 sbcd    D0, D0
+30bbe: d117                 add.b   D0, (A7)
+30bc0: 819e                 or.l    D0, (A6)+
+30bc2: f180                 dc.w    $f180; opcode 1111
+30bc4: 6301                 bls     $30bc7
+30bc6: 9d81                 subx.l  D1, D6
+30bc8: 0308 d811            movep.w ($d811,A0), D1
+30bcc: 9941                 subx.w  D1, D4
+30bce: 9999                 sub.l   D4, (A1)+
+30bd0: 8712                 or.b    D3, (A2)
+30bd2: 80b6 0556            or.l    INVALID 36, D0
+30bd6: 8111                 or.b    D0, (A1)
+30bd8: 1255                 dc.w    $1255; ILLEGAL
+30bda: 88ff                 dc.w    $88ff; ILLEGAL
+30bdc: 0101                 btst    D0, D1
+30bde: 80ff                 dc.w    $80ff; ILLEGAL
+30be0: 0117                 btst    D0, (A7)
+30be2: 8006                 or.b    D6, D0
+30be4: 0174 800a            bchg    D0, ($a,A4,A0.w)
+30be8: 0188 800a            movep.w D0, ($800a,A0)
+30bec: 0d87                 bclr    D6, D7
+30bee: 0000 1871            ori.b   #$71, D0
+30bf2: 0001 7717            ori.b   #$17, D1
+30bf6: 0001 7177            ori.b   #$77, D1
+30bfa: 8203                 or.b    D3, D1
+30bfc: 0117                 btst    D0, (A7)
+30bfe: 8103                 sbcd    D3, D0
+30c00: 0417 1700            subi.b  #$0, (A7)
+30c04: 1180 1302            move.b  D0, INVALID 30
+30c08: 1178 801b 0184       move.b  $801b.w, ($184,A0)
+30c0e: 8013                 or.b    (A3), D0
+30c10: 1848                 dc.w    $1848; ILLEGAL
+30c12: 1700                 move.b  D0, -(A3)
+30c14: 18d7                 move.b  (A7), (A4)+
+30c16: 1700                 move.b  D0, -(A3)
+30c18: 1d47 1701            move.b  D7, ($1701,A6)
+30c1c: 7d81                 dc.w    $7d81; ILLEGAL
+30c1e: 7801                 moveq   #$1, D4
+30c20: 8471 7801            or.w    ($1,A1,D7.l), D2
+30c24: 4871 8801            pea     ($1,A1,A0.l)
+30c28: 4183                 chk.w   D3, D0
+30c2a: 0310                 btst    D1, (A0)
+30c2c: 1781 1787            move.b  D1, INVALID 33
+30c30: 1771 1781 1110       move.b  INVALID 31, ($1110,A3)
+30c36: 1781 1010            move.b  D1, ($10,A3,D1.w)
+30c3a: 1771 8062 0177       move.b  ($62,A1,A0.w), ($177,A3)
+30c40: 806a 8003            or.w    (-$7ffd,A2), D0
+30c44: 0100                 btst    D0, D0
+30c46: 80c9                 dc.w    $80c9; ILLEGAL
+30c48: 8478 1111            or.w    $1111.w, D2
+30c4c: 1001                 move.b  D1, D0
+30c4e: 1748                 dc.w    $1748; ILLEGAL
+30c50: 7112                 dc.w    $7112; ILLEGAL
+30c52: 4487                 neg.l   D7
+30c54: 1225                 move.b  -(A5), D1
+30c56: 4871 2211            pea     INVALID 31
+30c5a: 7711                 dc.w    $7711; ILLEGAL
+30c5c: 8002                 or.b    D2, D0
+30c5e: 2b78 4448 7777       move.l  $4448.w, ($7777,A5)
+30c64: 78dd                 moveq   #-$23, D4
+30c66: 1777 844d 1778       move.b  INVALID 37, ($1778,A3)
+30c6c: 4488                 dc.w    $4488; ILLEGAL
+30c6e: 1778 8784 7177       move.b  $8784.w, ($7177,A3)
+30c74: 7777                 dc.w    $7777; ILLEGAL
+30c76: 8777 7477            or.w    D3, INVALID 37
+30c7a: 8871 d71d            or.w    INVALID 31, D4
+30c7e: 7714                 dc.w    $7714; ILLEGAL
+30c80: 81d8                 divs.w  (A0)+, D0
+30c82: 1174 7147 7187       move.b  INVALID 34, ($7187,A0)
+30c88: 1481                 move.b  D1, (A2)
+30c8a: 8103                 sbcd    D3, D0
+30c8c: 0817 7174            btst    #$74, (A7)
+30c90: 7117                 dc.w    $7117; ILLEGAL
+30c92: 7178                 dc.w    $7178; ILLEGAL
+30c94: 1780 a280            move.b  D0, INVALID 33
+30c98: da09                 dc.w    $da09; ILLEGAL
+30c9a: 1111                 move.b  (A1), -(A0)
+30c9c: 1711                 move.b  (A1), -(A3)
+30c9e: 8111                 or.b    D0, (A1)
+30ca0: 1417                 move.b  (A7), D2
+30ca2: 4780                 chk.w   D0, D3
+30ca4: 0305                 btst    D1, D5
+30ca6: 441d                 neg.b   (A5)+
+30ca8: 7141                 dc.w    $7141; ILLEGAL
+30caa: 4480                 neg.l   D0
+30cac: 1516                 move.b  (A6), -(A2)
+30cae: 74dd                 moveq   #-$23, D2
+30cb0: 7177                 dc.w    $7177; ILLEGAL
+30cb2: 174d                 dc.w    $174d; ILLEGAL
+30cb4: 7177                 dc.w    $7177; ILLEGAL
+30cb6: 7114                 dc.w    $7114; ILLEGAL
+30cb8: 7171                 dc.w    $7171; ILLEGAL
+30cba: 1331 101e            move.b  ($1e,A1,D1.w), -(A1)
+30cbe: 3111                 move.w  (A1), -(A0)
+30cc0: 1013                 move.b  (A3), D0
+30cc2: 1222                 move.b  -(A2), D1
+30cc4: 81ff                 dc.w    $81ff; ILLEGAL
+30cc6: 0c11 1000            cmpi.b  #$0, (A1)
+30cca: 00ff                 dc.w    $00ff; ILLEGAL
+30ccc: 6110                 bsr     $30cde
+30cce: 0056 6521            ori.w   #$6521, (A6)
+30cd2: 0081 3c02 7117       ori.l   #$3c027117, D1
+30cd8: 8068 1071            or.w    ($1071,A0), D0
+30cdc: 1788                 dc.w    $1788; ILLEGAL
+30cde: 4877 7178            pea     INVALID 37
+30ce2: dd48                 addx.w  -(A0), -(A6)
+30ce4: 7717                 dc.w    $7717; ILLEGAL
+30ce6: 4484                 neg.l   D4
+30ce8: 7777                 dc.w    $7777; ILLEGAL
+30cea: 8880                 or.l    D0, D4
+30cec: 7b81                 dc.w    $7b81; ILLEGAL
+30cee: 0280 1b28 1717       andi.l  #$1b281717, D0
+30cf4: d878 111d            add.w   $111d.w, D4
+30cf8: 481d                 nbcd    (A5)+
+30cfa: 1814                 move.b  (A4), D4
+30cfc: 871d                 or.b    D3, (A5)+
+30cfe: 1478                 dc.w    $1478; ILLEGAL
+30d00: 8114                 or.b    D0, (A4)
+30d02: 1488                 dc.w    $1488; ILLEGAL
+30d04: 1818                 move.b  (A0)+, D4
+30d06: 1d87 1417            move.b  D7, INVALID 36
+30d0a: 1d71 8441 8d11       move.b  INVALID 31, (-$72ef,A6)
+30d10: 11d1 d93f            move.b  (A1), $d93f.w
+30d14: 131d                 move.b  (A5)+, -(A1)
+30d16: 9917                 sub.b   D4, (A7)
+30d18: 7f99                 dc.w    $7f99; ILLEGAL
+30d1a: 8203                 or.b    D3, D1
+30d1c: 01d7                 bset    D0, (A7)
+30d1e: 8007                 or.b    D7, D0
+30d20: 0311                 btst    D1, (A1)
+30d22: f999                 dc.w    $f999; opcode 1111
+30d24: 8400                 or.b    D0, D2
+30d26: 1241                 dc.w    $1241; ILLEGAL
+30d28: 11d9 9414            move.b  (A1)+, $9414.w
+30d2c: d418                 add.b   (A0)+, D2
+30d2e: 414d                 dc.w    $414d; ILLEGAL
+30d30: 9971 1184            sub.w   D4, INVALID 31
+30d34: d911                 add.b   D4, (A1)
+30d36: 2511                 move.l  (A1), -(A2)
+30d38: 8481                 or.l    D1, D2
+30d3a: ff89                 dc.w    $ff89; opcode 1111
+30d3c: 0380                 bclr    D1, D0
+30d3e: 8a11                 or.b    (A1), D5
+30d40: 0071 1100 0077       ori.w   #$1100, ($77,A1,D0.w)
+30d46: 7711                 dc.w    $7711; ILLEGAL
+30d48: 0088                 dc.w    $0088; ILLEGAL
+30d4a: 8771 1178            or.w    D3, INVALID 31
+30d4e: 8877 1784            or.w    INVALID 37, D4
+30d52: 7c81                 moveq   #-$7f, D6
+30d54: fe82                 dc.w    $fe82; opcode 1111
+30d56: 0602 7887            addi.b  #-$79, D2
+30d5a: 80e7                 divu.w  -(A7), D0
+30d5c: 2548 1781            move.l  A0, ($1781,A2)
+30d60: 818d                 dc.w    $818d; ILLEGAL
+30d62: 7187                 dc.w    $7187; ILLEGAL
+30d64: 4174                 dc.w    $4174; ILLEGAL
+30d66: d178 4818            add.w   D0, $4818.w
+30d6a: 4718                 dc.w    $4718; ILLEGAL
+30d6c: 4817                 nbcd    (A7)
+30d6e: 8718                 or.b    D3, (A0)+
+30d70: d441                 add.w   D1, D2
+30d72: 1117                 move.b  (A7), -(A0)
+30d74: d811                 add.b   (A1), D4
+30d76: 8711                 or.b    D3, (A1)
+30d78: d1f1 1171            adda.l  INVALID 31, A0
+30d7c: 9111                 sub.b   D0, (A1)
+30d7e: 4171                 dc.w    $4171; ILLEGAL
+30d80: 9171 8103            sub.w   D0, INVALID 31
+30d84: 12d1                 move.b  (A1), (A1)+
+30d86: 119d 17d1            move.b  (A5)+, INVALID 30
+30d8a: 1799 9d87            move.b  (A1)+, INVALID 33
+30d8e: 1749                 dc.w    $1749; ILLEGAL
+30d90: 9d17                 sub.b   D6, (A7)
+30d92: 1114                 move.b  (A4), -(A0)
+30d94: d177 1180            add.w   D0, INVALID 37
+30d98: 2608                 move.l  A0, D3
+30d9a: 10d1                 move.b  (A1), (A0)+
+30d9c: 2561 0014            move.l  -(A1), ($14,A2)
+30da0: 26f4 816e            move.l  INVALID 34, (A3)+
+30da4: 9602                 sub.b   D2, D3
+30da6: 8086                 or.l    D6, D0
+30da8: 0100                 btst    D0, D0
+30daa: 8086                 or.l    D6, D0
+30dac: 1a00                 move.b  D0, D5
+30dae: 7447                 moveq   #$47, D2
+30db0: 1000                 move.b  D0, D0
+30db2: 7744                 dc.w    $7744; ILLEGAL
+30db4: 7100                 dc.w    $7100; ILLEGAL
+30db6: 1174 8100 7717       move.b  INVALID 34, ($7717,A0)
+30dbc: 8000                 or.b    D0, D0
+30dbe: 8871 7100            or.w    INVALID 31, D4
+30dc2: 7887                 moveq   #-$79, D4
+30dc4: 1000                 move.b  D0, D0
+30dc6: 1781 0305            move.b  D1, INVALID 33
+30dca: 8871 0071            or.w    ($71,A1,D0.w), D4
+30dce: 7880                 moveq   #-$80, D4
+30dd0: 0304                 btst    D1, D4
+30dd2: 7710                 dc.w    $7710; ILLEGAL
+30dd4: 0010 8130            ori.b   #$30, (A0)
+30dd8: 84c3                 divu.w  D3, D2
+30dda: 82c7                 divu.w  D7, D1
+30ddc: 80dc                 divu.w  (A4)+, D0
+30dde: 0181                 bclr    D0, D1
+30de0: 8c03                 or.b    D3, D6
+30de2: 8113                 or.b    D0, (A3)
+30de4: 9874 0101            sub.w   INVALID 34, D4
+30de8: 80fe                 dc.w    $80fe; ILLEGAL
+30dea: 0113                 btst    D0, (A3)
+30dec: 8407                 or.b    D7, D2
+30dee: 810b                 sbcd    -(A3), -(A0)
+30df0: 4f12                 dc.w    $4f12; ILLEGAL
+30df2: 01e1                 bset    D0, -(A1)
+30df4: 2211                 move.l  (A1), D1
+30df6: 01f1 2188            bset    D0, INVALID 31
+30dfa: 1ef1 1844            move.b  ($44,A1,D1.l), (A7)+
+30dfe: efe1                 dc.w    $efe1; ILLEGAL
+30e00: 1444                 dc.w    $1444; ILLEGAL
+30e02: efe3                 dc.w    $efe3; ILLEGAL
+30e04: 184d                 dc.w    $184d; ILLEGAL
+30e06: 1e33 314d            move.b  INVALID 33, D7
+30e0a: 213e                 dc.w    $213e; ILLEGAL
+30e0c: fe11                 dc.w    $fe11; opcode 1111
+30e0e: 2211                 move.l  (A1), D1
+30e10: eefe                 dc.w    $eefe; ILLEGAL
+30e12: 1256                 dc.w    $1256; ILLEGAL
+30e14: 6211                 bhi     $30e27
+30e16: 8112                 or.b    D0, (A2)
+30e18: f521                 unknown instruction: f521
+30e1a: 4d41                 dc.w    $4d41; ILLEGAL
+30e1c: 2521                 move.l  -(A1), -(A2)
+30e1e: d994                 add.l   D4, (A4)
+30e20: 121a                 move.b  (A2)+, D1
+30e22: 999d                 sub.l   D4, (A5)+
+30e24: 411a                 dc.w    $411a; ILLEGAL
+30e26: 99d4                 suba.l  (A4), A4
+30e28: 1314                 move.b  (A4), -(A1)
+30e2a: 4441                 neg.w   D1
+30e2c: 3ee1                 move.w  -(A1), (A7)+
+30e2e: 1113                 move.b  (A3), -(A0)
+30e30: ee31                 roxr.b  D7, D1
+30e32: 1144 4100            move.b  D4, ($4100,A0)
+30e36: 1411                 move.b  (A1), D2
+30e38: 1000                 move.b  D0, D0
+30e3a: 2221                 move.l  -(A1), D1
+30e3c: 1000                 move.b  D0, D0
+30e3e: 56f1 8003            sne     ($3,A1,A0.w)
+30e42: 0e61                 dc.w    $0e61; ILLEGAL
+30e44: 8100                 sbcd    D0, D0
+30e46: 2551 4100            move.l  (A1), ($4100,A2)
+30e4a: 4a12                 tst.b   (A2)
+30e4c: 2100                 move.l  D0, -(A0)
+30e4e: 11e1 2199            move.b  -(A1), $2199.w
+30e52: fe85                 dc.w    $fe85; opcode 1111
+30e54: 9201                 sub.b   D1, D1
+30e56: 2280                 move.l  D0, (A1)
+30e58: 8684                 or.l    D4, D3
+30e5a: 0381                 bclr    D1, D1
+30e5c: 0b01                 btst    D5, D1
+30e5e: 0084 e586 af82       ori.l   #$e586af82, D4
+30e64: a788                 dc.w    $a788; opcode 1010
+30e66: 0381                 bclr    D1, D1
+30e68: c386                 dc.w    $c386; ILLEGAL
+30e6a: e13a                 rol.b   D0, D2
+30e6c: 2222                 move.l  -(A2), D1
+30e6e: 1113                 move.b  (A3), -(A0)
+30e70: 2222                 move.l  -(A2), D1
+30e72: 2521                 move.l  -(A1), -(A2)
+30e74: 2222                 move.l  -(A2), D1
+30e76: 5556                 subq.w  #2, (A6)
+30e78: 2225                 move.l  -(A5), D1
+30e7a: 556f 2255            subq.w  #2, ($2255,A7)
+30e7e: 66ff                 dc.w    $66ff; ILLEGAL
+30e80: 1112                 move.b  (A2), -(A0)
+30e82: 5fff                 dc.w    $5fff; ILLEGAL
+30e84: 1471                 dc.w    $1471; ILLEGAL
+30e86: 156f 84d4 7111       move.b  (-$7b2c,A7), ($7111,A2)
+30e8c: 1849                 dc.w    $1849; ILLEGAL
+30e8e: 9dd4                 suba.l  (A4), A6
+30e90: 2118                 move.l  (A0)+, -(A0)
+30e92: 4d48                 dc.w    $4d48; ILLEGAL
+30e94: 2221                 move.l  -(A1), D1
+30e96: 1111                 move.b  (A1), -(A0)
+30e98: 2256                 movea.l (A6), A1
+30e9a: 6521                 bcs     $30ebd
+30e9c: 256f 6510 12f6       move.l  ($6510,A7), ($12f6,A2)
+30ea2: 5210                 addq.b  #1, (A0)
+30ea4: 0111                 btst    D0, (A1)
+30ea6: 8366                 or.w    D1, -(A6)
+30ea8: 0e33                 dc.w    $0e33; ILLEGAL
+30eaa: eee3                 dc.w    $eee3; ILLEGAL
+30eac: 1411                 move.b  (A1), D2
+30eae: 3311                 move.w  (A1), -(A1)
+30eb0: 4462                 neg.w   -(A2)
+30eb2: 1121                 move.b  -(A1), -(A0)
+30eb4: 1165 2180            move.b  -(A5), ($2180,A0)
+30eb8: 210d                 move.l  A5, -(A0)
+30eba: 2212                 move.l  (A2), D1
+30ebc: 55f6 2212            scs     INVALID 36
+30ec0: 25f6                 dc.w    $25f6; ILLEGAL
+30ec2: 5221                 addq.b  #1, -(A1)
+30ec4: 2525                 move.l  -(A5), -(A2)
+30ec6: 6580                 bcs     $30e48
+30ec8: 5d80                 subq.l  #6, D0
+30eca: 0005 1018            ori.b   #$18, D5
+30ece: 4dd9                 dc.w    $4dd9; ILLEGAL
+30ed0: 0080 0804 0012       ori.l   #$8040012, D0
+30ed6: 2556 8203            move.l  (A6), (-$7dfd,A2)
+30eda: 0301                 btst    D1, D1
+30edc: 2225                 move.l  -(A5), D1
+30ede: 80a6                 or.l    -(A6), D0
+30ee0: 82a7                 or.l    -(A7), D1
+30ee2: 0941                 bchg    D4, D1
+30ee4: 31d4 1012            move.w  (A4), $1012.w
+30ee8: 1448                 dc.w    $1448; ILLEGAL
+30eea: 1052                 dc.w    $1052; ILLEGAL
+30eec: 804f                 dc.w    $804f; ILLEGAL
+30eee: 0165                 bchg    D0, -(A5)
+30ef0: 80ee 0965            divu.w  ($965,A6), D0
+30ef4: 2210                 move.l  (A0), D1
+30ef6: 0066 5210            ori.w   #$5210, -(A6)
+30efa: 0052 80fa            ori.w   #$80fa, (A2)
+30efe: 0511                 btst    D2, (A1)
+30f00: 1000                 move.b  D0, D0
+30f02: 004d                 dc.w    $004d; ILLEGAL
+30f04: 8003                 or.b    D3, D0
+30f06: 0199                 bclr    D0, (A1)+
+30f08: 8007                 or.b    D7, D0
+30f0a: 810b                 sbcd    -(A3), -(A0)
+30f0c: 01f5 8403            bset    D0, INVALID 35
+30f10: 0166                 bchg    D0, -(A6)
+30f12: 811b                 or.b    D0, (A3)+
+30f14: 84e5                 divu.w  -(A5), D2
+30f16: 0471 8714 8181       subi.w  #-$78ec, INVALID 31
+30f1c: 030b 1771            movep.w ($1771,A3), D1
+30f20: 7471                 moveq   #$71, D2
+30f22: 1771 7817 1771       move.b  ($17,A1,D7.l), ($1771,A3)
+30f28: 7781                 dc.w    $7781; ILLEGAL
+30f2a: 7215                 moveq   #$15, D1
+30f2c: 4417                 neg.b   (A7)
+30f2e: 1184 dd14            move.b  D4, INVALID 30
+30f32: 1744 8114            move.b  D4, (-$7eec,A3)
+30f36: 1747 1171            move.b  D7, ($1171,A3)
+30f3a: 4144                 dc.w    $4144; ILLEGAL
+30f3c: dd77 1174            add.w   D6, INVALID 37
+30f40: dd89                 addx.l  -(A1), -(A6)
+30f42: f785                 dc.w    $f785; opcode 1111
+30f44: ff18                 dc.w    $ff18; opcode 1111
+30f46: 7881                 moveq   #-$7f, D4
+30f48: 1414                 move.b  (A4), D2
+30f4a: 8818                 or.b    (A0)+, D4
+30f4c: 181d                 move.b  (A5)+, D4
+30f4e: 8714                 or.b    D3, (A4)
+30f50: 171d                 move.b  (A5)+, -(A3)
+30f52: 7184                 dc.w    $7184; ILLEGAL
+30f54: 418d                 dc.w    $418d; ILLEGAL
+30f56: 114d                 dc.w    $114d; ILLEGAL
+30f58: d1d9                 adda.l  (A1)+, A0
+30f5a: dddd                 adda.l  (A5)+, A6
+30f5c: dd99                 add.l   D6, (A1)+
+30f5e: 8002                 or.b    D2, D0
+30f60: 0399                 bclr    D1, (A1)+
+30f62: 1117                 move.b  (A7), -(A0)
+30f64: 8003                 or.b    D3, D0
+30f66: 0511                 btst    D2, (A1)
+30f68: 9999                 sub.l   D4, (A1)+
+30f6a: d999                 add.l   D4, (A1)+
+30f6c: 8300                 sbcd    D0, D1
+30f6e: 913f                 dc.w    $913f; ILLEGAL
+30f70: 2341 74d1            move.l  D1, ($74d1,A1)
+30f74: 7848                 moveq   #$48, D4
+30f76: 1847                 dc.w    $1847; ILLEGAL
+30f78: 1848                 dc.w    $1848; ILLEGAL
+30f7a: 1787 18d4            move.b  D7, (-$2c,A3,D1.l)
+30f7e: 4111                 dc.w    $4111; ILLEGAL
+30f80: 17dd                 dc.w    $17dd; ILLEGAL
+30f82: 4187                 chk.w   D7, D0
+30f84: 11dd 4411            move.b  (A5)+, $4411.w
+30f88: 719d                 dc.w    $719d; ILLEGAL
+30f8a: dd81                 addx.l  D1, D6
+30f8c: 7191                 dc.w    $7191; ILLEGAL
+30f8e: 1741 7191            move.b  D1, ($7191,A3)
+30f92: 1181 8041            move.b  D1, ($41,A0,A0.w)
+30f96: 06d1                 dc.w    $06d1; ILLEGAL
+30f98: 1799 9d87            move.b  (A1)+, INVALID 33
+30f9c: 1791 7f85            move.b  (A1), INVALID 33
+30fa0: 9318                 sub.b   D1, (A0)+
+30fa2: 9999                 sub.l   D4, (A1)+
+30fa4: d811                 add.b   (A1), D4
+30fa6: 999d                 sub.l   D4, (A5)+
+30fa8: 8111                 or.b    D0, (A1)
+30faa: d994                 add.l   D4, (A4)
+30fac: 14d4                 move.b  (A4), (A2)+
+30fae: 1841                 dc.w    $1841; ILLEGAL
+30fb0: 4d99                 chk.w   (A1)+, D6
+30fb2: 7111                 dc.w    $7111; ILLEGAL
+30fb4: 84d9                 divu.w  (A1)+, D2
+30fb6: 1125                 move.b  -(A5), -(A0)
+30fb8: 1184 85b3            move.b  D4, INVALID 30
+30fbc: 0189 803f            movep.w D0, ($803f,A1)
+30fc0: 081d 9d17            btst    #$17, (A5)+
+30fc4: 1114                 move.b  (A4), -(A0)
+30fc6: d177 1180            add.w   D0, INVALID 37
+30fca: 6609                 bne     $30fd5
+30fcc: 10d1                 move.b  (A1), (A0)+
+30fce: 2561 0014            move.l  -(A1), ($14,A2)
+30fd2: 26f4 1083            move.l  (-$7d,A4,D1.w), (A3)+
+30fd6: d312                 add.b   D1, (A2)
+30fd8: 1111                 move.b  (A1), -(A0)
+30fda: 0001 3eff            ori.b   #$ff, D1
+30fde: 001e ffff            ori.b   #$ff, (A6)+
+30fe2: 013f                 dc.w    $013f; ILLEGAL
+30fe4: f111                 dc.w    $f111; opcode 1111
+30fe6: 01ef 1000            bset    D0, ($1000,A7)
+30fea: 8103                 sbcd    D3, D0
+30fec: 0200 1182            andi.b  #$82, D0
+30ff0: f101                 dc.w    $f101; opcode 1111
+30ff2: 0180                 bclr    D0, D0
+30ff4: f701                 dc.w    $f701; opcode 1111
+30ff6: 1e84                 move.b  D4, (A7)
+30ff8: 0381                 bclr    D1, D1
+30ffa: 0b01                 btst    D5, D1
+30ffc: 1f84 0381            move.b  D4, INVALID 37
+31000: 1783 3d80            move.b  D3, INVALID 33
+31004: 450a                 dc.w    $450a; ILLEGAL
+31006: fe31                 dc.w    $fe31; opcode 1111
+31008: 0000 fffe            ori.b   #$fe, D0
+3100c: 1000                 move.b  D0, D0
+3100e: 11ff                 dc.w    $11ff; ILLEGAL
+31010: 8008                 dc.w    $8008; ILLEGAL
+31012: 021f e182            andi.b  #$82, (A7)+
+31016: 0381                 bclr    D1, D1
+31018: 0b05                 btst    D5, D5
+3101a: eff3                 dc.w    $eff3; ILLEGAL
+3101c: 1000                 move.b  D0, D0
+3101e: ff80                 dc.w    $ff80; opcode 1111
+31020: 4701                 dc.w    $4701; ILLEGAL
+31022: f180                 dc.w    $f180; opcode 1111
+31024: fc81                 dc.w    $fc81; opcode 1111
+31026: 6c81                 bge     $30fa9
+31028: 0785                 bclr    D3, D5
+3102a: 0b94                 bclr    D5, (A4)
+3102c: cf81                 dc.w    $cf81; ILLEGAL
+3102e: 6f81                 ble     $30fb1
+31030: eb01                 asl.b   #5, D1
+31032: 1880                 move.b  D0, (A4)
+31034: 7a01                 moveq   #$1, D5
+31036: 7480                 moveq   #-$80, D2
+31038: 0a80 c311 1848       eori.l  #$c3111848, D0
+3103e: 0001 7887            ori.b   #$87, D1
+31042: 0001 8887            ori.b   #$87, D1
+31046: 0017 8871            ori.b   #$71, (A7)
+3104a: 0017 8780            ori.b   #$80, (A7)
+3104e: 0304                 btst    D1, D4
+31050: 1117                 move.b  (A7), -(A0)
+31052: 0001 811f            ori.b   #$1f, D1
+31056: 0201 4880            andi.b  #$80, D1
+3105a: 2a0c                 move.l  A4, D5
+3105c: 4700                 dc.w    $4700; ILLEGAL
+3105e: 001d 8100            ori.b   #$0, (A5)+
+31062: 018d 7100            movep.w D0, ($7100,A5)
+31066: 01d4                 bset    D0, (A4)
+31068: 8017                 or.b    (A7), D0
+3106a: 0ed8                 dc.w    $0ed8; ILLEGAL
+3106c: 1700                 move.b  D0, -(A3)
+3106e: 1747 1700            move.b  D7, ($1700,A3)
+31072: 1881                 move.b  D1, (A4)
+31074: 7700                 dc.w    $7700; ILLEGAL
+31076: 1871                 dc.w    $1871; ILLEGAL
+31078: 7780                 dc.w    $7780; ILLEGAL
+3107a: a001                 dc.w    $a001; opcode 1010
+3107c: 1780 7c81            move.b  D0, INVALID 33
+31080: 5386                 subq.l  #1, D6
+31082: b38c                 cmpm.l  (A4)+, (A1)+
+31084: 7221                 moveq   #$21, D1
+31086: 1100                 move.b  D0, -(A0)
+31088: 1117                 move.b  (A7), -(A0)
+3108a: 4811                 nbcd    (A1)
+3108c: 7444                 moveq   #$44, D2
+3108e: 8774 d487            or.w    D3, INVALID 34
+31092: 714d                 dc.w    $714d; ILLEGAL
+31094: 4877 11d4            pea     INVALID 37
+31098: 8711                 or.b    D3, (A1)
+3109a: 7848                 moveq   #$48, D4
+3109c: 7177                 dc.w    $7177; ILLEGAL
+3109e: 7787                 dc.w    $7787; ILLEGAL
+310a0: 1717                 move.b  (A7), -(A3)
+310a2: 7771                 dc.w    $7771; ILLEGAL
+310a4: 7717                 dc.w    $7717; ILLEGAL
+310a6: 7881                 moveq   #-$7f, D4
+310a8: 0301                 btst    D1, D1
+310aa: 1180 0903            move.b  D0, INVALID 30
+310ae: 7717                 dc.w    $7717; ILLEGAL
+310b0: 8780                 dc.w    $8780; ILLEGAL
+310b2: 030a 8871            movep.w ($8871,A2), D1
+310b6: 8771 7714            or.w    D3, INVALID 31
+310ba: 7177                 dc.w    $7177; ILLEGAL
+310bc: 1174 801d 8022       move.b  ($1d,A4,A0.w), (-$7fde,A0)
+310c2: 800e                 dc.w    $800e; ILLEGAL
+310c4: 0378 1771            bchg    D1, $1771.w
+310c8: 8203                 or.b    D3, D1
+310ca: 0a88                 dc.w    $0a88; ILLEGAL
+310cc: 1771 1788 1111       move.b  INVALID 31, ($1111,A3)
+310d2: 1887                 move.b  D7, (A4)
+310d4: 1780 0322            move.b  D0, INVALID 33
+310d8: 1417                 move.b  (A7), D2
+310da: 7877                 moveq   #$77, D4
+310dc: 1417                 move.b  (A7), D2
+310de: 7111                 dc.w    $7111; ILLEGAL
+310e0: 7141                 dc.w    $7141; ILLEGAL
+310e2: 14d4                 move.b  (A4), (A2)+
+310e4: 1711                 move.b  (A1), -(A3)
+310e6: 1999 d117            move.b  (A1)+, INVALID 34
+310ea: 1d9d 4121            move.b  (A5)+, INVALID 36
+310ee: 14d4                 move.b  (A4), (A2)+
+310f0: 1252                 dc.w    $1252; ILLEGAL
+310f2: 1111                 move.b  (A1), -(A0)
+310f4: 2651                 movea.l (A1), A3
+310f6: 0156                 bchg    D0, (A6)
+310f8: ff21                 dc.w    $ff21; opcode 1111
+310fa: 81ff                 dc.w    $81ff; ILLEGAL
+310fc: 0e10                 dc.w    $0e10; ILLEGAL
+310fe: 0111                 btst    D0, (A1)
+31100: 1071                 dc.w    $1071; ILLEGAL
+31102: 12ff                 dc.w    $12ff; ILLEGAL
+31104: 6112                 bsr     $31118
+31106: 2556 6522            move.l  (A6), ($6522,A2)
+3110a: 1180 0017            move.b  D0, ($17,A0,D0.w)
+3110e: 7771                 dc.w    $7771; ILLEGAL
+31110: 1744 4877            move.b  D4, ($4877,A3)
+31114: 7178                 dc.w    $7178; ILLEGAL
+31116: dd48                 addx.w  -(A0), -(A6)
+31118: 7784                 dc.w    $7784; ILLEGAL
+3111a: 4ddd                 dc.w    $4ddd; ILLEGAL
+3111c: 4844                 swap    D4
+3111e: 8844                 or.w    D4, D4
+31120: 8487                 or.l    D7, D2
+31122: 8488                 dc.w    $8488; ILLEGAL
+31124: 7781                 dc.w    $7781; ILLEGAL
+31126: 0001 7480            ori.b   #$80, D1
+3112a: 1b18                 move.b  (A0)+, -(A5)
+3112c: d71d                 add.b   D3, (A5)+
+3112e: 17d8                 dc.w    $17d8; ILLEGAL
+31130: 81d8                 divs.w  (A0)+, D0
+31132: 1d48                 dc.w    $1d48; ILLEGAL
+31134: 7147                 dc.w    $7147; ILLEGAL
+31136: 1487                 move.b  D7, (A2)
+31138: 1481                 move.b  D1, (A2)
+3113a: 7881                 moveq   #-$7f, D4
+3113c: 1481                 move.b  D1, (A2)
+3113e: 8818                 or.b    (A0)+, D4
+31140: 7471                 moveq   #$71, D2
+31142: 8714                 or.b    D3, (A4)
+31144: 8082                 or.l    D2, D0
+31146: 3114                 move.w  (A4), -(A0)
+31148: 771e                 dc.w    $771e; ILLEGAL
+3114a: 1ee1                 move.b  -(A1), (A7)+
+3114c: 113f                 dc.w    $113f; ILLEGAL
+3114e: fffe                 dc.w    $fffe; opcode 1111
+31150: 8eff                 dc.w    $8eff; ILLEGAL
+31152: f1ff                 dc.w    $f1ff; opcode 1111
+31154: 4fff                 dc.w    $4fff; ILLEGAL
+31156: ffff                 dc.w    $ffff; opcode 1111
+31158: 4eff                 dc.w    $4eff; ILLEGAL
+3115a: fff9                 dc.w    $fff9; opcode 1111
+3115c: 4d71                 dc.w    $4d71; ILLEGAL
+3115e: 114d                 dc.w    $114d; ILLEGAL
+31160: 74d9                 moveq   #-$27, D2
+31162: 4811                 nbcd    (A1)
+31164: 184d                 dc.w    $184d; ILLEGAL
+31166: 1177 1178 1778       move.b  INVALID 37, ($1778,A0)
+3116c: 1711                 move.b  (A1), -(A3)
+3116e: 1777 8413 1111       move.b  INVALID 37, ($1111,A3)
+31174: dd12                 add.b   D6, (A2)
+31176: 1e51                 dc.w    $1e51; ILLEGAL
+31178: 83ff                 dc.w    $83ff; ILLEGAL
+3117a: 8083                 or.l    D3, D0
+3117c: 8088                 dc.w    $8088; ILLEGAL
+3117e: 818c                 dc.w    $818c; ILLEGAL
+31180: 0911                 btst    D4, (A1)
+31182: 1110                 move.b  (A0), -(A0)
+31184: 0077 7771 1117       ori.w   #$7771, INVALID 37
+3118a: 806e 0471            or.w    ($471,A6), D0
+3118e: 7888                 moveq   #-$78, D4
+31190: 8780                 dc.w    $8780; ILLEGAL
+31192: fa81                 dc.w    $fa81; opcode 1111
+31194: 7883                 moveq   #-$7d, D4
+31196: 7c81                 moveq   #-$7f, D6
+31198: 812b 1777            or.b    D0, ($1777,A3)
+3119c: 7778                 dc.w    $7778; ILLEGAL
+3119e: 1178 871d 1817       move.b  $871d.w, ($1817,A0)
+311a4: 481d                 nbcd    (A5)+
+311a6: 1481                 move.b  D1, (A2)
+311a8: 8d14                 or.b    D6, (A4)
+311aa: 1441                 dc.w    $1441; ILLEGAL
+311ac: 7418                 moveq   #$18, D2
+311ae: 1d48                 dc.w    $1d48; ILLEGAL
+311b0: 1817                 move.b  (A7), D4
+311b2: 1d48                 dc.w    $1d48; ILLEGAL
+311b4: 1741 8dd4            move.b  D1, (-$722c,A3)
+311b8: 11d1 d9d1            move.b  (A1), $d9d1.w
+311bc: ee1d                 ror.b   #7, D5
+311be: 99df                 suba.l  (A7)+, A4
+311c0: ff99                 dc.w    $ff99; opcode 1111
+311c2: 999f                 sub.l   D4, (A7)+
+311c4: 1f80 0380            move.b  D0, INVALID 37
+311c8: 070b 9eff            movep.w ($9eff,A3), D3
+311cc: d999                 add.l   D4, (A1)+
+311ce: d411                 add.b   (A1), D2
+311d0: 1444                 dc.w    $1444; ILLEGAL
+311d2: 8177 7780            or.w    D0, INVALID 37
+311d6: 7701                 dc.w    $7701; ILLEGAL
+311d8: 8880                 or.l    D0, D4
+311da: 5203                 addq.b  #1, D3
+311dc: 8888                 dc.w    $8888; ILLEGAL
+311de: 7781                 dc.w    $7781; ILLEGAL
+311e0: e505                 asl.b   #2, D5
+311e2: 1212                 move.b  (A2), D1
+311e4: 5521                 subq.b  #2, -(A1)
+311e6: 2585 7f8d            move.l  D5, INVALID 32
+311ea: 0701                 btst    D3, D1
+311ec: 1180 9804            move.b  D0, ($4,A0,A1.l)
+311f0: 7111                 dc.w    $7111; ILLEGAL
+311f2: 1100                 move.b  D0, -(A0)
+311f4: 806f 0111            or.w    ($111,A7), D0
+311f8: 80f5 0547            divu.w  INVALID 35, D0
+311fc: 7771                 dc.w    $7771; ILLEGAL
+311fe: 7744                 dc.w    $7744; ILLEGAL
+31200: 8040                 or.w    D0, D0
+31202: 0274 7180 810d       andi.w  #$7180, INVALID 34
+31208: 7817                 moveq   #$17, D4
+3120a: 8871 1781            or.w    INVALID 31, D4
+3120e: 7887                 moveq   #-$79, D4
+31210: 7187                 dc.w    $7187; ILLEGAL
+31212: 1787 d180            move.b  D7, INVALID 33
+31216: 0c07 4718            cmpi.b  #$18, D7
+3121a: 7178                 dc.w    $7178; ILLEGAL
+3121c: 8718                 or.b    D3, (A0)+
+3121e: 7180                 dc.w    $7180; ILLEGAL
+31220: 5e03                 addq.b  #7, D3
+31222: 1011                 move.b  (A1), D0
+31224: 1780 c01e            move.b  D0, ($1e,A3,A4.w)
+31228: e171                 roxl.w  D0, D1
+3122a: 4d10                 dc.w    $4d10; ILLEGAL
+3122c: 4171                 dc.w    $4171; ILLEGAL
+3122e: 89d1                 divs.w  (A1), D4
+31230: 4171                 dc.w    $4171; ILLEGAL
+31232: 1841                 dc.w    $1841; ILLEGAL
+31234: 9112                 sub.b   D0, (A2)
+31236: 2111                 move.l  (A1), -(A0)
+31238: 4715                 dc.w    $4715; ILLEGAL
+3123a: 6621                 bne     $3125d
+3123c: 1112                 move.b  (A2), -(A0)
+3123e: 6651                 bne     $31291
+31240: 7111                 dc.w    $7111; ILLEGAL
+31242: 2521                 move.l  -(A1), -(A2)
+31244: 1218                 move.b  (A0)+, D1
+31246: 807a 0a84            or.w    ($31ccc,PC), D0
+3124a: d481                 add.l   D1, D2
+3124c: 114d                 dc.w    $114d; ILLEGAL
+3124e: 9410                 sub.b   (A0), D2
+31250: f514                 pflushan
+31252: d881                 add.l   D1, D4
+31254: f69e                 dc.w    $f69e; opcode 1111
+31256: 0281 2401 7180       andi.l  #$24017180, D1
+3125c: a801                 dc.w    $a801; opcode 1010
+3125e: 8180                 dc.w    $8180; ILLEGAL
+31260: ac01                 dc.w    $ac01; opcode 1010
+31262: 8084                 or.l    D4, D0
+31264: 0b81                 bclr    D5, D1
+31266: 3885                 move.w  D5, (A4)
+31268: 1785 0fb1            move.b  D5, INVALID 33
+3126c: 020c                 dc.w    $020c; ILLEGAL
+3126e: 0125                 btst    D0, -(A5)
+31270: 6214                 bhi     $31286
+31272: 0012 214d            ori.b   #$4d, (A2)
+31276: 0001 1d99            ori.b   #$99, D1
+3127a: 800d                 dc.w    $800d; ILLEGAL
+3127c: 0184                 bclr    D0, D4
+3127e: 84fa 8696            divu.w  ($29916,PC), D2
+31282: 4c94 121e            movem.w (A4), D1-D4/A1/A4
+31286: fe98                 dc.w    $fe98; opcode 1111
+31288: 121e                 move.b  (A6)+, D1
+3128a: ffd1                 dc.w    $ffd1; opcode 1111
+3128c: 213e                 dc.w    $213e; ILLEGAL
+3128e: ff12                 dc.w    $ff12; opcode 1111
+31290: 21ef ff11 1eff       move.l  (-$ef,A7), $1eff.w
+31296: ff13                 dc.w    $ff13; opcode 1111
+31298: effe                 dc.w    $effe; ILLEGAL
+3129a: ff1e                 dc.w    $ff1e; opcode 1111
+3129c: fe3e                 dc.w    $fe3e; opcode 1111
+3129e: fe11                 dc.w    $fe11; opcode 1111
+312a0: 133e                 dc.w    $133e; ILLEGAL
+312a2: e351                 roxl.w  #1, D1
+312a4: 1114                 move.b  (A4), -(A0)
+312a6: a2ff                 dc.w    $a2ff; opcode 1010
+312a8: fe51                 dc.w    $fe51; opcode 1111
+312aa: 4aff                 dc.w    $4aff; ILLEGAL
+312ac: ffe1                 dc.w    $ffe1; opcode 1111
+312ae: 14ff                 dc.w    $14ff; ILLEGAL
+312b0: fe31                 dc.w    $fe31; opcode 1111
+312b2: 41fe                 dc.w    $41fe; ILLEGAL
+312b4: f314                 dc.w    $f314; opcode 1111
+312b6: 155e f141            move.b  (A6)+, (-$ebf,A2)
+312ba: 113e                 dc.w    $113e; ILLEGAL
+312bc: 311d                 move.w  (A5)+, -(A0)
+312be: 4133                 dc.w    $4133; ILLEGAL
+312c0: 1111                 move.b  (A1), -(A0)
+312c2: 1256                 dc.w    $1256; ILLEGAL
+312c4: 2141 0022            move.l  D1, ($22,A0)
+312c8: 4110                 dc.w    $4110; ILLEGAL
+312ca: 00aa 1310 0080 1405  ori.l   #$13100080, ($1405,A2)
+312d2: 00e3                 dc.w    $00e3; ILLEGAL
+312d4: 1111                 move.b  (A1), -(A0)
+312d6: 0080 0208 0011       ori.l   #$2080011, D0
+312dc: 2211                 move.l  (A1), D1
+312de: 0022 5552            ori.b   #$52, -(A2)
+312e2: 8a6b 9daa            or.w    (-$6256,A3), D5
+312e6: 8403                 or.b    D3, D2
+312e8: 0112                 btst    D0, (A2)
+312ea: 8da3                 or.l    D6, -(A3)
+312ec: 9adf                 suba.w  (A7)+, A5
+312ee: 0121                 btst    D0, -(A1)
+312f0: 8084                 or.l    D4, D0
+312f2: 0b22                 btst    D5, -(A2)
+312f4: 5652                 addq.w  #3, (A2)
+312f6: 2222                 move.l  -(A2), D1
+312f8: 6f55                 ble     $3134f
+312fa: 2225                 move.l  -(A5), D1
+312fc: 6f65                 ble     $31363
+312fe: 8203                 or.b    D3, D1
+31300: 0356                 bchg    D1, (A6)
+31302: 66f6                 bne     $312fa
+31304: 8099                 or.l    (A1)+, D0
+31306: 03ff                 dc.w    $03ff; ILLEGAL
+31308: 0001 808c            ori.b   #$8c, D1
+3130c: 0601 84d4            addi.b  #-$2c, D1
+31310: 0000 1881            ori.b   #$81, D0
+31314: 9101                 subx.b  D1, D0
+31316: 2580 5a80            move.l  D0, INVALID 32
+3131a: 0302                 btst    D1, D2
+3131c: 0122                 btst    D0, -(A2)
+3131e: 8303                 sbcd    D3, D1
+31320: 8363                 or.w    D1, -(A3)
+31322: 0111                 btst    D0, (A1)
+31324: 80a4                 or.l    -(A4), D0
+31326: 1812                 move.b  (A2), D4
+31328: 2225                 move.l  -(A5), D1
+3132a: 6621                 bne     $3134d
+3132c: 2222                 move.l  -(A2), D1
+3132e: 5651                 addq.w  #3, (A1)
+31330: 2222                 move.l  -(A2), D1
+31332: 6652                 bne     $31386
+31334: 1225                 move.b  -(A5), D1
+31336: 6555                 bcs     $3138d
+31338: 2125                 move.l  -(A5), -(A0)
+3133a: 5266                 addq.w  #1, -(A6)
+3133c: 5522                 subq.b  #2, -(A2)
+3133e: 1181 0005            move.b  D1, ($5,A0,D0.w)
+31342: 8111                 or.b    D0, (A1)
+31344: 8100                 sbcd    D0, D0
+31346: 1280                 move.b  D0, (A1)
+31348: cb10                 and.b   D5, (A0)
+3134a: 66ff                 dc.w    $66ff; ILLEGAL
+3134c: 5210                 addq.b  #1, (A0)
+3134e: 56ff                 dc.w    $56ff; ILLEGAL
+31350: 6210                 bhi     $31362
+31352: 566f f521            addq.w  #3, (-$adf,A7)
+31356: 556f f651            subq.w  #2, (-$9af,A7)
+3135a: 801c                 or.b    (A4)+, D0
+3135c: 0110                 btst    D0, (A0)
+3135e: 833f                 dc.w    $833f; ILLEGAL
+31360: 2356 5252            move.l  (A6), ($5252,A1)
+31364: 1125                 move.b  -(A5), -(A0)
+31366: 6566                 bcs     $313ce
+31368: 5221                 addq.b  #1, -(A1)
+3136a: 1152 1114            move.b  (A2), ($1114,A0)
+3136e: d121                 add.b   D0, -(A1)
+31370: 8d41                 dc.w    $8d41; ILLEGAL
+31372: 1218                 move.b  (A0)+, D1
+31374: 4112                 dc.w    $4112; ILLEGAL
+31376: 5684                 addq.l  #3, D4
+31378: 1255                 dc.w    $1255; ILLEGAL
+3137a: 6611                 bne     $3138d
+3137c: 2222                 move.l  -(A2), D1
+3137e: 5501                 subq.b  #2, D1
+31380: 1222                 move.b  -(A2), D1
+31382: 2200                 move.l  D0, D1
+31384: 8004                 or.b    D4, D0
+31386: 80de                 divu.w  (A6)+, D0
+31388: 92d3                 suba.w  (A3), A1
+3138a: 8144                 dc.w    $8144; ILLEGAL
+3138c: 0121                 btst    D0, -(A1)
+3138e: 8407                 or.b    D7, D2
+31390: 820b                 dc.w    $820b; ILLEGAL
+31392: 8055                 or.w    (A5), D0
+31394: 0165                 bchg    D0, -(A5)
+31396: 8004                 or.b    D4, D0
+31398: 04ff                 dc.w    $04ff; ILLEGAL
+3139a: 6521                 bcs     $313bd
+3139c: 0080 6a02 0022       ori.l   #$6a020022, D0
+313a2: 8066                 or.w    -(A6), D0
+313a4: 9238 8f4c            sub.b   $8f4c.w, D1
+313a8: 0101                 btst    D0, D1
+313aa: 80d3                 divu.w  (A3), D0
+313ac: 0112                 btst    D0, (A2)
+313ae: 8407                 or.b    D7, D2
+313b0: 8913                 or.b    D4, (A3)
+313b2: 8517                 or.b    D2, (A7)
+313b4: 8903                 sbcd    D3, D4
+313b6: 8623                 or.b    -(A3), D3
+313b8: 0101                 btst    D0, D1
+313ba: 80e6                 divu.w  -(A6), D0
+313bc: 1412                 move.b  (A2), D2
+313be: 2255                 movea.l (A5), A1
+313c0: 6522                 bcs     $313e4
+313c2: 2556 f622            move.l  (A6), (-$9de,A2)
+313c6: 566f f625            addq.w  #3, (-$9db,A7)
+313ca: 56ff                 dc.w    $56ff; ILLEGAL
+313cc: ff11                 dc.w    $ff11; opcode 1111
+313ce: 2556 6f80            move.l  (A6), ($6f80,A2)
+313d2: 151d                 move.b  (A5)+, -(A2)
+313d4: 2518                 move.l  (A0)+, -(A2)
+313d6: 4481                 neg.l   D1
+313d8: 1121                 move.b  -(A1), -(A0)
+313da: 8d9d                 or.l    D6, (A5)+
+313dc: 4422                 neg.b   -(A2)
+313de: 1184 4822            move.b  D4, ($22,A0,D4.l)
+313e2: 5211                 addq.b  #1, (A1)
+313e4: 1125                 move.b  -(A5), -(A0)
+313e6: 6665                 bne     $3144d
+313e8: 2156 ff55            move.l  (A6), (-$ab,A0)
+313ec: 1056                 dc.w    $1056; ILLEGAL
+313ee: f552                 unknown instruction: f552
+313f0: 1080                 move.b  D0, (A0)
+313f2: ff82                 dc.w    $ff82; opcode 1111
+313f4: ce81                 and.l   D1, D7
+313f6: 3c06                 move.w  D6, D6
+313f8: 5221                 addq.b  #1, -(A1)
+313fa: 2225                 move.l  -(A5), D1
+313fc: 5521                 subq.b  #2, -(A1)
+313fe: 80ec 0422            divu.w  ($422,A4), D0
+31402: 1222                 move.b  -(A2), D1
+31404: 6580                 bcs     $31386
+31406: 0c02 f652            cmpi.b  #$52, D2
+3140a: 80f8 8015            divu.w  $8015.w, D0
+3140e: 8023                 or.b    -(A3), D0
+31410: 1318                 move.b  (A0)+, -(A1)
+31412: 8118                 or.b    D0, (A0)+
+31414: 4d99                 chk.w   (A1)+, D6
+31416: 1011                 move.b  (A1), D0
+31418: 184d                 dc.w    $184d; ILLEGAL
+3141a: 0012 2111            ori.b   #$11, (A2)
+3141e: 0012 2556            ori.b   #$56, (A2)
+31422: 0001 8103            ori.b   #$3, D1
+31426: 0222 5580            andi.b  #$80, -(A2)
+3142a: 3982 d601            move.w  D2, INVALID 34
+3142e: 6681                 bne     $313b1
+31430: 5380                 subq.l  #1, D0
+31432: 5704                 subq.b  #3, D4
+31434: 5566                 subq.w  #2, -(A6)
+31436: 5211                 addq.b  #1, (A1)
+31438: 8044                 or.w    D4, D0
+3143a: 0500                 btst    D2, D0
+3143c: 2222                 move.l  -(A2), D1
+3143e: 1000                 move.b  D0, D0
+31440: 8029 0e00            or.b    ($e00,A1), D0
+31444: 1841                 dc.w    $1841; ILLEGAL
+31446: 0000 4d81            ori.b   #$81, D0
+3144a: 0000 9d10            ori.b   #$10, D0
+3144e: 0000 9980            ori.b   #$80, D0
+31452: 0301                 btst    D1, D1
+31454: 1180 0701            move.b  D0, INVALID 30
+31458: 6580                 bcs     $313da
+3145a: 0b01                 btst    D5, D1
+3145c: f684                 dc.w    $f684; opcode 1111
+3145e: 0381                 bclr    D1, D1
+31460: 0f81                 bclr    D7, D1
+31462: ff5c                 dc.w    $ff5c; opcode 1111
+31464: 1481                 move.b  D1, (A2)
+31466: 7881                 moveq   #-$7f, D4
+31468: 1481                 move.b  D1, (A2)
+3146a: 8818                 or.b    (A0)+, D4
+3146c: 7471                 moveq   #$71, D2
+3146e: 8714                 or.b    D3, (A4)
+31470: 7817                 moveq   #$17, D4
+31472: 7114                 dc.w    $7114; ILLEGAL
+31474: 771e                 dc.w    $771e; ILLEGAL
+31476: 1ee1                 move.b  -(A1), (A7)+
+31478: 113f                 dc.w    $113f; ILLEGAL
+3147a: fffe                 dc.w    $fffe; opcode 1111
+3147c: 8eff                 dc.w    $8eff; ILLEGAL
+3147e: f1ff                 dc.w    $f1ff; opcode 1111
+31480: 4fff                 dc.w    $4fff; ILLEGAL
+31482: ffff                 dc.w    $ffff; opcode 1111
+31484: 4eff                 dc.w    $4eff; ILLEGAL
+31486: fff9                 dc.w    $fff9; opcode 1111
+31488: 4d71                 dc.w    $4d71; ILLEGAL
+3148a: 114d                 dc.w    $114d; ILLEGAL
+3148c: 74d9                 moveq   #-$27, D2
+3148e: 9999                 sub.l   D4, (A1)+
+31490: 144d                 dc.w    $144d; ILLEGAL
+31492: 9d71 1174            sub.w   D6, INVALID 31
+31496: ddd9                 adda.l  (A1)+, A6
+31498: 1711                 move.b  (A1), -(A3)
+3149a: 784d                 moveq   #$4d, D4
+3149c: 8413                 or.b    (A3), D2
+3149e: 1111                 move.b  (A1), -(A0)
+314a0: dd12                 add.b   D6, (A2)
+314a2: 1e51                 dc.w    $1e51; ILLEGAL
+314a4: 1414                 move.b  (A4), D2
+314a6: 4174                 dc.w    $4174; ILLEGAL
+314a8: 181d                 move.b  (A5)+, D4
+314aa: 4818                 nbcd    (A0)+
+314ac: 171d                 move.b  (A5)+, -(A3)
+314ae: 4817                 nbcd    (A7)
+314b0: 418d                 dc.w    $418d; ILLEGAL
+314b2: d411                 add.b   (A1), D2
+314b4: d1d9                 adda.l  (A1)+, A0
+314b6: d1ee 1d99            adda.l  ($1d99,A6), A0
+314ba: dfff                 dc.w    $dfff; ILLEGAL
+314bc: 9999                 sub.l   D4, (A1)+
+314be: 9f1f                 sub.b   D7, (A7)+
+314c0: 8003                 or.b    D3, D0
+314c2: 8007                 or.b    D7, D0
+314c4: 159e ffd9            move.b  (A6)+, INVALID 32
+314c8: 99d4                 suba.l  (A4), A4
+314ca: 119d dddd            move.b  (A5)+, INVALID 30
+314ce: dd11                 add.b   D6, (A1)
+314d0: 1117                 move.b  (A7), -(A0)
+314d2: d499                 add.l   (A1)+, D2
+314d4: 99dd                 suba.l  (A5)+, A4
+314d6: 47dd                 dc.w    $47dd; ILLEGAL
+314d8: d487                 add.l   D7, D2
+314da: 80fe                 dc.w    $80fe; ILLEGAL
+314dc: 2711                 move.l  (A1), -(A3)
+314de: 1212                 move.b  (A2), D1
+314e0: 5521                 subq.b  #2, -(A1)
+314e2: 25d1                 dc.w    $25d1; ILLEGAL
+314e4: 7817                 moveq   #$17, D4
+314e6: 8847                 or.w    D7, D4
+314e8: 1871                 dc.w    $1871; ILLEGAL
+314ea: 7887                 moveq   #-$79, D4
+314ec: 1871                 dc.w    $1871; ILLEGAL
+314ee: 7711                 dc.w    $7711; ILLEGAL
+314f0: 1710                 move.b  (A0), -(A3)
+314f2: 1117                 move.b  (A7), -(A0)
+314f4: 1111                 move.b  (A1), -(A0)
+314f6: 10e1                 move.b  -(A1), (A0)+
+314f8: 714d                 dc.w    $714d; ILLEGAL
+314fa: 1041                 dc.w    $1041; ILLEGAL
+314fc: 7189                 dc.w    $7189; ILLEGAL
+314fe: d141                 addx.w  D1, D0
+31500: 7118                 dc.w    $7118; ILLEGAL
+31502: 4191                 chk.w   (A1), D0
+31504: 80f7 0e47            divu.w  INVALID 37, D0
+31508: 1566 2181            move.b  -(A6), ($2181,A2)
+3150c: 1266                 dc.w    $1266; ILLEGAL
+3150e: 5171 1125            subq.w  #8, INVALID 31
+31512: 2112                 move.l  (A2), -(A0)
+31514: 1880                 move.b  D0, (A4)
+31516: 3a0b                 move.w  A3, D5
+31518: 84d4                 divu.w  (A4), D2
+3151a: 8111                 or.b    D0, (A1)
+3151c: 4d94                 chk.w   (A4), D6
+3151e: 10f5 14d8            move.b  INVALID 35, (A0)+
+31522: 108c                 dc.w    $108c; ILLEGAL
+31524: bf15                 eor.b   D7, (A5)
+31526: 7477                 moveq   #$77, D2
+31528: 1414                 move.b  (A4), D2
+3152a: d911                 add.b   D4, (A1)
+3152c: 4d4d                 dc.w    $4d4d; ILLEGAL
+3152e: 9984                 subx.l  D4, D4
+31530: 4111                 dc.w    $4111; ILLEGAL
+31532: 174d                 dc.w    $174d; ILLEGAL
+31534: 7711                 dc.w    $7711; ILLEGAL
+31536: 114d                 dc.w    $114d; ILLEGAL
+31538: 9999                 sub.l   D4, (A1)+
+3153a: 9980                 subx.l  D0, D4
+3153c: 0311                 btst    D1, (A1)
+3153e: dd74 d948            add.w   D6, INVALID 34
+31542: 1118                 move.b  (A0)+, -(A0)
+31544: 4d11                 dc.w    $4d11; ILLEGAL
+31546: 7711                 dc.w    $7711; ILLEGAL
+31548: 7817                 moveq   #$17, D4
+3154a: 7817                 moveq   #$17, D4
+3154c: 1117                 move.b  (A7), -(A0)
+3154e: 7797                 dc.w    $7797; ILLEGAL
+31550: bf03                 eor.b   D7, D3
+31552: 9dd4                 suba.l  (A4), A6
+31554: 9d80                 subx.l  D0, D6
+31556: a480                 dc.w    $a480; opcode 1010
+31558: ee05                 asr.b   #7, D5
+3155a: d179 999d 1180       add.w   D0, $999d1180.l
+31560: 3e01                 move.w  D1, D7
+31562: 9981                 subx.l  D1, D4
+31564: bf04                 eor.b   D7, D4
+31566: 1444                 dc.w    $1444; ILLEGAL
+31568: 8177 80a0            or.w    D0, (-$60,A7,A0.w)
+3156c: 0477 8888 8780       subi.w  #-$7778, INVALID 37
+31572: 0380                 bclr    D1, D0
+31574: 5898                 addq.l  #4, (A0)+
+31576: bf01                 eor.b   D7, D1
+31578: 4180                 chk.w   D0, D0
+3157a: bf01                 eor.b   D7, D1
+3157c: 1180 bf01            move.b  D0, INVALID 30
+31580: 7180                 dc.w    $7180; ILLEGAL
+31582: bf01                 eor.b   D7, D1
+31584: d184                 addx.l  D4, D0
+31586: bf01                 eor.b   D7, D1
+31588: 11bb bf02 9974       move.b  INVALID 3b, INVALID 30
+3158e: 8090                 or.l    (A0), D0
+31590: 0c14 4d9d            cmpi.b  #-$63, (A4)
+31594: 7111                 dc.w    $7111; ILLEGAL
+31596: 74dd                 moveq   #-$23, D2
+31598: d917                 add.b   D4, (A7)
+3159a: 1178 4da9 bf81       move.b  $4da9.w, (-$407f,A0)
+315a0: c303                 abcd    D3, D1
+315a2: 9d48                 subx.w  -(A0), -(A6)
+315a4: 7180                 dc.w    $7180; ILLEGAL
+315a6: 7902                 dc.w    $7902; ILLEGAL
+315a8: 7844                 moveq   #$44, D4
+315aa: 80da                 divu.w  (A2)+, D0
+315ac: 0447 ddd4            subi.w  #-$222c, D7
+315b0: 87aa bf01            or.l    D3, (-$40ff,A2)
+315b4: d780                 addx.l  D0, D3
+315b6: bf01                 eor.b   D7, D1
+315b8: 4194                 chk.w   (A4), D0
+315ba: bf01                 eor.b   D7, D1
+315bc: 009b 0001 0184       ori.l   #$10184, (A3)+
+315c2: 0301                 btst    D1, D1
+315c4: 1787 0302            move.b  D7, INVALID 33
+315c8: 0177 8016            bchg    D0, ($16,A7,A0.w)
+315cc: 0171 801a            bchg    D0, ($1a,A1,A0.w)
+315d0: 810b                 sbcd    -(A3), -(A0)
+315d2: 8117                 or.b    D0, (A7)
+315d4: 0118                 btst    D0, (A0)+
+315d6: 8026                 or.b    -(A6), D0
+315d8: 0174 802a            bchg    D0, ($2a,A4,A0.w)
+315dc: 018d 802e            movep.w D0, ($802e,A5)
+315e0: 01d4                 bset    D0, (A4)
+315e2: 802a 01d8            or.b    ($1d8,A2), D0
+315e6: 8012                 or.b    (A2), D0
+315e8: 0547                 bchg    D2, D7
+315ea: 0000 1487            ori.b   #$87, D0
+315ee: 8003                 or.b    D3, D0
+315f0: 8037 8003            or.b    ($3,A7,A0.w), D0
+315f4: 0301                 btst    D1, D1
+315f6: 7811                 moveq   #$11, D4
+315f8: 8036 8003            or.b    ($3,A6,A0.w), D0
+315fc: 0511                 btst    D2, (A1)
+315fe: 0100                 btst    D0, D0
+31600: 0101                 btst    D0, D1
+31602: 8553                 or.w    D2, (A3)
+31604: 8c7a 2211            or.w    ($33817,PC), D6
+31608: 1100                 move.b  D0, -(A0)
+3160a: 1174 8701 7448       move.b  INVALID 34, ($7448,A0)
+31610: 7117                 dc.w    $7117; ILLEGAL
+31612: 4487                 neg.l   D7
+31614: 1218                 move.b  (A0)+, D1
+31616: 8771 1178            or.w    D3, INVALID 31
+3161a: 7117                 dc.w    $7117; ILLEGAL
+3161c: 8487                 or.l    D7, D2
+3161e: 1777 7771 7177       move.b  INVALID 37, ($7177,A3)
+31624: 7817                 moveq   #$17, D4
+31626: 7177                 dc.w    $7177; ILLEGAL
+31628: 8480                 or.l    D0, D2
+3162a: 0307                 btst    D1, D7
+3162c: 8817                 or.b    (A7), D4
+3162e: 7717                 dc.w    $7717; ILLEGAL
+31630: 7771                 dc.w    $7771; ILLEGAL
+31632: 7880                 moveq   #-$80, D4
+31634: 130e                 dc.w    $130e; ILLEGAL
+31636: 7887                 moveq   #-$79, D4
+31638: 1d87 1771            move.b  D7, INVALID 36
+3163c: 4847                 swap    D7
+3163e: 7117                 dc.w    $7117; ILLEGAL
+31640: 4781                 chk.w   D1, D3
+31642: 7718                 dc.w    $7718; ILLEGAL
+31644: 8022                 or.b    -(A2), D0
+31646: 8003                 or.b    D3, D0
+31648: 0571 7717            bchg    D2, INVALID 31
+3164c: 1781 8303            move.b  D1, INVALID 33
+31650: 0e18                 dc.w    $0e18; ILLEGAL
+31652: 8111                 or.b    D0, (A1)
+31654: 1118                 move.b  (A0)+, -(A0)
+31656: 8171 1818            or.w    D0, ($18,A1,D1.l)
+3165a: 8141                 dc.w    $8141; ILLEGAL
+3165c: 7478                 moveq   #$78, D2
+3165e: 7180                 dc.w    $7180; ILLEGAL
+31660: 0303                 btst    D1, D3
+31662: 1714                 move.b  (A4), -(A3)
+31664: 1480                 move.b  D0, (A2)
+31666: 4480                 neg.l   D0
+31668: 3e80                 move.w  D0, (A7)
+3166a: 4980                 chk.w   D0, D4
+3166c: 4381                 chk.w   D1, D1
+3166e: 4780                 chk.w   D0, D3
+31670: 8e80                 or.l    D0, D7
+31672: c788                 exg     D3, A0
+31674: 7e23                 moveq   #$23, D7
+31676: 2ff6                 dc.w    $2ff6; ILLEGAL
+31678: 1122                 move.b  -(A2), -(A0)
+3167a: 5566                 subq.w  #2, -(A6)
+3167c: 5221                 addq.b  #1, -(A1)
+3167e: 1111                 move.b  (A1), -(A0)
+31680: 1117                 move.b  (A7), -(A0)
+31682: 7711                 dc.w    $7711; ILLEGAL
+31684: 7744                 dc.w    $7744; ILLEGAL
+31686: 8777 118d            or.w    D3, INVALID 37
+3168a: d487                 add.l   D7, D2
+3168c: 7744                 dc.w    $7744; ILLEGAL
+3168e: ddd4                 adda.l  (A4), A6
+31690: 8748                 dc.w    $8748; ILLEGAL
+31692: 8448                 dc.w    $8448; ILLEGAL
+31694: 4778                 dc.w    $4778; ILLEGAL
+31696: 4887                 ext.w   D7
+31698: 7781                 dc.w    $7781; ILLEGAL
+3169a: 0001 4780            ori.b   #$80, D1
+3169e: 1b18                 move.b  (A0)+, -(A5)
+316a0: 71d1                 dc.w    $71d1; ILLEGAL
+316a2: 7d87                 dc.w    $7d87; ILLEGAL
+316a4: 1d81 d481            move.b  D1, INVALID 36
+316a8: 1471                 dc.w    $1471; ILLEGAL
+316aa: 4871 4817            pea     ($17,A1,D4.l)
+316ae: 8811                 or.b    (A1), D4
+316b0: 4818                 nbcd    (A0)+
+316b2: 8181                 dc.w    $8181; ILLEGAL
+316b4: 4718                 dc.w    $4718; ILLEGAL
+316b6: 7141                 dc.w    $7141; ILLEGAL
+316b8: 808b                 dc.w    $808b; ILLEGAL
+316ba: 0e44                 dc.w    $0e44; ILLEGAL
+316bc: 7111                 dc.w    $7111; ILLEGAL
+316be: 111d                 move.b  (A5)+, -(A0)
+316c0: 1113                 move.b  (A3), -(A0)
+316c2: f131                 dc.w    $f131; opcode 1111
+316c4: 1111                 move.b  (A1), -(A0)
+316c6: 77f9                 dc.w    $77f9; ILLEGAL
+316c8: 7180                 dc.w    $7180; ILLEGAL
+316ca: 030d 41dd            movep.w ($41dd,A5), D1
+316ce: 77f9                 dc.w    $77f9; ILLEGAL
+316d0: 4711                 dc.w    $4711; ILLEGAL
+316d2: 1f99 4dd9            move.b  (A1)+, INVALID 37
+316d6: 9999                 sub.l   D4, (A1)+
+316d8: 7480                 moveq   #-$80, D2
+316da: 0305                 btst    D1, D5
+316dc: 114d                 dc.w    $114d; ILLEGAL
+316de: 9999                 sub.l   D4, (A1)+
+316e0: 7180                 dc.w    $7180; ILLEGAL
+316e2: 5902                 subq.b  #4, D2
+316e4: 1213                 move.b  (A3), D1
+316e6: 80f3 8c00            divu.w  INVALID 33, D0
+316ea: 0110                 btst    D0, (A0)
+316ec: 838a                 dc.w    $838a; ILLEGAL
+316ee: 0d00                 btst    D6, D0
+316f0: 7777                 dc.w    $7777; ILLEGAL
+316f2: 1110                 move.b  (A0), -(A0)
+316f4: 7887                 moveq   #-$79, D4
+316f6: 7771                 dc.w    $7771; ILLEGAL
+316f8: 1788                 dc.w    $1788; ILLEGAL
+316fa: 8877 80f6            or.w    (-$a,A7,A0.w), D4
+316fe: 8078 800d            or.w    $800d.w, D0
+31702: 8400                 or.b    D0, D2
+31704: 80c0                 divu.w  D0, D0
+31706: 1177 8117 8877       move.b  INVALID 37, (-$7789,A0)
+3170c: d181                 addx.l  D1, D0
+3170e: 7481                 moveq   #-$7f, D2
+31710: d148                 addx.w  -(A0), -(A0)
+31712: 18d7                 move.b  (A7), (A4)+
+31714: 4144                 dc.w    $4144; ILLEGAL
+31716: 174d                 dc.w    $174d; ILLEGAL
+31718: 808a                 dc.w    $808a; ILLEGAL
+3171a: 1184 71d4            move.b  D4, INVALID 30
+3171e: 8178 18dd            or.w    D0, $18dd.w
+31722: 4411                 neg.b   (A1)
+31724: 1d9d 8118            move.b  (A5)+, INVALID 36
+31728: d99d                 add.l   D4, (A5)+
+3172a: 1f11                 move.b  (A1), -(A7)
+3172c: 8069 0414            or.w    ($414,A1), D0
+31730: 9999                 sub.l   D4, (A1)+
+31732: 1781 030a            move.b  D1, INVALID 33
+31736: 1d99 99d1            move.b  (A1)+, INVALID 36
+3173a: 7d99                 dc.w    $7d99; ILLEGAL
+3173c: 9999                 sub.l   D4, (A1)+
+3173e: d894                 add.l   (A4), D4
+31740: 80db                 divu.w  (A3)+, D0
+31742: 0c41 4d41            cmpi.w  #$4d41, D1
+31746: 5514                 subq.b  #2, (A4)
+31748: d416                 add.b   (A6), D2
+3174a: f61d                 dc.w    $f61d; opcode 1111
+3174c: 9816                 sub.b   (A6), D4
+3174e: 6f8d                 ble     $316dd
+31750: 7f8f                 dc.w    $7f8f; ILLEGAL
+31752: 8b0e                 sbcd    -(A6), -(A5)
+31754: 1000                 move.b  D0, D0
+31756: 7177                 dc.w    $7177; ILLEGAL
+31758: 7110                 dc.w    $7110; ILLEGAL
+3175a: 7777                 dc.w    $7777; ILLEGAL
+3175c: 4471 7717            neg.w   INVALID 31
+31760: 7447                 moveq   #$47, D2
+31762: 8091                 or.l    (A1), D0
+31764: 1248                 dc.w    $1248; ILLEGAL
+31766: 1777 7178 8178       move.b  INVALID 37, (-$7e88,A3)
+3176c: 8717                 or.b    D3, (A7)
+3176e: 7817                 moveq   #$17, D4

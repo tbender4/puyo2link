@@ -1,0 +1,183 @@
+:COINAGE Coin A
+:COINAGE Coin B
+:DSW Rannyu Off Button
+:DSW Turn Direction
+:DSW VS Mode Match/1 Play
+:DSW Demo Sounds
+:DSW Battle Start credit
+:DSW Difficulty
+:P1 P1 Down
+:P1 P1 Button 2
+:P1 P1 Left
+:P1 P1 Up
+:P1 P1 Button 1
+:P1 P1 Right
+:P2 P2 Down
+:P2 P2 Button 1
+:P2 P2 Left
+:P2 P2 Right
+:P2 P2 Button 2
+:P2 P2 Up
+:SERVICE Coin 1
+:SERVICE 1 Player Start
+:SERVICE Coin 2
+:SERVICE Service Mode
+:SERVICE 2 Players Start
+:SERVICE Service 1
+420 :SERVICE Coin 1
+435 :SERVICE Coin 1
+450 :SERVICE Coin 1
+465 :SERVICE Coin 1
+510 :SERVICE 1 Player Start
+570 :SERVICE 1 Player Start
+state frame=600 mode=01 match=04 command=1302 protection=00
+630 :SERVICE 2 Players Start
+630 :P1 P1 Button 1
+630 :P2 P2 Button 1
+690 :SERVICE 2 Players Start
+720 :P1 P1 Button 1
+720 :P2 P2 Button 1
+810 :P1 P1 Button 1
+810 :P2 P2 Button 1
+900 :P1 P1 Button 1
+900 :P2 P2 Button 1
+990 :P1 P1 Button 1
+990 :P2 P2 Button 1
+1080 :P1 P1 Button 1
+1080 :P2 P2 Button 1
+1170 :P1 P1 Button 1
+1170 :P2 P2 Button 1
+state frame=1200 mode=01 match=04 command=3822 protection=00
+1320 :SERVICE 2 Players Start
+placement frame=1398 player=1 pair=1 colors=b,d target=4
+placement frame=1398 player=2 pair=1 colors=b,d target=5
+placement frame=1462 player=1 pair=2 colors=b,c target=5
+placement frame=1464 player=2 pair=2 colors=b,c target=4
+placement frame=1528 player=1 pair=3 colors=d,b target=0
+placement frame=1528 player=2 pair=3 colors=d,b target=1
+placement frame=1585 player=2 pair=4 colors=c,c target=3
+placement frame=1592 player=1 pair=4 colors=c,c target=1
+placement frame=1642 player=2 pair=5 colors=c,b target=2
+placement frame=1649 player=1 pair=5 colors=c,b target=2
+placement frame=1704 player=1 pair=6 colors=d,b target=3
+placement frame=1761 player=1 pair=7 colors=8,d target=4
+placement frame=1779 player=2 pair=6 colors=d,b target=0
+state frame=1800 mode=01 match=04 command=0b22 protection=00
+placement frame=1821 player=1 pair=8 colors=8,d target=5
+placement frame=1843 player=2 pair=7 colors=8,d target=3
+placement frame=1881 player=1 pair=9 colors=8,d target=3
+placement frame=1900 player=2 pair=8 colors=8,d target=2
+placement frame=1934 player=1 pair=10 colors=c,8 target=1
+placement frame=1953 player=2 pair=9 colors=8,d target=4
+placement frame=2013 player=2 pair=10 colors=c,8 target=3
+placement frame=2066 player=2 pair=11 colors=b,8 target=0
+placement frame=2072 player=1 pair=11 colors=b,8 target=2
+hardware soft reset at frame 2100
+:COINAGE Coin A
+:COINAGE Coin B
+:DSW Rannyu Off Button
+:DSW Turn Direction
+:DSW VS Mode Match/1 Play
+:DSW Demo Sounds
+:DSW Battle Start credit
+:DSW Difficulty
+:P1 P1 Down
+:P1 P1 Button 2
+:P1 P1 Left
+:P1 P1 Up
+:P1 P1 Button 1
+:P1 P1 Right
+:P2 P2 Down
+:P2 P2 Button 1
+:P2 P2 Left
+:P2 P2 Right
+:P2 P2 Button 2
+:P2 P2 Up
+:SERVICE Coin 1
+:SERVICE 1 Player Start
+:SERVICE Coin 2
+:SERVICE Service Mode
+:SERVICE 2 Players Start
+:SERVICE Service 1
+420 :SERVICE Coin 1
+435 :SERVICE Coin 1
+450 :SERVICE Coin 1
+465 :SERVICE Coin 1
+510 :SERVICE 1 Player Start
+570 :SERVICE 1 Player Start
+state frame=600 mode=01 match=04 command=0322 protection=00
+630 :SERVICE 2 Players Start
+630 :P1 P1 Button 1
+630 :P2 P2 Button 1
+690 :SERVICE 2 Players Start
+720 :P1 P1 Button 1
+720 :P2 P2 Button 1
+810 :P1 P1 Button 1
+810 :P2 P2 Button 1
+900 :P1 P1 Button 1
+900 :P2 P2 Button 1
+990 :P1 P1 Button 1
+990 :P2 P2 Button 1
+1080 :P1 P1 Button 1
+1080 :P2 P2 Button 1
+1170 :P1 P1 Button 1
+1170 :P2 P2 Button 1
+state frame=1200 mode=01 match=02 command=f822 protection=00
+placement frame=1200 player=1 pair=1 colors=c,c target=4
+placement frame=1200 player=2 pair=1 colors=c,c target=5
+placement frame=1250 player=1 pair=2 colors=9,9 target=0
+placement frame=1314 player=1 pair=3 colors=b,b target=1
+1320 :SERVICE 2 Players Start
+placement frame=1331 player=2 pair=2 colors=9,9 target=0
+placement frame=1371 player=1 pair=4 colors=9,d target=2
+placement frame=1395 player=2 pair=3 colors=b,b target=1
+placement frame=1426 player=1 pair=5 colors=d,9 target=3
+placement frame=1452 player=2 pair=4 colors=9,d target=2
+placement frame=1483 player=1 pair=6 colors=d,9 target=4
+placement frame=1507 player=2 pair=5 colors=d,9 target=3
+placement frame=1543 player=1 pair=7 colors=c,9 target=5
+placement frame=1564 player=2 pair=6 colors=d,9 target=4
+placement frame=1607 player=1 pair=8 colors=9,b target=3
+placement frame=1624 player=2 pair=7 colors=c,9 target=5
+placement frame=1688 player=2 pair=8 colors=9,b target=3
+placement frame=1744 player=1 pair=9 colors=9,9 target=0
+state frame=1800 mode=01 match=02 command=f822 protection=00
+placement frame=1825 player=2 pair=9 colors=9,9 target=0
+placement frame=1862 player=1 pair=10 colors=b,b target=0
+placement frame=1943 player=2 pair=10 colors=b,b target=0
+placement frame=1984 player=1 pair=11 colors=9,9 target=1
+placement frame=2041 player=1 pair=12 colors=9,9 target=0
+placement frame=2065 player=2 pair=11 colors=9,9 target=1
+hardware soft reset at frame 2100
+:COINAGE Coin A
+:COINAGE Coin B
+:DSW Rannyu Off Button
+:DSW Turn Direction
+:DSW VS Mode Match/1 Play
+:DSW Demo Sounds
+:DSW Battle Start credit
+:DSW Difficulty
+:P1 P1 Down
+:P1 P1 Button 2
+:P1 P1 Left
+:P1 P1 Up
+:P1 P1 Button 1
+:P1 P1 Right
+:P2 P2 Down
+:P2 P2 Button 1
+:P2 P2 Left
+:P2 P2 Right
+:P2 P2 Button 2
+:P2 P2 Up
+:SERVICE Coin 1
+:SERVICE 1 Player Start
+:SERVICE Coin 2
+:SERVICE Service Mode
+:SERVICE 2 Players Start
+:SERVICE Service 1
+420 :SERVICE Coin 1
+435 :SERVICE Coin 1
+450 :SERVICE Coin 1
+465 :SERVICE Coin 1
+510 :SERVICE 1 Player Start
+570 :SERVICE 1 Player Start

@@ -1,0 +1,393 @@
+ 
+ 
+ 
+ 
+ Puyo Puyo Tsu/Hardware Platforms - Puyo Nexus Wiki 
+ (function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )puyonexus_mw_mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"85d3fe2d16dbd5eff0792f95","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Puyo_Puyo_Tsu/Hardware_Platforms","wgTitle":"Puyo Puyo Tsu/Hardware Platforms","wgCurRevisionId":5914,"wgRevisionId":5914,"wgArticleId":1245,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Reverse Engineering"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Puyo_Puyo_Tsu/Hardware_Platforms","wgRelevantArticleId":1245,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCargoDefaultQueryLimit":100,"wgCargoMapClusteringMinimum":80,"wgCargoMonthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready","skins.vectornexus.styles.legacy":"ready","jquery.tablesorter.styles":"ready","ext.embedVideo.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","jquery.tablesorter","mediawiki.toc","skins.vector.legacy.js","ext.checkUser.clientHints","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.notify.desktop","ext.cargo.purge"]; 
+ (RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});}); 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Puyo Nexus 
+ 
+ 
+ 
+ 
+ Wiki 
+ Forum 
+ Chain Simulator 
+ 
+ 
+ 
+ Search 
+ 
+ <div id="simpleSearch"
+ class="vector-search-box-inner"
+ data-search-loc="header-navigation">
+ <input class="vector-search-box-input"
+ type="search" name="search" placeholder="Search Puyo Nexus Wiki" aria-label="Search Puyo Nexus Wiki" autocapitalize="sentences" title="Search Puyo Nexus Wiki [f]" accesskey="f" id="searchInput"
+ >
+ 
+ <input id="mw-searchButton"
+ class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+ <input id="searchButton"
+ class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <h3
+ id="p-navigation-label"
+ 
+ class="vector-menu-heading "
+ >
+ Navigation 
+ 
+ 
+ 
+ 
+ 
+ 
+ Main page Tools Links Recent changes Random page Random image Help 
+ 
+ 
+ 
+ 
+
+ 
+ <h3
+ id="p-Puyo_Puyo-label"
+ 
+ class="vector-menu-heading "
+ >
+ Puyo Puyo 
+ 
+ 
+ 
+ 
+ 
+ 
+ Characters Games Puyo Puyo!! Quest Database Other media Game Modes Game Rules Guides 
+ 
+ 
+ 
+ 
+ 
+ <h3
+ id="p-tb-label"
+ 
+ class="vector-menu-heading "
+ >
+ Tools 
+ 
+ 
+ 
+ 
+ 
+ 
+ What links here Related changes Special pages Printable version Permanent link Page information Cargo data 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ <h3
+ id="p-personal-label"
+ 
+ class="vector-menu-heading "
+ >
+ Personal tools 
+ 
+ 
+ 
+ 
+ 
+ 
+ Create account Log in 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ <h3
+ id="p-namespaces-label"
+ 
+ class="vector-menu-heading "
+ >
+ Namespaces 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page Discussion 
+ 
+ 
+ 
+ 
+
+ 
+ <input type="checkbox"
+ id="p-variants-checkbox"
+ role="button"
+ aria-haspopup="true"
+ data-event-name="ui.dropdown-p-variants"
+ class="vector-menu-checkbox"
+ aria-labelledby="p-variants-label"
+ >
+ <label
+ id="p-variants-label"
+ 
+ class="vector-menu-heading "
+ >
+ English 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ <h3
+ id="p-views-label"
+ 
+ class="vector-menu-heading "
+ >
+ Views 
+ 
+ 
+ 
+ 
+ 
+ 
+ Read View source View history 
+ 
+ 
+ 
+ 
+
+ 
+ <input type="checkbox"
+ id="p-cactions-checkbox"
+ role="button"
+ aria-haspopup="true"
+ data-event-name="ui.dropdown-p-cactions"
+ class="vector-menu-checkbox"
+ aria-labelledby="p-cactions-label"
+ >
+ <label
+ id="p-cactions-label"
+ 
+ class="vector-menu-heading "
+ >
+ More 
+ 
+ 
+ 
+ 
+ 
+ 
+ Purge cache 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Puyo Puyo Tsu/Hardware Platforms 
+ 
+ From Puyo Nexus Wiki 
+ &lt; Puyo Puyo Tsu 
+ 
+ 
+ 
+ Jump to navigation 
+ Jump to search 
+ Puyo Puyo Tsu runs on various hardware platforms. When analyzing game ROMs from those systems, one must keep in mind intricate details about the platform. Indeed, game routines depend on the platform architecture, how external devices are connected (for instance, how gamepad input is managed), as well as the different processor types which will directly impact the assembly language to be analyzed.
+ Puyo Puyo Tsu is available on multiple platforms: Arcade, Super Famicom, Sega Saturn, PlayStation, PlayStation 2, Mega Drive, Game Gear, Game Boy, PC, Virtual Console, NEC PC-9801, Macintosh, PC Engine, Neo-Geo Pocket, Wonderswan.
+ Current reverse engineering efforts focus on the Mega Drive/Genesis version of the game, for various reasons:
+ 
+ it still runs on available mainstream and inexpensive hardware; 
+ this version can be legitimately purchased somewhat easily, which grants reversers a more protective legal framework, depending on local regulations; 
+ the Genesis version is almost an arcade-perfect conversion, with only minor adjustments as the hardware platform is mostly the same. Only minor differences impact very few gameplay-related routines. 
+ The next sections describe both of these platforms as well as discuss various hardware considerations and generalities, so that everyone knows what's required to understand the reverse engineering efforts.
+ 
+ Contents 
+ 
+ 1 Hardware considerations and generalities 
+ 2 Hardware architecture 
+ 
+ 2.1 Genesis 
+ 2.2 System C-2 / Arcade 
+ 
+ 
+ 3 Main platform-related memory mappings 
+ 
+ 
+
+ Hardware considerations and generalities 
+ The process of reverse engineering programs mainly involves reading bytecode, assembly language, and debugging a running instance of the program to inspect the state of the machine at some specific moments. A few concepts shall be understood on how a computer/console works.
+ The main CPU communicates with various hardware processors and memories to perform calculations. In our case, the Genesis CPU communicates with game controllers, a sound processor to handle music and sound effects, and a video processor to render frames and display them on the screen. 
+It also talks to the ROM (static memory) in the cartridge to read the content of the game program and data (sprites, backgrounds, sounds...), and has some RAM (volatile) memory. The last type of memory resides inside the CPU itself, in multiple small chunks called registers, which are the fastest type of memory, in terms of access delay.
+ The main CPU is connected to the external processors and memories through a communication bus: it can send read and write orders on that bus, along with some data and the address they should occur at, be sent to or read from.
+ Old hardware handles all those surrounding memories and processors quite simply: a "virtual" address space is indexed sequentially at the byte (8 bits) level: address 0x0 is the byte value located at the first storage byte of the address space, while address 0xFF is byte the 256th byte of the memory.
+On the genesis, the address space is 24-bits wide, which means addresses range from 0 to 0xFFFFFF, 16 MB of available memory. For convenience and as the CPU registers are 32-bit wide themselves, addresses are mostly expressed as a 32-bit value, with their most significant byte being set zero. The full address space then ranges from 0x00000000 to 0x00FFFFFF.
+ ROMs are way smaller than that available addressing space, so the virtual addressing space is split up, and each portion is assigned to a designated peripheral: for instance, addresses 0 through 0x003FFFFF are mapped to the ROM inside the cartridge, while 0x00FF0000 through 0x00FFFFFF are assigned to the volatile RAM. External CPUs or game controllers are mapped in the same way, and communicating with them is as simple as reading and writing to their designated addresses. Seeing which keys are pressed is almost as simple as reading a value somewhere in the virtual address space.
+ CPU registers are a very small memory that resides inside the main CPU, usually 32-bits wide, 64-bits wide in current PC hardware. They are used to store intermediate values during calculations, values that are fetched from or stored to the ROM, RAM or external peripherals.
+ Some very special registers are important:
+ 
+ Program Counter (PC) / Instruction Pointer (IP/EIP) : it's a registers that always holds an address pointing somewhere in the virtual address space. More importantly, that address points to the next instruction (command) the CPU will execute. In our case, this almost always points to an address located in the cartridge ROM, so that the CPU executes the game code stored there. 
+ Stack Pointer (SP/ESP) : this is also an address but points to the RAM section. Its value slowly grows up or down as the program saves values by pushing/popping them onto/from a stack of values. The address points to the top of that stack. This is a fundamental mechanic on how program functions store variables. 
+ Status register (SR) : this registers holds bits which will each have some significance with regards to the most recently executed instruction: is the result negative? did we generate a carry/borrow while adding/subtracting stuff? etc. 
+ The other general purpose registers are used to hold data or addresses.
+ 
+ Hardware architecture 
+ The Genesis console (Mega Drive in EU and JP) was released as the household device everyone know, but also declined into arcade cabinet boards known as "System C" and "System C-2", which share the main hardware architecture while providing several enhancements (mainly performance-wise).
+ These platforms are based on various main components:
+ 
+ Main CPU: Motorola 68K, clocked higher on the C-2 hardware, which runs the main program of the games. It has 8 dedicated data registers (D0-D7) and 8 address registers (A0-A7) on top of PC, SP and SR; 
+ Sound CPU: Zilog Z80, which is absent of C-2 hardware (since the higher clock speed allowed for the main CPU to handle all that). The main CPU feeds it with sound samples and Z80 code excerpts to handle the playback; 
+ Video CPU (VDP): this CPU will actually build each frame but putting together sprites and backgrounds. The main CPU feeds it with sprite IDs and position through various data and control registers, and this CPU gets its graphic data from the ROM. 
+ Genesis 
+ See segaretro.org/Sega_Mega_Drive at segaretro (link filtered by anti-spam).
+ 
+ System C-2 / Arcade 
+ See segaretro.org/Sega_System_C at segaretro (link filtered by anti-spam).
+ 
+ Main platform-related memory mappings 
+ When reading or writing at specific addresses, the CPU can communicate with the cartridge, the RAM, the sound CPU, etc. This sums up where everything goes:
+ 
+ 
+
+ 
+ Address range 
+ Description
+ 
+ 
+ 0x000000 - 0x3FFFFF 
+ main ROM cartridge
+ 
+ 
+ 0xA00000 - 0xA0FFFF 
+ Z80 sound processor memory, used to send sound samples
+ 
+ 
+ 0xA10000 - 0xA10FFF 
+ System registers, some of which hold game controller status
+ 
+ 
+ 0xA11000 - 0xA11FFF 
+ Z80 control registers, used to send play commands
+ 
+ 
+ 0xC00000 - 0xDFFFFF 
+ VDP memory and control registers, used to send both data and display commands
+ 
+ 
+ 0xE00000 - 0xFFFFFF 
+ main RAM, with most games (including Tsuu) using only 0xFF0000 through 0xFFFFFF
+ 
+ (this list is not 100% accurate)
+ The System C-2 uses very similar mappings, most importantly for the main CPU ROM and RAM sections. Sound CPU mappings are different though.
+ 
+<!-- 
+NewPP limit report
+Cached time: 20260911115725
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.003 seconds
+Real time usage: 0.004 seconds
+Preprocessor visited node count: 16/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 0.000 1 -total
+-->
+
+<!-- Saved in parser cache with key puyonexus-mw_:pcache:idhash:1245-0!canonical and timestamp 20260911115725 and revision id 5914. Rendering was triggered because: page-view
+ -->
+ 
+ Retrieved from " https://puyonexus.com/mediawiki/index.php?title=Puyo_Puyo_Tsu/Hardware_Platforms&oldid=5914 " 
+ Category : Reverse Engineering 
+ 
+ 
+
+ 
+ 
+ 
+ This page was last edited on 30 November 2013, at 00:24. 
+ 
+
+ 
+ Privacy policy 
+ About Puyo Nexus Wiki 
+ Disclaimers 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+
+
+
+ 
+ 

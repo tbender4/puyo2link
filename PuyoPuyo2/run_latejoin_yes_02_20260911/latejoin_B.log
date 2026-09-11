@@ -1,0 +1,716 @@
+0 0.000 mapping :SERVICE Service Mode KEYCODE_F2
+0 0.000 mapping :SERVICE 1 Player Start KEYCODE_1 OR JOYCODE_1_UNKNOWN_SWITCH
+0 0.000 mapping :SERVICE Coin 1 KEYCODE_5 OR JOYCODE_1_UNKNOWN_SWITCH
+0 0.000 mapping :SERVICE Coin 2 KEYCODE_6 OR JOYCODE_2_UNKNOWN_SWITCH
+0 0.000 mapping :SERVICE 2 Players Start KEYCODE_2 OR JOYCODE_2_UNKNOWN_SWITCH
+0 0.000 mapping :SERVICE Service 1 KEYCODE_9
+0 0.000 mapping :P1 P1 Down KEYCODE_DOWN
+0 0.000 mapping :P1 P1 Button 1 KEYCODE_LCONTROL OR MOUSECODE_1_BUTTON1 OR GUNCODE_1_BUTTON1
+0 0.000 mapping :P1 P1 Left KEYCODE_LEFT
+0 0.000 mapping :P1 P1 Button 2 KEYCODE_LALT OR MOUSECODE_1_BUTTON3 OR GUNCODE_1_BUTTON2
+0 0.000 mapping :P1 P1 Right KEYCODE_RIGHT
+0 0.000 mapping :P1 P1 Up KEYCODE_UP
+0 0.000 mapping :P2 P2 Right KEYCODE_G
+0 0.000 mapping :P2 P2 Button 1 KEYCODE_A OR MOUSECODE_2_BUTTON1 OR GUNCODE_2_BUTTON1
+0 0.000 mapping :P2 P2 Down KEYCODE_F
+0 0.000 mapping :P2 P2 Left KEYCODE_D
+0 0.000 mapping :P2 P2 Up KEYCODE_R
+0 0.000 mapping :P2 P2 Button 2 KEYCODE_S OR MOUSECODE_2_BUTTON3 OR GUNCODE_2_BUTTON2
+0 0.010 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+1 0.017 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f48 flow=00010034 menu=00000000 flags=c7 offer=00 header=54/54 choice=0 done=0 selector=1 active=false/false
+2 0.033 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f70 flow=00010034 menu=00000000 flags=00 offer=00 header=00/00 choice=0 done=0 selector=1 active=false/false
+5 0.083 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f7e flow=00010034 menu=00000000 flags=00 offer=00 header=00/00 choice=0 done=0 selector=1 active=false/false
+10 0.167 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f80 flow=00010034 menu=00000000 flags=00 offer=00 header=00/00 choice=0 done=0 selector=1 active=false/false
+27 0.451 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f80 flow=00010034 menu=00000000 flags=00 offer=00 header=10/00 choice=0 done=0 selector=1 active=false/false
+28 0.467 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f80 flow=00010034 menu=00000000 flags=00 offer=00 header=00/00 choice=0 done=0 selector=1 active=false/false
+31 0.517 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f80 flow=00010034 menu=00000000 flags=00 offer=00 header=00/10 choice=0 done=0 selector=1 active=false/false
+32 0.534 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f80 flow=00010034 menu=00000000 flags=00 offer=00 header=10/10 choice=0 done=0 selector=1 active=false/false
+188 3.137 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f80 flow=00010034 menu=00000000 flags=00 offer=00 header=10/11 choice=0 done=0 selector=1 active=false/false
+191 3.187 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f84 flow=00010034 menu=00000000 flags=00 offer=00 header=10/11 choice=0 done=0 selector=1 active=false/false
+195 3.254 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019f86 flow=00010034 menu=00000000 flags=00 offer=00 header=10/11 choice=0 done=0 selector=1 active=false/false
+195 3.255 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+195 3.262 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+196 3.271 mode=01 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019fc8 flow=00010034 menu=00000000 flags=09 offer=00 header=11/11 choice=0 done=0 selector=1 active=false/false
+197 3.288 mode=00 match=04 mask=05 players=2 command=0b22 peer=0000 script=00019ff2 flow=00010034 menu=00000000 flags=09 offer=00 header=11/11 choice=0 done=0 selector=1 active=false/false
+198 3.304 mode=00 match=04 mask=05 players=2 command=0b22 peer=0000 script=0001a002 flow=00010034 menu=00000000 flags=09 offer=00 header=11/11 choice=0 done=0 selector=1 active=false/false
+199 3.321 mode=00 match=04 mask=05 players=2 command=0b22 peer=0000 script=0001a004 flow=00010034 menu=00000000 flags=09 offer=00 header=11/11 choice=0 done=0 selector=1 active=false/false
+236 3.938 mode=00 match=04 mask=05 players=2 command=0b22 peer=0000 script=0001a004 flow=00010034 menu=00000000 flags=09 offer=00 header=11/13 choice=0 done=0 selector=1 active=false/false
+237 3.955 mode=00 match=04 mask=05 players=2 command=0b22 peer=0000 script=0001a008 flow=00010034 menu=00000000 flags=09 offer=00 header=11/13 choice=0 done=0 selector=1 active=false/false
+245 4.089 mode=00 match=04 mask=05 players=2 command=0b22 peer=0000 script=0001a00a flow=00010034 menu=00000000 flags=09 offer=00 header=11/13 choice=0 done=0 selector=1 active=false/false
+245 4.089 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+245 4.097 menu-write pc=00a48a data=0000 mask=ffff oldchoice=0 done=0
+246 4.105 mode=01 match=04 mask=00 players=0 command=0322 peer=0000 script=0001a39e flow=00010034 menu=000188fc flags=08 offer=00 header=11/13 choice=0 done=0 selector=1 active=false/false
+248 4.139 mode=01 match=04 mask=00 players=0 command=0322 peer=0000 script=0001a39e flow=00010034 menu=000189c6 flags=08 offer=00 header=13/13 choice=0 done=0 selector=1 active=false/false
+289 4.823 mode=01 match=04 mask=00 players=0 command=0322 peer=0000 script=0001a39e flow=00010034 menu=00018a40 flags=08 offer=00 header=13/13 choice=0 done=0 selector=1 active=false/false
+693 11.565 mode=01 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a39e flow=00010034 menu=00018b84 flags=08 offer=00 header=13/13 choice=0 done=0 selector=1 active=false/false
+694 11.582 mode=01 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a39e flow=00010034 menu=00018db6 flags=08 offer=00 header=10/10 choice=0 done=0 selector=1 active=false/false
+713 11.899 mode=01 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a39e flow=00010034 menu=00018dd8 flags=08 offer=00 header=10/10 choice=0 done=0 selector=1 active=false/false
+714 11.915 mode=01 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a39e flow=00010034 menu=00018e08 flags=08 offer=00 header=10/10 choice=0 done=0 selector=1 active=false/false
+808 13.484 mode=01 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a39e flow=00010034 menu=00018e08 flags=08 offer=00 header=10/54 choice=0 done=0 selector=1 active=false/false
+894 14.919 mode=01 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a39e flow=00010034 menu=00018e0e flags=08 offer=00 header=10/54 choice=0 done=0 selector=1 active=false/false
+895 14.936 mode=01 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a39e flow=00010034 menu=00018e40 flags=08 offer=00 header=10/54 choice=0 done=0 selector=1 active=false/false
+898 14.989 menu-write pc=00a4f0 data=0000 mask=ffff oldchoice=0 done=0
+899 15.003 mode=01 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a39e flow=00010034 menu=00000000 flags=08 offer=00 header=10/54 choice=0 done=0 selector=1 active=false/false
+899 15.005 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+899 15.012 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+900 15.019 mode=01 match=04 mask=00 players=0 command=4322 peer=0000 script=00019fc8 flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+901 15.036 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=00019ff2 flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+902 15.053 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a002 flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+903 15.069 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a004 flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+1083 18.073 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a008 flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+1091 18.207 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a00a flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+1091 18.208 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+1091 18.215 menu-write pc=00a36c data=0000 mask=ffff oldchoice=0 done=0
+1092 18.223 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001f576 flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+1093 18.240 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001f582 flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+1149 19.175 B saw A active; delayed coin schedule
+1273 21.244 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001f588 flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+1280 21.361 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001f58a flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+1280 21.362 menu-write pc=00a36c data=0000 mask=ffff oldchoice=0 done=0
+1280 21.369 menu-write pc=00a36c data=0000 mask=ffff oldchoice=0 done=0
+1281 21.378 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001f5ba flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+1305 21.778 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001f5c6 flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+1306 21.795 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001f5c8 flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+1307 21.811 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001f5da flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+1329 22.179 input :SERVICE Coin 1
+1344 22.429 input :SERVICE Coin 1
+1359 22.679 input :SERVICE Coin 1
+1374 22.930 input :SERVICE Coin 1
+1419 23.680 input :SERVICE 1 Player Start
+1422 23.731 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001f5e0 flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+1429 23.847 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001f5e2 flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+1429 23.850 menu-write pc=00a36c data=0000 mask=ffff oldchoice=0 done=0
+1429 23.858 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+1430 23.864 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a034 flow=00010034 menu=00000000 flags=09 offer=00 header=11/54 choice=0 done=0 selector=1 active=false/false
+1430 23.866 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+1430 23.875 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+1431 23.881 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a0ac flow=00019a38 menu=00000000 flags=09 offer=00 header=10/54 choice=0 done=0 selector=0 active=false/false
+1431 23.892 menu-write pc=00a48a data=0000 mask=ffff oldchoice=0 done=0
+1432 23.897 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a0ac flow=00019a50 menu=00019b8e flags=09 offer=00 header=10/54 choice=0 done=0 selector=0 active=false/false
+1447 24.148 invitation ready choice=yes
+1447 24.148 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a0ac flow=00019a50 menu=00019c6e flags=09 offer=00 header=10/54 choice=0 done=0 selector=0 active=false/false
+1459 24.348 input :P1 P1 Down
+1460 24.365 menu-write pc=019cbe data=0101 mask=ff00 oldchoice=0 done=0
+1461 24.381 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a0ac flow=00019a50 menu=00019c6e flags=09 offer=00 header=10/54 choice=1 done=0 selector=0 active=false/false
+1477 24.648 input :P1 P1 Button 1
+1478 24.666 menu-write pc=019c9a data=0101 mask=00ff oldchoice=1 done=0
+1479 24.682 mode=00 match=04 mask=00 players=0 command=4322 peer=0000 script=0001a0ac flow=00019a50 menu=00019d84 flags=09 offer=00 header=10/54 choice=1 done=1 selector=0 active=false/false
+1480 24.698 mode=00 match=04 mask=01 players=1 command=4322 peer=0000 script=0001a0ac flow=00019768 menu=00019d84 flags=09 offer=00 header=10/54 choice=1 done=1 selector=0 active=false/false
+1481 24.715 mode=00 match=04 mask=01 players=1 command=0122 peer=0000 script=0001a0ac flow=0001978c menu=00019d84 flags=09 offer=00 header=90/54 choice=1 done=1 selector=0 active=false/false
+1487 24.815 mode=00 match=04 mask=01 players=1 command=0122 peer=9122 script=0001a0ac flow=0001978c menu=00019d84 flags=09 offer=00 header=90/54 choice=1 done=1 selector=0 active=false/false
+1488 24.832 mode=00 match=04 mask=01 players=1 command=2101 peer=9122 script=0001a0ac flow=00019840 menu=00019d84 flags=09 offer=00 header=90/54 choice=1 done=1 selector=0 active=false/false
+1494 24.932 mode=00 match=04 mask=01 players=1 command=2101 peer=8122 script=0001a0ac flow=00019840 menu=00019d84 flags=09 offer=00 header=90/54 choice=1 done=1 selector=0 active=false/false
+1495 24.949 mode=00 match=04 mask=01 players=1 command=2101 peer=8122 script=0001a0ac flow=00019872 menu=00019d84 flags=09 offer=00 header=90/54 choice=1 done=1 selector=0 active=false/false
+1590 26.534 mode=00 match=04 mask=01 players=1 command=2101 peer=0102 script=0001a0ac flow=00019872 menu=00019d84 flags=09 offer=00 header=90/54 choice=1 done=1 selector=0 active=false/false
+1591 26.551 mode=00 match=04 mask=01 players=1 command=2101 peer=0102 script=0001a7e6 flow=00010072 menu=00019d84 flags=82 offer=00 header=54/54 choice=1 done=1 selector=0 active=false/false
+1607 26.818 mode=00 match=04 mask=01 players=1 command=2101 peer=0102 script=0001a7e8 flow=00010072 menu=00019d84 flags=82 offer=00 header=54/54 choice=1 done=1 selector=0 active=false/false
+1607 26.819 menu-write pc=00a48a data=0000 mask=ffff oldchoice=1 done=1
+1608 26.835 mode=01 match=04 mask=01 players=1 command=0301 peer=0102 script=0001a842 flow=00010072 menu=000188fc flags=02 offer=00 header=54/54 choice=0 done=0 selector=0 active=false/false
+1609 26.851 mode=01 match=04 mask=01 players=1 command=0301 peer=0102 script=0001a842 flow=00010072 menu=000189c6 flags=02 offer=00 header=56/54 choice=0 done=0 selector=0 active=false/false
+1616 26.968 mode=01 match=04 mask=01 players=1 command=0301 peer=0102 script=0001a842 flow=00010072 menu=000189c6 flags=02 offer=00 header=56/56 choice=0 done=0 selector=0 active=false/false
+1648 27.502 mode=01 match=04 mask=01 players=1 command=0301 peer=0102 script=0001a842 flow=00010072 menu=00018a40 flags=02 offer=00 header=56/56 choice=0 done=0 selector=0 active=false/false
+1649 27.519 mode=01 match=04 mask=01 players=1 command=1301 peer=0102 script=0001a842 flow=00010072 menu=00018a40 flags=02 offer=00 header=56/56 choice=0 done=0 selector=0 active=false/false
+1867 31.157 input :SERVICE 2 Players Start
+1869 31.190 mode=01 match=04 mask=03 players=2 command=1301 peer=0102 script=0001a842 flow=00010072 menu=00018a40 flags=02 offer=00 header=56/56 choice=0 done=0 selector=0 active=false/false
+1870 31.207 mode=01 match=04 mask=03 players=2 command=7301 peer=0102 script=0001a842 flow=00010072 menu=00018b84 flags=02 offer=00 header=56/56 choice=0 done=0 selector=0 active=false/false
+1871 31.224 mode=01 match=04 mask=03 players=4 command=7301 peer=0102 script=0001a842 flow=00010072 menu=00018bfc flags=02 offer=00 header=56/56 choice=0 done=0 selector=0 active=false/false
+1871 31.226 menu-write pc=018c42 data=0078 mask=ffff oldchoice=0 done=0
+1872 31.240 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/56 choice=0 done=120 selector=0 active=false/false
+1872 31.243 menu-write pc=018c4e data=ffff mask=ff00 oldchoice=0 done=120
+1873 31.257 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/56 choice=255 done=120 selector=0 active=false/false
+1873 31.260 menu-write pc=018c4e data=fefe mask=ff00 oldchoice=255 done=120
+1874 31.274 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/56 choice=254 done=120 selector=0 active=false/false
+1874 31.276 menu-write pc=018c4e data=fdfd mask=ff00 oldchoice=254 done=120
+1875 31.290 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/56 choice=253 done=120 selector=0 active=false/false
+1875 31.295 menu-write pc=018c4e data=fcfc mask=ff00 oldchoice=253 done=120
+1876 31.307 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/56 choice=252 done=120 selector=0 active=false/false
+1876 31.310 menu-write pc=018c4e data=fbfb mask=ff00 oldchoice=252 done=120
+1877 31.324 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=251 done=120 selector=0 active=false/false
+1877 31.326 menu-write pc=018c4e data=fafa mask=ff00 oldchoice=251 done=120
+1878 31.340 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=250 done=120 selector=0 active=false/false
+1878 31.343 menu-write pc=018c4e data=f9f9 mask=ff00 oldchoice=250 done=120
+1879 31.357 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=249 done=120 selector=0 active=false/false
+1879 31.359 menu-write pc=018c4e data=f8f8 mask=ff00 oldchoice=249 done=120
+1880 31.374 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=248 done=120 selector=0 active=false/false
+1880 31.376 menu-write pc=018c4e data=f7f7 mask=ff00 oldchoice=248 done=120
+1881 31.390 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=247 done=120 selector=0 active=false/false
+1881 31.393 menu-write pc=018c4e data=f6f6 mask=ff00 oldchoice=247 done=120
+1882 31.407 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=246 done=120 selector=0 active=false/false
+1882 31.410 menu-write pc=018c4e data=f5f5 mask=ff00 oldchoice=246 done=120
+1883 31.424 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=245 done=120 selector=0 active=false/false
+1883 31.426 menu-write pc=018c4e data=f4f4 mask=ff00 oldchoice=245 done=120
+1884 31.440 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=244 done=120 selector=0 active=false/false
+1884 31.443 menu-write pc=018c4e data=f3f3 mask=ff00 oldchoice=244 done=120
+1885 31.457 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=243 done=120 selector=0 active=false/false
+1885 31.460 menu-write pc=018c4e data=f2f2 mask=ff00 oldchoice=243 done=120
+1886 31.474 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=242 done=120 selector=0 active=false/false
+1886 31.476 menu-write pc=018c4e data=f1f1 mask=ff00 oldchoice=242 done=120
+1887 31.491 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=241 done=120 selector=0 active=false/false
+1887 31.493 menu-write pc=018c4e data=f0f0 mask=ff00 oldchoice=241 done=120
+1888 31.507 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=240 done=120 selector=0 active=false/false
+1888 31.510 menu-write pc=018c4e data=efef mask=ff00 oldchoice=240 done=120
+1889 31.524 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=239 done=120 selector=0 active=false/false
+1889 31.527 menu-write pc=018c4e data=eeee mask=ff00 oldchoice=239 done=120
+1890 31.541 input :P1 P1 Button 1
+1890 31.541 input :P2 P2 Button 1
+1890 31.541 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=238 done=120 selector=0 active=false/false
+1890 31.543 menu-write pc=018c4e data=eded mask=ff00 oldchoice=238 done=120
+1891 31.557 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=237 done=120 selector=0 active=false/false
+1891 31.560 menu-write pc=018c4e data=ecec mask=ff00 oldchoice=237 done=120
+1892 31.574 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=236 done=120 selector=0 active=false/false
+1892 31.576 menu-write pc=018c4e data=ebeb mask=ff00 oldchoice=236 done=120
+1893 31.591 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=235 done=120 selector=0 active=false/false
+1893 31.593 menu-write pc=018c4e data=eaea mask=ff00 oldchoice=235 done=120
+1894 31.607 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=234 done=120 selector=0 active=false/false
+1894 31.611 menu-write pc=018c4e data=e9e9 mask=ff00 oldchoice=234 done=120
+1895 31.624 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=233 done=120 selector=0 active=false/false
+1895 31.626 menu-write pc=018c4e data=e8e8 mask=ff00 oldchoice=233 done=120
+1896 31.641 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=232 done=120 selector=0 active=false/false
+1896 31.643 menu-write pc=018c4e data=e7e7 mask=ff00 oldchoice=232 done=120
+1897 31.657 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=231 done=120 selector=0 active=false/false
+1897 31.660 menu-write pc=018c4e data=e6e6 mask=ff00 oldchoice=231 done=120
+1898 31.674 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=230 done=120 selector=0 active=false/false
+1898 31.676 menu-write pc=018c4e data=e5e5 mask=ff00 oldchoice=230 done=120
+1899 31.691 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=229 done=120 selector=0 active=false/false
+1899 31.693 menu-write pc=018c4e data=e4e4 mask=ff00 oldchoice=229 done=120
+1900 31.707 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=228 done=120 selector=0 active=false/false
+1900 31.710 menu-write pc=018c4e data=e3e3 mask=ff00 oldchoice=228 done=120
+1901 31.724 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=227 done=120 selector=0 active=false/false
+1901 31.726 menu-write pc=018c4e data=e2e2 mask=ff00 oldchoice=227 done=120
+1902 31.741 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=226 done=120 selector=0 active=false/false
+1902 31.743 menu-write pc=018c4e data=e1e1 mask=ff00 oldchoice=226 done=120
+1903 31.758 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=225 done=120 selector=0 active=false/false
+1903 31.760 menu-write pc=018c4e data=e0e0 mask=ff00 oldchoice=225 done=120
+1904 31.774 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=224 done=120 selector=0 active=false/false
+1904 31.780 menu-write pc=018c4e data=dfdf mask=ff00 oldchoice=224 done=120
+1905 31.791 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=223 done=120 selector=0 active=false/false
+1905 31.794 menu-write pc=018c4e data=dede mask=ff00 oldchoice=223 done=120
+1906 31.808 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=222 done=120 selector=0 active=false/false
+1906 31.810 menu-write pc=018c4e data=dddd mask=ff00 oldchoice=222 done=120
+1907 31.824 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=221 done=120 selector=0 active=false/false
+1907 31.827 menu-write pc=018c4e data=dcdc mask=ff00 oldchoice=221 done=120
+1908 31.841 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=220 done=120 selector=0 active=false/false
+1908 31.843 menu-write pc=018c4e data=dbdb mask=ff00 oldchoice=220 done=120
+1909 31.858 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=219 done=120 selector=0 active=false/false
+1909 31.860 menu-write pc=018c4e data=dada mask=ff00 oldchoice=219 done=120
+1910 31.874 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=218 done=120 selector=0 active=false/false
+1910 31.877 menu-write pc=018c4e data=d9d9 mask=ff00 oldchoice=218 done=120
+1911 31.891 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=217 done=120 selector=0 active=false/false
+1911 31.893 menu-write pc=018c4e data=d8d8 mask=ff00 oldchoice=217 done=120
+1912 31.908 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=216 done=120 selector=0 active=false/false
+1912 31.910 menu-write pc=018c4e data=d7d7 mask=ff00 oldchoice=216 done=120
+1913 31.924 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=215 done=120 selector=0 active=false/false
+1913 31.927 menu-write pc=018c4e data=d6d6 mask=ff00 oldchoice=215 done=120
+1914 31.941 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=214 done=120 selector=0 active=false/false
+1914 31.943 menu-write pc=018c4e data=d5d5 mask=ff00 oldchoice=214 done=120
+1915 31.958 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=213 done=120 selector=0 active=false/false
+1915 31.960 menu-write pc=018c4e data=d4d4 mask=ff00 oldchoice=213 done=120
+1916 31.975 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=212 done=120 selector=0 active=false/false
+1916 31.977 menu-write pc=018c4e data=d3d3 mask=ff00 oldchoice=212 done=120
+1917 31.991 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=211 done=120 selector=0 active=false/false
+1917 31.994 menu-write pc=018c4e data=d2d2 mask=ff00 oldchoice=211 done=120
+1918 32.008 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=210 done=120 selector=0 active=false/false
+1918 32.010 menu-write pc=018c4e data=d1d1 mask=ff00 oldchoice=210 done=120
+1919 32.025 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=209 done=120 selector=0 active=false/false
+1919 32.027 menu-write pc=018c4e data=d0d0 mask=ff00 oldchoice=209 done=120
+1920 32.041 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=208 done=120 selector=0 active=false/false
+1920 32.044 menu-write pc=018c4e data=cfcf mask=ff00 oldchoice=208 done=120
+1921 32.058 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=207 done=120 selector=0 active=false/false
+1921 32.060 menu-write pc=018c4e data=cece mask=ff00 oldchoice=207 done=120
+1922 32.075 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=206 done=120 selector=0 active=false/false
+1922 32.079 menu-write pc=018c4e data=cdcd mask=ff00 oldchoice=206 done=120
+1923 32.091 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=205 done=120 selector=0 active=false/false
+1923 32.094 menu-write pc=018c4e data=cccc mask=ff00 oldchoice=205 done=120
+1924 32.108 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=204 done=120 selector=0 active=false/false
+1924 32.110 menu-write pc=018c4e data=cbcb mask=ff00 oldchoice=204 done=120
+1925 32.125 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=203 done=120 selector=0 active=false/false
+1925 32.127 menu-write pc=018c4e data=caca mask=ff00 oldchoice=203 done=120
+1926 32.141 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=202 done=120 selector=0 active=false/false
+1926 32.144 menu-write pc=018c4e data=c9c9 mask=ff00 oldchoice=202 done=120
+1927 32.158 input :SERVICE 2 Players Start
+1927 32.158 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=201 done=120 selector=0 active=false/false
+1927 32.161 menu-write pc=018c4e data=c8c8 mask=ff00 oldchoice=201 done=120
+1928 32.175 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=200 done=120 selector=0 active=false/false
+1928 32.177 menu-write pc=018c4e data=c7c7 mask=ff00 oldchoice=200 done=120
+1929 32.191 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=199 done=120 selector=0 active=false/false
+1929 32.194 menu-write pc=018c4e data=c6c6 mask=ff00 oldchoice=199 done=120
+1930 32.208 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=198 done=120 selector=0 active=false/false
+1930 32.211 menu-write pc=018c4e data=c5c5 mask=ff00 oldchoice=198 done=120
+1931 32.225 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=197 done=120 selector=0 active=false/false
+1931 32.227 menu-write pc=018c4e data=c4c4 mask=ff00 oldchoice=197 done=120
+1932 32.242 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=196 done=120 selector=0 active=false/false
+1932 32.245 menu-write pc=018c4e data=c3c3 mask=ff00 oldchoice=196 done=120
+1933 32.258 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=195 done=120 selector=0 active=false/false
+1933 32.260 menu-write pc=018c4e data=c2c2 mask=ff00 oldchoice=195 done=120
+1934 32.275 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=194 done=120 selector=0 active=false/false
+1934 32.277 menu-write pc=018c4e data=c1c1 mask=ff00 oldchoice=194 done=120
+1935 32.292 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=193 done=120 selector=0 active=false/false
+1935 32.294 menu-write pc=018c4e data=c0c0 mask=ff00 oldchoice=193 done=120
+1936 32.308 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=192 done=120 selector=0 active=false/false
+1936 32.311 menu-write pc=018c4e data=bfbf mask=ff00 oldchoice=192 done=120
+1937 32.325 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=191 done=120 selector=0 active=false/false
+1937 32.327 menu-write pc=018c4e data=bebe mask=ff00 oldchoice=191 done=120
+1938 32.342 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=190 done=120 selector=0 active=false/false
+1938 32.344 menu-write pc=018c4e data=bdbd mask=ff00 oldchoice=190 done=120
+1939 32.358 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=189 done=120 selector=0 active=false/false
+1939 32.361 menu-write pc=018c4e data=bcbc mask=ff00 oldchoice=189 done=120
+1940 32.375 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=188 done=120 selector=0 active=false/false
+1940 32.377 menu-write pc=018c4e data=bbbb mask=ff00 oldchoice=188 done=120
+1941 32.392 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=187 done=120 selector=0 active=false/false
+1941 32.394 menu-write pc=018c4e data=baba mask=ff00 oldchoice=187 done=120
+1942 32.408 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=186 done=120 selector=0 active=false/false
+1942 32.410 menu-write pc=018c4e data=b9b9 mask=ff00 oldchoice=186 done=120
+1943 32.425 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=185 done=120 selector=0 active=false/false
+1943 32.427 menu-write pc=018c4e data=b8b8 mask=ff00 oldchoice=185 done=120
+1944 32.442 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=184 done=120 selector=0 active=false/false
+1944 32.444 menu-write pc=018c4e data=b7b7 mask=ff00 oldchoice=184 done=120
+1945 32.458 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=183 done=120 selector=0 active=false/false
+1945 32.460 menu-write pc=018c4e data=b6b6 mask=ff00 oldchoice=183 done=120
+1946 32.475 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=182 done=120 selector=0 active=false/false
+1946 32.477 menu-write pc=018c4e data=b5b5 mask=ff00 oldchoice=182 done=120
+1947 32.492 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=181 done=120 selector=0 active=false/false
+1947 32.494 menu-write pc=018c4e data=b4b4 mask=ff00 oldchoice=181 done=120
+1948 32.509 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=180 done=120 selector=0 active=false/false
+1948 32.510 menu-write pc=018c4e data=b3b3 mask=ff00 oldchoice=180 done=120
+1949 32.525 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=179 done=120 selector=0 active=false/false
+1949 32.527 menu-write pc=018c4e data=b2b2 mask=ff00 oldchoice=179 done=120
+1950 32.542 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=178 done=120 selector=0 active=false/false
+1950 32.544 menu-write pc=018c4e data=b1b1 mask=ff00 oldchoice=178 done=120
+1951 32.559 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=177 done=120 selector=0 active=false/false
+1951 32.563 menu-write pc=018c4e data=b0b0 mask=ff00 oldchoice=177 done=120
+1952 32.575 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=176 done=120 selector=0 active=false/false
+1952 32.578 menu-write pc=018c4e data=afaf mask=ff00 oldchoice=176 done=120
+1953 32.592 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=175 done=120 selector=0 active=false/false
+1953 32.594 menu-write pc=018c4e data=aeae mask=ff00 oldchoice=175 done=120
+1954 32.609 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=174 done=120 selector=0 active=false/false
+1954 32.611 menu-write pc=018c4e data=adad mask=ff00 oldchoice=174 done=120
+1955 32.625 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=173 done=120 selector=0 active=false/false
+1955 32.628 menu-write pc=018c4e data=acac mask=ff00 oldchoice=173 done=120
+1956 32.642 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=172 done=120 selector=0 active=false/false
+1956 32.644 menu-write pc=018c4e data=abab mask=ff00 oldchoice=172 done=120
+1957 32.659 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=171 done=120 selector=0 active=false/false
+1957 32.661 menu-write pc=018c4e data=aaaa mask=ff00 oldchoice=171 done=120
+1958 32.675 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=170 done=120 selector=0 active=false/false
+1958 32.678 menu-write pc=018c4e data=a9a9 mask=ff00 oldchoice=170 done=120
+1959 32.692 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=169 done=120 selector=0 active=false/false
+1959 32.694 menu-write pc=018c4e data=a8a8 mask=ff00 oldchoice=169 done=120
+1960 32.709 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=168 done=120 selector=0 active=false/false
+1960 32.713 menu-write pc=018c4e data=a7a7 mask=ff00 oldchoice=168 done=120
+1961 32.725 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=167 done=120 selector=0 active=false/false
+1961 32.728 menu-write pc=018c4e data=a6a6 mask=ff00 oldchoice=167 done=120
+1962 32.742 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=166 done=120 selector=0 active=false/false
+1962 32.745 menu-write pc=018c4e data=a5a5 mask=ff00 oldchoice=166 done=120
+1963 32.759 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=165 done=120 selector=0 active=false/false
+1963 32.761 menu-write pc=018c4e data=a4a4 mask=ff00 oldchoice=165 done=120
+1964 32.776 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=164 done=120 selector=0 active=false/false
+1964 32.778 menu-write pc=018c4e data=a3a3 mask=ff00 oldchoice=164 done=120
+1965 32.792 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=163 done=120 selector=0 active=false/false
+1965 32.795 menu-write pc=018c4e data=a2a2 mask=ff00 oldchoice=163 done=120
+1966 32.809 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=162 done=120 selector=0 active=false/false
+1966 32.811 menu-write pc=018c4e data=a1a1 mask=ff00 oldchoice=162 done=120
+1967 32.826 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=161 done=120 selector=0 active=false/false
+1967 32.828 menu-write pc=018c4e data=a0a0 mask=ff00 oldchoice=161 done=120
+1968 32.842 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=160 done=120 selector=0 active=false/false
+1968 32.845 menu-write pc=018c4e data=9f9f mask=ff00 oldchoice=160 done=120
+1969 32.859 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=159 done=120 selector=0 active=false/false
+1969 32.861 menu-write pc=018c4e data=9e9e mask=ff00 oldchoice=159 done=120
+1970 32.876 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=158 done=120 selector=0 active=false/false
+1970 32.878 menu-write pc=018c4e data=9d9d mask=ff00 oldchoice=158 done=120
+1971 32.892 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=157 done=120 selector=0 active=false/false
+1971 32.894 menu-write pc=018c4e data=9c9c mask=ff00 oldchoice=157 done=120
+1972 32.909 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=156 done=120 selector=0 active=false/false
+1972 32.911 menu-write pc=018c4e data=9b9b mask=ff00 oldchoice=156 done=120
+1973 32.926 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=155 done=120 selector=0 active=false/false
+1973 32.928 menu-write pc=018c4e data=9a9a mask=ff00 oldchoice=155 done=120
+1974 32.942 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=154 done=120 selector=0 active=false/false
+1974 32.944 menu-write pc=018c4e data=9999 mask=ff00 oldchoice=154 done=120
+1975 32.959 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=153 done=120 selector=0 active=false/false
+1975 32.961 menu-write pc=018c4e data=9898 mask=ff00 oldchoice=153 done=120
+1976 32.976 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=152 done=120 selector=0 active=false/false
+1976 32.978 menu-write pc=018c4e data=9797 mask=ff00 oldchoice=152 done=120
+1977 32.992 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=151 done=120 selector=0 active=false/false
+1977 32.995 menu-write pc=018c4e data=9696 mask=ff00 oldchoice=151 done=120
+1978 33.009 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=150 done=120 selector=0 active=false/false
+1978 33.011 menu-write pc=018c4e data=9595 mask=ff00 oldchoice=150 done=120
+1979 33.026 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=149 done=120 selector=0 active=false/false
+1979 33.030 menu-write pc=018c4e data=9494 mask=ff00 oldchoice=149 done=120
+1980 33.043 input :P1 P1 Button 1
+1980 33.043 input :P2 P2 Button 1
+1980 33.043 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=148 done=120 selector=0 active=false/false
+1980 33.045 menu-write pc=018c4e data=9393 mask=ff00 oldchoice=148 done=120
+1981 33.059 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=147 done=120 selector=0 active=false/false
+1981 33.061 menu-write pc=018c4e data=9292 mask=ff00 oldchoice=147 done=120
+1982 33.076 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=146 done=120 selector=0 active=false/false
+1982 33.078 menu-write pc=018c4e data=9191 mask=ff00 oldchoice=146 done=120
+1983 33.093 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=145 done=120 selector=0 active=false/false
+1983 33.095 menu-write pc=018c4e data=9090 mask=ff00 oldchoice=145 done=120
+1984 33.109 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=144 done=120 selector=0 active=false/false
+1984 33.112 menu-write pc=018c4e data=8f8f mask=ff00 oldchoice=144 done=120
+1985 33.126 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=143 done=120 selector=0 active=false/false
+1985 33.128 menu-write pc=018c4e data=8e8e mask=ff00 oldchoice=143 done=120
+1986 33.143 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=142 done=120 selector=0 active=false/false
+1986 33.145 menu-write pc=018c4e data=8d8d mask=ff00 oldchoice=142 done=120
+1987 33.159 input :SERVICE 2 Players Start
+1987 33.159 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=141 done=120 selector=0 active=false/false
+1987 33.162 menu-write pc=018c4e data=8c8c mask=ff00 oldchoice=141 done=120
+1988 33.176 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=140 done=120 selector=0 active=false/false
+1988 33.178 menu-write pc=018c4e data=8b8b mask=ff00 oldchoice=140 done=120
+1989 33.193 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=139 done=120 selector=0 active=false/false
+1989 33.196 menu-write pc=018c4e data=8a8a mask=ff00 oldchoice=139 done=120
+1990 33.209 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=138 done=120 selector=0 active=false/false
+1990 33.212 menu-write pc=018c4e data=8989 mask=ff00 oldchoice=138 done=120
+1991 33.226 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=137 done=120 selector=0 active=false/false
+1991 33.229 menu-write pc=018c4e data=8888 mask=ff00 oldchoice=137 done=120
+1992 33.243 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=136 done=120 selector=0 active=false/false
+1992 33.245 menu-write pc=018c4e data=8787 mask=ff00 oldchoice=136 done=120
+1993 33.259 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=135 done=120 selector=0 active=false/false
+1993 33.262 menu-write pc=018c4e data=8686 mask=ff00 oldchoice=135 done=120
+1994 33.276 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=134 done=120 selector=0 active=false/false
+1994 33.279 menu-write pc=018c4e data=8585 mask=ff00 oldchoice=134 done=120
+1995 33.293 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=133 done=120 selector=0 active=false/false
+1995 33.295 menu-write pc=018c4e data=8484 mask=ff00 oldchoice=133 done=120
+1996 33.310 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=132 done=120 selector=0 active=false/false
+1996 33.312 menu-write pc=018c4e data=8383 mask=ff00 oldchoice=132 done=120
+1997 33.326 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=131 done=120 selector=0 active=false/false
+1997 33.329 menu-write pc=018c4e data=8282 mask=ff00 oldchoice=131 done=120
+1998 33.343 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=130 done=120 selector=0 active=false/false
+1998 33.345 menu-write pc=018c4e data=8181 mask=ff00 oldchoice=130 done=120
+1999 33.360 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=129 done=120 selector=0 active=false/false
+1999 33.362 menu-write pc=018c4e data=8080 mask=ff00 oldchoice=129 done=120
+2000 33.376 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=128 done=120 selector=0 active=false/false
+2000 33.379 menu-write pc=018c4e data=7f7f mask=ff00 oldchoice=128 done=120
+2001 33.393 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=127 done=120 selector=0 active=false/false
+2001 33.395 menu-write pc=018c4e data=7e7e mask=ff00 oldchoice=127 done=120
+2002 33.410 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=126 done=120 selector=0 active=false/false
+2002 33.412 menu-write pc=018c4e data=7d7d mask=ff00 oldchoice=126 done=120
+2003 33.426 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=125 done=120 selector=0 active=false/false
+2003 33.429 menu-write pc=018c4e data=7c7c mask=ff00 oldchoice=125 done=120
+2004 33.443 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=124 done=120 selector=0 active=false/false
+2004 33.445 menu-write pc=018c4e data=7b7b mask=ff00 oldchoice=124 done=120
+2005 33.460 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=123 done=120 selector=0 active=false/false
+2005 33.462 menu-write pc=018c4e data=7a7a mask=ff00 oldchoice=123 done=120
+2006 33.476 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=122 done=120 selector=0 active=false/false
+2006 33.479 menu-write pc=018c4e data=7979 mask=ff00 oldchoice=122 done=120
+2007 33.493 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=121 done=120 selector=0 active=false/false
+2007 33.495 menu-write pc=018c4e data=7878 mask=ff00 oldchoice=121 done=120
+2008 33.510 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=120 done=120 selector=0 active=false/false
+2008 33.514 menu-write pc=018c4e data=7777 mask=ff00 oldchoice=120 done=120
+2009 33.527 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=119 done=120 selector=0 active=false/false
+2009 33.529 menu-write pc=018c4e data=7676 mask=ff00 oldchoice=119 done=120
+2010 33.543 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=118 done=120 selector=0 active=false/false
+2010 33.546 menu-write pc=018c4e data=7575 mask=ff00 oldchoice=118 done=120
+2011 33.560 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=117 done=120 selector=0 active=false/false
+2011 33.562 menu-write pc=018c4e data=7474 mask=ff00 oldchoice=117 done=120
+2012 33.577 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=116 done=120 selector=0 active=false/false
+2012 33.579 menu-write pc=018c4e data=7373 mask=ff00 oldchoice=116 done=120
+2013 33.593 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=115 done=120 selector=0 active=false/false
+2013 33.596 menu-write pc=018c4e data=7272 mask=ff00 oldchoice=115 done=120
+2014 33.610 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=114 done=120 selector=0 active=false/false
+2014 33.612 menu-write pc=018c4e data=7171 mask=ff00 oldchoice=114 done=120
+2015 33.627 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=113 done=120 selector=0 active=false/false
+2015 33.629 menu-write pc=018c4e data=7070 mask=ff00 oldchoice=113 done=120
+2016 33.643 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=112 done=120 selector=0 active=false/false
+2016 33.646 menu-write pc=018c4e data=6f6f mask=ff00 oldchoice=112 done=120
+2017 33.660 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=111 done=120 selector=0 active=false/false
+2017 33.664 menu-write pc=018c4e data=6e6e mask=ff00 oldchoice=111 done=120
+2018 33.677 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=110 done=120 selector=0 active=false/false
+2018 33.679 menu-write pc=018c4e data=6d6d mask=ff00 oldchoice=110 done=120
+2019 33.693 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=109 done=120 selector=0 active=false/false
+2019 33.696 menu-write pc=018c4e data=6c6c mask=ff00 oldchoice=109 done=120
+2020 33.710 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=108 done=120 selector=0 active=false/false
+2020 33.713 menu-write pc=018c4e data=6b6b mask=ff00 oldchoice=108 done=120
+2021 33.727 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=107 done=120 selector=0 active=false/false
+2021 33.729 menu-write pc=018c4e data=6a6a mask=ff00 oldchoice=107 done=120
+2022 33.743 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=106 done=120 selector=0 active=false/false
+2022 33.746 menu-write pc=018c4e data=6969 mask=ff00 oldchoice=106 done=120
+2023 33.760 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=105 done=120 selector=0 active=false/false
+2023 33.763 menu-write pc=018c4e data=6868 mask=ff00 oldchoice=105 done=120
+2024 33.777 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=104 done=120 selector=0 active=false/false
+2024 33.779 menu-write pc=018c4e data=6767 mask=ff00 oldchoice=104 done=120
+2025 33.794 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=103 done=120 selector=0 active=false/false
+2025 33.796 menu-write pc=018c4e data=6666 mask=ff00 oldchoice=103 done=120
+2026 33.810 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=102 done=120 selector=0 active=false/false
+2026 33.813 menu-write pc=018c4e data=6565 mask=ff00 oldchoice=102 done=120
+2027 33.827 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=101 done=120 selector=0 active=false/false
+2027 33.830 menu-write pc=018c4e data=6464 mask=ff00 oldchoice=101 done=120
+2028 33.844 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=100 done=120 selector=0 active=false/false
+2028 33.846 menu-write pc=018c4e data=6363 mask=ff00 oldchoice=100 done=120
+2029 33.860 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=99 done=120 selector=0 active=false/false
+2029 33.863 menu-write pc=018c4e data=6262 mask=ff00 oldchoice=99 done=120
+2030 33.877 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=98 done=120 selector=0 active=false/false
+2030 33.879 menu-write pc=018c4e data=6161 mask=ff00 oldchoice=98 done=120
+2031 33.894 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=97 done=120 selector=0 active=false/false
+2031 33.896 menu-write pc=018c4e data=6060 mask=ff00 oldchoice=97 done=120
+2032 33.910 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=96 done=120 selector=0 active=false/false
+2032 33.913 menu-write pc=018c4e data=5f5f mask=ff00 oldchoice=96 done=120
+2033 33.927 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=95 done=120 selector=0 active=false/false
+2033 33.930 menu-write pc=018c4e data=5e5e mask=ff00 oldchoice=95 done=120
+2034 33.944 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=94 done=120 selector=0 active=false/false
+2034 33.946 menu-write pc=018c4e data=5d5d mask=ff00 oldchoice=94 done=120
+2035 33.960 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=93 done=120 selector=0 active=false/false
+2035 33.963 menu-write pc=018c4e data=5c5c mask=ff00 oldchoice=93 done=120
+2036 33.977 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=92 done=120 selector=0 active=false/false
+2036 33.980 menu-write pc=018c4e data=5b5b mask=ff00 oldchoice=92 done=120
+2037 33.994 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=91 done=120 selector=0 active=false/false
+2037 33.996 menu-write pc=018c4e data=5a5a mask=ff00 oldchoice=91 done=120
+2038 34.010 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=90 done=120 selector=0 active=false/false
+2038 34.013 menu-write pc=018c4e data=5959 mask=ff00 oldchoice=90 done=120
+2039 34.027 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=89 done=120 selector=0 active=false/false
+2039 34.030 menu-write pc=018c4e data=5858 mask=ff00 oldchoice=89 done=120
+2040 34.044 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=88 done=120 selector=0 active=false/false
+2040 34.046 menu-write pc=018c4e data=5757 mask=ff00 oldchoice=88 done=120
+2041 34.061 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=87 done=120 selector=0 active=false/false
+2041 34.063 menu-write pc=018c4e data=5656 mask=ff00 oldchoice=87 done=120
+2042 34.077 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=86 done=120 selector=0 active=false/false
+2042 34.080 menu-write pc=018c4e data=5555 mask=ff00 oldchoice=86 done=120
+2043 34.094 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=85 done=120 selector=0 active=false/false
+2043 34.096 menu-write pc=018c4e data=5454 mask=ff00 oldchoice=85 done=120
+2044 34.111 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=84 done=120 selector=0 active=false/false
+2044 34.113 menu-write pc=018c4e data=5353 mask=ff00 oldchoice=84 done=120
+2045 34.127 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=83 done=120 selector=0 active=false/false
+2045 34.130 menu-write pc=018c4e data=5252 mask=ff00 oldchoice=83 done=120
+2046 34.144 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=82 done=120 selector=0 active=false/false
+2046 34.147 menu-write pc=018c4e data=5151 mask=ff00 oldchoice=82 done=120
+2047 34.161 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=81 done=120 selector=0 active=false/false
+2047 34.163 menu-write pc=018c4e data=5050 mask=ff00 oldchoice=81 done=120
+2048 34.177 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=80 done=120 selector=0 active=false/false
+2048 34.180 menu-write pc=018c4e data=4f4f mask=ff00 oldchoice=80 done=120
+2049 34.194 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=79 done=120 selector=0 active=false/false
+2049 34.196 menu-write pc=018c4e data=4e4e mask=ff00 oldchoice=79 done=120
+2050 34.211 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=78 done=120 selector=0 active=false/false
+2050 34.213 menu-write pc=018c4e data=4d4d mask=ff00 oldchoice=78 done=120
+2051 34.227 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=77 done=120 selector=0 active=false/false
+2051 34.229 menu-write pc=018c4e data=4c4c mask=ff00 oldchoice=77 done=120
+2052 34.244 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=76 done=120 selector=0 active=false/false
+2052 34.246 menu-write pc=018c4e data=4b4b mask=ff00 oldchoice=76 done=120
+2053 34.261 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=75 done=120 selector=0 active=false/false
+2053 34.263 menu-write pc=018c4e data=4a4a mask=ff00 oldchoice=75 done=120
+2054 34.277 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=74 done=120 selector=0 active=false/false
+2054 34.280 menu-write pc=018c4e data=4949 mask=ff00 oldchoice=74 done=120
+2055 34.294 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=73 done=120 selector=0 active=false/false
+2055 34.296 menu-write pc=018c4e data=4848 mask=ff00 oldchoice=73 done=120
+2056 34.311 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=72 done=120 selector=0 active=false/false
+2056 34.313 menu-write pc=018c4e data=4747 mask=ff00 oldchoice=72 done=120
+2057 34.328 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=71 done=120 selector=0 active=false/false
+2057 34.330 menu-write pc=018c4e data=4646 mask=ff00 oldchoice=71 done=120
+2058 34.344 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=70 done=120 selector=0 active=false/false
+2058 34.346 menu-write pc=018c4e data=4545 mask=ff00 oldchoice=70 done=120
+2059 34.361 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=69 done=120 selector=0 active=false/false
+2059 34.363 menu-write pc=018c4e data=4444 mask=ff00 oldchoice=69 done=120
+2060 34.378 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=68 done=120 selector=0 active=false/false
+2060 34.380 menu-write pc=018c4e data=4343 mask=ff00 oldchoice=68 done=120
+2061 34.394 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=67 done=120 selector=0 active=false/false
+2061 34.396 menu-write pc=018c4e data=4242 mask=ff00 oldchoice=67 done=120
+2062 34.411 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=66 done=120 selector=0 active=false/false
+2062 34.413 menu-write pc=018c4e data=4141 mask=ff00 oldchoice=66 done=120
+2063 34.428 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=65 done=120 selector=0 active=false/false
+2063 34.430 menu-write pc=018c4e data=4040 mask=ff00 oldchoice=65 done=120
+2064 34.444 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=64 done=120 selector=0 active=false/false
+2064 34.446 menu-write pc=018c4e data=3f3f mask=ff00 oldchoice=64 done=120
+2065 34.461 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=63 done=120 selector=0 active=false/false
+2065 34.463 menu-write pc=018c4e data=3e3e mask=ff00 oldchoice=63 done=120
+2066 34.478 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=62 done=120 selector=0 active=false/false
+2066 34.480 menu-write pc=018c4e data=3d3d mask=ff00 oldchoice=62 done=120
+2067 34.494 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=61 done=120 selector=0 active=false/false
+2067 34.496 menu-write pc=018c4e data=3c3c mask=ff00 oldchoice=61 done=120
+2068 34.511 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=60 done=120 selector=0 active=false/false
+2068 34.513 menu-write pc=018c4e data=3b3b mask=ff00 oldchoice=60 done=120
+2069 34.528 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=59 done=120 selector=0 active=false/false
+2069 34.530 menu-write pc=018c4e data=3a3a mask=ff00 oldchoice=59 done=120
+2070 34.544 input :P1 P1 Button 1
+2070 34.544 input :P2 P2 Button 1
+2070 34.544 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=58 done=120 selector=0 active=false/false
+2070 34.546 menu-write pc=018c4e data=3939 mask=ff00 oldchoice=58 done=120
+2071 34.561 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=57 done=120 selector=0 active=false/false
+2071 34.563 menu-write pc=018c4e data=3838 mask=ff00 oldchoice=57 done=120
+2072 34.578 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=56 done=120 selector=0 active=false/false
+2072 34.580 menu-write pc=018c4e data=3737 mask=ff00 oldchoice=56 done=120
+2073 34.595 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=55 done=120 selector=0 active=false/false
+2073 34.596 menu-write pc=018c4e data=3636 mask=ff00 oldchoice=55 done=120
+2074 34.611 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=54 done=120 selector=0 active=false/false
+2074 34.615 menu-write pc=018c4e data=3535 mask=ff00 oldchoice=54 done=120
+2075 34.628 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=53 done=120 selector=0 active=false/false
+2075 34.630 menu-write pc=018c4e data=3434 mask=ff00 oldchoice=53 done=120
+2076 34.645 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=52 done=120 selector=0 active=false/false
+2076 34.647 menu-write pc=018c4e data=3333 mask=ff00 oldchoice=52 done=120
+2077 34.661 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=51 done=120 selector=0 active=false/false
+2077 34.663 menu-write pc=018c4e data=3232 mask=ff00 oldchoice=51 done=120
+2078 34.678 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=50 done=120 selector=0 active=false/false
+2078 34.680 menu-write pc=018c4e data=3131 mask=ff00 oldchoice=50 done=120
+2079 34.695 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=49 done=120 selector=0 active=false/false
+2079 34.697 menu-write pc=018c4e data=3030 mask=ff00 oldchoice=49 done=120
+2080 34.711 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=48 done=120 selector=0 active=false/false
+2080 34.713 menu-write pc=018c4e data=2f2f mask=ff00 oldchoice=48 done=120
+2081 34.728 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=47 done=120 selector=0 active=false/false
+2081 34.730 menu-write pc=018c4e data=2e2e mask=ff00 oldchoice=47 done=120
+2082 34.745 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=46 done=120 selector=0 active=false/false
+2082 34.747 menu-write pc=018c4e data=2d2d mask=ff00 oldchoice=46 done=120
+2083 34.761 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=45 done=120 selector=0 active=false/false
+2083 34.763 menu-write pc=018c4e data=2c2c mask=ff00 oldchoice=45 done=120
+2084 34.778 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=44 done=120 selector=0 active=false/false
+2084 34.780 menu-write pc=018c4e data=2b2b mask=ff00 oldchoice=44 done=120
+2085 34.795 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=43 done=120 selector=0 active=false/false
+2085 34.797 menu-write pc=018c4e data=2a2a mask=ff00 oldchoice=43 done=120
+2086 34.811 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=42 done=120 selector=0 active=false/false
+2086 34.814 menu-write pc=018c4e data=2929 mask=ff00 oldchoice=42 done=120
+2087 34.828 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=41 done=120 selector=0 active=false/false
+2087 34.830 menu-write pc=018c4e data=2828 mask=ff00 oldchoice=41 done=120
+2088 34.845 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=40 done=120 selector=0 active=false/false
+2088 34.847 menu-write pc=018c4e data=2727 mask=ff00 oldchoice=40 done=120
+2089 34.862 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=39 done=120 selector=0 active=false/false
+2089 34.864 menu-write pc=018c4e data=2626 mask=ff00 oldchoice=39 done=120
+2090 34.878 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=38 done=120 selector=0 active=false/false
+2090 34.880 menu-write pc=018c4e data=2525 mask=ff00 oldchoice=38 done=120
+2091 34.895 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=37 done=120 selector=0 active=false/false
+2091 34.897 menu-write pc=018c4e data=2424 mask=ff00 oldchoice=37 done=120
+2092 34.912 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=36 done=120 selector=0 active=false/false
+2092 34.914 menu-write pc=018c4e data=2323 mask=ff00 oldchoice=36 done=120
+2093 34.928 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=35 done=120 selector=0 active=false/false
+2093 34.930 menu-write pc=018c4e data=2222 mask=ff00 oldchoice=35 done=120
+2094 34.945 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=34 done=120 selector=0 active=false/false
+2094 34.947 menu-write pc=018c4e data=2121 mask=ff00 oldchoice=34 done=120
+2095 34.962 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=33 done=120 selector=0 active=false/false
+2095 34.964 menu-write pc=018c4e data=2020 mask=ff00 oldchoice=33 done=120
+2096 34.978 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=32 done=120 selector=0 active=false/false
+2096 34.981 menu-write pc=018c4e data=1f1f mask=ff00 oldchoice=32 done=120
+2097 34.995 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=31 done=120 selector=0 active=false/false
+2097 34.997 menu-write pc=018c4e data=1e1e mask=ff00 oldchoice=31 done=120
+2098 35.012 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=30 done=120 selector=0 active=false/false
+2098 35.014 menu-write pc=018c4e data=1d1d mask=ff00 oldchoice=30 done=120
+2099 35.028 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=29 done=120 selector=0 active=false/false
+2099 35.031 menu-write pc=018c4e data=1c1c mask=ff00 oldchoice=29 done=120
+2100 35.045 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=28 done=120 selector=0 active=false/false
+2100 35.047 menu-write pc=018c4e data=1b1b mask=ff00 oldchoice=28 done=120
+2101 35.062 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=27 done=120 selector=0 active=false/false
+2101 35.064 menu-write pc=018c4e data=1a1a mask=ff00 oldchoice=27 done=120
+2102 35.079 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=26 done=120 selector=0 active=false/false
+2102 35.080 menu-write pc=018c4e data=1919 mask=ff00 oldchoice=26 done=120
+2103 35.095 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=25 done=120 selector=0 active=false/false
+2103 35.098 menu-write pc=018c4e data=1818 mask=ff00 oldchoice=25 done=120
+2104 35.112 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=24 done=120 selector=0 active=false/false
+2104 35.114 menu-write pc=018c4e data=1717 mask=ff00 oldchoice=24 done=120
+2105 35.129 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=23 done=120 selector=0 active=false/false
+2105 35.131 menu-write pc=018c4e data=1616 mask=ff00 oldchoice=23 done=120
+2106 35.145 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=22 done=120 selector=0 active=false/false
+2106 35.147 menu-write pc=018c4e data=1515 mask=ff00 oldchoice=22 done=120
+2107 35.162 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=21 done=120 selector=0 active=false/false
+2107 35.164 menu-write pc=018c4e data=1414 mask=ff00 oldchoice=21 done=120
+2108 35.179 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=20 done=120 selector=0 active=false/false
+2108 35.181 menu-write pc=018c4e data=1313 mask=ff00 oldchoice=20 done=120
+2109 35.195 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=19 done=120 selector=0 active=false/false
+2109 35.198 menu-write pc=018c4e data=1212 mask=ff00 oldchoice=19 done=120
+2110 35.212 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=18 done=120 selector=0 active=false/false
+2110 35.214 menu-write pc=018c4e data=1111 mask=ff00 oldchoice=18 done=120
+2111 35.229 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=17 done=120 selector=0 active=false/false
+2111 35.231 menu-write pc=018c4e data=1010 mask=ff00 oldchoice=17 done=120
+2112 35.245 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=16 done=120 selector=0 active=false/false
+2112 35.248 menu-write pc=018c4e data=0f0f mask=ff00 oldchoice=16 done=120
+2113 35.262 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=15 done=120 selector=0 active=false/false
+2113 35.264 menu-write pc=018c4e data=0e0e mask=ff00 oldchoice=15 done=120
+2114 35.279 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=14 done=120 selector=0 active=false/false
+2114 35.281 menu-write pc=018c4e data=0d0d mask=ff00 oldchoice=14 done=120
+2115 35.295 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=13 done=120 selector=0 active=false/false
+2115 35.298 menu-write pc=018c4e data=0c0c mask=ff00 oldchoice=13 done=120
+2116 35.312 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=12 done=120 selector=0 active=false/false
+2116 35.315 menu-write pc=018c4e data=0b0b mask=ff00 oldchoice=12 done=120
+2117 35.329 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=11 done=120 selector=0 active=false/false
+2117 35.331 menu-write pc=018c4e data=0a0a mask=ff00 oldchoice=11 done=120
+2118 35.346 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=10 done=120 selector=0 active=false/false
+2118 35.348 menu-write pc=018c4e data=0909 mask=ff00 oldchoice=10 done=120
+2119 35.362 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=9 done=120 selector=0 active=false/false
+2119 35.365 menu-write pc=018c4e data=0808 mask=ff00 oldchoice=9 done=120
+2120 35.379 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=8 done=120 selector=0 active=false/false
+2120 35.381 menu-write pc=018c4e data=0707 mask=ff00 oldchoice=8 done=120
+2121 35.396 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=7 done=120 selector=0 active=false/false
+2121 35.398 menu-write pc=018c4e data=0606 mask=ff00 oldchoice=7 done=120
+2122 35.412 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=6 done=120 selector=0 active=false/false
+2122 35.416 menu-write pc=018c4e data=0505 mask=ff00 oldchoice=6 done=120
+2123 35.429 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=5 done=120 selector=0 active=false/false
+2123 35.431 menu-write pc=018c4e data=0404 mask=ff00 oldchoice=5 done=120
+2124 35.446 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=4 done=120 selector=0 active=false/false
+2124 35.448 menu-write pc=018c4e data=0303 mask=ff00 oldchoice=4 done=120
+2125 35.462 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=3 done=120 selector=0 active=false/false
+2125 35.465 menu-write pc=018c4e data=0202 mask=ff00 oldchoice=3 done=120
+2126 35.479 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=2 done=120 selector=0 active=false/false
+2126 35.481 menu-write pc=018c4e data=0101 mask=ff00 oldchoice=2 done=120
+2127 35.496 mode=01 match=04 mask=03 players=4 command=8334 peer=0102 script=0001a842 flow=00010072 menu=00018c48 flags=02 offer=00 header=56/54 choice=1 done=120 selector=0 active=false/false
+2127 35.498 menu-write pc=018c4e data=0000 mask=ff00 oldchoice=1 done=120
+2128 35.512 mode=01 match=04 mask=03 players=4 command=c334 peer=0102 script=0001a842 flow=00010072 menu=00018db6 flags=02 offer=00 header=54/54 choice=0 done=120 selector=0 active=false/false
+2147 35.829 mode=01 match=04 mask=03 players=4 command=c334 peer=0102 script=0001a842 flow=00010072 menu=00018dd8 flags=02 offer=00 header=54/54 choice=0 done=120 selector=0 active=false/false
+2148 35.846 mode=01 match=04 mask=03 players=4 command=c334 peer=0102 script=0001a842 flow=00010072 menu=00018e08 flags=02 offer=00 header=54/54 choice=0 done=120 selector=0 active=false/false
+2160 36.046 input :P1 P1 Button 1
+2160 36.046 input :P2 P2 Button 1
+2162 36.080 mode=01 match=04 mask=03 players=4 command=c334 peer=0102 script=0001a842 flow=00010072 menu=00018e0e flags=02 offer=00 header=54/54 choice=0 done=120 selector=0 active=false/false
+2163 36.096 mode=01 match=04 mask=03 players=4 command=c334 peer=0102 script=0001a842 flow=00010072 menu=00018e40 flags=02 offer=00 header=54/54 choice=0 done=120 selector=0 active=false/false
+2166 36.149 menu-write pc=00a4f0 data=0000 mask=ffff oldchoice=0 done=120
+2167 36.163 mode=01 match=04 mask=03 players=4 command=c334 peer=0102 script=0001a842 flow=00010072 menu=00000000 flags=02 offer=00 header=54/54 choice=0 done=0 selector=0 active=false/false
+2167 36.166 menu-write pc=00a340 data=0000 mask=ffff oldchoice=0 done=0
+2167 36.173 menu-write pc=00a36c data=0000 mask=ffff oldchoice=0 done=0
+2168 36.180 mode=01 match=04 mask=03 players=4 command=c334 peer=0102 script=0001f7bc flow=00010072 menu=00000000 flags=c2 offer=00 header=54/54 choice=0 done=0 selector=0 active=false/false
+2169 36.197 mode=01 match=04 mask=03 players=4 command=c334 peer=0102 script=0001f7d2 flow=00010072 menu=00000000 flags=c2 offer=00 header=54/54 choice=0 done=0 selector=0 active=false/false
+2186 36.480 mode=01 match=04 mask=03 players=4 command=c334 peer=0102 script=0001f7de flow=00010072 menu=00000000 flags=c2 offer=00 header=54/54 choice=0 done=0 selector=0 active=false/false
+2188 36.514 mode=01 match=04 mask=03 players=4 command=c334 peer=0102 script=0001f7f6 flow=00010072 menu=00000000 flags=c2 offer=00 header=54/54 choice=0 done=0 selector=0 active=false/false
+2250 37.548 input :P1 P1 Button 1
+2250 37.548 input :P2 P2 Button 1
+2340 39.050 input :P1 P1 Button 1
+2340 39.050 input :P2 P2 Button 1
+2430 40.552 input :P1 P1 Button 1
+2430 40.552 input :P2 P2 Button 1
+2520 42.054 input :P1 P1 Button 1
+2520 42.054 input :P2 P2 Button 1
+2610 43.556 input :P1 P1 Button 1
+2610 43.556 input :P2 P2 Button 1
+2700 45.058 input :P1 P1 Button 1
+2700 45.058 input :P2 P2 Button 1
+2790 46.560 input :P1 P1 Button 1
+2790 46.560 input :P2 P2 Button 1
+2880 48.062 input :P1 P1 Button 1
+2880 48.062 input :P2 P2 Button 1
+2970 49.564 input :P1 P1 Button 1
+2970 49.564 input :P2 P2 Button 1
+3060 51.066 input :P1 P1 Button 1
+3060 51.066 input :P2 P2 Button 1
+3150 52.568 input :P1 P1 Button 1
+3150 52.568 input :P2 P2 Button 1
+3240 54.070 input :P1 P1 Button 1
+3240 54.070 input :P2 P2 Button 1
+3330 55.572 input :P1 P1 Button 1
+3330 55.572 input :P2 P2 Button 1
+3420 57.073 input :P1 P1 Button 1
+3420 57.073 input :P2 P2 Button 1
+3510 58.575 input :P1 P1 Button 1
+3510 58.575 input :P2 P2 Button 1
+3600 60.077 input :P1 P1 Button 1
+3600 60.077 input :P2 P2 Button 1
+3690 61.579 input :P1 P1 Button 1
+3690 61.579 input :P2 P2 Button 1
+3780 63.081 input :P1 P1 Button 1
+3780 63.081 input :P2 P2 Button 1
+3870 64.583 input :P1 P1 Button 1
+3870 64.583 input :P2 P2 Button 1
+3960 66.085 input :P1 P1 Button 1
+3960 66.085 input :P2 P2 Button 1
+4050 67.587 input :P1 P1 Button 1
+4050 67.587 input :P2 P2 Button 1
+4140 69.089 input :P1 P1 Button 1
+4140 69.089 input :P2 P2 Button 1
+4230 70.591 input :P1 P1 Button 1
+4230 70.591 input :P2 P2 Button 1
+4320 72.093 input :P1 P1 Button 1
+4320 72.093 input :P2 P2 Button 1
+4410 73.595 input :P1 P1 Button 1
+4410 73.595 input :P2 P2 Button 1
+4500 75.097 input :P1 P1 Button 1
+4500 75.097 input :P2 P2 Button 1
+4590 76.599 input :P1 P1 Button 1
+4590 76.599 input :P2 P2 Button 1
+4680 78.101 input :P1 P1 Button 1
+4680 78.101 input :P2 P2 Button 1
+4770 79.602 input :P1 P1 Button 1
+4770 79.602 input :P2 P2 Button 1
+4860 81.104 input :P1 P1 Button 1
+4860 81.104 input :P2 P2 Button 1
+4950 82.606 input :P1 P1 Button 1
+4950 82.606 input :P2 P2 Button 1
+5040 84.108 input :P1 P1 Button 1
+5040 84.108 input :P2 P2 Button 1

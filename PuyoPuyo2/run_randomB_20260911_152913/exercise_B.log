@@ -1,0 +1,187 @@
+:COINAGE Coin B
+:COINAGE Coin A
+:DSW Battle Start credit
+:DSW Demo Sounds
+:DSW Turn Direction
+:DSW VS Mode Match/1 Play
+:DSW Difficulty
+:DSW Rannyu Off Button
+:P1 P1 Button 1
+:P1 P1 Left
+:P1 P1 Up
+:P1 P1 Right
+:P1 P1 Down
+:P1 P1 Button 2
+:P2 P2 Button 1
+:P2 P2 Up
+:P2 P2 Button 2
+:P2 P2 Left
+:P2 P2 Down
+:P2 P2 Right
+:SERVICE Coin 1
+:SERVICE Coin 2
+:SERVICE Service 1
+:SERVICE 2 Players Start
+:SERVICE 1 Player Start
+:SERVICE Service Mode
+random frame=1838 player=1 direction=0
+random frame=1838 player=1 rotate
+random frame=1854 player=1 direction=0
+random frame=1866 player=1 direction=-1
+random frame=1877 player=1 rotate
+random frame=1880 player=1 direction=0
+random frame=1905 player=1 direction=0
+random frame=1921 player=1 rotate
+random frame=1935 player=1 direction=0
+random frame=1939 player=1 rotate
+random frame=1962 player=1 direction=-1
+random frame=1979 player=1 rotate
+random frame=1989 player=1 direction=-1
+random frame=2011 player=1 direction=-1
+random frame=2012 player=1 rotate
+random frame=2036 player=1 direction=1
+random frame=2045 player=1 rotate
+random frame=2046 player=1 direction=0
+random frame=2071 player=1 direction=-1
+random frame=2071 player=1 rotate
+random frame=2095 player=1 direction=-1
+random frame=2105 player=1 rotate
+random frame=2125 player=1 direction=0
+random frame=2127 player=1 rotate
+random frame=2142 player=1 direction=0
+random frame=2159 player=1 rotate
+random frame=2171 player=1 direction=-1
+random frame=2188 player=1 rotate
+random frame=2194 player=1 direction=0
+random frame=2205 player=1 rotate
+random frame=2223 player=1 direction=-1
+random frame=2238 player=1 rotate
+random frame=2241 player=1 direction=0
+random frame=2252 player=1 direction=-1
+random frame=2259 player=1 rotate
+random frame=2263 player=1 direction=1
+random frame=2286 player=1 direction=-1
+random frame=2319 player=1 direction=1
+random frame=2319 player=1 rotate
+random frame=2341 player=1 direction=1
+random frame=2348 player=1 rotate
+random frame=2365 player=1 rotate
+random frame=2368 player=1 direction=1
+random frame=2382 player=1 direction=1
+random frame=2393 player=1 direction=-1
+random frame=2402 player=1 rotate
+random frame=2411 player=1 direction=0
+random frame=2434 player=1 direction=1
+random frame=2439 player=1 rotate
+random frame=2461 player=1 direction=-1
+random frame=2477 player=1 rotate
+random frame=2487 player=1 direction=-1
+random frame=2506 player=1 direction=-1
+random frame=2514 player=1 rotate
+random frame=2517 player=1 direction=1
+random frame=2543 player=1 direction=1
+random frame=2556 player=1 rotate
+random frame=2587 player=1 direction=1
+random frame=2587 player=1 rotate
+random frame=2609 player=1 direction=1
+random frame=2628 player=1 direction=1
+random frame=2629 player=1 rotate
+random frame=2641 player=1 rotate
+random frame=2645 player=1 direction=-1
+random frame=2663 player=1 direction=0
+random frame=2677 player=1 rotate
+random frame=2688 player=1 direction=1
+random frame=2703 player=1 rotate
+random frame=2717 player=1 direction=0
+random frame=2729 player=1 rotate
+random frame=2742 player=1 direction=1
+random frame=2746 player=1 rotate
+random frame=2759 player=1 direction=1
+random frame=2770 player=1 direction=-1
+random frame=2773 player=1 rotate
+random frame=2789 player=1 direction=-1
+random frame=2796 player=1 rotate
+random frame=2827 player=1 direction=1
+random frame=2827 player=1 rotate
+random frame=2849 player=1 direction=0
+random frame=2861 player=1 direction=1
+random frame=2862 player=1 rotate
+random frame=2874 player=1 rotate
+random frame=2881 player=1 direction=-1
+random frame=2889 player=1 rotate
+random frame=2902 player=1 direction=0
+random frame=2904 player=1 rotate
+random frame=2926 player=1 direction=-1
+random frame=2938 player=1 rotate
+random frame=2954 player=1 direction=1
+random frame=2973 player=1 rotate
+random frame=2980 player=1 direction=0
+random frame=2991 player=1 direction=-1
+random frame=3002 player=1 direction=-1
+random frame=3006 player=1 rotate
+random frame=3024 player=1 direction=0
+random frame=3051 player=1 direction=0
+random frame=3051 player=1 rotate
+random frame=3064 player=1 rotate
+random frame=3080 player=1 direction=1
+random frame=3102 player=1 rotate
+random frame=3106 player=1 direction=1
+random frame=3115 player=1 rotate
+random frame=3117 player=1 direction=-1
+random frame=3129 player=1 direction=1
+random frame=3141 player=1 direction=1
+random frame=3141 player=1 rotate
+random frame=3154 player=1 rotate
+random frame=3155 player=1 direction=0
+random frame=3169 player=1 rotate
+random frame=3179 player=1 direction=-1
+random frame=3201 player=1 direction=-1
+random frame=3208 player=1 rotate
+random frame=3231 player=1 direction=0
+random frame=3235 player=1 rotate
+random frame=3351 player=1 direction=1
+random frame=3351 player=1 rotate
+random frame=3366 player=1 direction=-1
+random frame=3389 player=1 rotate
+random frame=3390 player=1 direction=0
+random frame=3400 player=1 direction=-1
+random frame=3418 player=1 rotate
+random frame=3427 player=1 direction=-1
+random frame=3444 player=1 direction=0
+random frame=3458 player=1 direction=-1
+random frame=3461 player=1 rotate
+random frame=3480 player=1 rotate
+random frame=3484 player=1 direction=0
+random frame=3505 player=1 direction=1
+random frame=3505 player=1 rotate
+random frame=3518 player=1 direction=-1
+random frame=3523 player=1 rotate
+random frame=3528 player=1 direction=1
+random frame=3661 player=1 direction=1
+random frame=3661 player=1 rotate
+random frame=3674 player=1 rotate
+random frame=3685 player=1 direction=-1
+random frame=3698 player=1 direction=1
+random frame=3715 player=1 rotate
+random frame=3721 player=1 direction=1
+random frame=3733 player=1 direction=-1
+random frame=3743 player=1 direction=-1
+random frame=3750 player=1 rotate
+random frame=3760 player=1 direction=-1
+random frame=3770 player=1 direction=0
+random frame=3779 player=1 rotate
+random frame=3784 player=1 direction=0
+random frame=3796 player=1 direction=-1
+random frame=3845 player=1 direction=0
+random frame=3845 player=1 rotate
+random frame=3866 player=1 direction=1
+random frame=3885 player=1 rotate
+random frame=3886 player=1 direction=0
+random frame=3898 player=1 rotate
+random frame=3912 player=1 direction=-1
+random frame=3923 player=1 rotate
+random frame=3925 player=1 direction=0
+random frame=3943 player=1 direction=-1
+random frame=3945 player=1 rotate
+random frame=3970 player=1 direction=1
+random frame=3971 player=1 rotate

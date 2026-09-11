@@ -1,0 +1,1909 @@
+ 
+ 
+ 
+ 
+ 
+ 
+
+ Puyo Puyo Tsuu Reverse Engineering: game mechanics explained - Puyo Nexus Forum 
+
+ 
+ 
+
+<!--
+ phpBB style name: prosilver
+ Based on style: prosilver (this is the default phpBB3 style)
+ Original author: Tom Beddard ( http://www.subBlue.com/ )
+ Modified by:
+-->
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+ 
+ 
+
+
+
+
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ Puyo Nexus 
+ 
+ 
+ 
+ 
+ Wiki 
+ Forum 
+ Chain Simulator 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Members 
+ 
+ 
+ 
+ 
+ The team 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ FAQ 
+ 
+ 
+ 
+ 
+ 
+ Login 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ Board index 
+
+ 
+ Puyo Puyo 
+ 
+ Gameplay Discussion 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ Puyo Puyo Tsuu Reverse Engineering: game mechanics explained 
+ 
+ Discuss the gameplay of various Puyo Puyo games. 
+
+
+ 
+ 
+ 
+ Post Reply 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Print view 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 32 posts
+ 
+ 1 
+ 2 
+ 3 
+ Next 
+ 
+ 
+ 
+
+
+
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Puyo Puyo Tsuu Reverse Engineering: game mechanics explained 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Tue Aug 27, 2013 6:38 pm 
+ 
+ 
+ 
+ 
+ 
+ Hello, 
+ 
+Short of available and accurate documentation, I have started a reverse engineering effort on Puyo Puyo Tsuu in order to figure out actual algorithms used by the game to randomly generate upcoming pairs, and perform further analysis based on those. I chose to analyze Tsuu specifically because of its obvious randomization differences and the fact it's used in competition (and that I have the actual game on genesis hardware). 
+ 
+I will document my efforts and findings throughout this thread, in several parts: I'll try to describe technical details on how Puyo Puyo Tsuu works on both Genesis and Arcade versions, and describe game mechanics and algorithms. 
+ 
+(2013-11-28) The up-to-date reference for technical information is now over Puyonexus' wiki: http://puyonexus.net/wiki/Category:Reverse_Engineering 
+ 
+I will still edit this main post to reflect my progress and keep a table of content linking to relevant posts / wiki pages. 
+ 
+Feel free to discuss my efforts and give me suggestions, or ask for specific details! 
+ 
+ Progress 
+So far, I have successfully reverse engineered how the game handles the colors, the board, the currently falling pair, upcoming pairs, long-term pair pool, randomizer, random number generation, game inputs, video frame update. 
+ 
+ Table of contents 
+ 
+ The hardware: Genesis/Mega Drive and System C-2/Arcade, tools of the trade 
+ Puyo Puyo Tsuu fundamentals: memory mappings 
+ Random numbers: how it's done 
+ Upcoming pairs: how they are picked 
+ How baby puyos are made: from random generation to the board 
+ Memory allocation and memory structures 
+ Bonus round: game genie codes and elite 1-chain 
+ Codes to set falling speed and color set 
+ (wiki) Game options variables : description of settings, their location in RAM and handling 
+ (wiki) Gamepad Input 
+ (wiki) Frame Data Tables 
+ (wiki) Rotation, collision and push back 
+ (wiki) Falling Pair Control 
+ (wiki) Pair Lateral Movement 
+ (wiki) Free fall 
+ (wiki) Software Architecture 
+ (wiki) Soft drop, regular drop, bouncing animation and control lockout 
+
+ Change log 
+ 
+ 2013-08-27 - Initial post 
+ 2013-08-29 - Updated RNG C implementation to accurately reflect the first values on Genesis hardware 
+ 2013-09-01 - How baby puyos are made: from random generation to the board 
+ 2013-09-01 - Memory allocation and memory structures 
+ 2013-09-02 - Bonus round 
+ 2013-11-28 - Wiki port of these forum posts; see: http://puyonexus.net/wiki/Category:Reverse_Engineering 
+ 2013-11-29 - Game options variables 
+ 2013-11-30 - Gamepad input routines, input trickery and created the frame data table page 
+ 2013-12-21 - Updated the frame data table page with rotation and drop speed timings 
+ 2013-12-23 - Rotation, collision detection and push-back 
+ 2014-01-04 - Software architecture 
+ 2014-01-05 - Falling pair control, lateral movement, pair split and free-fall 
+ 2014-01-05 - Updated the frame data table page with pair-splitting and free-fall information 
+ 2014-01-20 - Regular drop speed, soft-drop, bouncing animation and control lockout 
+ 2014-01-20 - Updated the frame data table page with bouncing animation and control lockout grace period information 
+
+ 
+ Coming up (not necessarily in chronological order)
+ 
+ how the RNG gets truly randomized throughout the game 
+ how the RNG is actually biased and might be troublesome 
+ how is the score calculated? 
+ what's the sequence of game routines during a battle? 
+ what are actual frame timings of about every game sequence? 
+ how are ojama puyos distributed across the rows? 
+ how are gamepad inputs handled? (done!) 
+
+ 
+ 
+ 
+ Last edited by BLueBLue on Mon Jan 20, 2014 3:04 am, edited 21 times in total.
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Tue Aug 27, 2013 6:39 pm 
+ 
+ 
+ 
+ 
+ 
+ The hardware: Genesis/Mega Drive and System C-2/Arcade, tools of the trade 
+ 
+This post lays the basics on those systems, so that everyone knows what's needed to understand the reverse engineering efforts. 
+ 
+ Hardware considerations and generalities 
+When reverse engineering some code, it mainly involves reading bytecode, assembly code, and debugging a running program to inspect the state of the machine at some specific moments. A few concepts shall be understood on how a computer/console works: 
+ 
+The CPU communicates with various hardware processors and memories to perform calculations. In our case, the genesis CPU communicates with game controllers, a sound processor to handle music and sound effects, a video processor to render frames and display them on the screen, then talks to the ROM (static) in the cartridge to read the content of the game program, and has some RAM (volatile) memory. The last memory resides inside the CPU itself, and are called registers, which are the fastest type of memory, in terms of access delay. 
+ 
+The main CPU is connected to external processors and memories through a communication bus: it can send read and write orders on that bus, along with some data and the address they should occur at. 
+ 
+Old hardware handles all those surrounding memories and processors quite simply: a "virtual" address space is indexed sequentially at the byte (8 bits) level: address 0 is the byte value located at the first storage byte of the address space, while byte 0xFF is byte number 255. 
+On the genesis, the address space is 24-bits wide, which means addresses range from 0 to 0xFFFFFF, 16 MB of available memory. 
+ 
+ROMs are way smaller than that, so the virtual addressing space is split up, and each portion is assigned to a designated peripheral: for instance, addresses 0 through 0x3FFFFF are mapped to the ROM inside the cartridge, while 0xFF0000 through 0xFFFFFF are assigned to the volatile RAM. External CPUs or game controllers are mapped in the same way, and communicating with them is as simple as reading and writing to specific addresses. Seeing which keys are pressed is almost as simple as reading a value somewhere in the virtual address space. 
+ 
+CPU registers are a very small memory that resides inside the main CPU, usually 32-bits wide, 64-bits wide in current PC hardware. They are used to store intermediate values during calculations, values that are fetched from or stored to the ROM, RAM or external peripherals. 
+ 
+Some very special registers are important:
+ 
+ Program Counter (PC) / Instruction Pointer (IP/EIP): it's a registers that always holds an address pointing somewhere in the virtual address space. More importantly, that address points to the next instruction (command) the CPU will execute. IN our case, this almost always points to an address located in the cartridge ROM, so that the CPU executes the game code stored there. 
+ Stack Pointer (SP/ESP): this is also an address but points to the RAM section. It slowly grows up or down as the program saves values by pushing/popping them onto/from a stack of values. The address points to the top of that stack. This is a fundamental mechanic on how program functions store variables. 
+ Status register (SR): this registers holds bits which will each have some significance with regards to the most recently executed instruction: is the result negative? did we generate a carry/borrow while adding/subtracting stuff? etc. 
+
+The other general purpose registers are used to hold data or addresses. 
+ 
+ Hardware architecture 
+The Genesis console (Mega Drive in EU and JP) was released as the household device everyone know, but also declined into arcade cabinet boards known as "System C" and "System C-2", which share the main hardware architecture while providing several enhancements (mainly performance-wise). 
+ 
+These platforms are based on various main components:
+ 
+ Main CPU: Motorola 68K, clocked higher on the C-2 hardware, which runs the main program of the games. It has 8 dedicated data registers (D0-D7) and 8 address registers (A0-A7), 
+ Sound CPU: Zilog Z80, which is absent of C-2 hardware (since the higher clock speed allowed for the main CPU to handle all that). The main CPU feeds it with sound samples and Z80 code excerpts to handle the playback. 
+ Video CPU (VDP): this CPU will actually build each frame but putting together sprites and backgrounds. The main CPU feeds it with sprite IDs and position through various data and control registers, and this CPU gets its graphic data from the ROM. 
+
+ Main memory mappings 
+ 
+As I said earlier, when reading or writing at specific addresses, the CPU can communicate with the cartridge, the RAM, the sound CPU, etc. This sums up where everything goes: 
+
+ 
+ 0x000000 - 0x3FFFF: main ROM cartridge 
+ 0xA00000 - 0xA0FFFF: Z80 sound processor memory, used to send sound samples 
+ 0xA10000 - 0xA10FFF: System registers, some of which hold game controller status 
+ 0xA11000 - 0xA11FFF: Z80 control registers, used to send play commands 
+ 0xC00000 - 0xDFFFFF: VDP memory and control registers, used to send both data and display commands 
+ 0xE00000 - 0xFFFFFF: main RAM, most games (including Tsuu) using only 0xFF0000 through 0xFFFFFF 
+(this list is not accurate) 
+ 
+The system C-2 uses a very similar mapping, most importantly for the main CPU ROM and RAM sections. Sound CPU mappings are different though. 
+ 
+ Emulation and debugging tools 
+ 
+To analyze any Genesis / System C-2 game, you'll need emulators which include powerful debugging tools, that allow you to stop the CPU at any desired moment (at a specific instruction), or watch what occurs in memory. 
+ 
+I used MAME for the System C-2 version, and MESS for the Genesis version, as they are both from the MAMEdev team, and include the best debugger (which works exactly the same on both platforms). MESS is basically the console version of MAME. 
+ 
+Download: http://www.mamedev.org/release.html 
+ 
+How to run MESS with debugging tools: create a shortcut to messpp.exe or mess64.exe with the following parameters:
+ Code: Select all "C:\Documents and Settings\Administrator\Desktop\mess\messpp.exe" genesis -cart "Puyo Puyo 2 (REV 00) (J).bin" -video gdi -debug -resolution 320x240 -keepaspect 
+Note the ROM file will have to be located in the same directory as the MESS .exe 
+ 
+How to run MAME with debugging tools: create a shortcut to mame.exe or mame64.exe with the following parameters:
+ Code: Select all "C:\Documents and Settings\Administrator\Desktop\mame\mame.exe" puyopuy2 -video gdi -debug -resolution 320x240 -keepaspect 
+Note the ROM directory "puyopuy2" will have to be located in the "roms/" folder. 
+ 
+ Reverse engineering tools 
+ 
+I mainly used IDA Pro, which is a somewhat expensive commercial software, and is able to disassemble Motorola 68000 bytecode. 
+ 
+However, its disassembly is not accurate in the case of Genesis ROMs, and some instruction operands are not properly decoded (mainly address offsets). Using the emulator can help figuring those out. 
+ 
+This tools gives you a pretty graph display of the program code and paths : arrows will visualize loops, alternatives and successive blocks. This is convenient to annotate and comment your findings, rename functions and variables, so that the code looks like something readable. 
+ 
+This tool can't give you an accurate depiction of what CPU registers hold at a given point : you have to use the emulator to get the actual value or help you understand where they come from. 
+ 
+ Method 
+ 
+Reverse engineering a program means you want to figure out various stuff:
+ 
+ Where and how are data stored: for instance, where is stored the current state of each player's board, how is it represented. 
+ What computations are done with those data: what algorithm computes the next pair a player will get? how is the score calculated? 
+
+To do so, you need to read the program code, which will tell you the algorithms, and observe memory, mainly RAM memory where variables, parameters and states are stored while the system is running. 
+ 
+This is where debuggers come in handy: 
+
+ 
+ You can run the program and see the actual code that gets executed at the same time 
+ You can stop the program execution when some condition is met: you've reached a particular instruction, you've read or written to a specific address in memory. You can have complicated conditions that will trigger upon writing specific values at specific addresses. 
+ You can slowly continue running the program by single-stepping through the code, pausing after each instruction. This allows you to understand every bit of an algorithm by seeing it unfold before your eyes. You can take the time to manually figure out how things went. 
+
+So I did exactly that: 
+I've set watchpoints at various memory addresses to figure out which program functions were writing/reading there (by noting the value of the PC register when execution stopped). 
+Then went to IDA Pro to analyze that part of the code, then single-stepped my way through the rest of the function. 
+ 
+At times, I used the tracing capability of the emulator: it writes a text file whose lines will each describe the successive instructions that were actually executed, along with their location. That helped figuring out where functions were called from. Indeed, old programming tricks used by game developers at the time make it painful to analyze ROMs statically, and automated tools have a hard time figuring everything out as well. So you have to tell IDA to interpret parts of the ROM as code or data. 
+ 
+That's is for the general considerations, now on to the Puyo Puyo Tsuu reverse engineering! 
+
+ 
+ 
+ 
+ Last edited by BLueBLue on Wed Aug 28, 2013 8:57 am, edited 4 times in total.
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Tue Aug 27, 2013 6:40 pm 
+ 
+ 
+ 
+ 
+ 
+ I will mainly focus on the Genesis version of the game, but I did check the arcade version to make sure the same algorithms were involved. Luckily, they were the same, but more importantly: the memory mappings of various game structures and variables are the same, which makes comparisons easy. 
+ 
+Function offsets are different though, and code varies a bit to accommodate for the hardware changes, or differences in available game modes. 
+ 
+ Puyo Puyo Tsuu fundamentals: memory mappings and representation 
+ 
+Puyo Puyo Tsuu stores all information related to the current game into memory (RAM), while the system is running. This is lost every time the system is powered off, but is actually where the magic happens: that's where your puyos get stored as you place them on your board, and that's where the upcoming pairs are stored as well, after being generated through an oobscure algorithm. 
+ 
+This sums post sums up interesting locations in memory. 
+ 
+Here are the main locations regarding puyo storage and their generation in the game (offsets are applicable to both genesis and C-2 versions):
+ 
+ 0xFF8000 - 0xFF80A7: 168 bytes, board (player 1) 
+ 0xFF8800 - 0xFF88A7: 168 bytes, board (player 2) 
+ 0xFF85A0: 6 bytes, P1 upcoming pairs (the two displayed on screen + one after that) 
+ 0xFF8DA0: 6 bytes, P2 upcoming pairs 
+ 0xFFAD00: 256 bytes, randomized pool of upcoming pairs (128 pairs), usually 3-color set (difficulty levels 1-2) 
+ 0xFFAE00: 256 bytes, randomized pool of upcoming pairs (128 pairs), usually 4-color set (difficulty level 3) 
+ 0xFFAF00: 256 bytes, randomized pool of upcoming pairs (128 pairs), usually 5-color set (difficulty levels 4-5) 
+ 0xFFD080: multiple chunks of 64 bytes representing part of the current game's state, including the currently falling pair 
+ 0xFFA134: 4-byte value that is the last generated random number 
+ 0xFFA4E2: color-set to be used in the game 
+
+ Puyo representation 
+ 
+The game picks puyos according to color codes, which are converted into sprite numbers to be displayed on the screen. 
+Thus, in structures handling the board, the display of the few upcoming pairs, the currently falling piece, the codes are sprite identifiers, stored on 1 byte as such:
+ 
+ 0x80: red 
+ 0x90: yellow 
+ 0xA0: green 1 
+ 0xB0: green 2 
+ 0xC0: purple 
+ 0xD0: blue 
+ 0xE0: ojama 
+ 0xF0: block 
+
+Each sprite code has variations: the first digit stands for the color, while the second digit is the sprite variation (where they look at, how they are linked to their neighbors...). 
+ 
+While picking pairs, in the areas containing the randomized pair pool and the next three pairs, the game only handles color codes according to this list: 
+
+ 
+ 0x00: red 
+ 0x01: yellow 
+ 0x02: green 1 
+ 0x03: green 2 
+ 0x04: purple 
+ 0x05: blue 
+ 0x06: ojama 
+ 0x07: block 
+
+Note there are 2 colors codes acting as green, but they are not compatible. The game does not link those puyos together, and handles them as different. 
+ 
+Also, the board representation actually uses double the necessary space, since it stores every sprite ID twice at the same spot. 
+ 
+An overview of a running game looks like this: 
+ 
+ 
+
+ 
+ 
+ 
+ Last edited by BLueBLue on Tue Aug 27, 2013 9:24 pm, edited 1 time in total.
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Tue Aug 27, 2013 6:40 pm 
+ 
+ 
+ 
+ 
+ 
+ Random numbers: how it's done 
+ 
+When the game gives you pairs randomly, obviously there is some logic to it. In most computer systems, random is not actually random and can be predicted, you have to know the algorithm and how it is used, then could infer some properties that make it predictable. 
+ 
+Puyo Puyo Tsuu is no exception, and has what is called a random number generator. Here's how it works:
+ 
+ a variable is declared to stand for the current random value (rng_val) 
+ when the system boots, this variable is set to a predefined value 
+ a function then modifies this value every time it is called, based on various parameters, but should attempt to make it difficult to predict the next value 
+ when needed, read the variable and "iterate" the random value so that the next code chunk that wants a random value does not get the same as yours 
+
+Puyo Puyo Tsuu has those functions and variables:
+ 
+ the game stores the current random value at 0xFFA134; 
+ it is initialized at boot time by function sub_2216 (subroutine whose code begins at 0x002216), which initializes the game options to their default values. At 0x222C the function writes the default "random" value of 0x35879DE2; 
+ function sub_C04 is the "iterator", equivalent to rand() in most programming languages, which picks the next random value based on its calculations and the old value stored in that variable. 
+Function offsets are specific to the genesis version. 
+ 
+On the arcade version, the initialization function lies at 0x23FA and the rand iterator function is at 0x4AA. The initial value of the rng_val variable is the same. 
+ 
+Here's the initialization function: 
+ 
+ 
+ 
+And here's the rand() function: 
+ 
+ 
+ 
+This RNG function calculates the next value as follows:
+ 
+ assign old value to d0 from the variable in RAM, adding it to the current d0 content 
+ add the value of the stack pointer register to d0 
+ rotate the contents of d0 by 5 bits to the left: higher bits get placed at the lowest place 
+ add the old value to d0 
+ increment d0 by one 
+ store the new value to the variable in memory 
+
+The function also returns the generated value, as it is not erased from d0: that's the return value, a new 32-bit random number. 
+ 
+The following C code mimics this behaviour: 
+
+ Code: Select all #include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define TRIALS 1&lt;&lt;16
+
+unsigned int _rotl(const unsigned int value, int shift) {
+ if ((shift &= sizeof(value)*8 - 1) == 0)
+ return value;
+ return (value &lt;&lt; shift) | (value &gt;&gt; (sizeof(value)*8 - shift));
+}
+ 
+unsigned int _rotr(const unsigned int value, int shift) {
+ if ((shift &= sizeof(value)*8 - 1) == 0)
+ return value;
+ return (value &gt;&gt; shift) | (value &lt;&lt; (sizeof(value)*8 - shift));
+}
+
+int main(int argc, const char** argv)
+{
+ unsigned int seed = 0x35879DE2;
+ unsigned int i;
+ unsigned int tmp;
+
+ printf("sizeof(unsigned int): %ld bits\n", sizeof(unsigned int)*8);
+ if(sizeof(unsigned int) != 4)
+ puts("WARNING: integer type is not 32-bit long");
+
+ for (i = 0; i &lt; TRIALS; i++) {
+ /* tmp holds d0 value that depends from where the function is called, 
+ so is a yet unknown variable.
+ The following initialization is accurate for the first 7 values of the RNG, 
+ if you let the animation play through, on the genesis.
+ 
+ For the color-set shuffling, it holds 0x00000004.
+ For the pool randomization process, it holds the previous RNG value masked 
+ with 0xFFFF00FF, and is initialized to 0x4AD00000.
+ */
+ if(i%2 == 0)
+ tmp = 0xF1;
+ else 
+ tmp = 0xF0;
+ tmp += seed;
+ printf("0x%08X ", tmp);
+ tmp += (unsigned int) 0x00FF7FE8; /* 0x00FF7FF4 most likely to be the sp at generation */
+ printf("0x%08X ", tmp);
+ tmp = _rotl(tmp,5);
+ printf("0x%08X ", tmp);
+ tmp += seed;
+ printf("0x%08X ", tmp);
+ tmp++;
+ printf("0x%08X \n", tmp);
+ seed = tmp;
+ 
+ printf("0x%08x: %3d (0x%02x) [mod 4: %d]\n", seed, seed & 0xFF, seed & 0xFF,(seed & 0xFF)%4);
+ }
+ 
+ return EXIT_SUCCESS;
+}
+ 
+
+The code will generate 65536 values and print the results. tmp stands for the d0 register. _rotl() is the rotation function. Beware it only works on systems where unsigned int is a 32-bit value. 
+ 
+This is how the game gets random numbers. Now, let's have a look at how those random numbers are used to generate puyo pairs. 
+
+ 
+ 
+ 
+ Last edited by BLueBLue on Thu Aug 29, 2013 10:43 am, edited 4 times in total.
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Tue Aug 27, 2013 6:41 pm 
+ 
+ 
+ 
+ 
+ 
+ Upcoming pairs: how they are picked 
+I'm assuming a standard rules battle, not the fancy 2 color games and everything. 
+ 
+The game keeps 3 main pools or "buffers" that store the puyos you'll get at various steps:
+ 
+ there's a buffer for the currently falling pair, for each player 
+ there's a buffer for the upcoming 3 pieces, for each player 
+ there a big buffer that holds the randomized pairs for your game, in their order of appearance, that is shared among all players 
+
+Pairs are passed along these buffers as they are picked from the later one to make their way to the first one. 
+ 
+At the beginning of a battle, the game will generate the big buffer holding all the pairs you'll ever be able to get during that game. This is a pool shared by both players, but depends on the chosen difficulty. Thus, the game actually generates 3 pair pools:
+ 
+ Pool #1 at 0xFFAD00, holding pairs chosen among a 3-color subset only 
+ Pool #2 at 0xFFAE00, holding pairs chosen among a 4-color subset only 
+ Pool #3 at 0xFFAF00, holding pairs chosen among a 5-color subset only 
+
+Each pool holds 256 puyos, making 128 pairs. The game will pick a pair from the relevant pool sequentially and loop if it ever reaches the end of the pool. 
+ 
+The pool generation works as follows:
+ 
+ The full color-set of the game is shuffled in RAM at 0xFFA4E2, on 8 bytes. Initial order is: 0, 1, 3, 5, 4, 6 and 5 random permutations occur. For the sake of the example, we will consider the initial order in the next items. 
+ Each pool is initialized with the colors taken from that set, from the beginning up to the desired number of different colors, and loops through. With our color-set, that means pool #1 gets 0-1-3-0-1-3-..., pool #2 gets 0-1-3-5-0-1-3-5-... and pool #3 gets 0-1-3-5-4-0-1-3-5-4-... as I said, the true order has been shuffled. 
+ Each pool is shuffled by performing 256 pseudo-random permutations (swapping 2 puyos). Two puyos get chosen to be swapped: one is picked sequentially, beginning from the last one (number 255) all the way up to puyo number #0 in the pool. The second puyo is chosen by randomly picking an index. How so? Well, the game uses the previously explained random number generator, and only keeps the lowest byte from the 32-bit value. That makes an 8-bit value, that will necessarily be between 0 and 255. A good random index for choosing a random puyo as a swapping candidate. 
+ After shuffling the 3 pair pools, the first two pairs of pool #2 and #3 are overwritten by the first two pairs of pool #1. This ensures you'll only get 3 different colors in your first 2 pairs. 
+ Lastly, the next two pairs of pool #3 are overwritten by the next two pairs of pool #2, effectively limiting the start of this pool to 4 colors. 
+
+So here it is, that's how Puyo Puyo Tsuu generates the pairs you get. 
+ 
+The game then picks the pairs from those pools, sequentially, as it keeps a counter of how many puyos you got. The counter is on 8 bits, so it will naturally loop after reaching 255. 
+ 
+ 
+For the sake of completeness, here's the full analysis of the subroutine, with side-by-side comparison of the Genesis and Arcade versions : 
+ 
+ 
+ 
+Here's the color-set shuffling subroutine: 
+ 
+ 
+ 
+ Notable facts 
+
+ 256 puyos make 128 pairs, which amounts to about 3.55 full boards before you'll loop through pairs. 
+
+ You might notice that the first three pairs you get are not the first 3 of the generated pair pool. Actually, they are in reversed order. Your first pair is the third one of the pool, while the third piece you get is the first in the pool. This is how the game picks the first three pairs only. However, it loops in the correct order. 
+
+ In a 4-color game, the pair pools initially get exactly 64 puyos of each of those 4 colors. Only 2 pairs are overwritten, so that's your margin of error right there, but the thing is mostly uniform. 
+ 
+This means that, over the course of a battle, if you were to use 128 pairs, you'd get exactly the same amount of puyos of each color. 
+ 
+However, the permutation algorithm may shift more puyos of one specific color towards the beginning, effectively greatly reducing your odds of getting that color afterwards. 
+That means that if you get lots of unicolor pairs and a few other of the same color, you will have quickly depleted the pool from that color and are not likely at all to get more any time soon. 
+ 
+More on that later. 
+
+ 
+ 
+ 
+ Last edited by BLueBLue on Wed Aug 28, 2013 3:45 pm, edited 3 times in total.
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Tue Aug 27, 2013 10:46 pm 
+ 
+ 
+ 
+ 
+ 
+ Here you go, tell me what you think! 
+I'll add more later. For now, I'm waiting for your comments and suggestions. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Wizzkidwas 
+
+ Puyo Fan 
+ Posts: 410 Joined: Fri Mar 23, 2012 8:33 pm 
+ 
+ Location: Trapped in Klug's book 
+ 
+ 
+ Contact: 
+ 
+ 
+ Contact Wizzkidwas 
+ 
+ 
+ 
+ 
+ 
+ 
+ Skype 
+ 
+ Twitter 
+ 
+ YouTube 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by Wizzkidwas &raquo; Wed Aug 28, 2013 7:55 am 
+ 
+ 
+ 
+ 
+ 
+ How long did that take???? 
+
+ 
+ 
+ 
+ 
+ LOL, puyo 
+I'm a huge Puyo, Fire Emblem, Eternal Sonata and Kirby fan and I am absolutely a Klug nut. Rafisol is my waifu fite me 
+...Kirby always says puyo (well it's poyo but still) 
+ Puyo Quest Team! 
+ 
+ Mwahahaha I have Black Sig, I got him first try, I only spent 5 stones getting him 
+Meanwhile, Rafisol took 150 stones 
+And Mirror Rafisol took 400! 
+AND WE GOT 7*S 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Hernan 
+
+ Administrator 
+ Posts: 2264 Joined: Sat Aug 11, 2007 10:51 am 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by Hernan &raquo; Wed Aug 28, 2013 3:21 pm 
+ 
+ 
+ 
+ 
+ 
+ I dont have the time to read this now, but this is extremely cool! 
+Thank you for doing this! 
+
+ 
+ 
+ 
+ 
+ @HernanZh 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Wed Aug 28, 2013 4:13 pm 
+ 
+ 
+ 
+ 
+ 
+ Wizzkidwas : it's been 2 weeks since I've first looked at how I would actually proceed. I've spent a week doing nothing, trying out the emulator, debugger... then a full week seriously looking at that stuff on my spare time (about 5 hours a day). I got lucky and literally stumbled upon the board buffers in memory, while looking through areas that were touched during a battle. Once I got that, making my way to the RNG was a matter of hours. 
+ 
+In the meantime, I had another process going on: I traced the CPU execution from powerup to the beginning of a battle, then identified all code paths that had been executed only once. I hoped to exclude most of the sound and video related code this way, and found about 30 interesting subroutines. Turns out one of those did initialize the RNG and I would have spotted the stuff this way. 
+ 
+But this is nothing exceptionally difficult. I inferred the game mechanics before looking at the code, so I had a few hypothesis at how it could work. For instance, I guessed some function would be called every time you place a pair to pick a new one from a random pool. Also, looking at the game, I knew something was going on with different pools for different color-subsets but some overwriting was going on to make the first pairs the same. 
+ 
+Now the hard work is mainly identifying every object (variable, buffer) in memory (RAM), and what role does it play (which setting it is, score, counter, buffer...). Once that is done, you're pretty much through, as you will easily get a list of every routine that touches them, and what their algorithms are. 
+ 
+ 
+The only painful stuff is something I'll talk about in a future post: how the RNG is pseudo-randomly iterated between battles, based on CPU interrupts (VBLANK, VINT, HINT, player inputs...) and various events I have yet to figure out. 
+ 
+ 
+ Hernan : I will post an accurate implementation of the whole process some time soon, that I hope will be able to match Tsuu's features and glitches as closely as I can. I will also perform a statistical analysis on the RNG and permutation algorithm with my younger brother (BrouH). He may have talked to you about what we've done so far regarding PuyoVS2. 
+ 
+There are some biases in Tsuu: many RNG values are about 200 times less likely to be picked than others (based on 16 million trials). Here's the count per RNG value on 16 million consecutive iterations : http://fry.blueblue.fr/puyo/reverse/rng_loop.txt 
+ 
+23241 values were picked only once among 102393 different RNG values. That also tells me the RNG doesn't quite cover the full range. 
+
+ 
+ 
+ 
+ Last edited by BLueBLue on Thu Aug 29, 2013 9:55 am, edited 1 time in total.
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Snivy 
+
+ Puyo Fan 
+ Posts: 361 Joined: Fri Apr 18, 2008 1:47 am 
+ 
+ Location: Ciudadela, Buenos Aires, Argentina 
+ 
+ 
+ Contact: 
+ 
+ 
+ Contact Snivy 
+ 
+ 
+ 
+ 
+ 
+ 
+ Website 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by Snivy &raquo; Thu Aug 29, 2013 1:33 am 
+ 
+ 
+ 
+ 
+ 
+ And this is why I'm too unexperienced at reading assembler 
+ 
+This reverse engineering could help in simulators, in order to make the game experience even more similar to the original game 
+
+ 
+ 
+ 
+ 
+ 3DS Friend Code : 0018-5085-8257 [Pokemon Super Mystery Dungeon; Pokemon Moon; Pokemon Alpha Sapphire] 
+ Switch Friend Code : SW-2552-1893-9214 [Puyo Puyo Tetris; Mario Kart 8 Deluxe; Splatoon 2; Sonic Mania] 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ RPGamerX 
+
+ Puyo Fan 
+ Posts: 785 Joined: Sat Apr 28, 2012 9:17 pm 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by RPGamerX &raquo; Thu Aug 29, 2013 4:56 am 
+ 
+ 
+ 
+ 
+ 
+ So, It's basically how the game reads itself, it is pointers who navigate to more and more pointers. 
+Every ROM works with this. let's say like 0x8D80000 is the pointer of the word ''yes'' which is used as selection in the game. 
+ 
+This is all complicated stuff but I have been reading a lot of how a GBA works inside. 
+
+ 
+ 
+ 
+ 
+ My Deviantart profile. 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ ccc 
+
+ Puyo Fan 
+ Posts: 294 Joined: Tue Dec 04, 2012 12:15 pm 
+ 
+ 
+ 
+ Contact: 
+ 
+ 
+ Contact ccc 
+ 
+ 
+ 
+ 
+ 
+ 
+ Website 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by ccc &raquo; Fri Aug 30, 2013 7:13 pm 
+ 
+ 
+ 
+ 
+ 
+ Hernan wrote: I dont have the time to read this now, but this is extremely cool! 
+Thank you for doing this! 
+
+I agree 
+ 
+So the Genesis/Megadrive version is "arcade perfect" from the RNG's point of view ? That's interesting ! 
+If I had more time I would do the same retro engineering with the snes cart ! 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Steelix100 
+
+ Puyo Fan 
+ Posts: 487 Joined: Thu Sep 17, 2009 11:21 am 
+ 
+ Location: the next world 
+ Preferred pronouns: loser 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by Steelix100 &raquo; Fri Aug 30, 2013 11:44 pm 
+ 
+ 
+ 
+ 
+ 
+ The Sega Megadrive version of Puyo Puyo 2 is pretty much Arcade perfect. The biggest difference is that the voice samples sound like utter trash in the MD version (as well as entirely pauses the music for no real reason). 
+
+ 
+ 
+ 
+ 
+ I will not die until I achieve something. 
+Even though the ideal is high, I never give in. 
+Therefore, I never die with regrets. 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Sat Aug 31, 2013 10:52 pm 
+ 
+ 
+ 
+ 
+ 
+ How baby puyos are made: from random generation to the board 
+ 
+The game function which handles most of the sequence of actions throughout a battle looks like this: 
+ 
+ 
+ The following paragraph simplifies things a bit and is not 100% accurate. 
+ 
+The logic begins by generating the falling pair (yellow), which may fail if the 3rd column is filled: at least one player has lost the battle, and the game branches to a code path that ends quickly (light green). If the falling pair was successfully spawned, the main logic occurs and makes successive calls to many subroutines handles the various computations to handle chaining, scoring, etc. 
+At the end, a video frame update occurs. 
+ 
+A detailed analysis of the main routine will be made later, as it opens the door to various interesting game mechanics: how ojamas are randomly distributed across the board, how is the score computed, what are the frame timings of various events, how does the chaining algorithm work... 
+ 
+ Function/routine names have been arbitrarily chosen. 
+ 
+Pair generation picks two successive puyos from the randomized pair pools to place them in the "hands" of the player. 
+The game calls function gen_cur_fal_pair() which will either return with a carry flag set in the status register (SR) or not. If the carry is set, the game could not generate a falling pair because the 3rd column was obstructed. 
+ 
+Here's the gen_cur_fal_pair() routine: 
+ 
+ 
+The routine first shifts the next 3 pairs that are displayed (well, only 2 are displayed but 3 are actually in the corresponding buffer). To do so, it calls the distrib_shift() routine which will put the very next pair in the d0 and d1 registers, while shifting the pairs in memory. distrib_shift() also picks another pair from the randomized pool by calling distrib_next_pair(). 
+ 
+Remember, the 3 upcoming pairs for each player are stored at 0xFF85A0 and 0xFF8DA0. Those are the places where the pairs are shifted from one position to the next, before being taken away from the buffer to be put in d0 and d1, then finally in the falling pair buffer. 
+ 
+Here's distrib_shift(): 
+ 
+ 
+And here's distrib_next_pair(), displayed in both graph and text views to include a statically predefined array in ROM: 
+ 
+ 
+The array stores offsets to select the relevant randomized pair pool (0xFFAD00 + 0x100 = 0xFFAE00, pair pool for difficulty #3, while #4 and #5 will result in a 0x200 offset). 
+ 
+Now back to the gen_cur_fal_pair() routine. After shifting the pairs, the function get_board_and_offset() returns the pointer to the current player's board in RAM (0xFF8000 or 0xFF8800). This allows it to check if byte 0xFF801C or 0xFF881C is non-zero, thus if the upper box of the 3rd column is obstructed. 
+ 
+Here's the get_board_and_offset() function, which returns the address in a2: 
+ 
+( the offset the function computes in d0 is ignored in our case, but will be of importance later ) 
+ 
+If the box is unobstructed, the game will allocate two structures in memory that will each describe a single puyo of the currently falling pair. Without going into details (they will be included in the very next post), those structures hold the current position of the falling puyo on the board, its color and the current vertical offset within a box (that's what makes the puyos gradually fall through a box). 
+The color is taken from the d0 and d1 registers that were previously filled by the distrib_shift() routine, from the upcoming pairs buffer. 
+ 
+There is a "master" puyo, which is the lowest one when the pair appears, around which the other one revolves. This is the only puyo which gets its absolute position stored. The other puyo is a "slave" puyo, the position of which is relative to the master one. 
+ 
+The slave puyo's position constraints player movements, and when the master puyo's y-axis position tries to get beyond the bottom line 0x0D (after being corrected by the relative position of the slave puyo), the pair is placed on the board by the place_puyo() routine (called from somewhere else): 
+ 
+The compute_offset routine calculates the memory address at which the puyos will be stored: from the beginning of the board's buffer, it's an offset that depends on the puyos coordinates (roughly 2*(num_rows*y+x)). 
+load_gfx() takes the puyo's sprite ID and position, and loads it to the VDP, making it appear at the next video frame update. 
+ 
+So that concludes the story of how baby puyos are made, from random numbers to birth. 
+
+ 
+ 
+ 
+ Last edited by BLueBLue on Sun Sep 01, 2013 2:10 am, edited 4 times in total.
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Sat Aug 31, 2013 11:39 pm 
+ 
+ 
+ 
+ 
+ 
+ Memory allocation and memory structures 
+ 
+This is an ongoing effort as I have not yet completed the full reverse engineering of the ROM (this will take quite some time to accomplish). 
+I will now try to explain some memory management mechanisms Puyo Puyo Tsuu uses for managing each player's status and the falling puyo and their sprites. 
+ 
+The game seems to have defined a reusable data structure and has a memory allocation function dedicated to it. 
+ 
+allocate_buffer() manages a pool of memory starting from FFD100 and can hold 60 structures of 64 bytes each. 
+ 
+ 
+ 
+The function first calls find_free_buffer() which will find the first free 64-byte-long slot and allocate it. This is somewhat of an optimization to avoid having to do garbage collection and reuse (overwrite) a previously allocated structure. 
+ 
+ 
+ 
+These 2 routines handle what is commonly known as a linked-list, but also perform some extra operations: they put a pool tag at the front of the structure, which seems to describe what use is made of the buffer, and they put an initial value in the first 4-byte field. 
+ 
+You can read the assembly comments which should be self-explanatory. 
+ 
+Here's a visual depiction of the allocated structures, describing how the currently falling pieces are actually stored: 
+ 
+ 
+The structure mainly looks like this when used for a falling puyo (pool tag 0xF780?):
+ 
+ 2 bytes: pool tag, 0xF7C0 (player status) or 0xF780 (falling puyo) 
+ 4 bytes: ROM pointer value (apparently sprite buffer pointer) 
+ 2 bytes: yet unknown 
+ 1 byte: puyo color 
+ 17 bytes: yet unknown 
+ 2 bytes: falling pair's master puyo x-pos (col) 
+ 2 bytes: falling pair's master puyo y-pos (row) 
+ 2 bytes: yet unknown, but relative to the falling puyo 
+ 2 bytes: offset comparable to a video frame counter, which defines how far a puyo has fallen through the box it's currently on 
+ 12 bytes: yet unknown 
+ 4 bytes: pointer to another such structure 
+ 4 bytes: ROM pointer value (apparently sprite buffer pointer) 
+ 4 bytes: pointer to next structure in linked list 
+ 6 bytes: yet unknown 
+
+Using the MESS or MAME emulator, you can fiddle with those structures while actually playing if you enable the debugger. 
+Open the memory window, pause the execution (the simplest way to do so is by pressing F8), then watch the address 0xFFD100 to find the buffers. Pause the execution while the first pair is falling on the board, then change the in-memory values to your linking. 
+ 
+You can change the (x,y) coordinates, or the puyos' color, then press F8 a few times to advance the game by a few frames, which will update the view. 
+ 
+Here's what you can do when playing with the board at 0xFF8000: 
+ 
+
+ 
+ 
+ 
+ Last edited by BLueBLue on Sun Sep 01, 2013 5:03 pm, edited 2 times in total.
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Post Reply 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Print view 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Display: All posts 1 day 7 days 2 weeks 1 month 3 months 6 months 1 year 
+ Sort by: Author Post time Subject 
+ Direction: Ascending Descending 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 32 posts
+ 
+ 1 
+ 2 
+ 3 
+ Next 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ Return to “Gameplay Discussion” 
+ 
+ 
+ 
+ 
+ 
+ Jump to 
+ 
+ 
+ 
+ 
+ 
+ The Site 
+ &#8627; News and Announcements 
+ &#8627; Puyo Nexus Discussion 
+ &#8627; Site Projects 
+ &#8627; Wiki 
+ &#8627; Chain Simulator 
+ &#8627; Game Translations 
+ &#8627; Releases 
+ &#8627; Puyo Puyo!! 20th Anniversary 
+ &#8627; Uploads 
+ &#8627; Puyo Puyo Fever 2 
+ &#8627; Puyo Puyo~n 
+ &#8627; Puyo Puyo Sun 
+ &#8627; Puyo Puyo! 15th Anniversary 
+ &#8627; Puyo Puyo 7 
+ &#8627; Uploads 
+ &#8627; DiscStation Games 
+ Puyo Puyo 
+ &#8627; Guides 
+ &#8627; Gameplay Discussion 
+ &#8627; Videos and Replays 
+ &#8627; Tournament Archives 
+ &#8627; Fandom 
+ &#8627; Discstation Games 
+ &#8627; Madou Monogatari 
+ &#8627; Puyo Puyo Quest 
+ &#8627; Game Rips and Modifications 
+ &#8627; Finger Paint Gallery 
+ &#8627; Questions and Answers 
+ &#8627; General Chatter 
+ International Puyo Puyo 
+ &#8627; Puyo Puyo Français 
+ The Purgatory 
+ &#8627; Puyo Purgatory 
+ 
+ 
+ 
+
+ 
+
+
+ 
+ Who is online 
+ Users browsing this forum: No registered users and 9 guests 
+ 
+
+
+ 
+ 
+
+
+ 
+ 
+ 
+
+ 
+ 
+ Board index 
+ 
+ All times are UTC 
+ 
+ 
+ Delete cookies 
+ 
+ 
+ 
+ 
+ Members 
+ 
+ 
+ 
+ 
+ The team 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ Powered by phpBB &reg; Forum Software &copy; phpBB Limited 
+ 
+ 
+ 
+ Privacy 
+ 
+ |
+ 
+ Terms 
+ 
+ 
+ 
+ © 2007-2017 Puyo Nexus
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 

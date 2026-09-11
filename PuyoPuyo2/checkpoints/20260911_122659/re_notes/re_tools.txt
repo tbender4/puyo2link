@@ -1,0 +1,328 @@
+ 
+ 
+ 
+ 
+ Puyo Puyo Tsu/Debugging and Reverse Engineering Tools - Puyo Nexus Wiki 
+ (function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )puyonexus_mw_mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"e27563c62c8dfefeded213f5","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Puyo_Puyo_Tsu/Debugging_and_Reverse_Engineering_Tools","wgTitle":"Puyo Puyo Tsu/Debugging and Reverse Engineering Tools","wgCurRevisionId":5912,"wgRevisionId":5912,"wgArticleId":1246,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Reverse Engineering"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Puyo_Puyo_Tsu/Debugging_and_Reverse_Engineering_Tools","wgRelevantArticleId":1246,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCargoDefaultQueryLimit":100,"wgCargoMapClusteringMinimum":80,"wgCargoMonthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgCiteReferencePreviewsActive":true,"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready","skins.vectornexus.styles.legacy":"ready","ext.embedVideo.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","skins.vector.legacy.js","ext.checkUser.clientHints","ext.embedVideo.overlay","ext.moderation.notify","ext.moderation.notify.desktop","ext.cargo.purge"]; 
+ (RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});}); 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Puyo Nexus 
+ 
+ 
+ 
+ 
+ Wiki 
+ Forum 
+ Chain Simulator 
+ 
+ 
+ 
+ Search 
+ 
+ <div id="simpleSearch"
+ class="vector-search-box-inner"
+ data-search-loc="header-navigation">
+ <input class="vector-search-box-input"
+ type="search" name="search" placeholder="Search Puyo Nexus Wiki" aria-label="Search Puyo Nexus Wiki" autocapitalize="sentences" title="Search Puyo Nexus Wiki [f]" accesskey="f" id="searchInput"
+ >
+ 
+ <input id="mw-searchButton"
+ class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+ <input id="searchButton"
+ class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <h3
+ id="p-navigation-label"
+ 
+ class="vector-menu-heading "
+ >
+ Navigation 
+ 
+ 
+ 
+ 
+ 
+ 
+ Main page Tools Links Recent changes Random page Random image Help 
+ 
+ 
+ 
+ 
+
+ 
+ <h3
+ id="p-Puyo_Puyo-label"
+ 
+ class="vector-menu-heading "
+ >
+ Puyo Puyo 
+ 
+ 
+ 
+ 
+ 
+ 
+ Characters Games Puyo Puyo!! Quest Database Other media Game Modes Game Rules Guides 
+ 
+ 
+ 
+ 
+ 
+ <h3
+ id="p-tb-label"
+ 
+ class="vector-menu-heading "
+ >
+ Tools 
+ 
+ 
+ 
+ 
+ 
+ 
+ What links here Related changes Special pages Printable version Permanent link Page information Cargo data 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ <h3
+ id="p-personal-label"
+ 
+ class="vector-menu-heading "
+ >
+ Personal tools 
+ 
+ 
+ 
+ 
+ 
+ 
+ Create account Log in 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ <h3
+ id="p-namespaces-label"
+ 
+ class="vector-menu-heading "
+ >
+ Namespaces 
+ 
+ 
+ 
+ 
+ 
+ 
+ Page Discussion 
+ 
+ 
+ 
+ 
+
+ 
+ <input type="checkbox"
+ id="p-variants-checkbox"
+ role="button"
+ aria-haspopup="true"
+ data-event-name="ui.dropdown-p-variants"
+ class="vector-menu-checkbox"
+ aria-labelledby="p-variants-label"
+ >
+ <label
+ id="p-variants-label"
+ 
+ class="vector-menu-heading "
+ >
+ English 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ <h3
+ id="p-views-label"
+ 
+ class="vector-menu-heading "
+ >
+ Views 
+ 
+ 
+ 
+ 
+ 
+ 
+ Read View source View history 
+ 
+ 
+ 
+ 
+
+ 
+ <input type="checkbox"
+ id="p-cactions-checkbox"
+ role="button"
+ aria-haspopup="true"
+ data-event-name="ui.dropdown-p-cactions"
+ class="vector-menu-checkbox"
+ aria-labelledby="p-cactions-label"
+ >
+ <label
+ id="p-cactions-label"
+ 
+ class="vector-menu-heading "
+ >
+ More 
+ 
+ 
+ 
+ 
+ 
+ 
+ Purge cache 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Puyo Puyo Tsu/Debugging and Reverse Engineering Tools 
+ 
+ From Puyo Nexus Wiki 
+ &lt; Puyo Puyo Tsu 
+ 
+ 
+ 
+ Jump to navigation 
+ Jump to search 
+ Emulation and debugging tools 
+ To analyze any Genesis / System C-2 game, one will need emulators that include powerful debugging tools. Such tools must allow you to stop the CPU at any desired moment (at a specific instruction with breakpoints), or watch what occurs in memory (with watchpoints).
+ MAME was chosen as the emulator of choice for the System C-2 version, and MESS for the Genesis version. 
+They are both from the MAMEdev team, and include the best debugger available on the platform (which works exactly the same on both). MESS is basically the console version of MAME.
+ Download: mamedev.org/release.html (external link filtered by anti-spam).
+ To run MESS with debugging tools, create a shortcut to messpp.exe or mess64.exe with the following parameters:
+ 
+ "C:\...\messpp.exe" genesis -cart "Puyo Puyo 2 (REV 00) (J).bin" -video gdi -debug -resolution 320x240 -keepaspect
+ 
+ Note: the ROM file will have to be located in the same directory as the MESS .exe.
+ To run MAME with debugging tools, create a shortcut to mame.exe or mame64.exe with the following parameters:
+ 
+ "C:\...\mame.exe" puyopuy2 -video gdi -debug -resolution 320x240 -keepaspect
+ 
+ Note the ROM directory "puyopuy2" or the "puyopuy2.zip" archive will have to be located in the "roms/" folder.
+ 
+ Reverse engineering tools 
+ IDA Pro was use for most of the reverse engineering efforts. It is a somewhat expensive commercial software that is able to disassemble Motorola 68000 bytecode. An old freeware version is available at hex-rays.com (external link filtered by anti-spam) but might not support all the required features. 
+ However, IDA Pro's disassembly is not accurate in the case of Genesis ROMs, and some instruction operands are not properly decoded (mainly address offsets). Using the emulator can help spotting errors and figuring those out.
+ Anyway, this tool displays a pretty graph overview of the program code and paths&#160;: arrows will visualize loops, alternatives and successive code blocks. This is convenient to annotate and comment your findings, rename functions and variables, so that the code looks like something readable.
+ However, it can't give you an accurate depiction of what CPU registers hold at a specific point during the game execution: you have to use the emulator to get the actual values or help you understand where they come from.
+ 
+<!-- 
+NewPP limit report
+Cached time: 20260911115735
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.002 seconds
+Real time usage: 0.002 seconds
+Preprocessor visited node count: 15/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 216/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 0.000 1 -total
+-->
+
+<!-- Saved in parser cache with key puyonexus-mw_:pcache:idhash:1246-0!canonical and timestamp 20260911115735 and revision id 5912. Rendering was triggered because: page-view
+ -->
+ 
+ Retrieved from " https://puyonexus.com/mediawiki/index.php?title=Puyo_Puyo_Tsu/Debugging_and_Reverse_Engineering_Tools&oldid=5912 " 
+ Category : Reverse Engineering 
+ 
+ 
+
+ 
+ 
+ 
+ This page was last edited on 30 November 2013, at 00:22. 
+ 
+
+ 
+ Privacy policy 
+ About Puyo Nexus Wiki 
+ Disclaimers 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+
+
+
+ 
+ 

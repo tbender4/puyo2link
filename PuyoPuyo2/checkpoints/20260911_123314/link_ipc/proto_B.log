@@ -1,0 +1,2374 @@
+[   0.000] === session start, side=B ===
+[   0.000] taps installed; out=C:/Users/tbend/mame/PuyoPuyo2/link_ipc/B_to_A.bin in=C:/Users/tbend/mame/PuyoPuyo2/link_ipc/A_to_B.bin
+[   0.000] SERVICE port fields: Coin 1 | Service Mode | 2 Players Start | Coin 2 | 1 Player Start | Service 1
+[   0.017]   [dbg] write $ffa500 = 00 (pc=0181ec)
+[   0.017]   [menu-state] write $ffa172 = 0000 mask=ffff (pc=019320)
+[   0.017]   [menu-state] write $ffa170 = 0000 mask=ffff (pc=019320)
+[   0.017]   [menu-state] write $ffa17c = 0000 mask=ff00 (pc=019326)
+[   0.017]   [menu-state] write $ffa17f = 0000 mask=00ff (pc=01932c)
+[   0.017]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[   0.017]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   0.027]   [menu-state] write $ffa170 = 0000 mask=ff00 (pc=018062)
+[   0.027]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[   0.027]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   0.162] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[   0.401]   [dbg] write $ffa500 = 7f (pc=018334)
+[   0.418] CMD $FE (loopback test) -> answering OK (nonzero)
+[   0.418]   [dbg] write $ffa500 = 81 (pc=018358)
+[   0.418]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   0.434]   [inject] pending_before=0 wrote=[03 00 10] expect_seq=00
+[   0.434] -> TX burst, block=0
+[   0.435]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[   0.435]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019466)
+[   0.435]   [header-byte] write $ffa513 = 00 mask=00ff (pc=019e4a)
+[   0.435]   [header-byte] write $ffa513 = 10 mask=00ff (pc=019e5a)
+[   0.435]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   0.435]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[   0.435]   [dbg] write $ffa500 = 00 (pc=0183ac)
+[   0.451]   [menu-state] write $ffa173 = 0000 mask=00ff (pc=01937c)
+[   0.451]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019382)
+[   0.451]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=01938a)
+[   0.451] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[   0.735]   [dbg] write $ffa500 = 7f (pc=018334)
+[   0.752] CMD $FE (loopback test) -> answering OK (nonzero)
+[   0.752]   [dbg] write $ffa500 = 81 (pc=018358)
+[   0.752]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   0.752]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[   0.768]   [inject] pending_before=0 wrote=[04 00 10] expect_seq=00
+[   0.768] -> TX burst, block=0
+[   0.768]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[   0.768]   [dbg] write $ffa500 = 00 (pc=0183ac)
+[   0.785]   [menu-state] write $ffa173 = 0000 mask=00ff (pc=01937c)
+[   0.785]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019382)
+[   0.785]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=01938a)
+[   0.785] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[   1.001] heartbeat frame=60 tx=0 rx=6 fc=3 fd=25 fe=2 linkflag=00 pc=000288 a502=00 a524=0000 a525=00 a170=00 a17f=00 txtail=0000 rxpend=0000
+[   1.001]   [tcb] [0]=ff80->01b388
+[   1.069]   [dbg] write $ffa500 = 7f (pc=018334)
+[   1.085] CMD $FE (loopback test) -> answering OK (nonzero)
+[   1.085]   [dbg] write $ffa500 = 81 (pc=018358)
+[   1.086]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   1.086]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[   1.102] -> TX burst, block=0
+[   1.102]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[   1.118]   [capture] sent=[00 00 10] my_seq=01
+[   1.185]   [inject] pending_before=0 wrote=[05 00 10] expect_seq=00
+[   1.186]   [dbg] write $ffa500 = 00 (pc=0183ac)
+[   1.202]   [capture] sent=[54 aa 00 54 ab 00 54 ac 00 04 ad 00 04 ae 00 54 af 00 54 b0 00 54 b1 00 54 b2 00 54 b3 00 54 b4 00 54 b5 00 54 b6 00 54 b7 00 54 b8 00 54 b9 00 54 ba 00 54 bb 00 54 bc 00 54 bd 00 54 be 00 54 bf 00 54 c0 00 54 c1 00 54 c2 00 54 c3 00 54 c4 00 54 c5 00 54 c6 00 54 c7 00 54 c8 00 54 c9 00 54 ca 00 54 cb 00 54 cc 00 54 cd 00 54 ce 00 54 cf 00 54 d0 00 54 d1 00 54 d2 00 54 d3 00 54 d4 00 54 d5 00 54 d6 00 54 d7 00 54 d8 00 54 d9 00 54 01 91 04 13 33 01 92 04 13 33 01 93 04 13 33 01 94 04 13 33 01 95 04 13 33 01 96 04 13 33 01 97 04 13 33 01 98 04 13 33 01 99 04 13 33 01 9a 04 13 33 01 9b 04 13 33 01 9c 04 13 33 01 9d 04 13 33 01 9e 04 13 33 01 9f 04 13 33 01 a0 04 13 33 01 a1 04 13 73 01 a2 04 10 73 01 a3 00 10 a4 00 10 a5 00 10 a6 00 10 a7 00 10 a8 00] my_seq=01
+[   1.202]   [menu-state] write $ffa173 = 0000 mask=00ff (pc=01937c)
+[   1.202]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019382)
+[   1.202]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=01938a)
+[   1.202] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[   1.469]   [dbg] write $ffa500 = 7f (pc=018334)
+[   1.486] CMD $FE (loopback test) -> answering OK (nonzero)
+[   1.486]   [dbg] write $ffa500 = 81 (pc=018358)
+[   1.486]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   1.486]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[   1.502]   [inject] pending_before=0 wrote=[54 af 00 54 b0 00 54 b1 00 54 b2 00 54 b3 00 54 b4 00 54 b5 00 54 b6 00 54 b7 00 54 b8 00 54 b9 00 54 ba 00 54 bb 00 54 bc 00 54 bd 00 54 be 00 54 bf 00 54 c0 00 54 c1 00 54 c2 00 54 c3 00 54 c4 00 54 c5 00 54 c6 00 54 c7 00 54 c8 00 54 c9 00 54 ca 00 54 cb 00 54 cc 00 54 cd 00 54 ce 00 54 cf 00 54 d0 00 54 d1 00 54 d2 00 54 d3 00 54 d4 00 54 d5 00 54 d6 00 54 d7 00 54 d8 00 54 d9 00 54 01 91 04 13 33 01 92 04 13 33 01 93 04 13 33 01 94 04 13 33 01 95 04 13 33 01 96 04 13 33 01 97 04 13 33 01 98 04 13 33 01 99 04 13 33 01 9a 04 13 33 01 9b 04 13 33 01 9c 04 13 33 01 9d 04 13 33 01 9e 04 13 33 01 9f 04 13 33 01 a0 04 13 33 01 a1 04 13 73 01 a2 04 10 73 01 a3 00 10 a4 00 10 a5 00 10 a6 00 10 a7 00 10 a8 00] expect_seq=00
+[   1.502] -> TX burst, block=0
+[   1.503]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[   1.503]   [dbg] write $ffa500 = 00 (pc=0183ac)
+[   1.519]   [menu-state] write $ffa173 = 0000 mask=00ff (pc=01937c)
+[   1.519]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019382)
+[   1.519]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=01938a)
+[   1.519] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[   1.803]   [dbg] write $ffa500 = 7f (pc=018334)
+[   1.820] CMD $FE (loopback test) -> answering OK (nonzero)
+[   1.820]   [dbg] write $ffa500 = 81 (pc=018358)
+[   1.820]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   1.820]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[   1.836] -> TX burst, block=0
+[   1.836]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[   1.837]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[   2.003] heartbeat frame=120 tx=259 rx=250 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=00 a17f=00 txtail=0003 rxpend=0000
+[   2.003]   [tcb] [0]=ff80->01b388
+[   2.053]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[   2.337] -> TX burst, block=0
+[   2.554]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[   2.837] -> TX burst, block=0
+[   3.004] heartbeat frame=180 tx=265 rx=256 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=00 a17f=00 txtail=0009 rxpend=0000
+[   3.004]   [tcb] [0]=ff80->01b388
+[   3.055]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[   3.262]   [menu-state] write $ffa170 = 0909 mask=ff00 (pc=018062)
+[   3.262]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[   3.262]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   3.262]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[   3.262]   [header-byte] write $ffa513 = 11 mask=00ff (pc=01b034)
+[   3.321] -> TX burst, block=1
+[   3.555]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[   3.822] -> TX burst, block=1
+[   4.005] heartbeat frame=240 tx=271 rx=262 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=000f rxpend=0000
+[   4.005]   [tcb] [0]=ff80->01b4ee [1]=ff80->00628e
+[   4.056]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[   4.322] -> TX burst, block=2
+[   4.557]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[   4.823] -> TX burst, block=2
+[   5.006] heartbeat frame=300 tx=277 rx=268 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0015 rxpend=0000
+[   5.006]   [tcb] [0]=ff80->01b4ee [1]=ff80->00628e
+[   5.057]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[   5.324] -> TX burst, block=2
+[   5.575]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[   5.824] -> TX burst, block=3
+[   6.008] heartbeat frame=360 tx=283 rx=274 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=001b rxpend=0000
+[   6.008]   [tcb] [0]=ff80->01b4ee [1]=ff80->00628e
+[   6.075]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[   6.325] -> TX burst, block=3
+[   6.580]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[   6.842] -> TX burst, block=3
+[   7.009] heartbeat frame=420 tx=289 rx=280 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0021 rxpend=0000
+[   7.009]   [tcb] [0]=ff80->018fcc [1]=ff80->0250ba [2]=ff80->024fe2
+[   7.077]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[   7.343] -> TX burst, block=4
+[   7.577]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[   7.844] -> TX burst, block=4
+[   8.010] heartbeat frame=480 tx=295 rx=286 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0027 rxpend=0000
+[   8.010]   [tcb] [0]=ff80->018fcc [1]=ff80->0250ba [2]=ff80->024fe2
+[   8.078]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[   8.344] -> TX burst, block=5
+[   8.845] -> TX burst, block=5
+[   8.996]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[   9.012] heartbeat frame=540 tx=301 rx=292 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=002d rxpend=0000
+[   9.012]   [tcb] [0]=ff80->018fcc [1]=ff80->0250ba [2]=ff80->024fe2
+[   9.346] -> TX burst, block=5
+[   9.497]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  10.013] heartbeat frame=600 tx=304 rx=295 fc=5 fd=50 fe=5 linkflag=81 pc=001e9a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0030 rxpend=0000
+[  10.013]   [tcb] [0]=ff80->018fba
+[  10.250]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  10.263] -> TX burst, block=6
+[  10.750]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  10.764] -> TX burst, block=6
+[  11.014] heartbeat frame=660 tx=310 rx=301 fc=5 fd=50 fe=5 linkflag=81 pc=001ea0 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0036 rxpend=0000
+[  11.014]   [tcb] [0]=ff80->018fcc [1]=ff80->025b9a [2]=ff80->02558e
+[  11.515] -> TX burst, block=6
+[  11.551]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  12.015] heartbeat frame=720 tx=313 rx=304 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0003 a525=03 a170=09 a17f=00 txtail=0039 rxpend=0000
+[  12.015]   [tcb] [0]=ff80->018fcc [1]=ff80->025be6 [2]=ff80->02558e [3]=ff80->02585c [4]=ff80->02585c
+[  12.016] -> TX burst, block=7
+[  12.302]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  12.803]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  12.817] -> TX burst, block=7
+[  13.017] heartbeat frame=780 tx=319 rx=310 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=003f rxpend=0000
+[  13.017]   [tcb] [0]=ff80->018fcc [1]=ff80->025cf2 [2]=ff80->02558e [3]=ff00->027736
+[  13.559]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  13.568] -> TX burst, block=8
+[  14.018] heartbeat frame=840 tx=322 rx=313 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0042 rxpend=0000
+[  14.018]   [tcb] [0]=ff80->018fcc [1]=ff80->025d88 [2]=ff80->02558e [3]=ff80->02585c [4]=ff80->02585c
+[  14.068] -> TX burst, block=8
+[  14.104]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  14.569] -> TX burst, block=8
+[  14.605]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  15.019] heartbeat frame=900 tx=328 rx=319 fc=5 fd=50 fe=5 linkflag=81 pc=001ee6 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0048 rxpend=0000
+[  15.019]   [tcb] [0]=ff80->018fcc [1]=ff80->025de6 [2]=ff80->02558e [3]=ff80->0253a2
+[  15.262]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  15.370] -> TX burst, block=9
+[  15.607]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  15.871] -> TX burst, block=9
+[  16.021] heartbeat frame=960 tx=334 rx=325 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=004e rxpend=0000
+[  16.021]   [tcb] [0]=ff80->018fcc [1]=ff80->025de6 [2]=ff80->02558e [3]=ff80->02547c [4]=ff80->027736 [5]=ff80->02533c
+[  16.107]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  16.371] -> TX burst, block=9
+[  16.606]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  16.872] -> TX burst, block=10
+[  17.022] heartbeat frame=1020 tx=340 rx=331 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0054 rxpend=0000
+[  17.022]   [tcb] [0]=ff80->018fcc [1]=ff80->025de6 [2]=ff80->02558e [3]=ff80->02549a [4]=ff80->027736 [5]=ff80->02535e
+[  17.107]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  17.373] -> TX burst, block=10
+[  17.859]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  17.873] -> TX burst, block=11
+[  18.023] heartbeat frame=1080 tx=346 rx=337 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=005a rxpend=0000
+[  18.023]   [tcb] [0]=ff80->018fcc [1]=ff80->025de6 [2]=ff80->02558e [3]=ff80->02549a [4]=ff80->027736 [5]=ff80->02535e
+[  18.359]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  18.374] -> TX burst, block=11
+[  19.024] heartbeat frame=1140 tx=349 rx=343 fc=5 fd=50 fe=5 linkflag=81 pc=001ed4 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=005d rxpend=0003
+[  19.024]   [tcb] [0]=ff80->018fcc [1]=ff80->025e12 [2]=ff80->02558e [3]=ff80->018fcc
+[  19.104]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  19.125] -> TX burst, block=11
+[  19.361]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  19.626] -> TX burst, block=12
+[  19.861]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  20.026] heartbeat frame=1200 tx=355 rx=349 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0063 rxpend=0000
+[  20.026]   [tcb] [0]=ff80->018fcc [1]=ff80->025e5e [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->02585c [5]=ff80->02585c
+[  20.126] -> TX burst, block=12
+[  20.362]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  20.627] -> TX burst, block=12
+[  20.863]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  21.027] heartbeat frame=1260 tx=361 rx=355 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0069 rxpend=0000
+[  21.027]   [tcb] [0]=ff80->018fcc [1]=ff80->025ef4 [2]=ff80->02558e [3]=ff80->018fcc
+[  21.128] -> TX burst, block=13
+[  21.363]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  21.628] -> TX burst, block=13
+[  21.864]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  22.028] heartbeat frame=1320 tx=367 rx=361 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=006f rxpend=0000
+[  22.028]   [tcb] [0]=ff80->018fcc [1]=ff80->025f1a [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->0259ac
+[  22.129] -> TX burst, block=14
+[  22.365]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  22.629] -> TX burst, block=14
+[  22.865]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  23.030] heartbeat frame=1380 tx=373 rx=367 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0075 rxpend=0000
+[  23.030]   [tcb] [0]=ff80->018fcc [1]=ff80->025f1a [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->0259ac
+[  23.130] -> TX burst, block=14
+[  23.366]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  23.631] -> TX burst, block=15
+[  23.866]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  24.031] heartbeat frame=1440 tx=379 rx=373 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=007b rxpend=0000
+[  24.031]   [tcb] [0]=ff80->018fcc [1]=ff80->025f34 [2]=ff80->02558e [3]=ff80->018fcc
+[  24.131] -> TX burst, block=15
+[  24.367]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  24.632] -> TX burst, block=15
+[  24.868]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  25.032] heartbeat frame=1500 tx=385 rx=379 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0081 rxpend=0000
+[  25.032]   [tcb] [0]=ff80->018fcc [1]=ff80->025f5e [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->0255fc [5]=ff80->0255fc [6]=ff80->025634 [7]=ff80->0255fc
+[  25.133] -> TX burst, block=16
+[  25.370]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  25.633] -> TX burst, block=16
+[  25.869]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  26.034] heartbeat frame=1560 tx=391 rx=385 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0087 rxpend=0000
+[  26.034]   [tcb] [0]=ff80->018fcc [1]=ff80->025f5e [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->025658 [5]=ff80->02561c [6]=ff80->025658 [7]=ff80->025634
+[  26.134] -> TX burst, block=17
+[  26.370]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  26.635] -> TX burst, block=17
+[  26.870]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  27.035] heartbeat frame=1620 tx=397 rx=391 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=008d rxpend=0000
+[  27.035]   [tcb] [0]=ff80->018fcc [1]=ff80->026070 [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->025658 [5]=ff80->025658 [6]=ff80->025658 [7]=ff80->025658 [8]=ff80->02567c [9]=ff80->0256a4 [10]=ff80->0256a4 [11]=ff80->0256a4 [12]=ff80->026188
+[  27.135] -> TX burst, block=17
+[  27.372]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  27.636] -> TX burst, block=18
+[  27.872]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  28.036] heartbeat frame=1680 tx=403 rx=397 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0093 rxpend=0000
+[  28.036]   [tcb] [0]=ff80->018fcc [1]=ff80->0260b6 [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->025658 [5]=ff80->025658 [6]=ff80->025658 [7]=ff80->025658 [8]=ff80->02567c [9]=ff80->0256a4 [10]=ff80->0256a4 [11]=ff80->0256a4 [12]=ff80->026188 [13]=ff80->02585c
+[  28.136] -> TX burst, block=18
+[  28.372]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  28.637] -> TX burst, block=18
+[  28.873]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  29.037] heartbeat frame=1740 tx=409 rx=403 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0099 rxpend=0000
+[  29.037]   [tcb] [0]=ff80->018fcc [1]=ff80->026116 [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->025658 [5]=ff80->025658 [6]=ff80->025658 [7]=ff80->025658 [8]=ff80->02567c [9]=ff80->0256a4 [10]=ff80->0256a4 [11]=ff80->0256a4 [12]=ff80->026188
+[  29.138] -> TX burst, block=19
+[  29.375]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  29.638] -> TX burst, block=19
+[  29.874]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  30.039] heartbeat frame=1800 tx=415 rx=409 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=009f rxpend=0000
+[  30.039]   [tcb] [0]=ff80->018fcc [1]=ff80->026116 [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->025658 [5]=ff80->025658 [6]=ff80->025658 [7]=ff80->025658 [8]=ff80->02567c [9]=ff80->0256a4 [10]=ff80->0256a4 [11]=ff80->0256a4 [12]=ff80->026188
+[  30.139] -> TX burst, block=20
+[  30.375]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  30.640] -> TX burst, block=20
+[  30.876]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  31.040] heartbeat frame=1860 tx=421 rx=415 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00a5 rxpend=0000
+[  31.040]   [tcb] [0]=ff80->018fcc [1]=ff80->026116 [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->025658 [5]=ff80->025658 [6]=ff80->025658 [7]=ff80->025658 [8]=ff80->02567c [9]=ff80->0256a4 [10]=ff80->0256a4 [11]=ff80->0256a4 [12]=ff80->026188
+[  31.140] -> TX burst, block=20
+[  31.376]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  31.641] -> TX burst, block=21
+[  31.877]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  32.041] heartbeat frame=1920 tx=427 rx=421 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00ab rxpend=0000
+[  32.041]   [tcb] [0]=ff80->018fcc [1]=ff80->026116 [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->025658 [5]=ff80->025658 [6]=ff80->025658 [7]=ff80->025658 [8]=ff80->02567c [9]=ff80->0256a4 [10]=ff80->0256a4 [11]=ff80->0256a4 [12]=ff80->026188
+[  32.142] -> TX burst, block=21
+[  32.511]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  32.642] -> TX burst, block=21
+[  33.013]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  33.043] heartbeat frame=1980 tx=433 rx=427 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00b1 rxpend=0000
+[  33.043]   [tcb] [0]=ff80->018fcc [1]=ff80->026150 [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->025658 [5]=ff80->025658 [6]=ff80->025658 [7]=ff80->025658 [8]=ff80->02567c [9]=ff80->0256a4 [10]=ff80->0256a4 [11]=ff80->0256a4 [12]=ff80->026188
+[  33.143] -> TX burst, block=22
+[  33.512]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  33.777] -> TX burst, block=22
+[  34.013]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  34.044] heartbeat frame=2040 tx=439 rx=433 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00b7 rxpend=0000
+[  34.044]   [tcb] [0]=ff80->018fcc [1]=ff80->020328 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0 [5]=ff80->017456
+[  34.278] -> TX burst, block=23
+[  34.514]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  34.778] -> TX burst, block=23
+[  35.014]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  35.045] heartbeat frame=2100 tx=445 rx=439 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00bd rxpend=0000
+[  35.045]   [tcb] [0]=ff80->018fcc [1]=ff80->020328 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  35.279] -> TX burst, block=23
+[  35.515]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  35.780] -> TX burst, block=24
+[  36.015]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  36.046] heartbeat frame=2160 tx=451 rx=445 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00c3 rxpend=0000
+[  36.046]   [tcb] [0]=ff80->018fcc [1]=ff80->020328 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  36.280] -> TX burst, block=24
+[  36.516]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  36.781] -> TX burst, block=24
+[  37.017]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  37.048] heartbeat frame=2220 tx=457 rx=451 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00c9 rxpend=0000
+[  37.048]   [tcb] [0]=ff80->018fcc [1]=ff80->020328 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  37.282] -> TX burst, block=25
+[  37.517]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  37.782] -> TX burst, block=25
+[  38.018]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  38.049] heartbeat frame=2280 tx=463 rx=457 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00cf rxpend=0000
+[  38.049]   [tcb] [0]=ff80->018fcc [1]=ff80->020328 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  38.283] -> TX burst, block=26
+[  38.519]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  38.783] -> TX burst, block=26
+[  39.019]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  39.050] heartbeat frame=2340 tx=469 rx=463 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00d5 rxpend=0000
+[  39.050]   [tcb] [0]=ff80->018fcc [1]=ff80->0203e6 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  39.284] -> TX burst, block=26
+[  39.523]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  39.785] -> TX burst, block=27
+[  40.020]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  40.052] heartbeat frame=2400 tx=475 rx=469 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00db rxpend=0000
+[  40.052]   [tcb] [0]=ff80->018fcc [1]=ff80->0203e6 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  40.285] -> TX burst, block=27
+[  40.521]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  40.786] -> TX burst, block=27
+[  41.022]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  41.053] heartbeat frame=2460 tx=481 rx=475 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00e1 rxpend=0000
+[  41.053]   [tcb] [0]=ff80->018fcc [1]=ff80->0203e6 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  41.287] -> TX burst, block=28
+[  41.522]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  41.787] -> TX burst, block=28
+[  42.023]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  42.054] heartbeat frame=2520 tx=487 rx=481 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00e7 rxpend=0000
+[  42.054]   [tcb] [0]=ff80->018fcc [1]=ff80->0203e6 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  42.288] -> TX burst, block=29
+[  42.524]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  42.789] -> TX burst, block=29
+[  43.025]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  43.055] heartbeat frame=2580 tx=493 rx=487 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00ed rxpend=0000
+[  43.055]   [tcb] [0]=ff80->018fcc [1]=ff80->0203e6 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  43.289] -> TX burst, block=29
+[  43.525]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  43.790] -> TX burst, block=30
+[  44.026]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  44.057] heartbeat frame=2640 tx=499 rx=493 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00f3 rxpend=0000
+[  44.057]   [tcb] [0]=ff80->018fcc [1]=ff80->0203e6 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  44.291] -> TX burst, block=30
+[  44.526]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  44.791] -> TX burst, block=30
+[  45.027]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  45.058] heartbeat frame=2700 tx=505 rx=499 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00f9 rxpend=0000
+[  45.058]   [tcb] [0]=ff80->018fcc [1]=ff80->02042e [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->017456
+[  45.292] -> TX burst, block=31
+[  45.528]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  45.793] -> TX burst, block=31
+[  46.028]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  46.059] heartbeat frame=2760 tx=511 rx=505 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00ff rxpend=0000
+[  46.059]   [tcb] [0]=ff80->018fcc [1]=ff80->02042e [2]=ff80->02558e [3]=ff80->0170f4
+[  46.293] -> TX burst, block=0
+[  46.531]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  46.794] -> TX burst, block=0
+[  47.030]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  47.061] heartbeat frame=2820 tx=517 rx=511 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0005 rxpend=0000
+[  47.061]   [tcb] [0]=ff80->018fcc [1]=ff80->020466 [2]=ff80->02558e [3]=ff80->0170f4
+[  47.294] -> TX burst, block=0
+[  47.530]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  47.795] -> TX burst, block=1
+[  48.031]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  48.062] heartbeat frame=2880 tx=523 rx=517 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=000b rxpend=0000
+[  48.062]   [tcb] [0]=ff80->018fcc [1]=ff80->020466 [2]=ff80->02558e [3]=ff80->0170f4
+[  48.296] -> TX burst, block=1
+[  48.531]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  48.796] -> TX burst, block=1
+[  49.032]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  49.063] heartbeat frame=2940 tx=529 rx=523 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0011 rxpend=0000
+[  49.063]   [tcb] [0]=ff80->018fcc [1]=ff80->020466 [2]=ff80->02558e [3]=ff80->0170f4
+[  49.297] -> TX burst, block=2
+[  49.533]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  49.798] -> TX burst, block=2
+[  50.038]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  50.064] heartbeat frame=3000 tx=535 rx=529 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0017 rxpend=0000
+[  50.064]   [tcb] [0]=ff80->018fcc [1]=ff80->0204de [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  50.298] -> TX burst, block=3
+[  50.534]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  50.799] -> TX burst, block=3
+[  51.035]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  51.066] heartbeat frame=3060 tx=541 rx=535 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=001d rxpend=0000
+[  51.066]   [tcb] [0]=ff80->018fcc [1]=ff80->0204de [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  51.300] -> TX burst, block=3
+[  51.535]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  51.800] -> TX burst, block=4
+[  52.036]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  52.067] heartbeat frame=3120 tx=547 rx=541 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0023 rxpend=0000
+[  52.067]   [tcb] [0]=ff80->018fcc [1]=ff80->0204de [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  52.301] -> TX burst, block=4
+[  52.537]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  52.802] -> TX burst, block=4
+[  53.037]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  53.068] heartbeat frame=3180 tx=553 rx=547 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0029 rxpend=0000
+[  53.068]   [tcb] [0]=ff80->018fcc [1]=ff80->0204de [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  53.302] -> TX burst, block=5
+[  53.539]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  53.803] -> TX burst, block=5
+[  54.039]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  54.070] heartbeat frame=3240 tx=559 rx=553 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=002f rxpend=0000
+[  54.070]   [tcb] [0]=ff80->018fcc [1]=ff80->0204de [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  54.303] -> TX burst, block=6
+[  54.539]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  54.804] -> TX burst, block=6
+[  55.040]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  55.071] heartbeat frame=3300 tx=565 rx=559 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0035 rxpend=0000
+[  55.071]   [tcb] [0]=ff80->018fcc [1]=ff80->0204de [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  55.305] -> TX burst, block=6
+[  55.540]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  55.805] -> TX burst, block=7
+[  56.042]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  56.072] heartbeat frame=3360 tx=571 rx=565 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=003b rxpend=0000
+[  56.072]   [tcb] [0]=ff80->018fcc [1]=ff80->020562 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0 [5]=ff80->017456
+[  56.306] -> TX burst, block=7
+[  56.542]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  56.807] -> TX burst, block=7
+[  57.044]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  57.073] heartbeat frame=3420 tx=577 rx=571 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0041 rxpend=0000
+[  57.073]   [tcb] [0]=ff80->018fcc [1]=ff80->020562 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0 [5]=ff80->017456
+[  57.307] -> TX burst, block=8
+[  57.543]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  57.808] -> TX burst, block=8
+[  58.044]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  58.075] heartbeat frame=3480 tx=583 rx=577 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0047 rxpend=0000
+[  58.075]   [tcb] [0]=ff80->018fcc [1]=ff80->020562 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  58.309] -> TX burst, block=9
+[  58.544]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  58.809] -> TX burst, block=9
+[  59.045]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  59.076] heartbeat frame=3540 tx=589 rx=583 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=004d rxpend=0000
+[  59.076]   [tcb] [0]=ff80->018fcc [1]=ff80->020562 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  59.310] -> TX burst, block=9
+[  59.546]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  59.811] -> TX burst, block=10
+[  60.046]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  60.077] heartbeat frame=3600 tx=595 rx=589 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0053 rxpend=0000
+[  60.077]   [tcb] [0]=ff80->018fcc [1]=ff80->020562 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  60.311] -> TX burst, block=10
+[  60.553]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  60.812] -> TX burst, block=10
+[  61.048]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  61.079] heartbeat frame=3660 tx=601 rx=595 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0059 rxpend=0000
+[  61.079]   [tcb] [0]=ff80->018fcc [1]=ff80->0205de [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0 [5]=ff80->017456
+[  61.312] -> TX burst, block=11
+[  61.548]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  61.813] -> TX burst, block=11
+[  62.049]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  62.080] heartbeat frame=3720 tx=607 rx=601 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=005f rxpend=0000
+[  62.080]   [tcb] [0]=ff80->018fcc [1]=ff80->0205de [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  62.314] -> TX burst, block=12
+[  62.549]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  62.814] -> TX burst, block=12
+[  63.050]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  63.081] heartbeat frame=3780 tx=613 rx=607 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0065 rxpend=0000
+[  63.081]   [tcb] [0]=ff80->018fcc [1]=ff80->0205de [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  63.315] -> TX burst, block=12
+[  63.551]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  63.816] -> TX burst, block=13
+[  64.052]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  64.083] heartbeat frame=3840 tx=619 rx=613 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=006b rxpend=0000
+[  64.083]   [tcb] [0]=ff80->018fcc [1]=ff80->0205de [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  64.316] -> TX burst, block=13
+[  64.553]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  64.817] -> TX burst, block=13
+[  65.053]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  65.084] heartbeat frame=3900 tx=625 rx=619 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0071 rxpend=0000
+[  65.084]   [tcb] [0]=ff80->018fcc [1]=ff80->0205de [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  65.318] -> TX burst, block=14
+[  65.554]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  65.818] -> TX burst, block=14
+[  66.054]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  66.085] heartbeat frame=3960 tx=631 rx=625 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0077 rxpend=0000
+[  66.085]   [tcb] [0]=ff80->018fcc [1]=ff80->0205de [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  66.319] -> TX burst, block=15
+[  66.556]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  66.820] -> TX burst, block=15
+[  67.056]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  67.086] heartbeat frame=4020 tx=637 rx=631 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=007d rxpend=0000
+[  67.086]   [tcb] [0]=ff80->018fcc [1]=ff80->02062c [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  67.320] -> TX burst, block=15
+[  67.556]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  67.821] -> TX burst, block=16
+[  68.057]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  68.088] heartbeat frame=4080 tx=643 rx=637 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0083 rxpend=0000
+[  68.088]   [tcb] [0]=ff80->018fcc [1]=ff80->02062c [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  68.322] -> TX burst, block=16
+[  68.557]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  68.822] -> TX burst, block=16
+[  69.058]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  69.089] heartbeat frame=4140 tx=649 rx=643 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0089 rxpend=0000
+[  69.089]   [tcb] [0]=ff80->018fcc [1]=ff80->02062c [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  69.323] -> TX burst, block=17
+[  69.559]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  69.823] -> TX burst, block=17
+[  70.059]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  70.090] heartbeat frame=4200 tx=655 rx=649 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=008f rxpend=0000
+[  70.090]   [tcb] [0]=ff80->018fcc [1]=ff80->02062c [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  70.324] -> TX burst, block=18
+[  70.560]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  70.825] -> TX burst, block=18
+[  71.061]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  71.092] heartbeat frame=4260 tx=661 rx=655 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0095 rxpend=0000
+[  71.092]   [tcb] [0]=ff80->018fcc [1]=ff80->02062c [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  71.325] -> TX burst, block=18
+[  71.562]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  71.826] -> TX burst, block=19
+[  72.062]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  72.093] heartbeat frame=4320 tx=667 rx=661 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=009b rxpend=0000
+[  72.093]   [tcb] [0]=ff80->018fcc [1]=ff80->0206b8 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->020204 [5]=ff80->0201a0 [6]=ff80->017456
+[  72.327] -> TX burst, block=19
+[  72.563]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  72.827] -> TX burst, block=19
+[  73.063]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  73.094] heartbeat frame=4380 tx=673 rx=667 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00a1 rxpend=0000
+[  73.094]   [tcb] [0]=ff80->018fcc [1]=ff80->0206b8 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->020204 [5]=ff80->0201a0
+[  73.328] -> TX burst, block=20
+[  73.564]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  73.829] -> TX burst, block=20
+[  74.065]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  74.095] heartbeat frame=4440 tx=679 rx=673 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00a7 rxpend=0000
+[  74.095]   [tcb] [0]=ff80->018fcc [1]=ff80->0206b8 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->020204 [5]=ff80->0201a0
+[  74.329] -> TX burst, block=21
+[  74.565]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  74.830] -> TX burst, block=21
+[  75.067]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  75.097] heartbeat frame=4500 tx=685 rx=679 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00ad rxpend=0000
+[  75.097]   [tcb] [0]=ff80->018fcc [1]=ff80->0206b8 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->020204 [5]=ff80->0201a0
+[  75.331] -> TX burst, block=21
+[  75.566]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  75.831] -> TX burst, block=22
+[  76.067]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  76.098] heartbeat frame=4560 tx=691 rx=685 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00b3 rxpend=0000
+[  76.098]   [tcb] [0]=ff80->018fcc [1]=ff80->0206b8 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->020204 [5]=ff80->0201a0
+[  76.332] -> TX burst, block=22
+[  76.568]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  76.832] -> TX burst, block=22
+[  77.068]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  77.099] heartbeat frame=4620 tx=697 rx=691 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00b9 rxpend=0000
+[  77.099]   [tcb] [0]=ff80->018fcc [1]=ff80->0206b8 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->020204 [5]=ff80->0201a0
+[  77.333] -> TX burst, block=23
+[  77.569]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  77.834] -> TX burst, block=23
+[  78.069]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  78.101] heartbeat frame=4680 tx=703 rx=697 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00bf rxpend=0000
+[  78.101]   [tcb] [0]=ff80->018fcc [1]=ff80->0206b8 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->020204 [5]=ff80->0201a0
+[  78.334] -> TX burst, block=24
+[  78.571]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  78.835] -> TX burst, block=24
+[  79.071]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  79.102] heartbeat frame=4740 tx=709 rx=703 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00c5 rxpend=0000
+[  79.102]   [tcb] [0]=ff80->018fcc [1]=ff80->0206b8 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->020204 [5]=ff80->0201a0
+[  79.336] -> TX burst, block=24
+[  79.572]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  79.836] -> TX burst, block=25
+[  80.072]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  80.103] heartbeat frame=4800 tx=715 rx=709 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00cb rxpend=0000
+[  80.103]   [tcb] [0]=ff80->018fcc [1]=ff80->0206d8 [2]=ff80->02558e [3]=ff80->0170f4
+[  80.337] -> TX burst, block=25
+[  80.573]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  80.838] -> TX burst, block=25
+[  81.074]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  81.104] heartbeat frame=4860 tx=721 rx=715 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00d1 rxpend=0000
+[  81.104]   [tcb] [0]=ff80->018fcc [1]=ff80->020732 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0 [5]=ff80->017456
+[  81.338] -> TX burst, block=26
+[  81.574]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  81.839] -> TX burst, block=26
+[  82.077]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  82.106] heartbeat frame=4920 tx=727 rx=721 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00d7 rxpend=0000
+[  82.106]   [tcb] [0]=ff80->018fcc [1]=ff80->020732 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  82.340] -> TX burst, block=27
+[  82.575]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  82.840] -> TX burst, block=27
+[  83.076]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  83.107] heartbeat frame=4980 tx=733 rx=727 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00dd rxpend=0000
+[  83.107]   [tcb] [0]=ff80->018fcc [1]=ff80->020732 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  83.341] -> TX burst, block=27
+[  83.577]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  83.842] -> TX burst, block=28
+[  84.077]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  84.108] heartbeat frame=5040 tx=739 rx=733 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00e3 rxpend=0000
+[  84.108]   [tcb] [0]=ff80->018fcc [1]=ff80->020732 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  84.342] -> TX burst, block=28
+[  84.578]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  84.843] -> TX burst, block=28
+[  85.110] heartbeat frame=5100 tx=745 rx=736 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00e9 rxpend=0000
+[  85.110]   [tcb] [0]=ff80->018fcc [1]=ff80->020732 [2]=ff80->02558e [3]=ff80->0170f4 [4]=ff80->0201a0
+[  85.196]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  85.343] -> TX burst, block=29
+[  85.844] -> TX burst, block=29
+[  85.880]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  86.111] heartbeat frame=5160 tx=751 rx=742 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00ef rxpend=0000
+[  86.111]   [tcb] [0]=ff80->018fcc [1]=ff80->020732 [2]=ff80->02558e [4]=ff80->0201a0
+[  86.280]   [menu-state] write $ffa170 = 0909 mask=ff00 (pc=018062)
+[  86.280]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[  86.280]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[  86.280]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[  86.280]   [header-byte] write $ffa513 = 11 mask=00ff (pc=01b034)
+[  86.447]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  86.461] -> TX burst, block=30
+[  86.880]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  87.112] heartbeat frame=5220 tx=754 rx=748 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00f2 rxpend=0000
+[  87.112]   [tcb] [0]=ffc0->018fcc [1]=ff80->02202a [2]=ff80->020d54 [3]=ff80->0210e2 [4]=ff80->020ddc [5]=ff80->020ddc [6]=ff80->020ddc [7]=ff80->020ddc [8]=ff80->020ddc [9]=ff80->020ddc [10]=ff80->020ddc [11]=ff80->020ddc [12]=ff80->020ccc [13]=ff80->020cea [14]=ff80->021b30 [15]=ff80->021b30 [16]=ff80->021b30
+[  87.146] -> TX burst, block=30
+[  87.381]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  87.646] -> TX burst, block=30
+[  87.882]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  88.113] heartbeat frame=5280 tx=760 rx=754 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00f8 rxpend=0000
+[  88.113]   [tcb] [0]=ffc0->018fcc [1]=ff80->02202a [2]=ff80->020d54 [3]=ff80->0210e2 [4]=ff80->020ddc [5]=ff80->020ddc [6]=ff80->020ddc [7]=ff80->020ddc [8]=ff80->020ddc [9]=ff80->020ddc [10]=ff80->020ddc [11]=ff80->020ddc [12]=ff80->020ccc [13]=ff80->020cea [14]=ff80->021b30 [15]=ff80->021b30 [16]=ff80->021b30
+[  88.147] -> TX burst, block=31
+[  88.382]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  88.648] -> TX burst, block=31
+[  88.884]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  89.115] heartbeat frame=5340 tx=766 rx=760 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00fe rxpend=0000
+[  89.115]   [tcb] [0]=ffc0->018fcc [1]=ff80->02202a [2]=ff80->020d54 [3]=ff80->0210e2 [4]=ff80->020ddc [5]=ff80->020ddc [6]=ff80->020ddc [7]=ff80->020ddc [8]=ff80->020ddc [9]=ff80->020ddc [10]=ff80->020ddc [11]=ff80->020ddc [12]=ff80->020ccc [13]=ff80->020cea [14]=ff80->021b30 [15]=ff80->021b30 [16]=ff80->021b30
+[  89.148] -> TX burst, block=31
+[  89.384]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  89.649] -> TX burst, block=0
+[  89.884]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  90.116] heartbeat frame=5400 tx=772 rx=766 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0004 rxpend=0000
+[  90.116]   [tcb] [0]=ffc0->018fcc [1]=ff80->02202a [2]=ff80->020d54 [3]=ff80->0210e2 [4]=ff80->020ddc [5]=ff80->020ddc [6]=ff80->020ddc [7]=ff80->020ddc [8]=ff80->020ddc [9]=ff80->020ddc [10]=ff80->020ddc [11]=ff80->020ddc [12]=ff80->020ccc [13]=ff80->020cea [14]=ff80->021b30 [15]=ff80->021b30 [16]=ff80->021b30
+[  90.150] -> TX burst, block=0
+[  90.385]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  90.650] -> TX burst, block=1
+[  90.886]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  91.117] heartbeat frame=5460 tx=778 rx=772 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=000a rxpend=0000
+[  91.117]   [tcb] [0]=ffc0->018fcc [1]=ff80->02202a [2]=ff80->020d54 [3]=ff80->0210e2 [4]=ff80->020ddc [5]=ff80->020ddc [6]=ff80->020ddc [7]=ff80->020ddc [8]=ff80->020ddc [9]=ff80->020ddc [10]=ff80->020ddc [11]=ff80->020ddc [12]=ff80->020ccc [13]=ff80->020cea [14]=ff80->021b30 [15]=ff80->021b30 [16]=ff80->021b30
+[  91.151] -> TX burst, block=1
+[  91.387]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  91.652] -> TX burst, block=1
+[  91.888]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  92.119] heartbeat frame=5520 tx=784 rx=778 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0010 rxpend=0000
+[  92.119]   [tcb] [0]=ffc0->018fcc [1]=ff80->02202a [2]=ff80->020d54 [3]=ff80->0210e2 [4]=ff80->020ddc [5]=ff80->020ddc [6]=ff80->020ddc [7]=ff80->020ddc [8]=ff80->020ddc [9]=ff80->020ddc [10]=ff80->020ddc [11]=ff80->020ddc [12]=ff80->020ccc [13]=ff80->020cea [14]=ff80->021b30 [15]=ff80->021b30 [16]=ff80->021b30
+[  92.152] -> TX burst, block=2
+[  92.421]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  92.653] -> TX burst, block=2
+[  92.922]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  93.120] heartbeat frame=5580 tx=790 rx=784 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0016 rxpend=0000
+[  93.120]   [tcb] [0]=ffc0->018fcc [2]=ff80->020d54 [3]=ff80->0210e2 [12]=ff80->020ccc [13]=ff80->020cea [14]=ff80->021b30 [15]=ff80->021b30 [16]=ff80->021b30
+[  93.154] -> TX burst, block=2
+[  93.423]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  93.620]   [menu-state] write $ffa170 = 0909 mask=ff00 (pc=018062)
+[  93.620]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[  93.620]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[  93.620]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[  93.620]   [header-byte] write $ffa513 = 11 mask=00ff (pc=01b034)
+[  93.688] -> TX burst, block=3
+[  93.922]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  94.121] heartbeat frame=5640 tx=796 rx=790 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=001c rxpend=0000
+[  94.121]   [tcb] [0]=ff80->01b4ee [1]=ff80->00628e
+[  94.188] -> TX burst, block=3
+[  94.423]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  94.689] -> TX burst, block=4
+[  94.923]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  95.122] heartbeat frame=5700 tx=802 rx=796 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0022 rxpend=0000
+[  95.122]   [tcb] [0]=ff80->01b4ee [1]=ff80->00628e
+[  95.189] -> TX burst, block=4
+[  95.424]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  95.690] -> TX burst, block=4
+[  95.941]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  96.124] heartbeat frame=5760 tx=808 rx=802 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0028 rxpend=0000
+[  96.124]   [tcb] [0]=ff80->01b4ee [1]=ff80->00628e
+[  96.191] -> TX burst, block=5
+[  96.442]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  96.692] -> TX burst, block=5
+[  96.947]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  97.125] heartbeat frame=5820 tx=814 rx=808 fc=5 fd=50 fe=5 linkflag=81 pc=000fee a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=002e rxpend=0000
+[  97.125]   [tcb] [0]=ff80->018fcc [1]=ff80->025066 [2]=ff80->024fe2
+[  97.209] -> TX burst, block=5
+[  97.443]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  97.709] -> TX burst, block=6
+[  97.944]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  98.126] heartbeat frame=5880 tx=820 rx=814 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0034 rxpend=0000
+[  98.126]   [tcb] [0]=ff80->018fcc [1]=ff80->0250ba [2]=ff80->024fe2
+[  98.210] -> TX burst, block=6
+[  98.444]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  98.711] -> TX burst, block=7
+[  99.128] heartbeat frame=5940 tx=826 rx=817 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=003a rxpend=0000
+[  99.128]   [tcb] [0]=ff80->018fcc [1]=ff80->0250ba [2]=ff80->024fe2
+[  99.211] -> TX burst, block=7
+[  99.362]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[  99.712] -> TX burst, block=7
+[  99.863]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 100.129] heartbeat frame=6000 tx=832 rx=823 fc=5 fd=50 fe=5 linkflag=81 pc=001ede a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0040 rxpend=0000
+[ 100.129]   [tcb] [0]=ff80->018fba
+[ 100.616]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 100.630] -> TX burst, block=8
+[ 101.116]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 101.130] heartbeat frame=6060 tx=835 rx=829 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0003 a525=03 a170=09 a17f=00 txtail=0043 rxpend=0000
+[ 101.130]   [tcb] [0]=ff80->018fcc [1]=ff80->025b72 [2]=ff80->02558e [3]=ff80->02527a [4]=ff80->02527a [5]=ff00->027736
+[ 101.131] -> TX burst, block=8
+[ 101.881] -> TX burst, block=8
+[ 101.917]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 102.132] heartbeat frame=6120 tx=841 rx=832 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0049 rxpend=0000
+[ 102.132]   [tcb] [0]=ff80->018fcc [1]=ff80->025be6 [2]=ff80->02558e [3]=ff80->02585c [4]=ff80->02585c
+[ 102.382] -> TX burst, block=9
+[ 102.668]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 103.133] heartbeat frame=6180 tx=844 rx=835 fc=5 fd=50 fe=5 linkflag=81 pc=00a3de a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=004c rxpend=0000
+[ 103.133]   [tcb] [0]=ff80->018fcc [1]=ff80->025c32 [2]=ff80->02558e
+[ 103.169]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 103.183] -> TX burst, block=9
+[ 103.926]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 103.934] -> TX burst, block=10
+[ 104.134] heartbeat frame=6240 tx=850 rx=841 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0052 rxpend=0000
+[ 104.134]   [tcb] [0]=ff80->018fcc [1]=ff80->025d88 [2]=ff80->02558e [3]=ff80->02585c [4]=ff80->02585c
+[ 104.435] -> TX burst, block=10
+[ 104.470]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 104.935] -> TX burst, block=10
+[ 104.971]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 105.135] heartbeat frame=6300 tx=856 rx=847 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0058 rxpend=0000
+[ 105.135]   [tcb] [0]=ff80->018fcc [1]=ff80->025d8e [2]=ff80->02558e [3]=ff80->02585c [4]=ff80->02585c
+[ 105.629]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 105.736] -> TX burst, block=11
+[ 105.973]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 106.137] heartbeat frame=6360 tx=859 rx=853 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=005b rxpend=0000
+[ 106.137]   [tcb] [0]=ff80->018fcc [1]=ff80->025de6 [2]=ff80->02558e [3]=ff80->02547c [4]=ff80->027736 [5]=ff80->02533c
+[ 106.237] -> TX burst, block=11
+[ 106.473]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 106.738] -> TX burst, block=11
+[ 106.972]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 107.138] heartbeat frame=6420 tx=865 rx=859 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0061 rxpend=0000
+[ 107.138]   [tcb] [0]=ff80->018fcc [1]=ff80->025de6 [2]=ff80->02558e [3]=ff80->02547c [4]=ff80->027736 [5]=ff80->02533c
+[ 107.238] -> TX burst, block=12
+[ 107.474]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 107.739] -> TX burst, block=12
+[ 108.139] heartbeat frame=6480 tx=871 rx=862 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0067 rxpend=0000
+[ 108.139]   [tcb] [0]=ff80->018fcc [1]=ff80->025de6 [2]=ff80->02558e [3]=ff80->02549a [4]=ff80->027736 [5]=ff80->02535e
+[ 108.225]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 108.240] -> TX burst, block=13
+[ 108.726]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 108.740] -> TX burst, block=13
+[ 109.141] heartbeat frame=6540 tx=877 rx=868 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=006d rxpend=0000
+[ 109.141]   [tcb] [0]=ff80->018fcc [1]=ff80->025de6 [2]=ff80->02558e [3]=ff80->0254b0 [4]=ff80->027736 [5]=ff80->02535e
+[ 109.471]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 109.491] -> TX burst, block=13
+[ 109.727]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 109.992] -> TX burst, block=14
+[ 110.142] heartbeat frame=6600 tx=883 rx=874 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0073 rxpend=0000
+[ 110.142]   [tcb] [0]=ff80->018fcc [1]=ff80->025e5e [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->02585c [5]=ff80->02585c
+[ 110.228]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 110.493] -> TX burst, block=14
+[ 110.729]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 110.993] -> TX burst, block=14
+[ 111.143] heartbeat frame=6660 tx=889 rx=880 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0079 rxpend=0000
+[ 111.143]   [tcb] [0]=ff80->018fcc [1]=ff80->025e80 [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->02585c
+[ 111.229]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 111.494] -> TX burst, block=15
+[ 111.730]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 111.994] -> TX burst, block=15
+[ 112.144] heartbeat frame=6720 tx=895 rx=886 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=007f rxpend=0000
+[ 112.144]   [tcb] [0]=ff80->018fcc [1]=ff80->025f1a [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->0259ac
+[ 112.230]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 112.495] -> TX burst, block=16
+[ 112.731]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 112.996] -> TX burst, block=16
+[ 113.146] heartbeat frame=6780 tx=901 rx=892 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0085 rxpend=0000
+[ 113.146]   [tcb] [0]=ff80->018fcc [1]=ff80->025f1a [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->0259ac
+[ 113.231]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 113.496] -> TX burst, block=16
+[ 113.732]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 113.997] -> TX burst, block=17
+[ 114.147] heartbeat frame=6840 tx=907 rx=898 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=008b rxpend=0000
+[ 114.147]   [tcb] [0]=ff80->018fcc [1]=ff80->025f1a [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->0259ac
+[ 114.233]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 114.498] -> TX burst, block=17
+[ 114.734]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 114.998] -> TX burst, block=17
+[ 115.148] heartbeat frame=6900 tx=913 rx=904 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0091 rxpend=0000
+[ 115.148]   [tcb] [0]=ff80->018fcc [1]=ff80->025f5e [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->0255fc [5]=ff80->0255f6 [6]=ff80->0255fc [7]=ff80->0255f6
+[ 115.234]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 115.499] -> TX burst, block=18
+[ 115.737]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 116.000] -> TX burst, block=18
+[ 116.150] heartbeat frame=6960 tx=919 rx=910 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0097 rxpend=0000
+[ 116.150]   [tcb] [0]=ff80->018fcc [1]=ff80->025f5e [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->025658 [5]=ff80->02561c [6]=ff80->025634 [7]=ff80->025634
+[ 116.235]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 116.500] -> TX burst, block=19
+[ 116.736]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 117.001] -> TX burst, block=19
+[ 117.151] heartbeat frame=7020 tx=925 rx=916 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=009d rxpend=0000
+[ 117.151]   [tcb] [0]=ff80->018fcc [1]=ff80->026070 [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->025658 [5]=ff80->025658 [6]=ff80->025658 [7]=ff80->025658 [8]=ff80->02567c [9]=ff80->0256a4 [10]=ff80->0256a4 [11]=ff80->0256a4 [12]=ff80->026188
+[ 117.237]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 117.502] -> TX burst, block=19
+[ 117.739]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 118.002] -> TX burst, block=20
+[ 118.152] heartbeat frame=7080 tx=931 rx=922 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00a3 rxpend=0000
+[ 118.152]   [tcb] [0]=ff80->018fcc [1]=ff80->0260b6 [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->025658 [5]=ff80->025658 [6]=ff80->025658 [7]=ff80->025658 [8]=ff80->02567c [9]=ff80->0256a4 [10]=ff80->0256a4 [11]=ff80->0256a4 [12]=ff80->026188 [13]=ff80->02585c
+[ 118.238]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 118.503] -> TX burst, block=20
+[ 118.739]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 119.004] -> TX burst, block=20
+[ 119.153] heartbeat frame=7140 tx=937 rx=928 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00a9 rxpend=0000
+[ 119.153]   [tcb] [0]=ff80->018fcc [1]=ff80->026116 [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->025658 [5]=ff80->025658 [6]=ff80->025658 [7]=ff80->025658 [8]=ff80->02567c [9]=ff80->0256a4 [10]=ff80->0256a4 [11]=ff80->0256a4 [12]=ff80->026188
+[ 119.239]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 119.504] -> TX burst, block=21
+[ 119.741]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 120.005] -> TX burst, block=21
+[ 120.155] heartbeat frame=7200 tx=943 rx=934 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00af rxpend=0000
+[ 120.155]   [tcb] [0]=ff80->018fcc [1]=ff80->026116 [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->025658 [5]=ff80->025658 [6]=ff80->025658 [7]=ff80->025658 [8]=ff80->02567c [9]=ff80->0256a4 [10]=ff80->0256a4 [11]=ff80->0256a4 [12]=ff80->026188
+[ 120.240]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 120.505] -> TX burst, block=22
+[ 120.741]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 121.006] -> TX burst, block=22
+[ 121.156] heartbeat frame=7260 tx=949 rx=940 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00b5 rxpend=0000
+[ 121.156]   [tcb] [0]=ff80->018fcc [1]=ff80->026116 [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->025658 [5]=ff80->025658 [6]=ff80->025658 [7]=ff80->025658 [8]=ff80->02567c [9]=ff80->0256a4 [10]=ff80->0256a4 [11]=ff80->0256a4 [12]=ff80->026188
+[ 121.242]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 121.507] -> TX burst, block=22
+[ 121.742]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 122.007] -> TX burst, block=23
+[ 122.157] heartbeat frame=7320 tx=955 rx=946 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00bb rxpend=0000
+[ 122.157]   [tcb] [0]=ff80->018fcc [1]=ff80->026116 [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->025658 [5]=ff80->025658 [6]=ff80->025658 [7]=ff80->025658 [8]=ff80->02567c [9]=ff80->0256a4 [10]=ff80->0256a4 [11]=ff80->0256a4 [12]=ff80->026188
+[ 122.243]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 122.508] -> TX burst, block=23
+[ 122.777]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 123.009] -> TX burst, block=23
+[ 123.159] heartbeat frame=7380 tx=961 rx=952 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00c1 rxpend=0000
+[ 123.159]   [tcb] [0]=ff80->018fcc [1]=ff80->026116 [2]=ff80->02558e [3]=ff80->018fcc [4]=ff80->025658 [5]=ff80->025658 [6]=ff80->025658 [7]=ff80->025658 [8]=ff80->02567c [9]=ff80->0256a4 [10]=ff80->0256a4 [11]=ff80->0256a4 [12]=ff80->026188
+[ 123.278]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 123.509] -> TX burst, block=24
+[ 123.579]   [menu-state] write $ffa170 = 0909 mask=ff00 (pc=018062)
+[ 123.579]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[ 123.579]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 123.579]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 123.579]   [header-byte] write $ffa513 = 11 mask=00ff (pc=01b034)
+[ 124.041]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 124.043] -> TX burst, block=24
+[ 124.160] heartbeat frame=7440 tx=967 rx=958 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00c7 rxpend=0000
+[ 124.160]   [tcb] [0]=ffc0->00839a
+[ 124.278]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 124.544] -> TX burst, block=25
+[ 124.778]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 125.045] -> TX burst, block=25
+[ 125.161] heartbeat frame=7500 tx=973 rx=964 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00cd rxpend=0000
+[ 125.161]   [tcb] [0]=ffc0->007fb6 [1]=ff80->00628e [2]=ff80->006782 [3]=ffc0->00f2e4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e
+[ 125.279]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 125.545] -> TX burst, block=25
+[ 125.779]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 126.046] -> TX burst, block=26
+[ 126.162] heartbeat frame=7560 tx=979 rx=970 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00d3 rxpend=0000
+[ 126.162]   [tcb] [0]=ffc0->007fb6 [1]=ff80->00628e [2]=ff80->006782 [3]=ffc0->00f2e4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e
+[ 126.280]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 126.546] -> TX burst, block=26
+[ 126.781]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 127.047] -> TX burst, block=26
+[ 127.164] heartbeat frame=7620 tx=985 rx=976 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00d9 rxpend=0000
+[ 127.164]   [tcb] [0]=ffc0->008082 [1]=ff80->00628e [2]=ff80->006782 [3]=ffc0->00f2e4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff00->0079fe [8]=ff00->0079fe [9]=ff80->0079d4 [10]=ff80->007dfc
+[ 127.281]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 127.548] -> TX burst, block=27
+[ 127.782]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 128.048] -> TX burst, block=27
+[ 128.165] heartbeat frame=7680 tx=991 rx=982 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00df rxpend=0000
+[ 128.165]   [tcb] [0]=ffc0->008082 [1]=ff80->00628e [2]=ff80->006782 [3]=ffc0->00f2e4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [11]=ff80->0079d4 [12]=ff80->007dfc [13]=ff80->0079d4 [14]=ff80->007dfc
+[ 128.283]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 128.549] -> TX burst, block=28
+[ 128.783]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 129.050] -> TX burst, block=28
+[ 129.166] heartbeat frame=7740 tx=997 rx=988 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00e5 rxpend=0000
+[ 129.166]   [tcb] [0]=ffc0->008082 [1]=ff80->00628e [2]=ff80->006782 [3]=ffc0->00f2e4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->0079d4 [8]=ff80->007dfc [9]=ff80->007944 [10]=ff80->007d70
+[ 129.284]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 129.550] -> TX burst, block=28
+[ 129.785]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 130.051] -> TX burst, block=29
+[ 130.168] heartbeat frame=7800 tx=1003 rx=994 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00eb rxpend=0000
+[ 130.168]   [tcb] [0]=ffc0->008082 [1]=ff80->00628e [2]=ff80->006782 [3]=ffc0->00f2e4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [9]=ff00->0079fe [10]=ff00->0079fe [11]=ff80->0079d4 [12]=ff80->007dfc
+[ 130.285]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 130.552] -> TX burst, block=29
+[ 130.787]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 131.052] -> TX burst, block=29
+[ 131.169] heartbeat frame=7860 tx=1009 rx=1000 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=00f1 rxpend=0000
+[ 131.169]   [tcb] [0]=ffc0->008082 [1]=ff80->00628e [2]=ff80->006782 [3]=ffc0->00f2e4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->007944 [8]=ff80->007d70 [10]=ff80->0079d4 [11]=ff00->007a24 [13]=ff80->007dfc
+[ 131.287]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 131.553] -> TX burst, block=30
+[ 132.054] -> TX burst, block=30
+[ 132.170] heartbeat frame=7920 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0002 a525=02 a170=09 a17f=00 txtail=00f5 rxpend=0001
+[ 132.170]   [tcb] [0]=ffc0->008082 [2]=ff80->006782 [3]=ffc0->00f2e4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff00->007a24 [8]=ff00->007a24 [9]=ff80->0079d4 [11]=ff80->007de4 [12]=ff80->007944 [14]=ff80->007d70
+[ 132.269]   [menu-state] write $ffa170 = 0808 mask=ff00 (pc=018062)
+[ 132.269]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[ 132.269]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 132.269]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 132.269]   [header-byte] write $ffa513 = 11 mask=00ff (pc=01b034)
+[ 132.298]   [header-byte] write $ffa513 = 13 mask=00ff (pc=0189b4)
+[ 132.298]   [menu-state] write $ffa17f = 0000 mask=00ff (pc=0189c2)
+[ 133.171] heartbeat frame=7980 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0008 a525=08 a170=08 a17f=00 txtail=00f5 rxpend=0001
+[ 133.171]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->01ffe2 [7]=ff80->020004 [8]=ff80->020004 [9]=ff80->01febe [10]=ff80->01fedc
+[ 134.173] heartbeat frame=8040 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=000e a525=0e a170=08 a17f=00 txtail=00f5 rxpend=0001
+[ 134.173]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->01ffe2 [7]=ff80->020004 [8]=ff80->020004 [9]=ff80->01febe [10]=ff80->01fedc
+[ 135.174] heartbeat frame=8100 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0014 a525=14 a170=08 a17f=00 txtail=00f5 rxpend=0001
+[ 135.174]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->01ffe2 [7]=ff80->020004 [8]=ff80->020004 [9]=ff80->01febe [10]=ff80->01fedc
+[ 136.175] heartbeat frame=8160 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=001a a525=1a a170=08 a17f=00 txtail=00f5 rxpend=0001
+[ 136.175]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->01ffe2 [7]=ff80->020004 [8]=ff80->020004 [9]=ff80->01febe [10]=ff80->01fedc
+[ 137.177] heartbeat frame=8220 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0020 a525=20 a170=08 a17f=00 txtail=00f5 rxpend=0001
+[ 137.177]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->01ffe2 [7]=ff80->020004 [8]=ff80->020004 [9]=ff80->01febe [10]=ff80->01fedc
+[ 138.178] heartbeat frame=8280 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0026 a525=26 a170=08 a17f=00 txtail=00f5 rxpend=0001
+[ 138.178]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->01ffe2 [7]=ff80->020004 [8]=ff80->020004 [9]=ff80->01febe [10]=ff80->01fedc
+[ 138.699]   [header-byte] write $ffa513 = 10 mask=00ff (pc=018d88)
+[ 139.179] heartbeat frame=8340 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0033 a525=33 a170=08 a17f=00 txtail=00f5 rxpend=0001
+[ 139.179]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->027726
+[ 140.006]   [menu-state] write $ffa170 = 0000 mask=ff00 (pc=01afb6)
+[ 140.006]   [menu-state] write $ffa170 = 8787 mask=ff00 (pc=01afce)
+[ 140.006]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[ 140.006]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 140.006]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 140.006]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 140.006]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[ 140.006]   [menu-state] write $ffa170 = 8787 mask=ff00 (pc=018062)
+[ 140.006]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[ 140.006]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 140.006]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 140.006]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 140.006]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[ 140.180] heartbeat frame=8400 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=000ff2 a502=00 a524=003c a525=3c a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 140.180]   [tcb] 
+[ 140.421]   [menu-state] write $ffa170 = 9797 mask=ff00 (pc=0266d6)
+[ 141.017]   [menu-state] write $ffa170 = 8787 mask=ff00 (pc=0268a0)
+[ 141.182] heartbeat frame=8460 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0042 a525=42 a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 141.182]   [tcb] [0]=ff80->026e10 [1]=ff80->027146 [2]=ff80->027146 [3]=ff80->027146 [4]=ff80->027146 [5]=ff80->027146 [6]=ff80->027146 [7]=ff80->027260 [8]=ff80->027278 [9]=ff80->027278 [10]=ff80->026e8c
+[ 142.183] heartbeat frame=8520 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0045 a525=45 a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 142.183]   [tcb] [0]=ffc0->00839a [1]=ff80->0155b2 [2]=ff80->0155b4 [3]=ff80->0155ea [4]=ff80->0156b2
+[ 143.184] heartbeat frame=8580 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=004b a525=4b a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 143.184]   [tcb] [0]=ffc0->00839a [1]=ff80->0155b2 [2]=ff80->0155b4 [3]=ff80->0155ea [4]=ff80->0156b2 [5]=ff80->0176e8 [6]=ffc0->017748 [7]=ffc0->0178bc [8]=ffc0->017a34 [9]=ffc0->017a34 [10]=ffc0->017a34 [11]=ffc0->017a34 [12]=ffc0->017a34 [13]=ffc0->017a34
+[ 144.186] heartbeat frame=8640 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0051 a525=51 a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 144.186]   [tcb] [0]=ffc0->00839a [1]=ff80->0155b2 [2]=ff80->0155b4 [3]=ff80->0155ea [4]=ff80->0156b2 [5]=ff80->0176e8 [6]=ffc0->0177aa [7]=ffc0->017950 [8]=ffc0->017a34 [9]=ffc0->017a34 [10]=ffc0->017a34 [11]=ffc0->017a34 [12]=ffc0->017a34 [13]=ffc0->017a34
+[ 145.187] heartbeat frame=8700 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0057 a525=57 a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 145.187]   [tcb] [0]=ffc0->00839a [1]=ff80->0155b2 [2]=ff80->0155b4 [3]=ff80->0155ea [4]=ff80->0156b2 [5]=ff80->0170dc [6]=ffc0->0177aa [7]=ffc0->017950 [8]=ffc0->017a9c [9]=ffc0->017a9c [10]=ffc0->017a9c [11]=ffc0->017a9c [12]=ffc0->017a9c [13]=ffc0->017a9c [14]=ff80->017456
+[ 146.188] heartbeat frame=8760 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=005d a525=5d a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 146.188]   [tcb] [0]=ffc0->00839a [1]=ff80->0155b2 [2]=ff80->0155b4 [3]=ff80->0155ea [4]=ff80->0156b2 [5]=ff80->0170dc [6]=ffc0->0177aa [7]=ffc0->017950 [8]=ffc0->017a9c [9]=ffc0->017a9c [10]=ffc0->017a9c [11]=ffc0->017a9c [12]=ffc0->017a9c [13]=ffc0->017a9c
+[ 147.190] heartbeat frame=8820 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0063 a525=63 a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 147.190]   [tcb] [0]=ffc0->00839a [1]=ff80->0155b2 [2]=ff80->0155b4 [3]=ff80->0155ea [4]=ff80->0156b2 [5]=ff80->0170dc [6]=ffc0->0177aa [7]=ffc0->017950 [8]=ffc0->017a9c [9]=ffc0->017a9c [10]=ffc0->017a9c [11]=ffc0->017a9c [12]=ffc0->017a9c [13]=ffc0->017a9c
+[ 148.191] heartbeat frame=8880 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=000fee a502=00 a524=0069 a525=69 a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 148.191]   [tcb] [0]=ffc0->00839a [1]=ff80->006782 [2]=ffc0->00f2ba [3]=ffc0->00f1ca [4]=ffc0->00f1ca [5]=ffc0->00f634 [6]=ffc0->0177ba [7]=ffc0->017964 [8]=ffc0->017ae2 [9]=ffc0->017ae2 [10]=ffc0->017ae2 [11]=ffc0->017ae2 [12]=ffc0->017ae2 [13]=ffc0->017ae2
+[ 149.192] heartbeat frame=8940 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=006f a525=6f a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 149.192]   [tcb] [0]=ffc0->00839a [1]=ff80->006782 [2]=ffc0->00f2ba [3]=ffc0->00f1ca [4]=ffc0->00f1ca [5]=ffc0->00f634 [9]=ffc0->017b04 [10]=ffc0->017b04 [11]=ffc0->017b04
+[ 150.193] heartbeat frame=9000 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0075 a525=75 a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 150.193]   [tcb] [0]=ffc0->007fb6 [1]=ff80->006782 [2]=ffc0->00f2e4 [3]=ffc0->00f1e0 [4]=ffc0->00f1e0 [5]=ffc0->00f982 [6]=ff80->00f86c [7]=ff80->00f81c
+[ 151.195] heartbeat frame=9060 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=007b a525=7b a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 151.195]   [tcb] [0]=ffc0->008082 [1]=ff80->006782 [2]=ffc0->00f2e4 [3]=ffc0->00f1e0 [4]=ffc0->00f1e0 [5]=ffc0->00f982 [6]=ff80->00f86c [7]=ff80->00f81c [8]=ff80->007944 [9]=ff80->007d70 [10]=ff80->007944 [11]=ff80->007d70
+[ 151.247]   [menu-state] write $ffa172 = 0101 mask=ff00 (pc=0194b6)
+[ 151.264]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=0193f4)
+[ 151.264]   [menu-state] write $ffa171 = 0000 mask=00ff (pc=0193fc)
+[ 151.264]   [header-byte] write $ffa513 = 44 mask=00ff (pc=019e4a)
+[ 151.264]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 151.264]   [header-byte] write $ffa513 = 04 mask=00ff (pc=01b044)
+[ 152.196] heartbeat frame=9120 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0081 a525=81 a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 152.196]   [tcb] [0]=ffc0->008082 [1]=ff80->006782 [2]=ffc0->00f2e4 [3]=ffc0->00f1e0 [4]=ffc0->00f1e0 [5]=ffc0->00f982 [6]=ff80->00f86c [7]=ff80->00f81c [8]=ff80->007944 [9]=ff80->007d70 [10]=ff80->007944 [11]=ff80->007d70
+[ 153.197] heartbeat frame=9180 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=0087 a525=87 a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 153.197]   [tcb] [0]=ffc0->008082 [1]=ff80->006782 [2]=ffc0->00f2e4 [3]=ffc0->00f1e0 [4]=ffc0->00f1e0 [5]=ffc0->00f982 [6]=ff80->00f86c [7]=ff80->00f81c [8]=ff80->007944 [9]=ff80->007d70 [10]=ff80->007944 [11]=ff80->007d70
+[ 154.199] heartbeat frame=9240 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=008d a525=8d a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 154.199]   [tcb] [0]=ffc0->008082 [1]=ff80->006782 [2]=ffc0->00f2e4 [3]=ffc0->00f1e0 [4]=ffc0->00f1e0 [5]=ffc0->00f982 [6]=ff80->00f86c [7]=ff80->00f81c [8]=ff80->007944 [9]=ff80->007d70 [10]=ff80->007944 [11]=ff80->007d70
+[ 155.200] heartbeat frame=9300 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0093 a525=93 a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 155.200]   [tcb] [0]=ffc0->008082 [1]=ff80->006782 [2]=ffc0->00f2e4 [3]=ffc0->00f1e0 [4]=ffc0->00f1e0 [5]=ffc0->00f982 [6]=ff80->00f86c [7]=ff80->00f81c [8]=ff80->007944 [9]=ff80->007d70 [10]=ff80->007944 [11]=ff80->007d70
+[ 156.201] heartbeat frame=9360 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=0099 a525=99 a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 156.201]   [tcb] [0]=ffc0->008082 [1]=ff80->006782 [2]=ffc0->00f2e4 [3]=ffc0->00f1e0 [4]=ffc0->00f1e0 [5]=ffc0->00f982 [6]=ff80->00f86c [7]=ff80->00f81c [8]=ff00->0079fe [9]=ff00->0079fe [10]=ff00->007a24 [11]=ff00->007a24 [12]=ff80->007944 [13]=ff80->007d70
+[ 157.202] heartbeat frame=9420 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=009f a525=9f a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 157.202]   [tcb] [0]=ffc0->008082 [1]=ff80->006782 [2]=ffc0->00f2e4 [3]=ffc0->00f1e0 [4]=ffc0->00f1e0 [5]=ffc0->00f982 [6]=ff80->00f86c [7]=ff80->00f81c [11]=ff80->007944 [12]=ff80->007944 [13]=ff80->007d70 [14]=ff80->007d70
+[ 157.373]   [menu-state] write $ffa172 = 0101 mask=ff00 (pc=0194b6)
+[ 157.388]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=0193f4)
+[ 157.388]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=0193fc)
+[ 157.389]   [header-byte] write $ffa513 = 04 mask=00ff (pc=019e4a)
+[ 157.389]   [header-byte] write $ffa513 = 14 mask=00ff (pc=019e5a)
+[ 157.389]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 157.389]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 157.389]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 157.389]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[ 158.204] heartbeat frame=9480 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=00a8 a525=a8 a170=87 a17f=00 txtail=00f5 rxpend=0001
+[ 158.204]   [tcb] [0]=ffc0->008082 [1]=ff80->006782 [2]=ffc0->00f2e4 [3]=ffc0->00f1e0 [4]=ffc0->00f1e0 [5]=ffc0->00f982 [6]=ff80->00f86c [7]=ff80->00f81c [11]=ff80->007944 [12]=ff80->007944 [13]=ff80->007d70 [14]=ff80->007d70
+[ 158.876]   [menu-state] write $ffa174 = 0001 mask=ffff (pc=019abc)
+[ 158.876]   [menu-state] write $ffa176 = 9600 mask=ffff (pc=019abc)
+[ 158.892]   [menu-state] write $ffa17d = 0101 mask=00ff (pc=01961c)
+[ 158.892]   [menu-state] write $ffa17f = 0000 mask=00ff (pc=019aec)
+[ 158.908]   [menu-state] write $ffa174 = 0001 mask=ffff (pc=019abc)
+[ 158.908]   [menu-state] write $ffa176 = 9652 mask=ffff (pc=019abc)
+[ 158.959]   [header-byte] write $ffa513 = 54 mask=00ff (pc=019702)
+[ 158.959]   [menu-state] write $ffa170 = 8282 mask=ff00 (pc=019718)
+[ 158.959]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[ 158.959]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 158.959]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 158.959]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 158.959]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[ 159.205] heartbeat frame=9540 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=00b1 a525=b1 a170=82 a17f=00 txtail=00f5 rxpend=0001
+[ 159.205]   [tcb] 
+[ 160.206] heartbeat frame=9600 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=00b7 a525=b7 a170=82 a17f=00 txtail=00f5 rxpend=0001
+[ 160.206]   [tcb] 
+[ 160.941]   [menu-state] write $ffa172 = 0101 mask=ff00 (pc=0194b6)
+[ 160.958]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=0193f4)
+[ 160.958]   [menu-state] write $ffa171 = 0000 mask=00ff (pc=0193fc)
+[ 160.958]   [header-byte] write $ffa513 = 44 mask=00ff (pc=019e4a)
+[ 160.958]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 160.958]   [header-byte] write $ffa513 = 04 mask=00ff (pc=01b044)
+[ 161.208] heartbeat frame=9660 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=000288 a502=00 a524=00bd a525=bd a170=82 a17f=00 txtail=00f5 rxpend=0001
+[ 161.208]   [tcb] 
+[ 161.275]   [menu-state] write $ffa172 = 0101 mask=ff00 (pc=0194b6)
+[ 161.292]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=0193f4)
+[ 161.292]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=0193fc)
+[ 161.292]   [header-byte] write $ffa513 = 04 mask=00ff (pc=019e4a)
+[ 161.292]   [header-byte] write $ffa513 = 14 mask=00ff (pc=019e5a)
+[ 161.292]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 161.292]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 161.292]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 161.292]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[ 161.492]   [menu-state] write $ffa170 = 8282 mask=ff00 (pc=01a87a)
+[ 161.492]   [menu-state] write $ffa170 = 0202 mask=ff00 (pc=01a87c)
+[ 161.519]   [header-byte] write $ffa513 = 56 mask=00ff (pc=0189b4)
+[ 161.519]   [menu-state] write $ffa17f = 0000 mask=00ff (pc=0189c2)
+[ 162.209] heartbeat frame=9720 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=00c3 a525=c3 a170=02 a17f=00 txtail=00f5 rxpend=0001
+[ 162.209]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->01ffe2 [7]=ff80->020004 [8]=ff80->020004
+[ 163.210] heartbeat frame=9780 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=00c9 a525=c9 a170=02 a17f=00 txtail=00f5 rxpend=0001
+[ 163.210]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->01ffe2 [7]=ff80->020004 [8]=ff80->020004
+[ 164.211] heartbeat frame=9840 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=00cf a525=cf a170=02 a17f=00 txtail=00f5 rxpend=0001
+[ 164.211]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->01ffe2 [7]=ff80->020004 [8]=ff80->020004
+[ 165.213] heartbeat frame=9900 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=00d5 a525=d5 a170=02 a17f=00 txtail=00f5 rxpend=0001
+[ 165.213]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->01ffe2 [7]=ff80->020004 [8]=ff80->020004
+[ 166.214] heartbeat frame=9960 tx=1013 rx=1004 fc=5 fd=50 fe=5 linkflag=81 pc=00028a a502=00 a524=00db a525=db a170=02 a17f=00 txtail=00f5 rxpend=0001
+[ 166.214]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->01ffe2 [7]=ff80->020004 [8]=ff80->020004
+[ 166.417]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[ 166.433]   [dbg] write $ffa500 = 00 (pc=0183ac)
+[ 166.434]   [header-byte] write $ffa513 = 54 mask=00ff (pc=018a6e)
+[ 166.450]   [menu-state] write $ffa173 = 0000 mask=00ff (pc=01937c)
+[ 166.450]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019382)
+[ 166.450]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=01938a)
+[ 166.450] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[ 166.734]   [dbg] write $ffa500 = 7f (pc=018334)
+[ 166.750] CMD $FE (loopback test) -> answering OK (nonzero)
+[ 166.750]   [dbg] write $ffa500 = 81 (pc=018358)
+[ 166.751]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 166.751]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 166.751]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 166.765] -> TX burst, block=0
+[ 166.767]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[ 166.934]   [dbg] write $ffa500 = 00 (pc=0183ac)
+[ 166.952]   [menu-state] write $ffa173 = 0000 mask=00ff (pc=01937c)
+[ 166.952]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019382)
+[ 166.952]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=01938a)
+[ 166.952] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[ 167.215] heartbeat frame=10020 tx=1280 rx=1260 fc=7 fd=66 fe=6 linkflag=00 pc=000288 a502=00 a524=0000 a525=00 a170=02 a17f=00 txtail=0000 rxpend=0000
+[ 167.215]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->01ffe2 [7]=ff80->020004 [8]=ff80->020004
+[ 167.269]   [dbg] write $ffa500 = 7f (pc=018334)
+[ 167.284] CMD $FE (loopback test) -> answering OK (nonzero)
+[ 167.284]   [dbg] write $ffa500 = 81 (pc=018358)
+[ 167.284]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 167.284]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 167.284]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 167.299] -> TX burst, block=0
+[ 167.301]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[ 167.737]   [dbg] write $ffa500 = 00 (pc=0183ac)
+[ 167.751]   [menu-state] write $ffa173 = 0000 mask=00ff (pc=01937c)
+[ 167.751]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019382)
+[ 167.751]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=01938a)
+[ 167.751] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[ 168.069]   [dbg] write $ffa500 = 7f (pc=018334)
+[ 168.085] CMD $FE (loopback test) -> answering OK (nonzero)
+[ 168.085]   [dbg] write $ffa500 = 81 (pc=018358)
+[ 168.085]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 168.085]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 168.085]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 168.086]   [header-byte] write $ffa513 = 50 mask=00ff (pc=018d88)
+[ 168.100] -> TX burst, block=0
+[ 168.102]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[ 168.102]   [dbg] write $ffa500 = 00 (pc=0183ac)
+[ 168.119]   [menu-state] write $ffa173 = 0000 mask=00ff (pc=01937c)
+[ 168.119]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019382)
+[ 168.119]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=01938a)
+[ 168.119] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[ 168.217] heartbeat frame=10080 tx=1536 rx=1516 fc=8 fd=80 fe=8 linkflag=00 pc=00028a a502=00 a524=0000 a525=00 a170=02 a17f=00 txtail=0000 rxpend=0000
+[ 168.217]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e
+[ 168.403]   [dbg] write $ffa500 = 7f (pc=018334)
+[ 168.419] CMD $FE (loopback test) -> answering OK (nonzero)
+[ 168.419]   [dbg] write $ffa500 = 81 (pc=018358)
+[ 168.419]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 168.419]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 168.419]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 168.434] -> TX burst, block=0
+[ 168.436]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[ 168.436]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 168.636]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 168.934] -> TX burst, block=0
+[ 169.136]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 169.218] heartbeat frame=10140 tx=1542 rx=1525 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=02 a17f=00 txtail=0006 rxpend=0000
+[ 169.218]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->027726
+[ 169.435] -> TX burst, block=0
+[ 169.637]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 169.936] -> TX burst, block=1
+[ 170.138]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 170.219] heartbeat frame=10200 tx=1548 rx=1531 fc=9 fd=90 fe=9 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=02 a17f=00 txtail=000c rxpend=0000
+[ 170.219]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->027726
+[ 170.255]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 170.437] -> TX burst, block=1
+[ 170.757]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 170.937] -> TX burst, block=2
+[ 171.220] heartbeat frame=10260 tx=1554 rx=1537 fc=9 fd=90 fe=9 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=02 a17f=00 txtail=0012 rxpend=0000
+[ 171.220]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->027726
+[ 171.256]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 171.438] -> TX burst, block=2
+[ 171.530]   [menu-state] write $ffa170 = 0000 mask=ff00 (pc=01afb6)
+[ 171.530]   [menu-state] write $ffa170 = 8282 mask=ff00 (pc=01afd8)
+[ 171.530]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[ 171.530]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 171.530]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 171.530]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 171.530]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[ 171.530]   [menu-state] write $ffa170 = 8282 mask=ff00 (pc=018062)
+[ 171.530]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[ 171.530]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 171.530]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 171.530]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 171.530]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[ 171.863]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 171.872] -> TX burst, block=2
+[ 172.222] heartbeat frame=10320 tx=1560 rx=1543 fc=9 fd=90 fe=9 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0018 rxpend=0000
+[ 172.222]   [tcb] [0]=ff80->023daa [1]=ff80->023c40 [2]=ff80->023c70 [3]=ff80->023c70 [4]=ff80->023c08
+[ 172.258]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 172.355] -> TX burst, block=3
+[ 172.759]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 172.856] -> TX burst, block=3
+[ 173.223] heartbeat frame=10380 tx=1566 rx=1549 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=001e rxpend=0000
+[ 173.223]   [tcb] [0]=ff80->023f48 [4]=ff80->023c3e
+[ 173.259]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 173.357] -> TX burst, block=3
+[ 173.776]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 173.858] -> TX burst, block=4
+[ 174.224] heartbeat frame=10440 tx=1572 rx=1555 fc=9 fd=90 fe=9 linkflag=81 pc=001ede a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0024 rxpend=0000
+[ 174.224]   [tcb] 
+[ 174.498]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 174.778]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 174.859] -> TX burst, block=4
+[ 175.226] heartbeat frame=10500 tx=1575 rx=1561 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0027 rxpend=0000
+[ 175.226]   [tcb] [0]=ff80->006782 [1]=ffc0->007f6e [2]=ff80->00539a [3]=ff00->005660 [4]=ff00->0056e4 [5]=ff80->00539a [6]=ff00->005660 [7]=ff00->0056e4 [8]=ff80->0086ee [9]=ff80->0086ee
+[ 175.278]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 175.359] -> TX burst, block=5
+[ 175.778]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 175.860] -> TX burst, block=5
+[ 176.227] heartbeat frame=10560 tx=1581 rx=1567 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=002d rxpend=0000
+[ 176.227]   [tcb] [0]=ff80->006782 [1]=ffc0->007f6e [2]=ff80->00539a [3]=ff00->005660 [4]=ff00->0056e4 [5]=ff80->00539a [6]=ff00->005660 [7]=ff00->0056e4 [8]=ff80->0086ee [9]=ff80->0086ee
+[ 176.279]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 176.361] -> TX burst, block=5
+[ 176.861] -> TX burst, block=6
+[ 177.197]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 177.228] heartbeat frame=10620 tx=1587 rx=1573 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0033 rxpend=0000
+[ 177.228]   [tcb] [0]=ff80->006782 [1]=ffc0->007f6e [2]=ff80->00539a [3]=ff00->005660 [4]=ff00->0056e4 [5]=ff80->00539a [6]=ff00->005660 [7]=ff00->0056e4 [8]=ff80->0086ee [9]=ff80->0086ee
+[ 177.362] -> TX burst, block=6
+[ 177.698]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 177.863] -> TX burst, block=6
+[ 178.229] heartbeat frame=10680 tx=1593 rx=1576 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0039 rxpend=0000
+[ 178.229]   [tcb] [0]=ff80->006782 [1]=ffc0->007f6e [2]=ff80->00539a [3]=ff00->005660 [4]=ff00->0056e4 [5]=ff80->00539a [6]=ff00->005660 [7]=ff00->0056e4 [8]=ff80->0086ee [9]=ff80->0086ee
+[ 178.363] -> TX burst, block=7
+[ 178.449]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 178.864] -> TX burst, block=7
+[ 178.949]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 179.050]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 179.231] heartbeat frame=10740 tx=1599 rx=1585 fc=9 fd=90 fe=9 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=003f rxpend=0000
+[ 179.231]   [tcb] [0]=ff80->006782 [1]=ffc0->007f6e [2]=ff80->00539a [3]=ff00->005660 [4]=ff00->0056e4 [5]=ff80->00539a [6]=ff00->005660 [7]=ff00->0056e4 [8]=ff80->0086ee [9]=ff80->0086ee
+[ 179.364] -> TX burst, block=8
+[ 179.600]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 179.865] -> TX burst, block=8
+[ 180.102]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 180.232] heartbeat frame=10800 tx=1605 rx=1591 fc=9 fd=90 fe=9 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0045 rxpend=0000
+[ 180.232]   [tcb] [0]=ff80->006782 [1]=ffc0->007f6e [2]=ff80->00539a [3]=ff00->005660 [4]=ff00->0056e4 [5]=ff80->00539a [6]=ff00->005660 [7]=ff00->0056e4 [8]=ff80->0086ee [9]=ff80->0086ee
+[ 180.366] -> TX burst, block=8
+[ 180.602]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 180.636]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 180.752]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 180.866] -> TX burst, block=9
+[ 181.233] heartbeat frame=10860 tx=1611 rx=1600 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=004b rxpend=0000
+[ 181.233]   [tcb] [0]=ff80->006782 [1]=ffc0->007f6e [2]=ff80->005454 [3]=ff00->005660 [4]=ff00->0056e4 [5]=ff80->005454 [6]=ff00->005660 [7]=ff00->0056e4
+[ 181.367] -> TX burst, block=9
+[ 181.503]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 181.868] -> TX burst, block=9
+[ 182.003]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 182.235] heartbeat frame=10920 tx=1617 rx=1606 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0051 rxpend=0000
+[ 182.235]   [tcb] [0]=ff80->006782 [1]=ffc0->007fb6
+[ 182.368] -> TX burst, block=10
+[ 182.504]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 182.869] -> TX burst, block=10
+[ 183.005]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 183.236] heartbeat frame=10980 tx=1623 rx=1612 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0057 rxpend=0000
+[ 183.236]   [tcb] [0]=ff80->006782 [1]=ffc0->008082
+[ 183.370] -> TX burst, block=11
+[ 183.506]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 183.870] -> TX burst, block=11
+[ 184.006]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 184.237] heartbeat frame=11040 tx=1629 rx=1618 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=005d rxpend=0000
+[ 184.237]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff80->007944 [3]=ff80->007d70 [4]=ff80->007944 [5]=ff80->007d70
+[ 184.371] -> TX burst, block=11
+[ 184.506]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 184.872] -> TX burst, block=12
+[ 185.007]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 185.239] heartbeat frame=11100 tx=1635 rx=1624 fc=9 fd=90 fe=9 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0063 rxpend=0000
+[ 185.239]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff80->007944 [3]=ff80->007d70 [4]=ff80->007944 [5]=ff80->007d70
+[ 185.372] -> TX burst, block=12
+[ 185.508]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 185.873] -> TX burst, block=12
+[ 186.009]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 186.240] heartbeat frame=11160 tx=1641 rx=1630 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0069 rxpend=0000
+[ 186.240]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff80->007944 [3]=ff80->007d70 [4]=ff80->007944 [5]=ff80->007d70
+[ 186.374] -> TX burst, block=13
+[ 186.509]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 186.874] -> TX burst, block=13
+[ 187.009]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 187.241] heartbeat frame=11220 tx=1647 rx=1636 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=006f rxpend=0000
+[ 187.241]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff00->0079fe [3]=ff00->0079fe [4]=ff00->0079fe [5]=ff00->0079fe
+[ 187.375] -> TX burst, block=14
+[ 187.510]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 187.875] -> TX burst, block=14
+[ 188.011]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 188.242] heartbeat frame=11280 tx=1653 rx=1642 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0075 rxpend=0000
+[ 188.242]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [6]=ff80->007944 [7]=ff80->007d70 [8]=ff80->007944 [9]=ff80->007d70
+[ 188.376] -> TX burst, block=14
+[ 188.512]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 188.877] -> TX burst, block=15
+[ 189.014]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 189.244] heartbeat frame=11340 tx=1659 rx=1648 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=007b rxpend=0000
+[ 189.244]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [6]=ff80->007944 [7]=ff80->007d70 [8]=ff80->007944 [9]=ff80->007d70
+[ 189.377] -> TX burst, block=15
+[ 189.430]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 189.446]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 189.878] -> TX burst, block=15
+[ 189.949]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 190.245] heartbeat frame=11400 tx=1665 rx=1661 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0081 rxpend=0000
+[ 190.245]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [6]=ff80->007944 [7]=ff80->007d70 [8]=ff80->007944 [9]=ff80->007d70
+[ 190.379] -> TX burst, block=16
+[ 190.431]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 190.879] -> TX burst, block=16
+[ 190.915]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 191.246] heartbeat frame=11460 tx=1671 rx=1667 fc=9 fd=90 fe=9 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0087 rxpend=0000
+[ 191.246]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff80->007944 [3]=ff80->007d70 [4]=ff80->007944 [5]=ff80->007d70 [6]=ff00->007a24 [7]=ff00->007a24 [8]=ff00->007a24 [9]=ff00->007a24
+[ 191.380] -> TX burst, block=17
+[ 191.416]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 191.881] -> TX burst, block=17
+[ 191.916]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 192.248] heartbeat frame=11520 tx=1677 rx=1673 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=008d rxpend=0000
+[ 192.248]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff80->007944 [3]=ff80->007d70 [4]=ff80->007944 [5]=ff80->007d70
+[ 192.381] -> TX burst, block=17
+[ 192.417]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 192.882] -> TX burst, block=18
+[ 193.249] heartbeat frame=11580 tx=1683 rx=1676 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0093 rxpend=0000
+[ 193.249]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff80->007944 [3]=ff80->007d70 [4]=ff80->007944 [5]=ff80->007d70
+[ 193.383] -> TX burst, block=18
+[ 193.418]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 193.883] -> TX burst, block=18
+[ 193.919]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 194.250] heartbeat frame=11640 tx=1689 rx=1682 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0099 rxpend=0000
+[ 194.250]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff00->007a24 [3]=ff00->007a24 [4]=ff00->007a24 [5]=ff00->007a24 [6]=ff80->007944 [7]=ff80->007d70 [8]=ff80->007944 [9]=ff80->007d70
+[ 194.384] -> TX burst, block=19
+[ 194.884] -> TX burst, block=19
+[ 195.251] heartbeat frame=11700 tx=1695 rx=1682 fc=9 fd=90 fe=9 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=009f rxpend=0000
+[ 195.251]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [6]=ff80->007944 [7]=ff80->007d70 [8]=ff80->007944 [9]=ff80->007d70
+[ 195.385] -> TX burst, block=20
+[ 195.388]   [dbg] write $ffa500 = 00 (pc=0183ac)
+[ 195.404]   [menu-state] write $ffa173 = 0000 mask=00ff (pc=01937c)
+[ 195.404]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019382)
+[ 195.404]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=01938a)
+[ 195.404] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[ 195.721]   [dbg] write $ffa500 = 7f (pc=018334)
+[ 195.738] CMD $FE (loopback test) -> answering OK (nonzero)
+[ 195.738]   [dbg] write $ffa500 = 81 (pc=018358)
+[ 195.738]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 195.738]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 195.738]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 195.738]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[ 195.752] -> TX burst, block=0
+[ 195.754]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[ 195.754]   [dbg] write $ffa500 = 00 (pc=0183ac)
+[ 195.773]   [menu-state] write $ffa173 = 0000 mask=00ff (pc=01937c)
+[ 195.773]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019382)
+[ 195.773]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=01938a)
+[ 195.773] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[ 196.055]   [dbg] write $ffa500 = 7f (pc=018334)
+[ 196.072] CMD $FE (loopback test) -> answering OK (nonzero)
+[ 196.072]   [dbg] write $ffa500 = 81 (pc=018358)
+[ 196.072]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 196.072]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 196.072]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 196.072]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[ 196.086] -> TX burst, block=0
+[ 196.088]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[ 196.088]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 196.253] heartbeat frame=11760 tx=1795 rx=1941 fc=11 fd=110 fe=11 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0003 rxpend=0000
+[ 196.253]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [6]=ff00->0079fe [7]=ff00->0079fe [8]=ff00->0079fe [9]=ff00->0079fe
+[ 196.289]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 196.587] -> TX burst, block=0
+[ 196.789]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 197.087] -> TX burst, block=0
+[ 197.254] heartbeat frame=11820 tx=1801 rx=1947 fc=11 fd=110 fe=11 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0009 rxpend=0000
+[ 197.254]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff80->007944 [3]=ff80->007d70 [4]=ff80->007944 [5]=ff80->007d70
+[ 197.290]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 197.588] -> TX burst, block=1
+[ 197.791]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 198.089] -> TX burst, block=1
+[ 198.241]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 198.255] heartbeat frame=11880 tx=1807 rx=1956 fc=11 fd=110 fe=11 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=000f rxpend=0000
+[ 198.255]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff00->0079fe [3]=ff00->0079fe [4]=ff00->0079fe [5]=ff00->0079fe
+[ 198.589] -> TX burst, block=2
+[ 198.742]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 199.090] -> TX burst, block=2
+[ 199.242]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 199.257] heartbeat frame=11940 tx=1813 rx=1962 fc=11 fd=110 fe=11 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0015 rxpend=0000
+[ 199.257]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [6]=ff80->007944 [7]=ff80->007d70 [8]=ff80->007944 [9]=ff80->007d70
+[ 199.591] -> TX burst, block=2
+[ 199.741] -> TX burst, block=3
+[ 199.747]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 199.747]   [menu-state] write $ffa170 = a2a2 mask=ff00 (pc=00dc36)
+[ 199.747]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[ 199.747]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 199.747]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 199.747]   [header-byte] write $ffa513 = 14 mask=00ff (pc=01b044)
+[ 199.757] -> TX burst, block=3
+[ 200.244]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 200.258] heartbeat frame=12000 tx=1826 rx=1968 fc=11 fd=110 fe=11 linkflag=81 pc=000288 a502=00 a524=0003 a525=03 a170=a2 a17f=00 txtail=0022 rxpend=0000
+[ 200.258]   [tcb] [0]=ff80->006782 [3]=ff80->00cea4 [4]=ff80->00cec4 [5]=ff80->00cec4 [10]=ff80->00cec4 [11]=ff80->00cec4 [12]=ff80->00cec4 [13]=ff80->00449a [15]=ff80->00cea4 [16]=ff80->00cec4 [17]=ff80->00cec4 [18]=ff80->00cec4 [19]=ff80->00cec4 [20]=ff80->00cec4 [21]=ff80->00449a
+[ 200.258] -> TX burst, block=4
+[ 200.745]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 200.759] -> TX burst, block=4
+[ 201.247]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 201.259] heartbeat frame=12060 tx=1832 rx=1974 fc=11 fd=110 fe=11 linkflag=81 pc=000288 a502=00 a524=0003 a525=03 a170=a2 a17f=00 txtail=0028 rxpend=0000
+[ 201.259]   [tcb] [0]=ff80->006782 [3]=ff80->00cec4 [13]=ff80->00449a [15]=ff80->00cec4 [21]=ff80->00449a
+[ 201.259] -> TX burst, block=5
+[ 201.760] -> TX burst, block=5
+[ 201.763]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 202.260] heartbeat frame=12120 tx=1838 rx=1980 fc=11 fd=110 fe=11 linkflag=81 pc=00028a a502=00 a524=0003 a525=03 a170=a2 a17f=00 txtail=002e rxpend=0003
+[ 202.260]   [tcb] [0]=ffc0->00cd98 [1]=ffc0->00ca8a [2]=ffc0->00ca8a [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e
+[ 202.261] -> TX burst, block=5
+[ 202.263]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 202.630]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 202.761] -> TX burst, block=6
+[ 203.262] heartbeat frame=12180 tx=1844 rx=1983 fc=11 fd=110 fe=11 linkflag=81 pc=00028a a502=00 a524=0003 a525=03 a170=a2 a17f=00 txtail=0034 rxpend=0000
+[ 203.262]   [tcb] [0]=ffc0->00cd98 [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e [9]=ff80->0086ee [10]=ff80->00c936
+[ 203.262] -> TX burst, block=6
+[ 203.381]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 203.763] -> TX burst, block=7
+[ 203.881]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 204.263] heartbeat frame=12240 tx=1850 rx=1989 fc=11 fd=110 fe=11 linkflag=81 pc=00028a a502=00 a524=0003 a525=03 a170=a2 a17f=00 txtail=003a rxpend=0000
+[ 204.263]   [tcb] [0]=ffc0->00cd98 [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e [9]=ff80->0086ee [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 204.263] -> TX burst, block=7
+[ 204.382]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 204.764] -> TX burst, block=7
+[ 204.882]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 205.264] heartbeat frame=12300 tx=1856 rx=1995 fc=11 fd=110 fe=11 linkflag=81 pc=00028a a502=00 a524=0003 a525=03 a170=a2 a17f=00 txtail=0040 rxpend=0000
+[ 205.264]   [tcb] [0]=ffc0->00cd98 [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e [9]=ff80->0086ee [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 205.265] -> TX burst, block=8
+[ 205.383]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 205.765] -> TX burst, block=8
+[ 205.884]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 206.266] heartbeat frame=12360 tx=1862 rx=2001 fc=11 fd=110 fe=11 linkflag=81 pc=00028a a502=00 a524=0003 a525=03 a170=a2 a17f=00 txtail=0046 rxpend=0000
+[ 206.266]   [tcb] [0]=ffc0->00cd98 [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e [9]=ff80->0086ee [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 206.266] -> TX burst, block=8
+[ 206.385]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 206.766] -> TX burst, block=9
+[ 206.885]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 206.901]   [menu-state] write $ffa172 = 0101 mask=ff00 (pc=0194b6)
+[ 206.920]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=0193f4)
+[ 206.920]   [menu-state] write $ffa171 = 0000 mask=00ff (pc=0193fc)
+[ 206.920]   [header-byte] write $ffa513 = 04 mask=00ff (pc=019e4a)
+[ 206.920]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 206.920]   [header-byte] write $ffa513 = 04 mask=00ff (pc=01b044)
+[ 206.920]   [menu-state] write $ffa170 = 8282 mask=ff00 (pc=00e06e)
+[ 206.920]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[ 206.920]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 206.920]   [header-byte] write $ffa513 = 04 mask=00ff (pc=01b044)
+[ 206.933] -> TX burst, block=9
+[ 207.267] heartbeat frame=12420 tx=1873 rx=2007 fc=11 fd=110 fe=11 linkflag=81 pc=000ff2 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0051 rxpend=0000
+[ 207.267]   [tcb] 
+[ 207.845]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 207.888]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 208.268] heartbeat frame=12480 tx=1873 rx=2013 fc=11 fd=110 fe=11 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0051 rxpend=0000
+[ 208.268]   [tcb] [0]=ff80->006782 [1]=ffc0->007f6e [2]=ff80->00539a [3]=ff00->005660 [4]=ff00->0056e4 [5]=ff80->00539a [6]=ff00->005660 [7]=ff00->0056e4 [8]=ff80->0086ee [9]=ff80->0086ee
+[ 208.318] -> TX burst, block=10
+[ 208.387]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 208.819] -> TX burst, block=10
+[ 208.888]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 209.269] heartbeat frame=12540 tx=1879 rx=2019 fc=11 fd=110 fe=11 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0057 rxpend=0000
+[ 209.269]   [tcb] [0]=ff80->006782 [1]=ffc0->007f6e [2]=ff80->00539a [3]=ff00->005660 [4]=ff00->0056e4 [5]=ff80->00539a [6]=ff00->005660 [7]=ff00->0056e4 [8]=ff80->0086ee [9]=ff80->0086ee
+[ 209.320] -> TX burst, block=11
+[ 209.388]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 209.820] -> TX burst, block=11
+[ 209.889]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 210.271] heartbeat frame=12600 tx=1885 rx=2025 fc=11 fd=110 fe=11 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=005d rxpend=0000
+[ 210.271]   [tcb] [0]=ff80->006782 [1]=ffc0->007f6e [2]=ff80->00539a [3]=ff00->005660 [4]=ff00->0056e4 [5]=ff80->00539a [6]=ff00->005660 [7]=ff00->0056e4 [8]=ff80->0086ee [9]=ff80->0086ee
+[ 210.321] -> TX burst, block=11
+[ 210.390]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 210.822] -> TX burst, block=12
+[ 211.272] heartbeat frame=12660 tx=1891 rx=2028 fc=11 fd=110 fe=11 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0063 rxpend=0000
+[ 211.272]   [tcb] [0]=ff80->006782 [1]=ffc0->007f6e [2]=ff80->00539a [3]=ff00->005660 [4]=ff00->0056e4 [5]=ff80->00539a [6]=ff00->005660 [7]=ff00->0056e4 [8]=ff80->0086ee [9]=ff80->0086ee
+[ 211.322] -> TX burst, block=12
+[ 211.358]   [dbg] write $ffa500 = 00 (pc=0183ac)
+[ 211.374]   [menu-state] write $ffa173 = 0000 mask=00ff (pc=01937c)
+[ 211.374]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019382)
+[ 211.374]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=01938a)
+[ 211.374] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[ 211.692]   [dbg] write $ffa500 = 7f (pc=018334)
+[ 211.708] CMD $FE (loopback test) -> answering OK (nonzero)
+[ 211.708]   [dbg] write $ffa500 = 81 (pc=018358)
+[ 211.708]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 211.708]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 211.708]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 211.708]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[ 211.723] -> TX burst, block=0
+[ 211.725]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[ 211.875]   [dbg] write $ffa500 = 00 (pc=0183ac)
+[ 211.892]   [menu-state] write $ffa173 = 0000 mask=00ff (pc=01937c)
+[ 211.892]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019382)
+[ 211.892]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=01938a)
+[ 211.892] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[ 212.159]   [dbg] write $ffa500 = 7f (pc=018334)
+[ 212.175] CMD $FE (loopback test) -> answering OK (nonzero)
+[ 212.175]   [dbg] write $ffa500 = 81 (pc=018358)
+[ 212.176]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 212.176]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 212.176]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 212.176]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[ 212.190] -> TX burst, block=0
+[ 212.192]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[ 212.192]   [dbg] write $ffa500 = 00 (pc=0183ac)
+[ 212.209]   [menu-state] write $ffa173 = 0000 mask=00ff (pc=01937c)
+[ 212.209]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019382)
+[ 212.209]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=01938a)
+[ 212.209] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[ 212.273] heartbeat frame=12720 tx=2304 rx=2540 fc=13 fd=130 fe=13 linkflag=00 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0000 rxpend=0000
+[ 212.273]   [tcb] [0]=ff80->006782 [1]=ffc0->007f6e [2]=ff80->00539a [3]=ff00->005660 [4]=ff00->0056e4 [5]=ff80->00539a [6]=ff00->005660 [7]=ff00->0056e4 [8]=ff80->0086ee [9]=ff80->0086ee
+[ 212.492]   [dbg] write $ffa500 = 7f (pc=018334)
+[ 212.509] CMD $FE (loopback test) -> answering OK (nonzero)
+[ 212.509]   [dbg] write $ffa500 = 81 (pc=018358)
+[ 212.509]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 212.509]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 212.509]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 212.509]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[ 212.524] -> TX burst, block=0
+[ 212.526]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[ 212.526]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 212.776]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 213.025] -> TX burst, block=0
+[ 213.275] heartbeat frame=12780 tx=2310 rx=2549 fc=14 fd=140 fe=14 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0006 rxpend=0003
+[ 213.275]   [tcb] [0]=ff80->006782 [1]=ffc0->007f6e [2]=ff80->00539a [3]=ff00->005660 [4]=ff00->0056e4 [5]=ff80->00539a [6]=ff00->005660 [7]=ff00->0056e4 [8]=ff80->0086ee [9]=ff80->0086ee
+[ 213.277]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 213.525] -> TX burst, block=0
+[ 213.778]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 214.026] -> TX burst, block=1
+[ 214.276] heartbeat frame=12840 tx=2316 rx=2555 fc=14 fd=140 fe=14 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=000c rxpend=0003
+[ 214.276]   [tcb] [0]=ff80->006782 [1]=ffc0->007f6e [2]=ff80->00539a [3]=ff00->005660 [4]=ff00->0056e4 [5]=ff80->00539a [6]=ff00->005660 [7]=ff00->0056e4 [8]=ff80->0086ee [9]=ff80->0086ee
+[ 214.278]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 214.526] -> TX burst, block=1
+[ 214.763]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 215.027] -> TX burst, block=2
+[ 215.263]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 215.277] heartbeat frame=12900 tx=2322 rx=2561 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0012 rxpend=0000
+[ 215.277]   [tcb] [0]=ff80->006782 [1]=ffc0->007fb6
+[ 215.528] -> TX burst, block=2
+[ 215.764]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 216.028] -> TX burst, block=2
+[ 216.264]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 216.278] heartbeat frame=12960 tx=2328 rx=2567 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0018 rxpend=0000
+[ 216.278]   [tcb] [0]=ff80->006782 [1]=ffc0->007fb6
+[ 216.529] -> TX burst, block=3
+[ 216.764]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 217.030] -> TX burst, block=3
+[ 217.266]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 217.280] heartbeat frame=13020 tx=2334 rx=2573 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=001e rxpend=0000
+[ 217.280]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff80->007944 [3]=ff80->007d70 [4]=ff80->007944 [5]=ff80->007d70
+[ 217.530] -> TX burst, block=3
+[ 217.766]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 218.031] -> TX burst, block=4
+[ 218.281] heartbeat frame=13080 tx=2340 rx=2579 fc=14 fd=140 fe=14 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0024 rxpend=0003
+[ 218.281]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff80->007944 [3]=ff80->007d70 [4]=ff80->007944 [5]=ff80->007d70
+[ 218.283]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 218.532] -> TX burst, block=4
+[ 218.784]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 219.032] -> TX burst, block=5
+[ 219.282] heartbeat frame=13140 tx=2346 rx=2585 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=002a rxpend=0003
+[ 219.282]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff80->007944 [3]=ff80->007d70 [4]=ff80->007944 [5]=ff80->007d70
+[ 219.285]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 219.533] -> TX burst, block=5
+[ 219.786]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 220.034] -> TX burst, block=5
+[ 220.284] heartbeat frame=13200 tx=2352 rx=2591 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0030 rxpend=0003
+[ 220.284]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff80->007944 [3]=ff80->007d70 [4]=ff80->007944 [5]=ff80->007d70
+[ 220.286]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 220.534] -> TX burst, block=6
+[ 220.787]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 221.035] -> TX burst, block=6
+[ 221.285] heartbeat frame=13260 tx=2358 rx=2594 fc=14 fd=140 fe=14 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0036 rxpend=0000
+[ 221.285]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [6]=ff80->007944 [7]=ff80->007d70 [8]=ff80->007944 [9]=ff80->007d70
+[ 221.535] -> TX burst, block=6
+[ 221.705]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 222.036] -> TX burst, block=7
+[ 222.205]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 222.286] heartbeat frame=13320 tx=2364 rx=2600 fc=14 fd=140 fe=14 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=003c rxpend=0000
+[ 222.286]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [6]=ff80->007944 [7]=ff80->007d70 [8]=ff80->007944 [9]=ff80->007d70
+[ 222.537] -> TX burst, block=7
+[ 222.956]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 223.037] -> TX burst, block=8
+[ 223.288] heartbeat frame=13380 tx=2370 rx=2603 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0042 rxpend=0000
+[ 223.288]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [6]=ff80->007944 [7]=ff80->007d70 [8]=ff80->007944 [9]=ff80->007d70
+[ 223.457]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 223.538] -> TX burst, block=8
+[ 224.039] -> TX burst, block=8
+[ 224.257]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 224.289] heartbeat frame=13440 tx=2376 rx=2609 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0048 rxpend=0000
+[ 224.289]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff80->007944 [3]=ff80->007d70 [4]=ff80->007944 [5]=ff80->007d70 [6]=ff00->007a24 [7]=ff00->007a24 [8]=ff00->007a24 [9]=ff00->007a24
+[ 224.539] -> TX burst, block=9
+[ 225.009]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 225.040] -> TX burst, block=9
+[ 225.176]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 225.290] heartbeat frame=13500 tx=2382 rx=2615 fc=14 fd=140 fe=14 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=004e rxpend=0000
+[ 225.290]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff80->007944 [3]=ff80->007d70 [4]=ff80->007944 [5]=ff80->007d70
+[ 225.541] -> TX burst, block=9
+[ 225.743]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 226.041] -> TX burst, block=10
+[ 226.244]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 226.291] heartbeat frame=13560 tx=2388 rx=2621 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0054 rxpend=0000
+[ 226.291]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff80->007944 [3]=ff80->007d70 [4]=ff80->007944 [5]=ff80->007d70
+[ 226.542] -> TX burst, block=10
+[ 226.744]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 227.043] -> TX burst, block=11
+[ 227.245]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 227.293] heartbeat frame=13620 tx=2394 rx=2627 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=005a rxpend=0000
+[ 227.293]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff00->007a16 [3]=ff00->007a24 [4]=ff00->007a16 [5]=ff00->007a24 [6]=ff80->007944 [7]=ff80->007d70 [8]=ff80->007944 [9]=ff80->007d70
+[ 227.543] -> TX burst, block=11
+[ 227.745]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 228.044] -> TX burst, block=11
+[ 228.246]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 228.294] heartbeat frame=13680 tx=2400 rx=2633 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0060 rxpend=0000
+[ 228.294]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [6]=ff80->007944 [7]=ff80->007d70 [8]=ff80->007944 [9]=ff80->007d70
+[ 228.544] -> TX burst, block=12
+[ 228.748]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 229.045] -> TX burst, block=12
+[ 229.248]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 229.295] heartbeat frame=13740 tx=2406 rx=2639 fc=14 fd=140 fe=14 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0066 rxpend=0000
+[ 229.295]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [6]=ff80->0079d4 [7]=ff00->0079fe [8]=ff80->0079d4 [9]=ff00->0079fe
+[ 229.546] -> TX burst, block=12
+[ 229.598]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 229.715]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 230.046] -> TX burst, block=13
+[ 230.297] heartbeat frame=13800 tx=2412 rx=2645 fc=14 fd=140 fe=14 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=006c rxpend=0000
+[ 230.297]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff80->007944 [3]=ff80->007d70 [4]=ff80->007944 [5]=ff80->007d70
+[ 230.501]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 230.547] -> TX burst, block=13
+[ 231.000]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 231.048] -> TX burst, block=14
+[ 231.298] heartbeat frame=13860 tx=2418 rx=2651 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0072 rxpend=0000
+[ 231.298]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [2]=ff80->0079d4 [3]=ff00->0079fe [4]=ff80->0079d4 [5]=ff00->0079fe
+[ 231.500]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 231.548] -> TX burst, block=14
+[ 232.001]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 232.049] -> TX burst, block=14
+[ 232.299] heartbeat frame=13920 tx=2424 rx=2657 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0078 rxpend=0000
+[ 232.299]   [tcb] [0]=ff80->006782 [1]=ffc0->008082 [6]=ff80->007944 [7]=ff80->007d70 [8]=ff80->007944 [9]=ff80->007d70
+[ 232.502]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 232.550] -> TX burst, block=15
+[ 233.000] -> TX burst, block=15
+[ 233.005]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 233.005]   [menu-state] write $ffa170 = a2a2 mask=ff00 (pc=00dc36)
+[ 233.005]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[ 233.005]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 233.005]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 233.005]   [header-byte] write $ffa513 = 14 mask=00ff (pc=01b044)
+[ 233.017] -> TX burst, block=16
+[ 233.300] heartbeat frame=13980 tx=2437 rx=2663 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=a2 a17f=00 txtail=0085 rxpend=0000
+[ 233.300]   [tcb] [0]=ff80->006782 [3]=ff80->00cea4 [4]=ff80->00cec4 [5]=ff80->00cec4 [10]=ff80->00cec4 [11]=ff80->00cea4 [12]=ff80->00cea4 [13]=ff80->00449a [15]=ff80->00cea4 [16]=ff80->00cec4 [17]=ff80->00cec4 [18]=ff80->00cec4 [19]=ff80->00cea4 [20]=ff80->00cea4 [21]=ff80->00449a
+[ 233.503]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 233.518] -> TX burst, block=16
+[ 234.004]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 234.018] -> TX burst, block=17
+[ 234.302] heartbeat frame=14040 tx=2443 rx=2669 fc=14 fd=140 fe=14 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=a2 a17f=00 txtail=008b rxpend=0000
+[ 234.302]   [tcb] [0]=ff80->006782 [3]=ff80->00cec4 [12]=ff80->00cec4 [13]=ff80->00449a [15]=ff80->00cec4 [20]=ff80->00cec4 [21]=ff80->00449a
+[ 234.504]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 234.519] -> TX burst, block=17
+[ 235.005]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 235.020] -> TX burst, block=17
+[ 235.303] heartbeat frame=14100 tx=2449 rx=2675 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=a2 a17f=00 txtail=0091 rxpend=0000
+[ 235.303]   [tcb] [0]=ffc0->00cd98 [1]=ffc0->00ca8a [2]=ffc0->00ca8a [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e
+[ 235.505]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 235.520] -> TX burst, block=18
+[ 236.006]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 236.021] -> TX burst, block=18
+[ 236.304] heartbeat frame=14160 tx=2455 rx=2681 fc=14 fd=140 fe=14 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=a2 a17f=00 txtail=0097 rxpend=0000
+[ 236.304]   [tcb] [0]=ffc0->00cd98 [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e [9]=ff80->0086ee [10]=ff80->00c936
+[ 236.507]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 236.521] -> TX burst, block=19
+[ 237.007]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 237.022] -> TX burst, block=19
+[ 237.306] heartbeat frame=14220 tx=2461 rx=2687 fc=14 fd=140 fe=14 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=a2 a17f=00 txtail=009d rxpend=0000
+[ 237.306]   [tcb] [0]=ffc0->00cd98 [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e [9]=ff80->0086ee [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 237.508]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 237.523] -> TX burst, block=19
+[ 238.009]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 238.023] -> TX burst, block=20
+[ 238.307] heartbeat frame=14280 tx=2467 rx=2693 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=a2 a17f=00 txtail=00a3 rxpend=0000
+[ 238.307]   [tcb] [0]=ffc0->00cd98 [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e [9]=ff80->0086ee [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 238.460]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 238.476]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 238.524] -> TX burst, block=20
+[ 238.976]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 239.025] -> TX burst, block=20
+[ 239.308] heartbeat frame=14340 tx=2473 rx=2706 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=a2 a17f=00 txtail=00a9 rxpend=0000
+[ 239.308]   [tcb] [0]=ffc0->00cd98 [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e [9]=ff80->0086ee [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 239.477]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 239.525] -> TX burst, block=21
+[ 239.978]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 240.026] -> TX burst, block=21
+[ 240.309] heartbeat frame=14400 tx=2479 rx=2712 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=a2 a17f=00 txtail=00af rxpend=0000
+[ 240.309]   [tcb] [0]=ffc0->00cd98 [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e [9]=ff80->0086ee [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 240.479]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 240.527] -> TX burst, block=22
+[ 240.981]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 241.027] -> TX burst, block=22
+[ 241.311] heartbeat frame=14460 tx=2485 rx=2718 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=a2 a17f=00 txtail=00b5 rxpend=0000
+[ 241.311]   [tcb] [0]=ffc0->00cd98 [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e [9]=ff80->0086ee [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 241.480]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 241.528] -> TX burst, block=22
+[ 241.931]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 242.029] -> TX burst, block=23
+[ 242.312] heartbeat frame=14520 tx=2491 rx=2724 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=a2 a17f=00 txtail=00bb rxpend=0000
+[ 242.312]   [tcb] [0]=ffc0->00cd98 [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e [9]=ff80->0086ee [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 242.448]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 242.529] -> TX burst, block=23
+[ 242.949]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 243.030] -> TX burst, block=23
+[ 243.313] heartbeat frame=14580 tx=2497 rx=2730 fc=14 fd=140 fe=14 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=a2 a17f=00 txtail=00c1 rxpend=0000
+[ 243.313]   [tcb] [0]=ffc0->00cd98 [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e [9]=ff80->0086ee [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 243.449]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 243.530] -> TX burst, block=24
+[ 243.950]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 244.031] -> TX burst, block=24
+[ 244.315] heartbeat frame=14640 tx=2503 rx=2736 fc=14 fd=140 fe=14 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=a2 a17f=00 txtail=00c7 rxpend=0000
+[ 244.315]   [tcb] [0]=ffc0->00cd98 [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e [9]=ff80->0086ee [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 244.450]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 244.532] -> TX burst, block=25
+[ 244.953]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 245.032] -> TX burst, block=25
+[ 245.316] heartbeat frame=14700 tx=2509 rx=2742 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=a2 a17f=00 txtail=00cd rxpend=0000
+[ 245.316]   [tcb] [0]=ffc0->00cd98 [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e [9]=ff80->0086ee [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 245.452]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 245.533] -> TX burst, block=25
+[ 245.953]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 246.034] -> TX burst, block=26
+[ 246.317] heartbeat frame=14760 tx=2515 rx=2748 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=a2 a17f=00 txtail=00d3 rxpend=0000
+[ 246.317]   [tcb] [0]=ffc0->00cd98 [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f2d4 [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->01510e [8]=ff80->01510e [9]=ff80->0086ee [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 246.418] -> TX burst, block=26
+[ 246.453]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[ 246.918] -> TX burst, block=27
+[ 247.318] heartbeat frame=14820 tx=2523 rx=2751 fc=14 fd=140 fe=14 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=a2 a17f=00 txtail=00db rxpend=0000
+[ 247.318]   [tcb] [0]=ffc0->00cd98 [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f3cc [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->015156 [8]=ff80->015156 [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 247.419] -> TX burst, block=27
+[ 247.421]   [dbg] write $ffa500 = 00 (pc=0183ac)
+[ 247.437]   [menu-state] write $ffa173 = 0000 mask=00ff (pc=01937c)
+[ 247.437]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019382)
+[ 247.437]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=01938a)
+[ 247.437] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[ 247.738]   [dbg] write $ffa500 = 7f (pc=018334)
+[ 247.755] CMD $FE (loopback test) -> answering OK (nonzero)
+[ 247.755]   [dbg] write $ffa500 = 81 (pc=018358)
+[ 247.755]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 247.755]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 247.755]   [header-byte] write $ffa513 = 14 mask=00ff (pc=01b044)
+[ 247.769] -> TX burst, block=0
+[ 247.772]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[ 247.772]   [dbg] write $ffa500 = 00 (pc=0183ac)
+[ 247.788]   [menu-state] write $ffa173 = 0000 mask=00ff (pc=01937c)
+[ 247.788]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019382)
+[ 247.788]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=01938a)
+[ 247.788] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[ 248.072]   [dbg] write $ffa500 = 7f (pc=018334)
+[ 248.089] CMD $FE (loopback test) -> answering OK (nonzero)
+[ 248.089]   [dbg] write $ffa500 = 81 (pc=018358)
+[ 248.089]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 248.089]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 248.089]   [header-byte] write $ffa513 = 14 mask=00ff (pc=01b044)
+[ 248.103] -> TX burst, block=0
+[ 248.105]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[ 248.105]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[ 248.105]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 248.320] heartbeat frame=14880 tx=2563 rx=3013 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=a2 a17f=00 txtail=0003 rxpend=0000
+[ 248.320]   [tcb] [0]=ffc0->00cd98 [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f3cc [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [7]=ff80->015172 [8]=ff80->015172 [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 248.572]   [menu-state] write $ffa170 = 8080 mask=ff00 (pc=00e0e2)
+[ 248.572]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[ 248.572]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 248.572]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 248.572]   [header-byte] write $ffa513 = 14 mask=00ff (pc=01b044)
+[ 248.587] -> TX burst, block=0
+[ 248.591]   [menu-state] write $ffa170 = 0808 mask=ff00 (pc=018062)
+[ 248.591]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[ 248.591]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 248.591]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 248.591]   [header-byte] write $ffa513 = 11 mask=00ff (pc=01b034)
+[ 248.591]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 248.604] -> TX burst, block=0
+[ 249.090]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 249.104] -> TX burst, block=1
+[ 249.321] heartbeat frame=14940 tx=2572 rx=3019 fc=16 fd=160 fe=16 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=08 a17f=00 txtail=000c rxpend=0000
+[ 249.321]   [tcb] [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f3cc [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 249.591]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 249.605] -> TX burst, block=1
+[ 250.091]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 250.106] -> TX burst, block=2
+[ 250.322] heartbeat frame=15000 tx=2578 rx=3025 fc=16 fd=160 fe=16 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=08 a17f=00 txtail=0012 rxpend=0000
+[ 250.322]   [tcb] [1]=ff40->00c9ce [2]=ff40->00c9ce [3]=ffc0->00f3cc [4]=ffc0->00f1e0 [5]=ffc0->00f1e0 [6]=ffc0->00ff8e [11]=ff40->00c9ce [12]=ff40->00c9ce [13]=ff40->00c9ce [14]=ff40->00c9ce [15]=ff40->00c9ce [16]=ff40->00c9ce [17]=ff40->00c9ce [18]=ff40->00c9ce [19]=ff40->00c9ce [20]=ff40->00c9ce [21]=ff40->00c9ce [22]=ff40->00c9ce [23]=ff40->00c9ce [24]=ff40->00c9ce [25]=ff40->00c9ce [26]=ff40->00c9ce [27]=ff40->00c9ce [28]=ff40->00c9ce [29]=ff40->00c9ce [30]=ff40->00c9ce [31]=ff40->00c9ce [32]=ff40->00c9ce [33]=ff40->00c9ce [34]=ff40->00c9ce [35]=ff40->00c9ce [36]=ff40->00c9ce [37]=ff40->00c9ce [38]=ff40->00c9ce [39]=ff40->00c9ce [40]=ff40->00c9ce
+[ 250.592]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[ 250.606] -> TX burst, block=2
+[ 250.787]   [header-byte] write $ffa513 = 13 mask=00ff (pc=0189b4)
+[ 250.787]   [menu-state] write $ffa17f = 0000 mask=00ff (pc=0189c2)
+[ 250.790] -> TX burst, block=2
+[ 250.924]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[ 251.124]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 251.324] heartbeat frame=15060 tx=2584 rx=3034 fc=16 fd=160 fe=16 linkflag=81 pc=000ff2 a502=00 a524=0000 a525=00 a170=08 a17f=00 txtail=0018 rxpend=0000
+[ 251.324]   [tcb] 
+[ 251.474] -> TX burst, block=3
+[ 251.491] -> TX burst, block=3
+[ 251.508] -> TX burst, block=4
+[ 251.524] -> TX burst, block=5
+[ 251.541] -> TX burst, block=5
+[ 251.558] -> TX burst, block=6
+[ 251.574] -> TX burst, block=6
+[ 251.591] -> TX burst, block=7
+[ 251.608] -> TX burst, block=8
+[ 251.624] -> TX burst, block=8
+[ 251.641] -> TX burst, block=9
+[ 251.658] -> TX burst, block=10
+[ 251.674] -> TX burst, block=10
+[ 251.691] -> TX burst, block=11
+[ 251.708] -> TX burst, block=11
+[ 251.724] -> TX burst, block=12
+[ 251.741] -> TX burst, block=13
+[ 251.758] -> TX burst, block=13
+[ 251.774] -> TX burst, block=14
+[ 251.791] -> TX burst, block=15
+[ 251.808] -> TX burst, block=15
+[ 251.824] -> TX burst, block=16
+[ 251.827]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 251.841] -> TX burst, block=16
+[ 251.843]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 251.858] -> TX burst, block=17
+[ 251.860]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 251.875] -> TX burst, block=18
+[ 251.877]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 251.891] -> TX burst, block=18
+[ 251.893]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 251.908] -> TX burst, block=19
+[ 251.910]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 251.925] -> TX burst, block=20
+[ 251.929]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 251.941] -> TX burst, block=20
+[ 251.944]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 251.958] -> TX burst, block=21
+[ 251.960]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 251.975] -> TX burst, block=21
+[ 251.977]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 251.991] -> TX burst, block=22
+[ 251.994]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.008] -> TX burst, block=23
+[ 252.010]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.025] -> TX burst, block=23
+[ 252.027]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.041] -> TX burst, block=24
+[ 252.044]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.058] -> TX burst, block=25
+[ 252.060]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.075] -> TX burst, block=25
+[ 252.077]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.092] -> TX burst, block=26
+[ 252.094]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.108] -> TX burst, block=26
+[ 252.110]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.125] -> TX burst, block=27
+[ 252.127]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.142] -> TX burst, block=28
+[ 252.144]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.158] -> TX burst, block=28
+[ 252.161]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.175] -> TX burst, block=29
+[ 252.177]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.192] -> TX burst, block=30
+[ 252.194]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.208] -> TX burst, block=30
+[ 252.211]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.225] -> TX burst, block=31
+[ 252.227]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.242] -> TX burst, block=31
+[ 252.246]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.258] -> TX burst, block=0
+[ 252.261]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.275] -> TX burst, block=1
+[ 252.277]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.292] -> TX burst, block=1
+[ 252.294]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.308] -> TX burst, block=2
+[ 252.311]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.325] heartbeat frame=15120 tx=2839 rx=3189 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0005 a525=05 a170=08 a17f=00 txtail=0017 rxpend=0005
+[ 252.325]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->01ffe2 [7]=ff80->020004 [8]=ff80->020004 [9]=ff80->01febe [10]=ff80->01fedc
+[ 252.325] -> TX burst, block=3
+[ 252.327]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.342] -> TX burst, block=3
+[ 252.344]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.359] -> TX burst, block=4
+[ 252.361]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.375] -> TX burst, block=4
+[ 252.377]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.392] -> TX burst, block=5
+[ 252.395]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.409] -> TX burst, block=6
+[ 252.410]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.425] -> TX burst, block=6
+[ 252.427]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.442] -> TX burst, block=7
+[ 252.444]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.459] -> TX burst, block=8
+[ 252.461]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.475] -> TX burst, block=8
+[ 252.477]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.492] -> TX burst, block=9
+[ 252.494]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.509] -> TX burst, block=9
+[ 252.511]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.525] -> TX burst, block=10
+[ 252.527]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.542] -> TX burst, block=11
+[ 252.544]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.559] -> TX burst, block=11
+[ 252.561]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.575] -> TX burst, block=12
+[ 252.577]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.592] -> TX burst, block=13
+[ 252.594]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.609] -> TX burst, block=13
+[ 252.611]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.626] -> TX burst, block=14
+[ 252.627]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.642] -> TX burst, block=14
+[ 252.644]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.659] -> TX burst, block=15
+[ 252.661]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.676] -> TX burst, block=16
+[ 252.677]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.692] -> TX burst, block=16
+[ 252.694]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.709] -> TX burst, block=17
+[ 252.713]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.726] -> TX burst, block=18
+[ 252.728]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.742] -> TX burst, block=18
+[ 252.744]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.759] -> TX burst, block=19
+[ 252.761]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.776] -> TX burst, block=19
+[ 252.778]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.792] -> TX burst, block=20
+[ 252.794]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.809] -> TX burst, block=21
+[ 252.811]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.826] -> TX burst, block=21
+[ 252.828]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.842] -> TX burst, block=22
+[ 252.844]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.859] -> TX burst, block=23
+[ 252.861]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.876] -> TX burst, block=23
+[ 252.880]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.893] -> TX burst, block=24
+[ 252.895]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.909] -> TX burst, block=24
+[ 252.911]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.926] -> TX burst, block=25
+[ 252.928]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.943] -> TX burst, block=26
+[ 252.945]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.959] -> TX burst, block=26
+[ 252.961]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.976] -> TX burst, block=27
+[ 252.978]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 252.993] -> TX burst, block=28
+[ 252.995]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.009] -> TX burst, block=28
+[ 253.011]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.026] -> TX burst, block=29
+[ 253.028]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.043] -> TX burst, block=29
+[ 253.045]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.059] -> TX burst, block=30
+[ 253.061]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.076] -> TX burst, block=31
+[ 253.078]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.093] -> TX burst, block=31
+[ 253.095]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.109] -> TX burst, block=0
+[ 253.111]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.126] -> TX burst, block=1
+[ 253.128]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.143] -> TX burst, block=1
+[ 253.145]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.160] -> TX burst, block=2
+[ 253.161]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.176] -> TX burst, block=2
+[ 253.178]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.193] -> TX burst, block=3
+[ 253.197]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.210] -> TX burst, block=4
+[ 253.212]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.226] -> TX burst, block=4
+[ 253.228]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.243] -> TX burst, block=5
+[ 253.245]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.260] -> TX burst, block=6
+[ 253.262]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.276] -> TX burst, block=6
+[ 253.278]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.293] -> TX burst, block=7
+[ 253.295]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.310] -> TX burst, block=7
+[ 253.312]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.326] heartbeat frame=15180 tx=3139 rx=3489 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0005 a525=05 a170=08 a17f=00 txtail=0043 rxpend=0005
+[ 253.326]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->01ffe2 [7]=ff80->020004 [8]=ff80->020004 [9]=ff80->01febe [10]=ff80->01fedc
+[ 253.326] -> TX burst, block=8
+[ 253.328]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.343] -> TX burst, block=9
+[ 253.347]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.360] -> TX burst, block=9
+[ 253.362]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.376] -> TX burst, block=10
+[ 253.379]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.393] -> TX burst, block=11
+[ 253.395]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.410] -> TX burst, block=11
+[ 253.412]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.427] -> TX burst, block=12
+[ 253.429]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.443] -> TX burst, block=12
+[ 253.445]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.460] -> TX burst, block=13
+[ 253.462]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.477] -> TX burst, block=14
+[ 253.479]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.493] -> TX burst, block=14
+[ 253.495]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.510] -> TX burst, block=15
+[ 253.512]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.527] -> TX burst, block=16
+[ 253.529]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.543] -> TX burst, block=16
+[ 253.546]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.560] -> TX burst, block=17
+[ 253.562]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.577] -> TX burst, block=17
+[ 253.579]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.593] -> TX burst, block=18
+[ 253.596]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.610] -> TX burst, block=19
+[ 253.612]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.627] -> TX burst, block=19
+[ 253.629]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.643] -> TX burst, block=20
+[ 253.646]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.660] -> TX burst, block=21
+[ 253.664]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.677] -> TX burst, block=21
+[ 253.679]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.694] -> TX burst, block=22
+[ 253.696]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.710] -> TX burst, block=22
+[ 253.713]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.727] -> TX burst, block=23
+[ 253.729]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.744] -> TX burst, block=24
+[ 253.746]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.760] -> TX burst, block=24
+[ 253.763]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.777] -> TX burst, block=25
+[ 253.779]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.794] -> TX burst, block=26
+[ 253.796]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.810] -> TX burst, block=26
+[ 253.813]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.827] -> TX burst, block=27
+[ 253.831]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.844] -> TX burst, block=27
+[ 253.846]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.860] -> TX burst, block=28
+[ 253.863]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.877] -> TX burst, block=29
+[ 253.879]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.894] -> TX burst, block=29
+[ 253.896]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.911] -> TX burst, block=30
+[ 253.913]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.927] -> TX burst, block=31
+[ 253.929]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.944] -> TX burst, block=31
+[ 253.946]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.961] -> TX burst, block=0
+[ 253.963]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.977] -> TX burst, block=0
+[ 253.980]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 253.994] -> TX burst, block=1
+[ 253.996]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.011] -> TX burst, block=2
+[ 254.013]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.027] -> TX burst, block=2
+[ 254.030]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.044] -> TX burst, block=3
+[ 254.046]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.061] -> TX burst, block=4
+[ 254.063]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.077] -> TX burst, block=4
+[ 254.080]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.094] -> TX burst, block=5
+[ 254.096]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.111] -> TX burst, block=5
+[ 254.113]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.127] -> TX burst, block=6
+[ 254.130]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.144] -> TX burst, block=7
+[ 254.148]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.161] -> TX burst, block=7
+[ 254.163]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.178] -> TX burst, block=8
+[ 254.180]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.194] -> TX burst, block=9
+[ 254.196]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.211] -> TX burst, block=9
+[ 254.213]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.228] -> TX burst, block=10
+[ 254.230]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.244] -> TX burst, block=10
+[ 254.246]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.261] -> TX burst, block=11
+[ 254.263]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.278] -> TX burst, block=12
+[ 254.280]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.294] -> TX burst, block=12
+[ 254.298]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.311] -> TX burst, block=13
+[ 254.313]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.327] heartbeat frame=15240 tx=3439 rx=3789 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0005 a525=05 a170=08 a17f=00 txtail=006f rxpend=0005
+[ 254.327]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->01ffe2 [7]=ff80->020004 [8]=ff80->020004 [9]=ff80->01febe [10]=ff80->01fedc
+[ 254.328] -> TX burst, block=14
+[ 254.330]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.344] -> TX burst, block=14
+[ 254.346]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.361] -> TX burst, block=15
+[ 254.363]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.378] -> TX burst, block=15
+[ 254.380]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.394] -> TX burst, block=16
+[ 254.396]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.411] -> TX burst, block=17
+[ 254.413]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.428] -> TX burst, block=17
+[ 254.430]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.445] -> TX burst, block=18
+[ 254.446]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.461] -> TX burst, block=19
+[ 254.463]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.478] -> TX burst, block=19
+[ 254.480]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.495] -> TX burst, block=20
+[ 254.496]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.511] -> TX burst, block=20
+[ 254.513]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.528] -> TX burst, block=21
+[ 254.530]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.545] -> TX burst, block=22
+[ 254.546]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.561] -> TX burst, block=22
+[ 254.563]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.578] -> TX burst, block=23
+[ 254.580]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.595] -> TX burst, block=24
+[ 254.596]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.611] -> TX burst, block=24
+[ 254.615]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.628] -> TX burst, block=25
+[ 254.630]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.645] -> TX burst, block=25
+[ 254.647]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.661] -> TX burst, block=26
+[ 254.664]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.678] -> TX burst, block=27
+[ 254.680]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.695] -> TX burst, block=27
+[ 254.697]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.712] -> TX burst, block=28
+[ 254.714]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.728] -> TX burst, block=29
+[ 254.730]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.745] -> TX burst, block=29
+[ 254.747]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.762] -> TX burst, block=30
+[ 254.764]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.778] -> TX burst, block=30
+[ 254.782]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.795] -> TX burst, block=31
+[ 254.797]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.812] -> TX burst, block=0
+[ 254.814]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.828] -> TX burst, block=0
+[ 254.830]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.845] -> TX burst, block=1
+[ 254.847]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.862] -> TX burst, block=2
+[ 254.864]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.878] -> TX burst, block=2
+[ 254.880]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.895] -> TX burst, block=3
+[ 254.897]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.912] -> TX burst, block=3
+[ 254.914]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.928] -> TX burst, block=4
+[ 254.931]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.945] -> TX burst, block=5
+[ 254.947]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.962] -> TX burst, block=5
+[ 254.964]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.979] -> TX burst, block=6
+[ 254.980]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 254.995] -> TX burst, block=7
+[ 254.997]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.012] -> TX burst, block=7
+[ 255.014]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.029] -> TX burst, block=8
+[ 255.030]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.045] -> TX burst, block=8
+[ 255.047]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.062] -> TX burst, block=9
+[ 255.064]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.079] -> TX burst, block=10
+[ 255.080]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.095] -> TX burst, block=10
+[ 255.099]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.112] -> TX burst, block=11
+[ 255.114]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.129] -> TX burst, block=12
+[ 255.131]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.145] -> TX burst, block=12
+[ 255.147]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.162] -> TX burst, block=13
+[ 255.164]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.179] -> TX burst, block=13
+[ 255.181]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.195] -> TX burst, block=14
+[ 255.197]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.212] -> TX burst, block=15
+[ 255.214]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.229] -> TX burst, block=15
+[ 255.231]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.246] -> TX burst, block=16
+[ 255.250]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.262] -> TX burst, block=17
+[ 255.264]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.279] -> TX burst, block=17
+[ 255.281]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.296] -> TX burst, block=18
+[ 255.298]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.312] -> TX burst, block=18
+[ 255.314]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.329] heartbeat frame=15300 tx=3739 rx=4089 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0005 a525=05 a170=08 a17f=00 txtail=009b rxpend=0005
+[ 255.329]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->01ffe2 [7]=ff80->020004 [8]=ff80->020004 [9]=ff80->01febe [10]=ff80->01fedc
+[ 255.329] -> TX burst, block=19
+[ 255.331]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.346] -> TX burst, block=20
+[ 255.348]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.362] -> TX burst, block=20
+[ 255.365]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.379] -> TX burst, block=21
+[ 255.381]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.396] -> TX burst, block=22
+[ 255.398]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.412] -> TX burst, block=22
+[ 255.415]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.429] -> TX burst, block=23
+[ 255.431]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.446] -> TX burst, block=23
+[ 255.448]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.463] -> TX burst, block=24
+[ 255.465]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.479] -> TX burst, block=25
+[ 255.481]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.496] -> TX burst, block=25
+[ 255.498]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.513] -> TX burst, block=26
+[ 255.515]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.529] -> TX burst, block=27
+[ 255.532]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.546] -> TX burst, block=27
+[ 255.548]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.563] -> TX burst, block=28
+[ 255.567]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.579] -> TX burst, block=28
+[ 255.581]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.596] -> TX burst, block=29
+[ 255.598]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.613] -> TX burst, block=30
+[ 255.615]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.629] -> TX burst, block=30
+[ 255.631]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.646] -> TX burst, block=31
+[ 255.648]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.663] -> TX burst, block=0
+[ 255.665]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.679] -> TX burst, block=0
+[ 255.682]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.696] -> TX burst, block=1
+[ 255.698]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.713] -> TX burst, block=1
+[ 255.715]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.730] -> TX burst, block=2
+[ 255.734]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.746] -> TX burst, block=3
+[ 255.748]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.763] -> TX burst, block=3
+[ 255.765]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.780] -> TX burst, block=4
+[ 255.782]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.796] -> TX burst, block=5
+[ 255.798]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[ 255.813] -> TX burst, block=5
+[ 255.830] -> TX burst, block=6
+[ 255.846] -> TX burst, block=6
+[ 255.863] -> TX burst, block=7
+[ 255.880] -> TX burst, block=8
+[ 255.896] -> TX burst, block=8
+[ 255.913] -> TX burst, block=9
+[ 255.930] -> TX burst, block=10
+[ 255.946] -> TX burst, block=10
+[ 255.963] -> TX burst, block=11
+[ 255.980] -> TX burst, block=11
+[ 255.997] -> TX burst, block=12
+[ 256.013] -> TX burst, block=13
+[ 256.030] -> TX burst, block=13
+[ 256.047] -> TX burst, block=14
+[ 256.063] -> TX burst, block=15
+[ 256.080] -> TX burst, block=15
+[ 256.097] -> TX burst, block=16
+[ 256.113] -> TX burst, block=16
+[ 256.130] -> TX burst, block=17
+[ 256.147] -> TX burst, block=18
+[ 256.163] -> TX burst, block=18
+[ 256.197] -> TX burst, block=19
+[ 256.330] heartbeat frame=15360 tx=3999 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=08 a17f=00 txtail=009f rxpend=0003
+[ 256.330]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e
+[ 256.697] -> TX burst, block=20
+[ 257.198] -> TX burst, block=20
+[ 257.331] heartbeat frame=15420 tx=4005 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=08 a17f=00 txtail=00a5 rxpend=0003
+[ 257.331]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e
+[ 257.699] -> TX burst, block=20
+[ 258.199] -> TX burst, block=21
+[ 258.333] heartbeat frame=15480 tx=4011 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=08 a17f=00 txtail=00ab rxpend=0003
+[ 258.333]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e
+[ 258.700] -> TX burst, block=21
+[ 259.201] -> TX burst, block=21
+[ 259.334] heartbeat frame=15540 tx=4017 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=08 a17f=00 txtail=00b1 rxpend=0003
+[ 259.334]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e
+[ 259.701] -> TX burst, block=22
+[ 260.202] -> TX burst, block=22
+[ 260.335] heartbeat frame=15600 tx=4023 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=08 a17f=00 txtail=00b7 rxpend=0003
+[ 260.335]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e
+[ 260.454]   [header-byte] write $ffa513 = 10 mask=00ff (pc=018d88)
+[ 260.469] -> TX burst, block=23
+[ 260.970] -> TX burst, block=23
+[ 261.336] heartbeat frame=15660 tx=4031 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=08 a17f=00 txtail=00bf rxpend=0003
+[ 261.336]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->027726
+[ 261.470] -> TX burst, block=24
+[ 261.971] -> TX burst, block=24
+[ 262.338] heartbeat frame=15720 tx=4037 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=08 a17f=00 txtail=00c5 rxpend=0003
+[ 262.338]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->027726
+[ 262.472] -> TX burst, block=24
+[ 262.972] -> TX burst, block=25
+[ 263.339] heartbeat frame=15780 tx=4043 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=08 a17f=00 txtail=00cb rxpend=0003
+[ 263.339]   [tcb] [0]=ff80->01fbb4 [1]=ff80->01fbb6 [2]=ff80->01fbb6 [3]=ff80->01fbb6 [4]=ff80->01fbb6 [5]=ff80->01902e [6]=ff80->027726
+[ 263.473] -> TX burst, block=25
+[ 263.899]   [menu-state] write $ffa170 = 4848 mask=ff00 (pc=01a87a)
+[ 263.899]   [menu-state] write $ffa170 = 4848 mask=ff00 (pc=01a87c)
+[ 263.899]   [menu-state] write $ffa170 = 4040 mask=ff00 (pc=01afb6)
+[ 263.899]   [menu-state] write $ffa170 = c2c2 mask=ff00 (pc=01afd8)
+[ 263.899]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[ 263.899]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 263.899]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[ 263.899]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[ 263.899]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[ 264.241] -> TX burst, block=25
+[ 264.340] heartbeat frame=15840 tx=4054 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=00d6 rxpend=0003
+[ 264.340]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [2]=ff80->023c40 [3]=ff80->023c70 [4]=ff80->023c70 [5]=ff80->023c08
+[ 264.741] -> TX burst, block=26
+[ 265.242] -> TX burst, block=27
+[ 265.342] heartbeat frame=15900 tx=4060 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=00dc rxpend=0003
+[ 265.342]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [2]=ff80->023c40 [3]=ff80->023c70 [4]=ff80->023c70 [5]=ff80->023c08
+[ 265.742] -> TX burst, block=27
+[ 266.243] -> TX burst, block=28
+[ 266.343] heartbeat frame=15960 tx=4066 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=00e2 rxpend=0003
+[ 266.343]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [2]=ff80->023c40 [3]=ff80->023c70 [4]=ff80->023c70 [5]=ff80->023c08
+[ 266.744] -> TX burst, block=28
+[ 267.244] -> TX burst, block=28
+[ 267.344] heartbeat frame=16020 tx=4072 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=00e8 rxpend=0003
+[ 267.344]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [2]=ff80->023c40 [3]=ff80->023c70 [4]=ff80->023c70 [5]=ff80->023c08
+[ 267.745] -> TX burst, block=29
+[ 268.246] -> TX burst, block=29
+[ 268.346] heartbeat frame=16080 tx=4078 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=00ee rxpend=0003
+[ 268.346]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [2]=ff80->023c40 [3]=ff80->023c70 [4]=ff80->023c70 [5]=ff80->023c08
+[ 268.746] -> TX burst, block=29
+[ 269.247] -> TX burst, block=30
+[ 269.347] heartbeat frame=16140 tx=4084 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=00f4 rxpend=0003
+[ 269.347]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [2]=ff80->023c40 [3]=ff80->023c70 [4]=ff80->023c70 [5]=ff80->023c08
+[ 269.748] -> TX burst, block=30
+[ 270.248] -> TX burst, block=31
+[ 270.348] heartbeat frame=16200 tx=4090 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=00fa rxpend=0003
+[ 270.348]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [2]=ff80->023c40 [3]=ff80->023c70 [4]=ff80->023c70 [5]=ff80->023c08
+[ 270.749] -> TX burst, block=31
+[ 271.249] -> TX burst, block=31
+[ 271.349] heartbeat frame=16260 tx=4096 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=0000 rxpend=0003
+[ 271.349]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [2]=ff80->023c40 [3]=ff80->023c70 [4]=ff80->023c70 [5]=ff80->023c08
+[ 271.750] -> TX burst, block=0
+[ 272.251] -> TX burst, block=0
+[ 272.351] heartbeat frame=16320 tx=4102 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=0006 rxpend=0003
+[ 272.351]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [2]=ff80->023c40 [3]=ff80->023c70 [4]=ff80->023c70 [5]=ff80->023c08
+[ 272.751] -> TX burst, block=0
+[ 273.252] -> TX burst, block=1
+[ 273.352] heartbeat frame=16380 tx=4108 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=000c rxpend=0003
+[ 273.352]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [2]=ff80->023c40 [3]=ff80->023c70 [4]=ff80->023c70 [5]=ff80->023c08
+[ 273.753] -> TX burst, block=1
+[ 274.253] -> TX burst, block=2
+[ 274.353] heartbeat frame=16440 tx=4114 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=0012 rxpend=0003
+[ 274.353]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [2]=ff80->023c40 [3]=ff80->023c70 [4]=ff80->023c70 [5]=ff80->023c08
+[ 274.754] -> TX burst, block=2
+[ 275.255] -> TX burst, block=2
+[ 275.355] heartbeat frame=16500 tx=4120 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=0018 rxpend=0003
+[ 275.355]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [2]=ff80->023c40 [3]=ff80->023c70 [4]=ff80->023c70 [5]=ff80->023c08
+[ 275.755] -> TX burst, block=3
+[ 276.256] -> TX burst, block=3
+[ 276.356] heartbeat frame=16560 tx=4126 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=001e rxpend=0003
+[ 276.356]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [5]=ff80->023c3e
+[ 276.757] -> TX burst, block=3
+[ 277.257] -> TX burst, block=4
+[ 277.357] heartbeat frame=16620 tx=4132 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=0024 rxpend=0003
+[ 277.357]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [5]=ff80->023c3e
+[ 277.758] -> TX burst, block=4
+[ 278.259] -> TX burst, block=5
+[ 278.358] heartbeat frame=16680 tx=4138 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=002a rxpend=0003
+[ 278.358]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [5]=ff80->023c3e
+[ 278.759] -> TX burst, block=5
+[ 279.260] -> TX burst, block=5
+[ 279.360] heartbeat frame=16740 tx=4144 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=0030 rxpend=0003
+[ 279.360]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [5]=ff80->023c3e
+[ 279.760] -> TX burst, block=6
+[ 280.261] -> TX burst, block=6
+[ 280.361] heartbeat frame=16800 tx=4150 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=0036 rxpend=0003
+[ 280.361]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [5]=ff80->023c3e
+[ 280.762] -> TX burst, block=6
+[ 281.262] -> TX burst, block=7
+[ 281.362] heartbeat frame=16860 tx=4156 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=003c rxpend=0003
+[ 281.362]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [5]=ff80->023c3e
+[ 281.763] -> TX burst, block=7
+[ 282.264] -> TX burst, block=8
+[ 282.364] heartbeat frame=16920 tx=4162 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=0042 rxpend=0003
+[ 282.364]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [5]=ff80->023c3e
+[ 282.764] -> TX burst, block=8
+[ 283.265] -> TX burst, block=8
+[ 283.365] heartbeat frame=16980 tx=4168 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=0048 rxpend=0003
+[ 283.365]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [5]=ff80->023c3e
+[ 283.766] -> TX burst, block=9
+[ 284.266] -> TX burst, block=9
+[ 284.366] heartbeat frame=17040 tx=4174 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=004e rxpend=0003
+[ 284.366]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [5]=ff80->023c3e
+[ 284.767] -> TX burst, block=9
+[ 285.268] -> TX burst, block=10
+[ 285.367] heartbeat frame=17100 tx=4180 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=0054 rxpend=0003
+[ 285.367]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [5]=ff80->023c3e
+[ 285.403]   [menu-state] write $ffa172 = 0101 mask=ff00 (pc=0194b6)
+[ 285.420]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=0193f4)
+[ 285.420]   [menu-state] write $ffa171 = 0000 mask=00ff (pc=0193fc)
+[ 285.420]   [header-byte] write $ffa513 = 44 mask=00ff (pc=019e4a)
+[ 285.420]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[ 285.420]   [header-byte] write $ffa513 = 04 mask=00ff (pc=01b044)
+[ 285.434] -> TX burst, block=10
+[ 285.935] -> TX burst, block=11
+[ 286.369] heartbeat frame=17160 tx=4186 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=000288 a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=005a rxpend=0003
+[ 286.369]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [5]=ff80->023c3e
+[ 286.436] -> TX burst, block=11
+[ 286.936] -> TX burst, block=11
+[ 287.370] heartbeat frame=17220 tx=4192 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=0060 rxpend=0003
+[ 287.370]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [5]=ff80->023c3e
+[ 287.437] -> TX burst, block=12
+[ 287.938] -> TX burst, block=12
+[ 288.371] heartbeat frame=17280 tx=4198 rx=4232 fc=16 fd=160 fe=16 linkflag=81 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=0066 rxpend=0003
+[ 288.371]   [tcb] [0]=ff80->0241cc [1]=ff80->023f9e [5]=ff80->023c3e
+[ 288.438] -> TX burst, block=12
+[ 288.939] -> TX burst, block=13
+[ 289.239] === session stop ===

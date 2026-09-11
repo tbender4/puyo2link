@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Puyo Puyo Tsuu Reverse Engineering: game mechanics explained - Page 2 - Puyo Nexus Forum</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - Puyo Nexus Forum" href="/forum/app.php/feed?sid=7efea424800d539077fed72bd8a49eaf">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="/forum/app.php/feed/forums?sid=7efea424800d539077fed72bd8a49eaf">			<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Gameplay Discussion" href="/forum/app.php/feed/forum/40?sid=7efea424800d539077fed72bd8a49eaf">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - Puyo Puyo Tsuu Reverse Engineering: game mechanics explained" href="/forum/app.php/feed/topic/2304?sid=7efea424800d539077fed72bd8a49eaf">	
+	<link rel="canonical" href="https://puyonexus.com/forum/viewtopic.php?t=2304&amp;start=15">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./assets/css/font-awesome.min.css?assets_version=43" rel="stylesheet">
+<link href="./styles/pronexus/theme/stylesheet.css?assets_version=43" rel="stylesheet">
+<link href="./styles/pronexus/theme/en/stylesheet.css?assets_version=43" rel="stylesheet">
+<link href="/assets/css/common.css" rel="stylesheet">
+
+
+
+
+
+<link rel="shortcut icon" href="/assets/images/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png">
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<header id="pn-header">
+	<nav id="pn-navbar">
+		<div class="container">
+			<h1 id="pn-navbar-brand">
+				<a href="/">Puyo Nexus</a>
+			</h1>
+			<button class="pn-navbar-toggle collapsed"><span class="pn-navbar-toggle-icon" aria-hidden="true"></span></button>
+			<div class="pn-navbar-collapse collapse">
+				<ul class="pn-nav">
+					<li><a href="/wiki/">Wiki</a></li>
+					<li class="active"><a href="/forum/">Forum</a></li>
+					<li><a href="/chainsim/">Chain Simulator</a></li>
+				</ul>
+																			</div>
+		</div>
+	</nav>
+</header>						<div class="navbar" role="navigation">
+	<div class="inner container">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i>			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+					
+											<li class="separator"></li>
+													<li>
+								<a href="./memberlist.php?sid=7efea424800d539077fed72bd8a49eaf" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="./memberlist.php?mode=team&amp;sid=7efea424800d539077fed72bd8a49eaf" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="/forum/app.php/help/faq?sid=7efea424800d539077fed72bd8a49eaf" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="./ucp.php?mode=login&amp;redirect=viewtopic.php%3Fstart%3D15%26t%3D2304&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="./index.php?sid=7efea424800d539077fed72bd8a49eaf" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="32"><a itemprop="item" href="./viewforum.php?f=32&amp;sid=7efea424800d539077fed72bd8a49eaf"><span itemprop="name">Puyo Puyo</span></a><meta itemprop="position" content="2" /></span>
+															
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="40"><a itemprop="item" href="./viewforum.php?f=40&amp;sid=7efea424800d539077fed72bd8a49eaf"><span itemprop="name">Gameplay Discussion</span></a><meta itemprop="position" content="3" /></span>
+							
+					</li>
+
+		
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		<div class="container">
+			
+			
+<h2 class="topic-title"><a href="./viewtopic.php?t=2304&amp;start=15&amp;sid=7efea424800d539077fed72bd8a49eaf">Puyo Puyo Tsuu Reverse Engineering: game mechanics explained</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Discuss the gameplay of various Puyo Puyo games.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="./posting.php?mode=reply&amp;t=2304&amp;sid=7efea424800d539077fed72bd8a49eaf" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?t=2304&amp;start=15&amp;sid=7efea424800d539077fed72bd8a49eaf&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+	
+			<div class="pagination">
+			32 posts
+							<ul>
+			<li class="arrow previous"><a class="button button-icon-only" href="./viewtopic.php?t=2304&amp;sid=7efea424800d539077fed72bd8a49eaf" rel="prev" role="button"><i class="icon fa-chevron-left fa-fw" aria-hidden="true"></i><span class="sr-only">Previous</span></a></li>
+				<li><a class="button" href="./viewtopic.php?t=2304&amp;sid=7efea424800d539077fed72bd8a49eaf" role="button">1</a></li>
+			<li class="active"><span>2</span></li>
+				<li><a class="button" href="./viewtopic.php?t=2304&amp;sid=7efea424800d539077fed72bd8a49eaf&amp;start=30" role="button">3</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="./viewtopic.php?t=2304&amp;sid=7efea424800d539077fed72bd8a49eaf&amp;start=30" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p41674" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile41674">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=1457&amp;sid=7efea424800d539077fed72bd8a49eaf" class="avatar"><img class="avatar" src="./download/file.php?avatar=1457_1376795786.png" width="150" height="150" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=1457&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">JapanYoshiTheGamer</a>							</dt>
+
+						<dd class="profile-rank">Unwanted<br /><img src="./images/ranks/rank_banned.png" alt="Unwanted" title="Unwanted" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 446</dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jun 30, 2011 9:50 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Currently Japan</dd>
+												<dd class="profile-custom-field profile-pronouns"><strong>Preferred pronouns:</strong> Really, I don't mind</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content41674">
+
+					<h3 class="first">
+						<a href="./viewtopic.php?p=41674&amp;sid=7efea424800d539077fed72bd8a49eaf#p41674">Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=41674&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=41674&amp;sid=7efea424800d539077fed72bd8a49eaf#p41674" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=1457&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">JapanYoshiTheGamer</a></strong> &raquo; </span><time datetime="2013-09-01T12:53:47+00:00">Sun Sep 01, 2013 12:53 pm</time>
+			</p>
+			
+			
+			
+			
+			<div class="content">Wow... I wish I had the time to read this and the intellect to understand this...</div>
+
+			
+			
+									
+						
+							<div id="sig41674" class="signature"><img src="http://i.imgur.com/2dNTwwd.png" class="postimage" alt="Image"></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p41688" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile41688">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="avatar"><img class="avatar" src="./download/file.php?avatar=1970_1377997951.gif" width="150" height="113" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a>							</dt>
+
+						<dd class="profile-rank">Puyo Fan<br /><img src="./images/ranks/rank_user.png" alt="Puyo Fan" title="Puyo Fan" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 77</dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Aug 27, 2013 12:57 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> France</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content41688">
+
+					<h3 >
+						<a href="./viewtopic.php?p=41688&amp;sid=7efea424800d539077fed72bd8a49eaf#p41688">Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=41688&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=41688&amp;sid=7efea424800d539077fed72bd8a49eaf#p41688" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a></strong> &raquo; </span><time datetime="2013-09-02T00:10:02+00:00">Mon Sep 02, 2013 12:10 am</time>
+			</p>
+			
+			
+			
+			
+			<div class="content"><strong class="text-strong"><span style="text-decoration:underline">Bonus round</span></strong><br>
+<br>
+This game genie code should get you the very same pairs at every battle, on Puyo Puyo 2 (REV 00) (J) [Genesis]:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>9VGA-AGJ0 
+T7GA-BLJ2 
+6KGA-B5A4 
+97GA-AAA6
+GVGA-ADJ8
+</code></pre></div>
+It patches the following bytes:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>ROM:4C16                 move.b  (a2,d0.w),(a2,d1.w) ; Move Data from Source to Destination
+ROM:4C1C                 move.b  d2,(a2,d0.w)    ; Move Data from Source to Destination
+</code></pre></div>
+which are handling the color-set shuffling, by replacing them with:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>move.l #$35879DE2,($FFA134).l
+</code></pre></div>
+Which resets the current value of the RNG. This is called once at every start of a battle. The result is you'll always get the same puyos with colors yellow, red, green and blue.<br>
+<br>
+You can actually choose what puyos you'll get by varying the RNG value, defined by the game genie codes T7GA-BLJ2 6KGA-B5A4. The tool "Game Genie Code Converter" can help you compute new values.<br>
+<br>
+The code should work on real hardware. Could anyone confirm that?<br>
+<br>
+<br>
+Beyond that, here's what tricking the game looks like, based on the previous reverse engineering:<br>
+<span data-s9e-mediaembed="youtube" style="display:inline-block;width:100%;max-width:640px"><span style="display:block;overflow:hidden;position:relative;padding-bottom:56.25%"><iframe allowfullscreen="" loading="lazy" scrolling="no" style="background:url(https://i.ytimg.com/vi/bVA-scIhL5g/hqdefault.jpg) 50% 50% / cover;border:0;height:100%;left:0;position:absolute;width:100%" src="https://www.youtube.com/embed/bVA-scIhL5g"></iframe></span></span><br>
+<br>
+Here's what we've done:
+<ul>
+<li> defined a particular pair order to fill the upcoming pool buffer with. This was done to get the perfect pieces for our "insane niagara", at the right time, while not having to rotate them;</li>
+<li> swapped a yellow puyo for a blue in the P1 falling pair before triggering the 1-chain;</li>
+<li> filled the P1 board with puyos to get the crazy 1-chain. They are invisible because video updates are triggered only when you actually place a puyo.</li></ul>
+
+Notice the rest of the pairs are all double reds. The puyo swapping (yellow for blue) is purposely visible for only 1 frame.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p41689" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile41689">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=717&amp;sid=7efea424800d539077fed72bd8a49eaf" class="avatar"><img class="avatar" src="./download/file.php?avatar=717_1452284228.png" width="100" height="100" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=717&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">Steelix100</a>							</dt>
+
+						<dd class="profile-rank">Puyo Fan<br /><img src="./images/ranks/rank_user.png" alt="Puyo Fan" title="Puyo Fan" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 487</dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Sep 17, 2009 11:21 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> the next world</dd>
+												<dd class="profile-custom-field profile-pronouns"><strong>Preferred pronouns:</strong> loser</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content41689">
+
+					<h3 >
+						<a href="./viewtopic.php?p=41689&amp;sid=7efea424800d539077fed72bd8a49eaf#p41689">Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=41689&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=41689&amp;sid=7efea424800d539077fed72bd8a49eaf#p41689" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=717&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">Steelix100</a></strong> &raquo; </span><time datetime="2013-09-02T01:59:32+00:00">Mon Sep 02, 2013 1:59 am</time>
+			</p>
+			
+			
+			
+			
+			<div class="content">Conveniently I happen to have a Game Genie (two of them!) and a region-modded Genesis, and this game. What codes do you want me to test?</div>
+
+			
+			
+									
+						
+							<div id="sig41689" class="signature">I will not die until I achieve something.<br>
+Even though the ideal is high, I never give in.<br>
+Therefore, I never die with regrets.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p41691" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile41691">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="avatar"><img class="avatar" src="./download/file.php?avatar=1970_1377997951.gif" width="150" height="113" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a>							</dt>
+
+						<dd class="profile-rank">Puyo Fan<br /><img src="./images/ranks/rank_user.png" alt="Puyo Fan" title="Puyo Fan" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 77</dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Aug 27, 2013 12:57 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> France</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content41691">
+
+					<h3 >
+						<a href="./viewtopic.php?p=41691&amp;sid=7efea424800d539077fed72bd8a49eaf#p41691">Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=41691&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=41691&amp;sid=7efea424800d539077fed72bd8a49eaf#p41691" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a></strong> &raquo; </span><time datetime="2013-09-02T06:32:03+00:00">Mon Sep 02, 2013 6:32 am</time>
+			</p>
+			
+			
+			
+			
+			<div class="content">Steelix100:<br>
+<br>
+The 5 codes I just gave: they all have to be active at the same time.
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>9VGA-AGJ0 
+T7GA-BLJ2 
+6KGA-B5A4 
+97GA-AAA6
+GVGA-ADJ8</code></pre></div>
+You should always get the same puyos and colors battle after battle.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p41718" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile41718">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=717&amp;sid=7efea424800d539077fed72bd8a49eaf" class="avatar"><img class="avatar" src="./download/file.php?avatar=717_1452284228.png" width="100" height="100" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=717&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">Steelix100</a>							</dt>
+
+						<dd class="profile-rank">Puyo Fan<br /><img src="./images/ranks/rank_user.png" alt="Puyo Fan" title="Puyo Fan" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 487</dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Sep 17, 2009 11:21 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> the next world</dd>
+												<dd class="profile-custom-field profile-pronouns"><strong>Preferred pronouns:</strong> loser</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content41718">
+
+					<h3 >
+						<a href="./viewtopic.php?p=41718&amp;sid=7efea424800d539077fed72bd8a49eaf#p41718">Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=41718&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=41718&amp;sid=7efea424800d539077fed72bd8a49eaf#p41718" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=717&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">Steelix100</a></strong> &raquo; </span><time datetime="2013-09-05T00:02:03+00:00">Thu Sep 05, 2013 12:02 am</time>
+			</p>
+			
+			
+			
+			
+			<div class="content">Tested and works.</div>
+
+			
+			
+									
+						
+							<div id="sig41718" class="signature">I will not die until I achieve something.<br>
+Even though the ideal is high, I never give in.<br>
+Therefore, I never die with regrets.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p41959" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile41959">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="avatar"><img class="avatar" src="./download/file.php?avatar=1970_1377997951.gif" width="150" height="113" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a>							</dt>
+
+						<dd class="profile-rank">Puyo Fan<br /><img src="./images/ranks/rank_user.png" alt="Puyo Fan" title="Puyo Fan" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 77</dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Aug 27, 2013 12:57 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> France</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content41959">
+
+					<h3 >
+						<a href="./viewtopic.php?p=41959&amp;sid=7efea424800d539077fed72bd8a49eaf#p41959">Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=41959&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=41959&amp;sid=7efea424800d539077fed72bd8a49eaf#p41959" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a></strong> &raquo; </span><time datetime="2013-09-17T17:21:11+00:00">Tue Sep 17, 2013 5:21 pm</time>
+			</p>
+			
+			
+			
+			
+			<div class="content">A quick addition as it has been requested on IRC.<br>
+<br>
+The following are game genie codes that will force Puyo Puyo Tsuu to use a 4-color set only, or set the falling speed.<br>
+<br>
+These codes forces <strong class="text-strong">4-color mode</strong> in <span style="text-decoration:underline">both single player and 2p versus modes</span>:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>ABGA-ACE6 
+ABGA-ACE8 
+ABGA-ACFC 
+ABGA-ACFE
+</code></pre></div>
+
+The next code will <strong class="text-strong">set the falling speed to normal</strong> in <span style="text-decoration:underline">2p versus mode only</span>, regardless of the chosen difficulty:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>AB3A-BAG6
+</code></pre></div>
+
+The following code will <strong class="text-strong">set the falling speed to the lowest available setting</strong> <span style="text-decoration:underline">throughout single player mode only</span>:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>JB3A-AETW
+</code></pre></div>
+
+The next 2 codes will set falling speed <span style="text-decoration:underline">throughout single player mode</span> <strong class="text-strong">to the normal speed of 2p versus mode</strong>:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>JB3A-AETW
+AB3A-BAC6
+</code></pre></div>
+
+Note: due to how the game works, it is not possible to set a different speed for the player and the CPU in single player mode (with help of game genie codes anyway). Doing so requires heavy hacking, and patching a whole subroutine.</div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a> on Thu Sep 19, 2013 4:50 pm, edited 1 time in total.
+									</div>
+			
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p41981" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile41981">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=146&amp;sid=7efea424800d539077fed72bd8a49eaf" class="avatar"><img class="avatar" src="./download/file.php?avatar=146_1471297750.png" width="150" height="150" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=146&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">Azu</a>							</dt>
+
+						<dd class="profile-rank">Puyo Fan<br /><img src="./images/ranks/rank_user.png" alt="Puyo Fan" title="Puyo Fan" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 1081</dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri May 23, 2008 5:40 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content41981">
+
+					<h3 >
+						<a href="./viewtopic.php?p=41981&amp;sid=7efea424800d539077fed72bd8a49eaf#p41981">Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=41981&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=41981&amp;sid=7efea424800d539077fed72bd8a49eaf#p41981" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=146&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">Azu</a></strong> &raquo; </span><time datetime="2013-09-19T06:35:00+00:00">Thu Sep 19, 2013 6:35 am</time>
+			</p>
+			
+			
+			
+			
+			<div class="content">This makes me want to go back to hacking PP20th on the DS and see if I can try to combine two modes together.</div>
+
+			
+			
+									
+						
+							<div id="sig41981" class="signature"><a href="https://dl.dropbox.com/u/32409323/Puyo%20Puyo%20SoundFontV3.sf2" class="postlink">Puyo Puyo Fever!+V3</a><br>
+Updated! Jul 18, 2011<br>
+<br>
+'Remixed' Samples<br>
+<a href="https://dl.dropbox.com/u/32409323/Splashin%27%20Hill%20Second%20Act%21.mp3" class="postlink">Splashin' Hill Second Act!</a> Sonic 4 - Splash Hill Act 2<br>
+<a href="https://dl.dropbox.com/u/32409323/Dancin%27%20on%20The%20Second%20Level%21.mp3" class="postlink">Dancin' on The Second Level!</a> Puyo Puyo Tsuu - Area B<br>
+<a href="https://dl.dropbox.com/u/32409323/Up%20To%20The%20Third%20Area%21.mp3" class="postlink">Up To The Third Area!</a> Puyo Puyo Tsuu - Area C<br>
+<br>
+A little renamer I made for Puyo Puyo VS 2.<br>
+<a href="https://dl.dropbox.com/u/32409323/PPVS%202%20V-Renamer.7z" class="postlink">Puyo Puyo 2 VS Voice Renamer</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p42026" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile42026">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=756&amp;sid=7efea424800d539077fed72bd8a49eaf" class="avatar"><img class="avatar" src="./download/file.php?avatar=756_1518090117.png" width="150" height="150" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=756&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">Yoni Arousement</a>							</dt>
+
+						<dd class="profile-rank">Puyo Fan<br /><img src="./images/ranks/rank_user.png" alt="Puyo Fan" title="Puyo Fan" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 386</dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Oct 07, 2009 12:14 am</dd>		
+		
+																
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Yoni Arousement">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Yoni Arousement</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://yonihq.blogspot.com" title="Website">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																																																<a href="https://twitter.com/YoniArousement" title="Twitter" class="last-cell">
+										<span class="contact-icon phpbb_twitter-icon">Twitter</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content42026">
+
+					<h3 >
+						<a href="./viewtopic.php?p=42026&amp;sid=7efea424800d539077fed72bd8a49eaf#p42026">Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=42026&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=42026&amp;sid=7efea424800d539077fed72bd8a49eaf#p42026" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=756&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">Yoni Arousement</a></strong> &raquo; </span><time datetime="2013-09-21T11:57:47+00:00">Sat Sep 21, 2013 11:57 am</time>
+			</p>
+			
+			
+			
+			
+			<div class="content"><blockquote><div><cite>Steelix100 wrote:</cite>The Sega Megadrive version of Puyo Puyo 2 is pretty much Arcade perfect. The biggest difference is that the voice samples sound like utter trash in the MD version (as well as entirely pauses the music for no real reason).</div></blockquote>
+The music shouldn't pause if you set Voice Mode to Type A (but it defaults to Type B).</div>
+
+			
+			
+									
+						
+							<div id="sig42026" class="signature"><a href="https://www.youtube.com/channel/UCgSexHb0SqZ9rpoKlETyiOQ" class="postlink">YouTube Channel</a>, <a href="https://twitter.com/YoniArousement" class="postlink">Twitter</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p43231" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile43231">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="avatar"><img class="avatar" src="./download/file.php?avatar=1970_1377997951.gif" width="150" height="113" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a>							</dt>
+
+						<dd class="profile-rank">Puyo Fan<br /><img src="./images/ranks/rank_user.png" alt="Puyo Fan" title="Puyo Fan" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 77</dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Aug 27, 2013 12:57 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> France</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content43231">
+
+					<h3 >
+						<a href="./viewtopic.php?p=43231&amp;sid=7efea424800d539077fed72bd8a49eaf#p43231">Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=43231&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=43231&amp;sid=7efea424800d539077fed72bd8a49eaf#p43231" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a></strong> &raquo; </span><time datetime="2013-11-28T00:30:33+00:00">Thu Nov 28, 2013 12:30 am</time>
+			</p>
+			
+			
+			
+			
+			<div class="content">I have ported my forum posts over the wiki, all sorted in a category of their own:<br>
+<a href="http://puyonexus.net/wiki/Category:Reverse_Engineering" class="postlink">http://puyonexus.net/wiki/Category:Reverse_Engineering</a><br>
+<br>
+The main page is located there:<br>
+<a href="http://puyonexus.net/wiki/Puyo_Puyo_Tsu_Reverse_Engineering" class="postlink">http://puyonexus.net/wiki/Puyo_Puyo_Tsu ... ngineering</a><br>
+<br>
+I will continue posting announces to this thread but the updates will appear on the wiki only, as it is a far more convenient place for documenting technical stuff.<br>
+<br>
+Coming soon: 
+<ul>
+<li> Routine handling game inputs (fully analyzed)</li> 
+<li> Frame data (current efforts)</li></ul></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p43267" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile43267">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=717&amp;sid=7efea424800d539077fed72bd8a49eaf" class="avatar"><img class="avatar" src="./download/file.php?avatar=717_1452284228.png" width="100" height="100" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=717&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">Steelix100</a>							</dt>
+
+						<dd class="profile-rank">Puyo Fan<br /><img src="./images/ranks/rank_user.png" alt="Puyo Fan" title="Puyo Fan" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 487</dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Sep 17, 2009 11:21 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> the next world</dd>
+												<dd class="profile-custom-field profile-pronouns"><strong>Preferred pronouns:</strong> loser</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content43267">
+
+					<h3 >
+						<a href="./viewtopic.php?p=43267&amp;sid=7efea424800d539077fed72bd8a49eaf#p43267">Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=43267&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=43267&amp;sid=7efea424800d539077fed72bd8a49eaf#p43267" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=717&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">Steelix100</a></strong> &raquo; </span><time datetime="2013-11-29T16:57:26+00:00">Fri Nov 29, 2013 4:57 pm</time>
+			</p>
+			
+			
+			
+			
+			<div class="content"><blockquote><div><cite>Lorenzo The Comic wrote:</cite><blockquote><div><cite>Steelix100 wrote:</cite>The Sega Megadrive version of Puyo Puyo 2 is pretty much Arcade perfect. The biggest difference is that the voice samples sound like utter trash in the MD version (as well as entirely pauses the music for no real reason).</div></blockquote>
+The music shouldn't pause if you set Voice Mode to Type A (but it defaults to Type B).</div></blockquote>
+Heh, I actually already knew this. I usually don't use Type A because it manages to make the voices sound even worse...<br>
+
+<blockquote><div><cite>BLueBLue wrote:</cite>I have ported my forum posts over the wiki, all sorted in a category of their own:<br>
+<a href="http://puyonexus.net/wiki/Category:Reverse_Engineering" class="postlink">http://puyonexus.net/wiki/Category:Reverse_Engineering</a><br>
+<br>
+The main page is located there:<br>
+<a href="http://puyonexus.net/wiki/Puyo_Puyo_Tsu_Reverse_Engineering" class="postlink">http://puyonexus.net/wiki/Puyo_Puyo_Tsu ... ngineering</a><br>
+<br>
+I will continue posting announces to this thread but the updates will appear on the wiki only, as it is a far more convenient place for documenting technical stuff.<br>
+<br>
+Coming soon: 
+<ul>
+<li> Routine handling game inputs (fully analyzed)</li> 
+<li> Frame data (current efforts)</li></ul></div></blockquote>
+
+Go, go! For science!<br>
+<br>
+I have a question, for Hernan. Will you be using his findings to make PuyoVS 2 more "accurate"?</div>
+
+			
+			
+									
+						
+							<div id="sig43267" class="signature">I will not die until I achieve something.<br>
+Even though the ideal is high, I never give in.<br>
+Therefore, I never die with regrets.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p43273" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile43273">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="avatar"><img class="avatar" src="./download/file.php?avatar=1970_1377997951.gif" width="150" height="113" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a>							</dt>
+
+						<dd class="profile-rank">Puyo Fan<br /><img src="./images/ranks/rank_user.png" alt="Puyo Fan" title="Puyo Fan" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 77</dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Aug 27, 2013 12:57 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> France</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content43273">
+
+					<h3 >
+						<a href="./viewtopic.php?p=43273&amp;sid=7efea424800d539077fed72bd8a49eaf#p43273">Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=43273&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=43273&amp;sid=7efea424800d539077fed72bd8a49eaf#p43273" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a></strong> &raquo; </span><time datetime="2013-11-29T23:49:29+00:00">Fri Nov 29, 2013 11:49 pm</time>
+			</p>
+			
+			
+			
+			
+			<div class="content">A page on the game's options, settings and variables has been added to the wiki. It includes some hidden game options. <br>
+See <a href="http://puyonexus.net/wiki/Puyo_Puyo_Tsu/Game_Options_Variables" class="postlink">http://puyonexus.net/wiki/Puyo_Puyo_Tsu ... _Variables</a> and the <a href="http://puyonexus.net/wiki/Category:Reverse_Engineering" class="postlink">Reverse Engineering</a> category</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p43291" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile43291">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="avatar"><img class="avatar" src="./download/file.php?avatar=1970_1377997951.gif" width="150" height="113" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a>							</dt>
+
+						<dd class="profile-rank">Puyo Fan<br /><img src="./images/ranks/rank_user.png" alt="Puyo Fan" title="Puyo Fan" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 77</dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Aug 27, 2013 12:57 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> France</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content43291">
+
+					<h3 >
+						<a href="./viewtopic.php?p=43291&amp;sid=7efea424800d539077fed72bd8a49eaf#p43291">Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=43291&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=43291&amp;sid=7efea424800d539077fed72bd8a49eaf#p43291" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a></strong> &raquo; </span><time datetime="2013-12-01T01:41:29+00:00">Sun Dec 01, 2013 1:41 am</time>
+			</p>
+			
+			
+			
+			
+			<div class="content">I've written a new page on <a href="http://puyonexus.net/wiki/Puyo_Puyo_Tsu/Gamepad_Input" class="postlink">Gamepad Input</a> and created a reference page on <a href="http://puyonexus.net/wiki/Puyo_Puyo_Tsu/Frame_Data_Tables" class="postlink">Frame Data</a> timings for PP2.<br>
+<br>
+It includes how game inputs are actually handled, how button repeat is done, and possible trickery.<br>
+<br>
+Watch the <a href="http://puyonexus.net/wiki/Category:Reverse_Engineering" class="postlink">Reverse Engineering</a> category!</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p43721" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile43721">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="avatar"><img class="avatar" src="./download/file.php?avatar=1970_1377997951.gif" width="150" height="113" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a>							</dt>
+
+						<dd class="profile-rank">Puyo Fan<br /><img src="./images/ranks/rank_user.png" alt="Puyo Fan" title="Puyo Fan" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 77</dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Aug 27, 2013 12:57 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> France</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content43721">
+
+					<h3 >
+						<a href="./viewtopic.php?p=43721&amp;sid=7efea424800d539077fed72bd8a49eaf#p43721">Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=43721&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=43721&amp;sid=7efea424800d539077fed72bd8a49eaf#p43721" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a></strong> &raquo; </span><time datetime="2013-12-21T21:58:50+00:00">Sat Dec 21, 2013 9:58 pm</time>
+			</p>
+			
+			
+			
+			
+			<div class="content">For those interested, the following game genie code will turn the game into a <em class="text-italics">pseudo</em> <strong class="text-strong">endless mode</strong>:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>ABSA-AAGA
+</code></pre></div>
+Tested and works on <em class="text-italics">Puyo Puyo 2 (REV 00) (J) [Genesis]</em>.<br>
+Tested and works on <em class="text-italics">real Genesis hardware</em>.<br>
+<br>
+The code makes the game ignore the fact that a player has his third column full. The consequence is a deadlock in which the game will indefinitely loop through the pairs it should deal to the losing player. The other player can continue until his board is also full, at which point <strong class="text-strong">you should reset the console</strong> as there is no way the game will ever end. Ojama puyos will still fall upon an opponent (I haven't found which routines handle ojama puyos yet) .<br>
+<br>
+Note: although the game appears to loop and do nasty things, it will not harm your console or cartridge.<br>
+<br>
+Edit: Rom hackers who want to make this permanent may edit their rom and change the byte value at 0x005EC1 from 0x01 to 0x00. No need to edit the rom's checksum, the game doesn't care about its value.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p43747" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile43747">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="avatar"><img class="avatar" src="./download/file.php?avatar=1970_1377997951.gif" width="150" height="113" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a>							</dt>
+
+						<dd class="profile-rank">Puyo Fan<br /><img src="./images/ranks/rank_user.png" alt="Puyo Fan" title="Puyo Fan" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 77</dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Aug 27, 2013 12:57 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> France</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content43747">
+
+					<h3 >
+						<a href="./viewtopic.php?p=43747&amp;sid=7efea424800d539077fed72bd8a49eaf#p43747">Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=43747&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=43747&amp;sid=7efea424800d539077fed72bd8a49eaf#p43747" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a></strong> &raquo; </span><time datetime="2013-12-23T02:54:35+00:00">Mon Dec 23, 2013 2:54 am</time>
+			</p>
+			
+			
+			
+			
+			<div class="content">I've finally tackled <a href="http://puyonexus.net/wiki/Puyo_Puyo_Tsu/Rotation,_collision_and_push_back" class="postlink">rotation, collision and push-back</a> and updated the <a href="http://puyonexus.net/wiki/Puyo_Puyo_Tsu/Frame_Data_Tables" class="postlink">frame data</a> timings reference page.<br>
+<br>
+Among other things, it explains: 
+<ul>
+<li> how you can push your falling pair upwards;</li>
+<li> why it doesn't work beyond the 13th row;</li>
+<li> what input trickery you can do to indefinitely keep at the same spot;</li>
+<li> how you can "ghostride" over columns full to the 12th row.</li></ul>
+
+Other topics are still in the <a href="http://puyonexus.net/wiki/Category:Reverse_Engineering" class="postlink">Reverse Engineering</a> category!<br>
+<br>
+I've also added a new <a href="http://puyonexus.net/wiki/Puyo_Puyo_Tsu/Game_Genie_Codes" class="postlink">Game Genie</a> code for those who wish to slow down drop speed and even completely freeze the falling pair by pressing the down arrow:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>ABTT-AACG
+</code></pre></div></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p44060" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile44060">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="avatar"><img class="avatar" src="./download/file.php?avatar=1970_1377997951.gif" width="150" height="113" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a>							</dt>
+
+						<dd class="profile-rank">Puyo Fan<br /><img src="./images/ranks/rank_user.png" alt="Puyo Fan" title="Puyo Fan" /></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> 77</dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Aug 27, 2013 12:57 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> France</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content44060">
+
+					<h3 >
+						<a href="./viewtopic.php?p=44060&amp;sid=7efea424800d539077fed72bd8a49eaf#p44060">Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=44060&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=44060&amp;sid=7efea424800d539077fed72bd8a49eaf#p44060" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=1970&amp;sid=7efea424800d539077fed72bd8a49eaf" class="username">BLueBLue</a></strong> &raquo; </span><time datetime="2014-01-05T19:11:37+00:00">Sun Jan 05, 2014 7:11 pm</time>
+			</p>
+			
+			
+			
+			
+			<div class="content">New pages have been written on the wiki!<br>
+
+<ul>
+<li> <a href="http://puyonexus.net/wiki/Puyo_Puyo_Tsu/Software_Architecture" class="postlink">Puyo Puyo Tsu software architecture, callbacks routines, etc.</a></li>
+<li> <a href="http://puyonexus.net/wiki/Puyo_Puyo_Tsu/Falling_Pair_Control" class="postlink">Falling pair control</a></li>
+<li> <a href="http://puyonexus.net/wiki/Puyo_Puyo_Tsu/Pair_Lateral_Movement" class="postlink">Lateral movements</a></li>
+<li> <a href="http://puyonexus.net/wiki/Puyo_Puyo_Tsu/Free_fall" class="postlink">Free fall</a></li></ul>
+
+I also have updated the <a href="http://puyonexus.net/wiki/Puyo_Puyo_Tsu/Frame_Data_Tables" class="postlink">frame data</a> tables with pair split and some free-fall information.<br>
+<br>
+As always, everything is in the <a href="http://puyonexus.net/wiki/Category:Reverse_Engineering" class="postlink">Reverse Engineering</a> category!<br>
+<br>
+Coming up: soft drop (down arrow) and pair lock.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="./posting.php?mode=reply&amp;t=2304&amp;sid=7efea424800d539077fed72bd8a49eaf" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?t=2304&amp;start=15&amp;sid=7efea424800d539077fed72bd8a49eaf&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="./viewtopic.php?t=2304&amp;start=15&amp;sid=7efea424800d539077fed72bd8a49eaf">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			32 posts
+							<ul>
+			<li class="arrow previous"><a class="button button-icon-only" href="./viewtopic.php?t=2304&amp;sid=7efea424800d539077fed72bd8a49eaf" rel="prev" role="button"><i class="icon fa-chevron-left fa-fw" aria-hidden="true"></i><span class="sr-only">Previous</span></a></li>
+				<li><a class="button" href="./viewtopic.php?t=2304&amp;sid=7efea424800d539077fed72bd8a49eaf" role="button">1</a></li>
+			<li class="active"><span>2</span></li>
+				<li><a class="button" href="./viewtopic.php?t=2304&amp;sid=7efea424800d539077fed72bd8a49eaf&amp;start=30" role="button">3</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="./viewtopic.php?t=2304&amp;sid=7efea424800d539077fed72bd8a49eaf&amp;start=30" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="./viewforum.php?f=40&amp;sid=7efea424800d539077fed72bd8a49eaf" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Gameplay Discussion”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="./viewforum.php?f=31&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-cat-link"> <span> The Site</span></a></li>
+																<li><a href="./viewforum.php?f=12&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; News and Announcements</span></a></li>
+																<li><a href="./viewforum.php?f=6&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Puyo Nexus Discussion</span></a></li>
+																<li><a href="./viewforum.php?f=20&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Site Projects</span></a></li>
+																<li><a href="./viewforum.php?f=11&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Wiki</span></a></li>
+																<li><a href="./viewforum.php?f=24&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Chain Simulator</span></a></li>
+																<li><a href="./viewforum.php?f=35&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Game Translations</span></a></li>
+																<li><a href="./viewforum.php?f=41&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Releases</span></a></li>
+																<li><a href="./viewforum.php?f=44&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Puyo Puyo!! 20th Anniversary</span></a></li>
+																<li><a href="./viewforum.php?f=45&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Uploads</span></a></li>
+																<li><a href="./viewforum.php?f=42&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Puyo Puyo Fever 2</span></a></li>
+																<li><a href="./viewforum.php?f=36&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Puyo Puyo~n</span></a></li>
+																<li><a href="./viewforum.php?f=25&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Puyo Puyo Sun</span></a></li>
+																<li><a href="./viewforum.php?f=21&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Puyo Puyo! 15th Anniversary</span></a></li>
+																<li><a href="./viewforum.php?f=37&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Puyo Puyo 7</span></a></li>
+																<li><a href="./viewforum.php?f=38&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Uploads</span></a></li>
+																<li><a href="./viewforum.php?f=22&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; DiscStation Games</span></a></li>
+																<li><a href="./viewforum.php?f=32&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-cat-link"> <span> Puyo Puyo</span></a></li>
+																<li><a href="./viewforum.php?f=3&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Guides</span></a></li>
+																<li><a href="./viewforum.php?f=40&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Gameplay Discussion</span></a></li>
+																<li><a href="./viewforum.php?f=4&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Videos and Replays</span></a></li>
+																<li><a href="./viewforum.php?f=49&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Tournament Archives</span></a></li>
+																<li><a href="./viewforum.php?f=13&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Fandom</span></a></li>
+																<li><a href="./viewforum.php?f=17&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Discstation Games</span></a></li>
+																<li><a href="./viewforum.php?f=14&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Madou Monogatari</span></a></li>
+																<li><a href="./viewforum.php?f=48&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Puyo Puyo Quest</span></a></li>
+																<li><a href="./viewforum.php?f=7&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Game Rips and Modifications</span></a></li>
+																<li><a href="./viewforum.php?f=1&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Finger Paint Gallery</span></a></li>
+																<li><a href="./viewforum.php?f=39&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Questions and Answers</span></a></li>
+																<li><a href="./viewforum.php?f=10&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; General Chatter</span></a></li>
+																<li><a href="./viewforum.php?f=47&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-cat-link"> <span> International Puyo Puyo</span></a></li>
+																<li><a href="./viewforum.php?f=46&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Puyo Puyo Français</span></a></li>
+																<li><a href="./viewforum.php?f=34&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-cat-link"> <span> The Purgatory</span></a></li>
+																<li><a href="./viewforum.php?f=27&amp;sid=7efea424800d539077fed72bd8a49eaf" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Puyo Purgatory</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="./viewonline.php?sid=7efea424800d539077fed72bd8a49eaf">Who is online</a></h3>
+		<p>Users browsing this forum: No registered users and 9 guests</p>
+	</div>
+
+
+					</div>
+	</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner container">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="./index.php?sid=7efea424800d539077fed72bd8a49eaf" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="./ucp.php?mode=delete_cookies&amp;sid=7efea424800d539077fed72bd8a49eaf" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="./memberlist.php?sid=7efea424800d539077fed72bd8a49eaf" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="./memberlist.php?mode=team&amp;sid=7efea424800d539077fed72bd8a49eaf" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+							</ul>
+
+	</div>
+</div>
+
+	<div class="copyright container">
+				<p class="footer-row">
+			<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited</span>
+		</p>
+						<p class="footer-row" role="menu">
+			<a class="footer-link" href="./ucp.php?mode=privacy&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Privacy" role="menuitem">
+				<span class="footer-link-text">Privacy</span>
+			</a>
+			|
+			<a class="footer-link" href="./ucp.php?mode=terms&amp;sid=7efea424800d539077fed72bd8a49eaf" title="Terms" role="menuitem">
+				<span class="footer-link-text">Terms</span>
+			</a>
+		</p>
+				        <p class="footer-row">
+            <br>© 2007-2017 Puyo Nexus
+        </p>
+	</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img class="sr-only" aria-hidden="true" src="&#x2F;forum&#x2F;app.php&#x2F;cron&#x2F;cron.task.core.tidy_cache&#x3F;sid&#x3D;7efea424800d539077fed72bd8a49eaf" width="1" height="1" alt="">
+</div>
+
+<script src="./assets/javascript/jquery-3.7.1.min.js?assets_version=43"></script>
+<script src="./assets/javascript/core.js?assets_version=43"></script>
+
+
+<script src="/assets/js/common.min.js"></script>
+
+
+<script src="./styles/pronexus/template/forum_fn.js?assets_version=43"></script>
+<script src="./styles/pronexus/template/ajax.js?assets_version=43"></script>
+
+
+
+</body>
+</html>

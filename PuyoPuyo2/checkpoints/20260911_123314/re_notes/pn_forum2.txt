@@ -1,0 +1,1503 @@
+ 
+ 
+ 
+ 
+ 
+ 
+
+ Puyo Puyo Tsuu Reverse Engineering: game mechanics explained - Page 2 - Puyo Nexus Forum 
+
+ 
+ 
+
+<!--
+ phpBB style name: prosilver
+ Based on style: prosilver (this is the default phpBB3 style)
+ Original author: Tom Beddard ( http://www.subBlue.com/ )
+ Modified by:
+-->
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+ 
+ 
+
+
+
+
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ Puyo Nexus 
+ 
+ 
+ 
+ 
+ Wiki 
+ Forum 
+ Chain Simulator 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Members 
+ 
+ 
+ 
+ 
+ The team 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ FAQ 
+ 
+ 
+ 
+ 
+ 
+ Login 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ Board index 
+
+ 
+ Puyo Puyo 
+ 
+ Gameplay Discussion 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ Puyo Puyo Tsuu Reverse Engineering: game mechanics explained 
+ 
+ Discuss the gameplay of various Puyo Puyo games. 
+
+
+ 
+ 
+ 
+ Post Reply 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Print view 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 32 posts
+ 
+ Previous 
+ 1 
+ 2 
+ 3 
+ Next 
+ 
+ 
+ 
+
+
+
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ JapanYoshiTheGamer 
+
+ Unwanted 
+ Posts: 446 Joined: Thu Jun 30, 2011 9:50 pm 
+ 
+ Location: Currently Japan 
+ Preferred pronouns: Really, I don't mind 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by JapanYoshiTheGamer &raquo; Sun Sep 01, 2013 12:53 pm 
+ 
+ 
+ 
+ 
+ 
+ Wow... I wish I had the time to read this and the intellect to understand this... 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Mon Sep 02, 2013 12:10 am 
+ 
+ 
+ 
+ 
+ 
+ Bonus round 
+ 
+This game genie code should get you the very same pairs at every battle, on Puyo Puyo 2 (REV 00) (J) [Genesis]:
+ Code: Select all 9VGA-AGJ0 
+T7GA-BLJ2 
+6KGA-B5A4 
+97GA-AAA6
+GVGA-ADJ8
+ 
+It patches the following bytes:
+ Code: Select all ROM:4C16 move.b (a2,d0.w),(a2,d1.w) ; Move Data from Source to Destination
+ROM:4C1C move.b d2,(a2,d0.w) ; Move Data from Source to Destination
+ 
+which are handling the color-set shuffling, by replacing them with:
+ Code: Select all move.l #$35879DE2,($FFA134).l
+ 
+Which resets the current value of the RNG. This is called once at every start of a battle. The result is you'll always get the same puyos with colors yellow, red, green and blue. 
+ 
+You can actually choose what puyos you'll get by varying the RNG value, defined by the game genie codes T7GA-BLJ2 6KGA-B5A4. The tool "Game Genie Code Converter" can help you compute new values. 
+ 
+The code should work on real hardware. Could anyone confirm that? 
+ 
+ 
+Beyond that, here's what tricking the game looks like, based on the previous reverse engineering: 
+ 
+ 
+Here's what we've done:
+ 
+ defined a particular pair order to fill the upcoming pool buffer with. This was done to get the perfect pieces for our "insane niagara", at the right time, while not having to rotate them; 
+ swapped a yellow puyo for a blue in the P1 falling pair before triggering the 1-chain; 
+ filled the P1 board with puyos to get the crazy 1-chain. They are invisible because video updates are triggered only when you actually place a puyo. 
+
+Notice the rest of the pairs are all double reds. The puyo swapping (yellow for blue) is purposely visible for only 1 frame. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Steelix100 
+
+ Puyo Fan 
+ Posts: 487 Joined: Thu Sep 17, 2009 11:21 am 
+ 
+ Location: the next world 
+ Preferred pronouns: loser 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by Steelix100 &raquo; Mon Sep 02, 2013 1:59 am 
+ 
+ 
+ 
+ 
+ 
+ Conveniently I happen to have a Game Genie (two of them!) and a region-modded Genesis, and this game. What codes do you want me to test? 
+
+ 
+ 
+ 
+ 
+ I will not die until I achieve something. 
+Even though the ideal is high, I never give in. 
+Therefore, I never die with regrets. 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Mon Sep 02, 2013 6:32 am 
+ 
+ 
+ 
+ 
+ 
+ Steelix100: 
+ 
+The 5 codes I just gave: they all have to be active at the same time.
+ Code: Select all 9VGA-AGJ0 
+T7GA-BLJ2 
+6KGA-B5A4 
+97GA-AAA6
+GVGA-ADJ8 
+You should always get the same puyos and colors battle after battle. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Steelix100 
+
+ Puyo Fan 
+ Posts: 487 Joined: Thu Sep 17, 2009 11:21 am 
+ 
+ Location: the next world 
+ Preferred pronouns: loser 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by Steelix100 &raquo; Thu Sep 05, 2013 12:02 am 
+ 
+ 
+ 
+ 
+ 
+ Tested and works. 
+
+ 
+ 
+ 
+ 
+ I will not die until I achieve something. 
+Even though the ideal is high, I never give in. 
+Therefore, I never die with regrets. 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Tue Sep 17, 2013 5:21 pm 
+ 
+ 
+ 
+ 
+ 
+ A quick addition as it has been requested on IRC. 
+ 
+The following are game genie codes that will force Puyo Puyo Tsuu to use a 4-color set only, or set the falling speed. 
+ 
+These codes forces 4-color mode in both single player and 2p versus modes :
+ Code: Select all ABGA-ACE6 
+ABGA-ACE8 
+ABGA-ACFC 
+ABGA-ACFE
+ 
+
+The next code will set the falling speed to normal in 2p versus mode only , regardless of the chosen difficulty:
+ Code: Select all AB3A-BAG6
+ 
+
+The following code will set the falling speed to the lowest available setting throughout single player mode only :
+ Code: Select all JB3A-AETW
+ 
+
+The next 2 codes will set falling speed throughout single player mode to the normal speed of 2p versus mode :
+ Code: Select all JB3A-AETW
+AB3A-BAC6
+ 
+
+Note: due to how the game works, it is not possible to set a different speed for the player and the CPU in single player mode (with help of game genie codes anyway). Doing so requires heavy hacking, and patching a whole subroutine. 
+
+ 
+ 
+ 
+ Last edited by BLueBLue on Thu Sep 19, 2013 4:50 pm, edited 1 time in total.
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Azu 
+
+ Puyo Fan 
+ Posts: 1081 Joined: Fri May 23, 2008 5:40 pm 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by Azu &raquo; Thu Sep 19, 2013 6:35 am 
+ 
+ 
+ 
+ 
+ 
+ This makes me want to go back to hacking PP20th on the DS and see if I can try to combine two modes together. 
+
+ 
+ 
+ 
+ 
+ Puyo Puyo Fever!+V3 
+Updated! Jul 18, 2011 
+ 
+'Remixed' Samples 
+ Splashin' Hill Second Act! Sonic 4 - Splash Hill Act 2 
+ Dancin' on The Second Level! Puyo Puyo Tsuu - Area B 
+ Up To The Third Area! Puyo Puyo Tsuu - Area C 
+ 
+A little renamer I made for Puyo Puyo VS 2. 
+ Puyo Puyo 2 VS Voice Renamer 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Yoni Arousement 
+
+ Puyo Fan 
+ Posts: 386 Joined: Wed Oct 07, 2009 12:14 am 
+ 
+ 
+ 
+ Contact: 
+ 
+ 
+ Contact Yoni Arousement 
+ 
+ 
+ 
+ 
+ 
+ 
+ Website 
+ 
+ Twitter 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by Yoni Arousement &raquo; Sat Sep 21, 2013 11:57 am 
+ 
+ 
+ 
+ 
+ 
+ Steelix100 wrote: The Sega Megadrive version of Puyo Puyo 2 is pretty much Arcade perfect. The biggest difference is that the voice samples sound like utter trash in the MD version (as well as entirely pauses the music for no real reason). 
+The music shouldn't pause if you set Voice Mode to Type A (but it defaults to Type B). 
+
+ 
+ 
+ 
+ 
+ YouTube Channel , Twitter 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Thu Nov 28, 2013 12:30 am 
+ 
+ 
+ 
+ 
+ 
+ I have ported my forum posts over the wiki, all sorted in a category of their own: 
+ http://puyonexus.net/wiki/Category:Reverse_Engineering 
+ 
+The main page is located there: 
+ http://puyonexus.net/wiki/Puyo_Puyo_Tsu ... ngineering 
+ 
+I will continue posting announces to this thread but the updates will appear on the wiki only, as it is a far more convenient place for documenting technical stuff. 
+ 
+Coming soon: 
+ 
+ Routine handling game inputs (fully analyzed) 
+ Frame data (current efforts) 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Steelix100 
+
+ Puyo Fan 
+ Posts: 487 Joined: Thu Sep 17, 2009 11:21 am 
+ 
+ Location: the next world 
+ Preferred pronouns: loser 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by Steelix100 &raquo; Fri Nov 29, 2013 4:57 pm 
+ 
+ 
+ 
+ 
+ 
+ Lorenzo The Comic wrote: Steelix100 wrote: The Sega Megadrive version of Puyo Puyo 2 is pretty much Arcade perfect. The biggest difference is that the voice samples sound like utter trash in the MD version (as well as entirely pauses the music for no real reason). 
+The music shouldn't pause if you set Voice Mode to Type A (but it defaults to Type B). 
+Heh, I actually already knew this. I usually don't use Type A because it manages to make the voices sound even worse... 
+
+ BLueBLue wrote: I have ported my forum posts over the wiki, all sorted in a category of their own: 
+ http://puyonexus.net/wiki/Category:Reverse_Engineering 
+ 
+The main page is located there: 
+ http://puyonexus.net/wiki/Puyo_Puyo_Tsu ... ngineering 
+ 
+I will continue posting announces to this thread but the updates will appear on the wiki only, as it is a far more convenient place for documenting technical stuff. 
+ 
+Coming soon: 
+ 
+ Routine handling game inputs (fully analyzed) 
+ Frame data (current efforts) 
+
+Go, go! For science! 
+ 
+I have a question, for Hernan. Will you be using his findings to make PuyoVS 2 more "accurate"? 
+
+ 
+ 
+ 
+ 
+ I will not die until I achieve something. 
+Even though the ideal is high, I never give in. 
+Therefore, I never die with regrets. 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Fri Nov 29, 2013 11:49 pm 
+ 
+ 
+ 
+ 
+ 
+ A page on the game's options, settings and variables has been added to the wiki. It includes some hidden game options. 
+See http://puyonexus.net/wiki/Puyo_Puyo_Tsu ... _Variables and the Reverse Engineering category 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Sun Dec 01, 2013 1:41 am 
+ 
+ 
+ 
+ 
+ 
+ I've written a new page on Gamepad Input and created a reference page on Frame Data timings for PP2. 
+ 
+It includes how game inputs are actually handled, how button repeat is done, and possible trickery. 
+ 
+Watch the Reverse Engineering category! 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Sat Dec 21, 2013 9:58 pm 
+ 
+ 
+ 
+ 
+ 
+ For those interested, the following game genie code will turn the game into a pseudo endless mode :
+ Code: Select all ABSA-AAGA
+ 
+Tested and works on Puyo Puyo 2 (REV 00) (J) [Genesis] . 
+Tested and works on real Genesis hardware . 
+ 
+The code makes the game ignore the fact that a player has his third column full. The consequence is a deadlock in which the game will indefinitely loop through the pairs it should deal to the losing player. The other player can continue until his board is also full, at which point you should reset the console as there is no way the game will ever end. Ojama puyos will still fall upon an opponent (I haven't found which routines handle ojama puyos yet) . 
+ 
+Note: although the game appears to loop and do nasty things, it will not harm your console or cartridge. 
+ 
+Edit: Rom hackers who want to make this permanent may edit their rom and change the byte value at 0x005EC1 from 0x01 to 0x00. No need to edit the rom's checksum, the game doesn't care about its value. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Mon Dec 23, 2013 2:54 am 
+ 
+ 
+ 
+ 
+ 
+ I've finally tackled rotation, collision and push-back and updated the frame data timings reference page. 
+ 
+Among other things, it explains: 
+ 
+ how you can push your falling pair upwards; 
+ why it doesn't work beyond the 13th row; 
+ what input trickery you can do to indefinitely keep at the same spot; 
+ how you can "ghostride" over columns full to the 12th row. 
+
+Other topics are still in the Reverse Engineering category! 
+ 
+I've also added a new Game Genie code for those who wish to slow down drop speed and even completely freeze the falling pair by pressing the down arrow: 
+
+ Code: Select all ABTT-AACG
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ BLueBLue 
+
+ Puyo Fan 
+ Posts: 77 Joined: Tue Aug 27, 2013 12:57 am 
+ 
+ Location: France 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ Re: Puyo Puyo Tsuu Reverse Engineering: game mechanics expla 
+ 
+
+ 
+ 
+ 
+ Quote 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post 
+ 
+ by BLueBLue &raquo; Sun Jan 05, 2014 7:11 pm 
+ 
+ 
+ 
+ 
+ 
+ New pages have been written on the wiki! 
+
+ 
+ Puyo Puyo Tsu software architecture, callbacks routines, etc. 
+ Falling pair control 
+ Lateral movements 
+ Free fall 
+
+I also have updated the frame data tables with pair split and some free-fall information. 
+ 
+As always, everything is in the Reverse Engineering category! 
+ 
+Coming up: soft drop (down arrow) and pair lock. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Top 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ Post Reply 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Print view 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Display: All posts 1 day 7 days 2 weeks 1 month 3 months 6 months 1 year 
+ Sort by: Author Post time Subject 
+ Direction: Ascending Descending 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 32 posts
+ 
+ Previous 
+ 1 
+ 2 
+ 3 
+ Next 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ Return to “Gameplay Discussion” 
+ 
+ 
+ 
+ 
+ 
+ Jump to 
+ 
+ 
+ 
+ 
+ 
+ The Site 
+ &#8627; News and Announcements 
+ &#8627; Puyo Nexus Discussion 
+ &#8627; Site Projects 
+ &#8627; Wiki 
+ &#8627; Chain Simulator 
+ &#8627; Game Translations 
+ &#8627; Releases 
+ &#8627; Puyo Puyo!! 20th Anniversary 
+ &#8627; Uploads 
+ &#8627; Puyo Puyo Fever 2 
+ &#8627; Puyo Puyo~n 
+ &#8627; Puyo Puyo Sun 
+ &#8627; Puyo Puyo! 15th Anniversary 
+ &#8627; Puyo Puyo 7 
+ &#8627; Uploads 
+ &#8627; DiscStation Games 
+ Puyo Puyo 
+ &#8627; Guides 
+ &#8627; Gameplay Discussion 
+ &#8627; Videos and Replays 
+ &#8627; Tournament Archives 
+ &#8627; Fandom 
+ &#8627; Discstation Games 
+ &#8627; Madou Monogatari 
+ &#8627; Puyo Puyo Quest 
+ &#8627; Game Rips and Modifications 
+ &#8627; Finger Paint Gallery 
+ &#8627; Questions and Answers 
+ &#8627; General Chatter 
+ International Puyo Puyo 
+ &#8627; Puyo Puyo Français 
+ The Purgatory 
+ &#8627; Puyo Purgatory 
+ 
+ 
+ 
+
+ 
+
+
+ 
+ Who is online 
+ Users browsing this forum: No registered users and 9 guests 
+ 
+
+
+ 
+ 
+
+
+ 
+ 
+ 
+
+ 
+ 
+ Board index 
+ 
+ All times are UTC 
+ 
+ 
+ Delete cookies 
+ 
+ 
+ 
+ 
+ Members 
+ 
+ 
+ 
+ 
+ The team 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ Powered by phpBB &reg; Forum Software &copy; phpBB Limited 
+ 
+ 
+ 
+ Privacy 
+ 
+ |
+ 
+ Terms 
+ 
+ 
+ 
+ © 2007-2017 Puyo Nexus
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
