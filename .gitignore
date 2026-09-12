@@ -1,0 +1,67 @@
+# This checkout lives inside a MAME installation. Allow only project roots;
+# everything else (MAME binaries/assets/source, FBNeo, roms, etc.) stays local.
+/*
+!/.gitignore
+!/AGENTS.md
+!/README.md
+!/PuyoPuyo2/
+!/plugins/
+!/puyo2-lan-runs/
+!/puyo2-link/
+
+# Keep our plugin, not the plugins bundled with MAME.
+/plugins/*
+!/plugins/puyo2link/
+
+# Known extracted ROM sets. Do not match every "puyopuy2" directory:
+# historical run artifacts include NVRAM directories with that name.
+/PuyoPuyo2/puyopuy2/
+/PuyoPuyo2/puyopuy2_patched/
+roms/
+
+# ROM/media images and archives, including copies inside checkpoints.
+*.[zZ][iI][pP]
+*.7[zZ]
+*.[rR][aA][rR]
+*.[tT][aA][rR]
+*.[gG][zZ]
+*.[bB][zZ]2
+*.[xX][zZ]
+*.[zZ][sS][tT]
+*.[rR][oO][mM]
+*.[cC][hH][dD]
+*.[iI][sS][oO]
+*.[iI][mM][gG]
+*.[iI][cC][0-9]*
+*.[uU][0-9]*
+*.[bB][iI][nN]
+
+# These are captured link traffic and work-RAM snapshots, NOT ROM images.
+# Other binary files require deliberate review before adding an exception.
+!A_to_B.bin
+!B_to_A.bin
+!ram_[aAbB]_*.bin
+!latejoin_[aAbB]_*.bin
+
+# Compiled programs/libraries and development caches are not artifacts.
+*.[eE][xX][eE]
+*.[dD][lL][lL]
+*.so
+*.so.*
+*.dylib
+*.o
+*.obj
+*.a
+*.lib
+*.pdb
+*.sym
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.puyo2-lan-test-*/
+.DS_Store
+Thumbs.db
+
+# Intentionally keep project logs, screenshots, .bin.wire journals,
+# .status/.progress snapshots, configuration, and research/checkpoint files.

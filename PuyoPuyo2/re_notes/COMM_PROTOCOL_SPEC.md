@@ -2,6 +2,10 @@
 ## Software/Protocol Technical Specification (Reverse-Engineered)
 
 **Status date:** 2026-09-11
+**Reading order:** later updates correct earlier conclusions. Section 20
+records the paused real-PCB hardware research and supersedes the historical
+12-pin CN4 identification and speculative GPIO functions in section 1.2.
+Its documentary hardware evidence is not a measurement of the user's PCB.
 **Source ROM:** `epr-17240.ic31` / `epr-17241.ic32` (68000 program, byte-interleaved), Sega System C2, "Puyo Puyo 2" (Compile, 1994), as archived in `../puyopuy2/`.
 **Method:** Static disassembly of the merged 68000 program image (`../puyopuy2_merged.bin`) using MAME's `unidasm -arch m68000`, cross-referenced against the existing MAME driver source (`src/src/mame/sega/segac2.cpp`) and public secondary sources. No physical daughterboard, logic analyzer capture, or Z80-side firmware was available — everything below was derived purely from what the 68000 program ROM does.
 
@@ -1969,3 +1973,568 @@ includes key zero; the export alias and unnecessary forward declaration
 are removed. Mailbox semantics, credit limits, reset handling and error
 checks are unchanged. The existing callback harness covers transport
 and now rejects input-port access in quiet and debug modes.
+
+---
+
+## 20. Update 15 (2026-09-11): real-PCB bridge research and paused bring-up
+
+### 20.1 Goal and stopping point
+
+The user wants a replacement communication daughterboard connecting one
+real Puyo Puyo 2 PCB to MAME, eventually connecting two real PCBs through
+our own daughterboards. Windows is the current host; migration to Linux
+is not required for USB serial support.
+
+At the user's request, record this work and pause pending a new direction.
+No physical measurements, adapter construction, firmware, or host bridge
+have been completed. No working PCB-to-MAME connection is claimed.
+Plugin 0.6.2 remains the working software reference. Keep original ROMs,
+protection, game state, and watchdog behavior unchanged.
+
+### 20.2 Resume here: the user's first steps
+
+Start with the game PCB powered off and disconnected, including other
+possible power sources. The first deliverable is connector identification,
+not purchasing or wiring a microcontroller.
+
+1. Photograph the entire component side and underside. Make board numbers,
+   revision labels, and CPU markings readable.
+2. Photograph CN4 directly above, from its mating side, and underneath.
+   Show the key/notch, row/pin markings, surrounding silkscreen, solder
+   joints, and traces. If CN4 is unpopulated, photograph its empty footprint;
+   do not install a header yet.
+3. Record contacts per row, pin pitch, row spacing, and housing dimensions.
+   Measure across several pin intervals rather than estimating one gap.
+   A camera and ruler suffice to start; calipers improve dimensions.
+4. Leave the board unchanged: no soldering, trace cuts, jumper changes,
+   GPIO shorts, or MCU/USB-power connections. Preserve an existing working
+   arcade setup as the baseline. If the board has not run successfully,
+   establish the correct power/JAMMA setup before attempting a link.
+
+After photographs establish physical orientation, define specific
+power-off continuity measurements using a multimeter. Do not give pin
+probing instructions based on an unanchored row-numbering assumption.
+Only after that should appropriately equipped powered observations
+characterize the bus, initially without an adapter driving it.
+
+### 20.3 Recovered CN4 documentation and corrections
+
+Charles MacDonald's preliminary, hardware-tested System C2 notes [H1]
+provide a useful tracing reference. They are not an official schematic
+or a validated wiring prescription for this particular PCB.
+
+The table enumerates A1-A20 and B1-B20: **40 contact positions**, despite
+its ambiguous heading "20-pin two-row header." **CN2 is the 12-pin
+auxiliary-I/O header.** The historical 12-pin-CN4 claim in section 1.2
+and its appendix description must not be used for hardware design.
+An external communication cable and the motherboard expansion connector
+are distinct interfaces.
+
+Documented core mapping, pending continuity/orientation verification:
+
+| Signal group | Reported CN4 contacts |
+|---|---|
+| CPU A1, A2, A3, A4, A5 | A4, B4, A5, B5, A6 respectively |
+| CPU D0, D1, D2, D3, D4, D5, D6, D7 | B6, A7, B7, A8, B8, A9, B9, A10 respectively |
+| Read/write strobes | B10 `/RD`, A11 `/LWR`, B11 `/UWR` |
+| Reset | A12 `/RESET` |
+| Chip select | B12 `/CS`, traced in [H1] to IC26 pin 17, GAL16V8 315-5395 |
+| +5 V | A1, B1, A15, B15 |
+| Ground | A2, B2, A14, B14 |
+| Auxiliary inputs | A17 to CN2 pin 7 / port C bit 4; B17 to CN2 pin 8 / port C bit 5 |
+| Unidentified contacts | A16, B16, A18, B18, A20, B20; B18 also reportedly connects to TP7 |
+
+The source's port-H description says PH7 goes to A19 and PH6 to B19,
+matching MAME [H2]. Its connector table reverses those assignments.
+**Leave A19/B19 unassigned until continuity resolves this contradiction.**
+MAME repeating one passage is not independent hardware corroboration.
+Their daughterboard-side function is unknown; do not assume presence
+straps, reset inputs, or cabinet-role inputs. The working Lua plugin
+does not override GPIO, but that does not prove physical hardware
+ignores these nets.
+
+The five address bits fit 32 low-byte register selections, consistent
+with our observed odd-address mailbox window. This is a structural
+inference, not proof of the GAL's complete address decode or aliases.
+The strobes are the source's net names, not literal native 68000 pin
+names; do not substitute raw R/W, LDS, or UDS without tracing.
+
+Connector manufacturer, pitch, mating part, physical numbering view,
+and clearance remain unverified. Do not assume an IDE connector merely
+because it has 40 contacts. MAME [H2] reports that Print Club variants
+populate CN4 with the opposite polarizing-key orientation.
+
+### 20.4 Timing and RP2040 feasibility
+
+MAME's executable configuration uses `53,693,175 / 6` for the CPU:
+approximately 8.949 MHz, not the Genesis-like 7.67 MHz or the stale
+10 MHz overview comment. A CPU clock measurement on the real board
+is still required. Motorola [H3] describes four-clock standard cycles
+plus optional wait states. At the modeled frequency, four clocks are
+about 447 ns: **the whole cycle, not the available read-response time**.
+
+Neither CN4 wait-state authority nor motherboard DTACK timing was
+established. DTACK is not identified in the recovered table, but unknown
+contacts mean it cannot be declared absent. Measure CPU CLK/DTACK,
+CN4 select/strobes, addresses, data setup/hold, write capture edges,
+output-release requirements, and reset behavior before timing design.
+
+RP2040/Pico is a credible protocol processor and USB bridge, but an
+RP2040-only CN4 responder remains unproven:
+
+- Pico exposes 26 GPIOs; the documented core interface totals about 18
+  signals before translator controls and any other required nets.
+- RP2040 has 264 KB SRAM, two PIO blocks, and eight state machines.
+  Storage capacity is not the limiting issue.
+- PIO's instruction set has no arbitrary SRAM load. Address-dependent
+  responses require a bounded CPU/DMA/PIO path or hardware assistance.
+  FIFO stalls and bus contention matter; CPU frequency alone is no proof.
+- The researched SDK default is 125 MHz. Current RP2040 documentation
+  also describes conditional 200 MHz operation at 1.15 V core supply;
+  do not claim every clock above 133 MHz is unsupported. Initial
+  feasibility should use the actual configuration, not overclocking.
+
+A conservative architecture is:
+
+```text
+CN4 -> voltage/direction interface -> local registers/RAM -> RP2040
+                                                        -> USB -> PC
+```
+
+All immediate PCB reads, writes, and status transitions must be serviced
+locally. USB/Windows must never answer individual 68000 bus cycles.
+A small FPGA with local register/RAM logic, or CPLD plus suitable memory,
+is a fallback if MCU-only timing cannot be guaranteed. A CPLD is not
+automatically a RAM replacement; single-port memory requires arbitration.
+No specific programmable-logic part has been qualified.
+
+Demonstrate worst-case response, hold, output-disable, and back-to-back
+access behavior under USB activity, resets, host disconnection, and queue
+pressure before declaring an MCU-only design suitable. The previously
+observed accelerated recruitment race also means ordered byte delivery
+alone does not prove physical/emulated timing compatibility.
+
+### 20.5 Electrical interface and provisional purchases
+
+Pico GPIO uses 3.3 V and must not be connected directly to possibly 5 V
+CN4 signals. Select buffers/translators against actual source VOH/VOL,
+receiver VIH/VIL, loading, delay, and power sequencing. Data outputs
+must be high-impedance except during a valid selected read, including
+safe behavior while firmware boots or power is absent.
+
+Candidate-part caveats from TI datasheets:
+
+- SN74LVC245A at 3.3 V accepts inputs up to 5.5 V with TTL-compatible
+  input thresholds. It is a receiving-buffer candidate, not a generator
+  of 5 V output levels. A 3.3 V return path needs receiver qualification.
+- SN74LVC8T245 supports dual supplies but its 5 V-side VIH is 0.7 times
+  that supply (3.5 V at 5 V). It is not automatically compatible with
+  every legacy TTL source.
+- Prefer auditable direction/output-enable control over purchasing
+  generic auto-direction translator modules for this unresolved bus.
+
+Do not join arcade +5 V to USB VBUS, or join two cabinets' +5 V rails.
+Plan returns, sequencing, and possible external-link galvanic isolation;
+debugger and instrument grounds can defeat intended isolation. Follow
+Pico's documented power arrangements rather than guessing connections.
+
+Low-regret purchases are a genuine Pico/Pico H, USB data cable, and
+multimeter. For bus characterization, arrange access to a roughly
+100 MHz-class oscilloscope with suitable probes and a logic analyzer
+with documented 5 V compatibility, adequate simultaneous channels,
+and sufficient sampling rate at that channel count. This is an initial
+instrument target, not a guaranteed timing-resolution specification.
+An eight-channel analyzer cannot capture the whole bus simultaneously.
+Never defeat instrument protective earth or clip probe ground to a
+non-ground net.
+
+Defer the exact connector, translators, FPGA/CPLD/memory BOM, and PCB
+layout until board-specific evidence supports them.
+
+### 20.6 Windows bridge and eventual two-PCB transport
+
+Windows provides Usbser.sys for appropriately described USB CDC devices
+[H6]. pySerial supports Windows and Linux binary serial transfers with
+configurable timeouts [H7]. There is no need to change operating systems
+to get started.
+
+USB CDC is not TTL UART or RS-232. A COM-port baud setting is line-coding
+metadata for native CDC firmware; it does not set USB's physical rate.
+If firmware bridges a physical UART, it may apply the setting there.
+No original daughterboard baud rate or optical framing was established.
+
+The simplest proposed host integration is a small Python bridge acting
+as the physical cabinet's endpoint in the existing `.bin.wire` journals.
+That can reuse the working MAME mailbox implementation without an
+initial MAME C++ rebuild. It is not implemented serial support.
+
+Preserve the R/F/D generation handshake, ordering, readiness, and stale
+data rejection. Explicitly design serial framing, bounded queues,
+credit/backpressure, partial I/O, and disconnect/reconnect behavior.
+Current journal append acceptance is not MCU receipt or consumption by
+the other game; do not equate these acknowledgment boundaries or claim
+filesystem close alone guarantees crash-durable storage. Keep blocking
+serial operations outside MAME frame callbacks. Consider CDC reset/DTR
+and development-firmware magic-baud reset behavior deliberately.
+
+For two real PCBs, reuse each local CN4 responder and replace the host
+transport with MCU-to-MCU communication. An appropriately designed
+isolated differential serial link (e.g. full-duplex RS-422/RS-485) is
+a candidate for cabinet-distance wiring, not long raw GPIO/UART wires.
+Our two replacements can use their own external framing. Compatibility
+with an original daughterboard would be a separate research objective.
+
+### 20.7 Sources and remaining evidence gaps
+
+Research consulted on 2026-09-11. These are links and summarized findings,
+not redistributed third-party documents or ROM content.
+
+- **[H1] Charles MacDonald, Sega System C2 hardware notes (2000-2003):**
+  https://segaretro.org/Sega_System_C2_hardware_notes_(2003)
+  Hardware-tested but explicitly preliminary; see Connector pinouts,
+  port H, and test-point descriptions. Original cgfm2.emuviews.com host
+  did not resolve. Credit MacDonald when using these tracing findings.
+- **[H2] MAME System C/C2 source:**
+  https://github.com/mamedev/mame/blob/master/src/mame/sega/segac2.cpp
+  Includes connector observations, Print Club key reversal, PH output
+  mapping, and actual CPU clock configuration. Early link-protocol
+  comments are historical; our later ROM findings supersede them.
+- **[H3] Motorola/Freescale M68000 User's Manual:**
+  https://www.nxp.com/docs/en/reference-manual/MC68000UM.pdf
+  Section 5.8, printed p. 5-35, and DTACK timing at p. 5-39.
+- **[H4] Raspberry Pi component/board documentation:**
+  https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf
+  https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf
+  PIO/resources/electrical limits and board power arrangements.
+  SDK clock configuration:
+  https://github.com/raspberrypi/pico-sdk/blob/master/src/rp2040/hardware_regs/include/hardware/platform_defs.h
+- **[H5] TI translator datasheets:**
+  https://www.ti.com/lit/ds/symlink/sn74lvc245a.pdf
+  https://www.ti.com/lit/ds/symlink/sn74lvc8t245.pdf
+- **[H6] Microsoft USB serial driver binding:**
+  https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/usb-driver-installation-based-on-compatible-ids
+- **[H7] pySerial:**
+  https://pyserial.readthedocs.io/en/latest/pyserial.html
+  https://pyserial.readthedocs.io/en/latest/pyserial_api.html
+- **[H8] IC26/315-5395 PLD archive entry:**
+  https://wiki.pldarchive.co.uk/index.php?title=Template:SEGA_315-5395&action=raw
+  Corroborates device identity/location. The linked ZIP returned 403;
+  no decode equations were inspected.
+
+No original C/C2 motherboard schematic was verified. The Arcade-Projects
+four-player thread returned 403; snippets were not accepted as circuit
+evidence. No exact connector SKU, physical pin orientation, complete
+unknown-net mapping, original link physical layer, or safe bus timing
+has been established. Further parts shopping does not replace measuring
+the user's board. Resume with section 20.2 only when the user returns
+to this hardware objective.
+
+## 21. Update 16 (2026-09-11): wired-LAN implementation, plugin 0.7.0
+
+### 21.1 Scope and acceptance boundary
+
+The approved software path is now implemented: two current standalone
+MAME installations, each running original `puyopuy2` with two local
+controllers, Lua emulating the same communication-board mailbox, and a
+small external Python standard-library process exchanging records over
+TCP. No MAME C++ changes, ROM/game-memory writes, input injection,
+protection patches, watchdog changes or legacy-emulator compatibility.
+Hardware work in section 20 remains **paused**.
+
+`plugins/puyo2link/lan.py` is both bridge and launcher. One invocation on
+each PC owns its own MAME child; A listens, B connects. The README contains
+current runnable Linux and Windows commands. Launch from the MAME
+installation directory so ordinary `plugins` and `roms` paths resolve.
+The launcher uses native `pathlib` paths; Lua's prestart uses
+`package.config`'s native separator and a relative `puyo2-link` default,
+not the developer's Windows home directory. An invalid explicit
+`PUYO2_LINK_DIR` is reported, not silently replaced. Existing same-machine
+shared-file IPC remains available without the LAN environment variable.
+
+Section 21.5 records unit results; section 21.6 records the subsequent
+actual MAME TCP loopback gameplay and lifecycle exercises on Windows.
+Two physical wired-LAN Linux PCs still need acceptance.
+The previously user-confirmed 0.6.2 gameplay and invitation behavior is
+the baseline, not proof of this new network layer.
+
+### 21.2 Wire protocol and fresh-session rule
+
+The listener binds only the supplied IPv4 (default `127.0.0.1`), port
+24872 by default, accepts one connection and closes its listening socket.
+B retries refused connections within a monotonic 60-second startup
+deadline. Both sides complete identity exchange before their own MAME is
+started. A connection or identity failure never starts that local child.
+No address discovery, third-party libraries, external infrastructure,
+UPnP or automatic port forwarding.
+
+The fixed 33-byte hello is Python `!8sc16s8s`:
+
+| Field | Value |
+|---|---|
+| protocol/version | 8 ASCII bytes `P2LAN001` |
+| cabinet | exactly one ASCII byte `A` or `B`, opposite the local role |
+| sender session | 16 fresh UUID bytes, nonzero and different from our own |
+| game | exactly 8 ASCII bytes `puyopuy2` |
+
+Both sides send hello and read exactly one peer hello using the remaining
+startup deadline. A malformed/version/game/role/session mismatch fails
+closed. UUIDs identify runs; they are **not authentication**. This protocol
+is only for a trusted wired LAN, with no encryption and no Internet
+exposure. Scope A's firewall rule to B's address and the chosen TCP port.
+
+Subsequent frames have a 6-byte `!4sH` header: `P2N1` and big-endian body
+length, which must be 33..302. The body is one message-type byte, the
+sender's 16-byte UUID, the receiver's 16-byte UUID, then payload:
+
+- `D`: exactly one validated journal record, including its header.
+- `H`: heartbeat, empty payload.
+- `Q`: orderly end of the whole linked session, empty payload.
+
+Both session IDs must match the handshake in the correct direction.
+Unknown magic/type/version, invalid lengths, bad record structure or
+extra bytes inside a message are rejected before journal delivery.
+Arbitrary TCP fragmentation/coalescing and partial sends are supported;
+an unsent suffix stays queued and is never restarted from byte zero.
+No remote message selects a local file path or executable/command.
+
+Journal bytes remain unchanged: the existing 14-byte `>c4I4I4I2`
+`P2R1`/`P2F1`/`P2D1` records, nonzero sender epoch, valid receiver epoch
+where required, and data payloads 1..255 bytes. Reset has receiver zero
+and no payload; readiness has nonzero receiver and no payload. The bridge
+relays them in order. Lua still owns generation monotonicity, mutual FE
+readiness, queue invalidation and stale-generation rejection. An in-MAME
+CONTROL/F3 reset is not a TCP reconnect: its increasing epochs continue
+through the same journals. Native game recovery can still end a match
+and take the previously documented watchdog time.
+
+Each launcher creates a unique persistent local run directory. Its
+child receives only derived `PUYO2_LINK_SIDE`, `PUYO2_LINK_DIR` and
+`PUYO2_LINK_SESSION` environment values; the parent environment is not
+mutated. The two PCs never share a filesystem directory. No restart
+replays old files. Cabinet config/controller mappings and NVRAM persist
+separately below `puyo2-lan-runs/cabinet-A` or `cabinet-B`; they are not
+journal replay state.
+
+### 21.3 Progress, credit and explicit bounds
+
+This is not blind unlimited journal tail-copying. Lua LAN mode and the
+bridge cooperate through two local ASCII, LF-terminated snapshots, named
+after that cabinet's outgoing raw audit path:
+
+- `.bin.status`: Python atomically replaces
+  `P2S1 <local UUID hex> <up|down> <tx_handled>\n`. `tx_handled` counts
+  complete outgoing journal bytes accepted into the bounded Python send
+  buffer. Lua validates session, state and monotonic range. On Windows,
+  a transient reader/rename sharing conflict is retried for at most
+  250 ms, in Python only.
+- `.bin.progress`: Lua writes
+  `P2P1 <local UUID hex> <rx_parsed> <failed 0|1>\n`.
+  `rx_parsed` is `in_pos - #buffer`, **not prefetched file position**.
+  Only fully handled journal records release the incoming disk budget.
+  Python ignores incomplete snapshots from this single in-place writer,
+  never treats them as progress, and applies its stall/startup deadline.
+  Backward/impossible offsets, wrong session or a reported Lua failure
+  end the session.
+
+Per direction, the explicit software limits are:
+
+| Layer | Bound / response |
+|---|---|
+| outgoing local journal not yet accepted by Python | 65,536 encoded bytes; Lua refuses a whole append batch when it would exceed this |
+| Python outgoing network buffer | 65,536 bytes including network envelopes; partial-send suffix retained |
+| Python incoming network buffer | 65,536 bytes; socket reads at most 4,096 bytes each; validated messages at most 308 bytes including header |
+| incoming journal not yet parsed by Lua | 65,536 encoded bytes; bridge fails before an append that exceeds it |
+| Lua journal prefetch buffer | one existing at-most-65,536-byte read plus an incomplete record (at most 268 bytes) |
+| Lua LAN accepted RX queue | 4,096 payload bytes; overflow fails closed |
+| emulated committed TX queue / published RX bank | existing 255-byte credit limits each |
+
+Lua's prefetch is part of the incoming unread-journal budget until parsed,
+not an extra acknowledgment of consumption. Python's local journal reader
+holds at most one 269-byte record and advances `tx_handled` only after
+that complete record is accepted, never on a partial header/payload or
+merely prefetched bytes. TCP kernel buffers are separately OS-bounded;
+the bridge requests 65,536 bytes for each socket buffer, and logs actual
+`SO_SNDBUF`/`SO_RCVBUF` values (the OS can round/adjust these). TCP's own
+flow control applies; no application layer silently drops new data to
+stay under a cap. Historical journals/audits intentionally keep growing
+as evidence; it is unread backlog and queued memory that are bounded.
+
+The existing `link:send(payload)` contract remains **all or zero**:
+return the full payload length only after successful journal append/close,
+otherwise zero with the caller retaining all bytes/TX credit. A full
+LAN window backpressures this same queue; accepting some bytes and
+clearing the whole caller queue would be wrong. Ambiguous append/close
+or raw audit failure fails closed rather than resending possibly
+accepted data. LAN append-open failures also report failure immediately;
+the original retryable-open behavior remains available in local file mode.
+
+These are deliberately distinct boundaries:
+
+1. Lua journal append acceptance can free the emulated TX queue.
+2. Python acceptance (`tx_handled`) frees the local outgoing journal budget.
+3. A successful socket send frees only the corresponding Python buffer bytes.
+4. Remote journal append is not remote Lua parsing.
+5. Remote parsing (`rx_parsed`) can queue data in Lua, not necessarily
+   publish/consume it in the board bank or game's own ring.
+
+No TCP or progress acknowledgment claims game/application consumption.
+Closing a file does **not** assert `fsync`/power-loss durability.
+
+### 21.4 Timing, liveness and owned-child shutdown
+
+The bridge polls at 3 ms, uses TCP_NODELAY and emits a heartbeat each
+second. Default monotonic heartbeat, blocked-send and nonempty
+incoming-progress stall deadlines are 10 seconds (`--timeout`, 3..300).
+The first plugin progress snapshot has a separate 60-second allowance
+(`--startup-timeout` also configures startup connection/hello).
+These are configurable software operational deadlines, not invented
+original-link baud rates. No socket/connect operation occurs in MAME
+callbacks; ordinary local journal/snapshot I/O remains in Lua.
+
+The launcher explicitly selects throttle, speed 1, no auto/manual
+frameskip, no refresh-speed/wait-vsync/sync-refresh forcing, and joystick
+input. Both hosts must sustain normal speed. This does not synchronize
+PC clocks, correct emulator speed drift, or implement rollback/netplay.
+Pausing a receiving MAME does not pause its Python supervisor: unread
+journal growth or receive-stall timeout eventually ends the session.
+The original ROM's watchdog and all game state remain untouched.
+
+Normal local MAME exit sends `Q`, after any already-partially-sent frame,
+with a one-second bounded drain. Receiving `Q` exits the peer supervisor's
+loop without trying to send queued data to the departing peer. Ctrl+C
+also requests orderly peer quit. Unexpected EOF, heartbeat timeout,
+protocol/I/O/backlog failure or abnormal MAME exit returns nonzero;
+the other peer sees TCP closure promptly. There is no seamless reconnect,
+resume, or replay. Restart both launchers in fresh directories.
+
+In every supervised exit path Python publishes `down`, closes TCP before
+waiting, and asks the local child to exit through Lua's next frame
+(`manager.machine:exit()`). If that child is paused/unresponsive, after
+three seconds Python terminates that exact child process; after another
+three seconds it kills/reaps that child if needed. It never kills by
+process name or targets another MAME instance. Process creation failure
+also closes the connection. The listener is context-managed and never
+left accepting after startup. As with any user-space supervisor, an
+uncatchable OS kill/power loss cannot run cleanup; no crash-durability or
+unconditional process-survival guarantee is claimed.
+
+A Lua-originated failure publishes its failure snapshot and freezes
+transport, but keeps checking bridge status until the supervisor replies
+`down`. This prevents an ordinary exit-code-zero MAME shutdown from hiding
+a Lua transport error. The supervisor also checks the final plugin
+snapshot before accepting a normal child exit.
+
+Windows can transiently deny Lua's open of `.status` while Python
+atomically replaces it. After a valid status has been seen, an open
+failure logs a retry and retains the last safe handled offset without
+blocking the frame. A valid subsequent snapshot resets the retry count;
+120 consecutive failed polls terminate the link. This is a poll-count
+bound, not a promise of a fixed wall-clock interval. Malformed content,
+wrong sessions and invalid offsets still fail immediately, as does an
+unavailable initial status. A supervisor `down` is logged as a stop;
+`bridge.log` distinguishes normal quit from a connection failure.
+
+Run directories retain `bridge.log`, redirected `mame.log`, Lua proto
+logs, raw audits, authoritative journals and progress/status evidence.
+They are not silently deleted. See the README for controller mapping,
+firewall, current command lines and restart guidance.
+
+### 21.5 Validation performed without MAME
+
+- `py PuyoPuyo2\re_notes\test_lan.py`: **18 unittest cases passed**,
+  using standard-library loopback sockets and an owned sleeping Python
+  stub, not MAME. Covers fragmented/coalesced frames, invalid framing and
+  records, role/game/version/session rejection, bounded startup
+  retry/timeouts/listener release, partial sends, full-send backpressure,
+  exact handled offsets, reset-record relay, incoming caps and released
+  budgets, partial progress snapshots, EOF/heartbeat/stall failure,
+  bidirectional bridge steps/normal quit, fresh launcher environments,
+  native path/command defaults, Windows sharing retry bounds, and
+  child cleanup/escalation/spawn failure, and Lua failure propagation
+  despite a zero child exit code.
+- Existing GENie host, `--file=PuyoPuyo2\re_notes\test_transport.lua`:
+  **454 callback assertions passed**, including original-ROM opcode
+  premises, no game-RAM/input writes, existing reset/readiness/ring
+  races and new Linux/Windows prestart paths, invalid directories,
+  all-or-zero LAN credit, parsed-not-prefetched progress, queue caps,
+  invalid bridge progress, visible LAN shutdown, transient status-open
+  recovery and bounded persistent status-open failure.
+- Same host, `--file=PuyoPuyo2\re_notes\test_random_inputs.lua`:
+  **passed unchanged** (input/menu gating, cabinet restriction, reset
+  and stop cleanup).
+
+These unit results do not establish Linux/Pi performance or physical
+LAN acceptance. The separate actual MAME exercises follow.
+
+### 21.6 Actual TCP loopback exercises and Windows sharing correction
+
+All runs used one pair at a time, MAME 0.289 on Windows, normal speed,
+headless video/audio, and the existing input-only `exercise_link.lua`
+helper. The production launcher does not enable that helper. A temporary
+in-memory wrapper added bounded duration and helper arguments to the
+launcher's child command; no ROM or game-memory writes were introduced.
+Directories below are under the workspace's `puyo2-lan-runs`.
+
+Initial `loopback_20260911_1951` and diagnostic
+`loopback_20260911_1953` failed explicitly and closed both children.
+Expanded diagnostics captured `Permission denied` opening `.status`
+during Python's atomic replacement. This was a Windows file-sharing
+race, not a game protocol error. The bounded retry described in 21.4
+addresses that measured cause; malformed snapshots are not ignored.
+
+`loopback_20260911_1955` then ran for approximately 95 emulated seconds:
+
+- Both MAME instances reported 100.00% speed and roles 1/2.
+- Recruitment reached four participants (`a13e=04`, `a13f=0f`).
+  Both frame-2400 screenshots show the linked fields and active play.
+- A emitted 776 application packets / 6,670 payload bytes, including
+  12 positive-attack packets. B emitted 745 packets / 5,709 bytes,
+  including seven positive-attack packets. Neither outgoing stream
+  had a sequence error, partial application packet or journal tail.
+- Bridge totals were 17,548 journal bytes A-to-B and 16,167 B-to-A;
+  each remote bridge appended and Lua parsed those same totals.
+- Several transient status-open failures recovered on the next frame.
+  A's bounded normal exit sent quit; B exited in response; both
+  supervisors returned zero and both MAME children exited.
+
+Only the sender's directory contains that direction's raw `.bin` audit.
+The current `analyze_link.py` prints `raw_matches=False` for a received
+journal whose raw counterpart is absent; that is not evidence of
+different network bytes. Compare the sender's audit and both journals.
+Positive-attack transmission alone is not a per-packet proof of garbage
+landing; screenshots and the original ROM remain separate evidence.
+
+`loopback_reset_drop_20260911_1957` exercised lifecycle behavior:
+
+- B was soft-reset through the existing helper at frame 1200 (about
+  20 seconds). Its epoch became 2; A observed the peer reset.
+- Original watchdog recovery reset A's link at about 39.7 seconds.
+  Both endpoints completed epoch 2/2 readiness at about 40.1 seconds,
+  retaining distinct roles with no transport/game-state patch.
+- At 65 wall-clock seconds the wrapper injected a bridge failure on A.
+  A reported that deliberate failure; B reported unexpected peer EOF.
+  Both launchers returned failure, both Lua plugins received supervisor
+  shutdown, and both owned MAME processes exited without leftovers.
+
+Still unperformed: two physical wired-Ethernet hosts, Linux/Pi runtime
+acceptance, human controller mapping/play, prolonged LAN endurance and
+LAN mid-match invitation acceptance. Do not equate TCP loopback with
+those remaining deployment scenarios.
+
+### 21.7 Startup visibility and Ctrl+C correction
+
+The user started A alone and saw only the endpoint/log directory, with
+no MAME window and unresponsive Ctrl+C. Waiting for B before launching
+MAME is intentional, but the silent wait was misleading. Long blocking
+Winsock accept/hello operations could defer Python signal handling until
+the entire startup timeout.
+
+The launcher now prints waiting, handshake, and opening-window stages.
+Listener/client attempts use at most 100 ms socket waits; the hello
+uses nonblocking partial sends/receives with short select waits and the
+existing total deadline. Ctrl+C can be processed between waits. A
+regression schedules Python's SIGINT while waiting for a listener peer
+or a silent hello; the original listener deferred it for five seconds.
+The hello case also exercises partial sends. The README explicitly
+distinguishes Windows commands from Linux examples and says that
+starting A alone does not start a headless MAME.

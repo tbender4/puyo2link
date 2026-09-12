@@ -1,0 +1,1403 @@
+[   0.000] === session start, version=0.7.0 side=B debug=true ===
+[   0.000] [rom-guards] cpld_compare=b202 garbage_divisor=323c,ffff
+[   0.000] taps installed; out=C:\Users\tbend\mame\puyo2-lan-runs\loopback_reset_drop_20260911_1957\20260911-195653-B-f92ac187b02847d7b52bf40441ff3d07\B_to_A.bin in=C:\Users\tbend\mame\puyo2-lan-runs\loopback_reset_drop_20260911_1957\20260911-195653-B-f92ac187b02847d7b52bf40441ff3d07\A_to_B.bin
+[   0.021] [attack-state] address=ffa7e2 data=0000 mask=ffff pc=0181aa protection=ff
+[   0.021] [attack-state] address=ffa7e0 data=0000 mask=ffff pc=0181aa protection=ff
+[   0.021] [attack-state] address=ffa7e6 data=0000 mask=ffff pc=0181b0 protection=ff
+[   0.021] [attack-state] address=ffa7e4 data=0000 mask=ffff pc=0181b0 protection=ff
+[   0.021] [attack-state] address=ffa7f2 data=0000 mask=ffff pc=0181b6 protection=ff
+[   0.021] [attack-state] address=ffa7f0 data=0000 mask=ffff pc=0181b6 protection=ff
+[   0.021] [attack-state] address=ffa7f6 data=0000 mask=ffff pc=0181bc protection=ff
+[   0.021] [attack-state] address=ffa7f4 data=0000 mask=ffff pc=0181bc protection=ff
+[   0.021] [attack-state] address=ffa7fa data=0000 mask=ffff pc=0181c2 protection=ff
+[   0.021] [attack-state] address=ffa7f8 data=0000 mask=ffff pc=0181c2 protection=ff
+[   0.021] [attack-state] address=ffa7fe data=0000 mask=ffff pc=0181c8 protection=ff
+[   0.021] [attack-state] address=ffa7fc data=0000 mask=ffff pc=0181c8 protection=ff
+[   0.021] [link-state] data=0000 mask=ffff pc=0181ec watchdog=65535 expect=ff rxhead=ffff rxtail=ffff rxpend=ffff
+[   0.021] [protection-state] address=ffa020 data=ff00 mask=ffff pc=000932
+[   0.021]   [menu-state] write $ffa172 = 0000 mask=ffff (pc=019320)
+[   0.021]   [menu-state] write $ffa170 = 0000 mask=ffff (pc=019320)
+[   0.021]   [menu-state] write $ffa17c = 0000 mask=ff00 (pc=019326)
+[   0.021]   [menu-state] write $ffa17f = 0000 mask=00ff (pc=01932c)
+[   0.021]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[   0.021]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   0.021] [protection-state] address=ffa026 data=0000 mask=ff00 pc=000408
+[   0.021] [protection-checksum] data=0000 mask=ff00 pc=00040e
+[   0.021] [protection-checksum] data=0000 mask=00ff pc=000414
+[   0.022] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[   0.034]   [menu-state] write $ffa170 = 0000 mask=ff00 (pc=018062)
+[   0.034]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[   0.034]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   0.179] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[   0.179] [reset] discarded tx=0 rx=0
+[   0.179] [epoch-reset] local=1 peer=0 queued_rx=0
+[   0.200] [peer-reset] old=0 new=1 local=1 queued_rx=0
+[   0.418] [link-state] data=7f7f mask=ff00 pc=018334 watchdog=65535 expect=ff rxhead=0000 rxtail=0000 rxpend=0000
+[   0.468] [epoch-ready] local=1 peer=1
+[   0.468] CMD $FE -> cabinet role=2 (ROM linkflag=82)
+[   0.468] [link-state] data=8282 mask=ff00 pc=018358 watchdog=65535 expect=ff rxhead=0000 rxtail=0000 rxpend=0000
+[   0.468]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   0.485]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[   0.485]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019466)
+[   0.485]   [header-byte] write $ffa513 = 00 mask=00ff (pc=019e4a)
+[   0.485]   [header-byte] write $ffa513 = 10 mask=00ff (pc=019e5a)
+[   0.485]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   0.485]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[   0.501]   [menu-state] write $ffa171 = 0000 mask=00ff (pc=019466)
+[   0.501]   [header-byte] write $ffa513 = 00 mask=00ff (pc=019e4a)
+[   0.501]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   0.502]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[   0.502] [packet-accepted] total=1 seq=00 flags=00 status=00 pc=01845e
+[   0.518]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[   0.518] [packet-accepted] total=2 seq=01 flags=00 status=10 pc=01845e
+[   0.535]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019466)
+[   0.535]   [header-byte] write $ffa513 = 00 mask=00ff (pc=019e4a)
+[   0.535]   [header-byte] write $ffa513 = 10 mask=00ff (pc=019e5a)
+[   0.535]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   0.535]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[   1.001] heartbeat frame=60 tx=12 rx=6 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=00 a17f=00 txtail=000c rxpend=0000
+[   1.001] [transport] captured=12 flushed=12 received=6 accepted=2 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=33 bursts=4 txcredit=0 outq=0 inq=0 watchdog=28 txseq=04 rxseq=02 rxcredit=3 protection=00 checks=0000
+[   1.001] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[   1.001] [game-state] a142=ff a13e=ff a13f=ff a530=ffff a506=00 a507=00 a508=ff a7b0=0000 a7a6=0000 script=019f80 mode=ff rule=01 base=70 margin=6 difficulty=255 preset=0
+[   1.001] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1b00 ffd100=ff80->01b388 sleep=130 local26=0000
+[   1.002]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[   1.002] [packet-accepted] total=3 seq=02 flags=00 status=10 pc=01845e
+[   1.519]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[   1.519] [packet-accepted] total=4 seq=03 flags=00 status=10 pc=01845e
+[   2.003] heartbeat frame=120 tx=18 rx=12 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=00 a17f=00 txtail=0012 rxpend=0000
+[   2.003] [transport] captured=18 flushed=18 received=12 accepted=4 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=95 bursts=6 txcredit=0 outq=0 inq=0 watchdog=28 txseq=06 rxseq=04 rxcredit=0 protection=00 checks=0000
+[   2.003] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[   2.003] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1b00 ffd100=ff80->01b388 sleep=70 local26=0000
+[   2.020]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[   2.521]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[   3.004] heartbeat frame=180 tx=24 rx=18 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=00 a17f=00 txtail=0018 rxpend=0000
+[   3.004] [transport] captured=24 flushed=24 received=18 accepted=6 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=157 bursts=8 txcredit=0 outq=0 inq=0 watchdog=28 txseq=08 rxseq=06 rxcredit=0 protection=00 checks=0000
+[   3.004] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[   3.004] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1b00 ffd100=ff80->01b388 sleep=10 local26=0000
+[   3.021]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[   3.279]   [menu-state] write $ffa170 = 0909 mask=ff00 (pc=018062)
+[   3.279]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[   3.279]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   3.279]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[   3.279]   [header-byte] write $ffa513 = 11 mask=00ff (pc=01b034)
+[   3.310] [protection-checksum] data=0101 mask=00ff pc=01b0bc
+[   3.311] [protection-checksum] data=0000 mask=00ff pc=01b11a
+[   3.393]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[   3.889]   [header-byte] write $ffa517 = 11 mask=00ff (pc=018446)
+[   4.005] heartbeat frame=240 tx=33 rx=27 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=09 a17f=00 txtail=0021 rxpend=0000
+[   4.005] [transport] captured=33 flushed=33 received=27 accepted=9 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=220 bursts=11 txcredit=0 outq=0 inq=0 watchdog=6 txseq=0b rxseq=09 rxcredit=0 protection=00 checks=0000
+[   4.005] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[   4.005] [game-state] a142=ff a13e=ff a13f=ff a530=ffff a506=00 a507=00 a508=ff a7b0=0000 a7a6=0000 script=01a004 mode=00 rule=01 base=70 margin=6 difficulty=255 preset=0
+[   4.005] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=0a00 ffd100=ff80->01b4ee sleep=0 local26=0000 ffd140=ff80->00628e sleep=0 local26=008b
+[   4.206]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   4.380]   [menu-state] write $ffa170 = 0808 mask=ff00 (pc=018062)
+[   4.380]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[   4.380]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[   4.380]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[   4.380]   [header-byte] write $ffa513 = 11 mask=00ff (pc=01b034)
+[   4.380] [game-command] data=0303 mask=ff00 pc=0188d8 requests=80
+[   4.408]   [header-byte] write $ffa513 = 13 mask=00ff (pc=0189b4)
+[   4.408]   [menu-state] write $ffa17f = 0000 mask=00ff (pc=0189c2)
+[   5.001]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.001] [packet-accepted] total=11 seq=0a flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.002]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.002] [packet-accepted] total=12 seq=0b flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.002]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.002] [packet-accepted] total=13 seq=0c flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.002]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.002] [packet-accepted] total=14 seq=0d flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.002]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.002] [packet-accepted] total=15 seq=0e flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.006] heartbeat frame=300 tx=39 rx=55 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=08 a17f=00 txtail=0027 rxpend=0000
+[   5.006] [transport] captured=39 flushed=39 received=55 accepted=15 payload2=5 payload3=0 payload4=0 payload5=0 pump_reads=286 bursts=13 txcredit=0 outq=0 inq=0 watchdog=0 txseq=0d rxseq=0f rxcredit=5 protection=00 checks=0000
+[   5.006] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[   5.006] [game-state] a142=04 a13e=00 a13f=00 a530=03ff a506=03 a507=00 a508=01 a7b0=0000 a7a6=13ff script=01a39e mode=01 rule=01 base=70 margin=6 difficulty=255 preset=0
+[   5.006] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ff80->0189c6 sleep=0 local26=0301
+[   5.007]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.007] [packet-accepted] total=16 seq=0f flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.024]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.024] [packet-accepted] total=17 seq=10 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.041]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.041] [packet-accepted] total=18 seq=11 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.057]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.057] [packet-accepted] total=19 seq=12 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.082]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.082] [packet-accepted] total=20 seq=13 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.098]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.098] [packet-accepted] total=21 seq=14 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.098]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.098] [packet-accepted] total=22 seq=15 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.109]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.109] [packet-accepted] total=23 seq=16 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.142]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.142] [packet-accepted] total=24 seq=17 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.159]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.159] [packet-accepted] total=25 seq=18 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.176]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.176] [packet-accepted] total=26 seq=19 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.192]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.192] [packet-accepted] total=27 seq=1a flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.209]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.209] [packet-accepted] total=28 seq=1b flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.226]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.226] [packet-accepted] total=29 seq=1c flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.244]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.244] [packet-accepted] total=30 seq=1d flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.259]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.259] [packet-accepted] total=31 seq=1e flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.276]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.276] [packet-accepted] total=32 seq=1f flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.276]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.276] [packet-accepted] total=33 seq=20 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.293]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.293] [packet-accepted] total=34 seq=21 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.309]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.309] [packet-accepted] total=35 seq=22 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.343]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.343] [packet-accepted] total=36 seq=23 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.359]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.359] [packet-accepted] total=37 seq=24 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.376]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.376] [packet-accepted] total=38 seq=25 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.395]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.395] [packet-accepted] total=39 seq=26 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.409]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.409] [packet-accepted] total=40 seq=27 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.426]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.426] [packet-accepted] total=41 seq=28 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.443]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.443] [packet-accepted] total=42 seq=29 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.459]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.459] [packet-accepted] total=43 seq=2a flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.476]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.476] [packet-accepted] total=44 seq=2b flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.493]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.493] [packet-accepted] total=45 seq=2c flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.509]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.510] [packet-accepted] total=46 seq=2d flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.510]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.510] [packet-accepted] total=47 seq=2e flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.526]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.526] [packet-accepted] total=48 seq=2f flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.543]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.543] [packet-accepted] total=49 seq=30 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.576]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.576] [packet-accepted] total=50 seq=31 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.593]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.593] [packet-accepted] total=51 seq=32 flags=04 status=13 pc=01845e command=13 arg=ff
+[   5.610]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.610] [packet-accepted] total=52 seq=33 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.626]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.626] [packet-accepted] total=53 seq=34 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.643]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.643] [packet-accepted] total=54 seq=35 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.660]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.660] [packet-accepted] total=55 seq=36 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.677]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.677] [packet-accepted] total=56 seq=37 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.693]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.693] [packet-accepted] total=57 seq=38 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.710]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.710] [packet-accepted] total=58 seq=39 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.727]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.727] [packet-accepted] total=59 seq=3a flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.743]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.743] [packet-accepted] total=60 seq=3b flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.760]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.760] [packet-accepted] total=61 seq=3c flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.760]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.760] [packet-accepted] total=62 seq=3d flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.777]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.777] [packet-accepted] total=63 seq=3e flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.793]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.793] [packet-accepted] total=64 seq=3f flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.827]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.827] [packet-accepted] total=65 seq=40 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.843]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.843] [packet-accepted] total=66 seq=41 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.860]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.860] [packet-accepted] total=67 seq=42 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.879]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.879] [packet-accepted] total=68 seq=43 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.893]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.893] [packet-accepted] total=69 seq=44 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.910]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.910] [packet-accepted] total=70 seq=45 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.927]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.927] [packet-accepted] total=71 seq=46 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.943]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.943] [packet-accepted] total=72 seq=47 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.960]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.960] [packet-accepted] total=73 seq=48 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.960]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.960] [packet-accepted] total=74 seq=49 flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.977]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.977] [packet-accepted] total=75 seq=4a flags=04 status=13 pc=01845e command=33 arg=ff
+[   5.994]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   5.994] [packet-accepted] total=76 seq=4b flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.008] heartbeat frame=360 tx=309 rx=360 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0005 a525=05 a170=08 a17f=00 txtail=0035 rxpend=0000
+[   6.008] [transport] captured=309 flushed=309 received=360 accepted=76 payload2=66 payload3=0 payload4=0 payload5=0 pump_reads=402 bursts=67 txcredit=0 outq=0 inq=0 watchdog=0 txseq=44 rxseq=4c rxcredit=5 protection=00 checks=0000
+[   6.008] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[   6.008] [game-state] a142=04 a13e=00 a13f=00 a530=03ff a506=03 a507=00 a508=01 a7b0=0000 a7a6=33ff script=01a39e mode=01 rule=01 base=70 margin=6 difficulty=255 preset=0
+[   6.008] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=0000 ffd040=ff80->018a40 sleep=0 local26=0301 ffd080=ff80->018ee4 sleep=0 local26=0000 ffd0c0=ff80->018ee4 sleep=0 local26=0000 ffd100=ff80->01fbb4 sleep=0 local26=0000 ffd140=ff80->01fbb6 sleep=0 local26=0002 ffd180=ff80->01fbb6 sleep=0 local26=00a2 ffd1c0=ff80->01fbb6 sleep=0 local26=01c2 ffd200=ff80->01fbb6 sleep=0 local26=02e2 ffd240=ff80->01902e sleep=0 local26=0000 ffd280=ff80->01ffe2 sleep=0 local26=0000 ffd2c0=ff80->020004 sleep=0 local26=0002 ffd300=ff80->020004 sleep=0 local26=0000 ffd340=ff80->01febe sleep=0 local26=0000 ffd380=ff80->01fedc sleep=0 local26=0000 ffd3c0=ff80->01febe sleep=0 local26=0000 ffd400=ff80->01fedc sleep=0 local26=0000
+[   6.010]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.010] [packet-accepted] total=77 seq=4c flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.043]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.043] [packet-accepted] total=78 seq=4d flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.060]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.060] [packet-accepted] total=79 seq=4e flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.077]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.077] [packet-accepted] total=80 seq=4f flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.093]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.093] [packet-accepted] total=81 seq=50 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.110]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.110] [packet-accepted] total=82 seq=51 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.127]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.127] [packet-accepted] total=83 seq=52 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.143]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.143] [packet-accepted] total=84 seq=53 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.160]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.160] [packet-accepted] total=85 seq=54 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.160]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.160] [packet-accepted] total=86 seq=55 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.177]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.177] [packet-accepted] total=87 seq=56 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.210]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.210] [packet-accepted] total=88 seq=57 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.227]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.227] [packet-accepted] total=89 seq=58 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.243]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.243] [packet-accepted] total=90 seq=59 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.260]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.260] [packet-accepted] total=91 seq=5a flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.277]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.277] [packet-accepted] total=92 seq=5b flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.293]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.294] [packet-accepted] total=93 seq=5c flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.310]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.310] [packet-accepted] total=94 seq=5d flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.327]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.327] [packet-accepted] total=95 seq=5e flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.346]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.346] [packet-accepted] total=96 seq=5f flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.361]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.361] [packet-accepted] total=97 seq=60 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.361]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.361] [packet-accepted] total=98 seq=61 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.377]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.377] [packet-accepted] total=99 seq=62 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.410]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.410] [packet-accepted] total=100 seq=63 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.427]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.427] [packet-accepted] total=101 seq=64 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.444]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.444] [packet-accepted] total=102 seq=65 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.461]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.461] [packet-accepted] total=103 seq=66 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.477]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.477] [packet-accepted] total=104 seq=67 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.494]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.494] [packet-accepted] total=105 seq=68 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.512]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.513] [packet-accepted] total=106 seq=69 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.527]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.527] [packet-accepted] total=107 seq=6a flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.544]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.544] [packet-accepted] total=108 seq=6b flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.561]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.561] [packet-accepted] total=109 seq=6c flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.577]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.577] [packet-accepted] total=110 seq=6d flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.578]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.578] [packet-accepted] total=111 seq=6e flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.594]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.594] [packet-accepted] total=112 seq=6f flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.611]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.611] [packet-accepted] total=113 seq=70 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.644]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.644] [packet-accepted] total=114 seq=71 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.661]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.661] [packet-accepted] total=115 seq=72 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.677]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.677] [packet-accepted] total=116 seq=73 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.694]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.694] [packet-accepted] total=117 seq=74 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.711]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.711] [packet-accepted] total=118 seq=75 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.727]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.727] [packet-accepted] total=119 seq=76 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.744]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.744] [packet-accepted] total=120 seq=77 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.761]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.761] [packet-accepted] total=121 seq=78 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.778]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.778] [packet-accepted] total=122 seq=79 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.794]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.794] [packet-accepted] total=123 seq=7a flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.811]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.811] [packet-accepted] total=124 seq=7b flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.830]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.830] [packet-accepted] total=125 seq=7c flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.830]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.830] [packet-accepted] total=126 seq=7d flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.844]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.844] [packet-accepted] total=127 seq=7e flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.861]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.861] [packet-accepted] total=128 seq=7f flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.894]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.894] [packet-accepted] total=129 seq=80 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.911]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.911] [packet-accepted] total=130 seq=81 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.928]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.928] [packet-accepted] total=131 seq=82 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.945]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.945] [packet-accepted] total=132 seq=83 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.961]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.961] [packet-accepted] total=133 seq=84 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.979]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.979] [packet-accepted] total=134 seq=85 flags=04 status=13 pc=01845e command=33 arg=ff
+[   6.995]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   6.995] [packet-accepted] total=135 seq=86 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.009] heartbeat frame=420 tx=609 rx=655 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0005 a525=05 a170=08 a17f=00 txtail=0061 rxpend=0000
+[   7.009] [transport] captured=609 flushed=609 received=655 accepted=135 payload2=125 payload3=0 payload4=0 payload5=0 pump_reads=517 bursts=127 txcredit=0 outq=0 inq=0 watchdog=0 txseq=80 rxseq=87 rxcredit=5 protection=00 checks=0000
+[   7.009] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[   7.009] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=0000 ffd040=ff80->018a40 sleep=0 local26=0301 ffd080=ff80->018ee4 sleep=0 local26=0000 ffd0c0=ff80->018ee4 sleep=0 local26=0000 ffd100=ff80->01fbb4 sleep=0 local26=0000 ffd140=ff80->01fbb6 sleep=0 local26=0002 ffd180=ff80->01fbb6 sleep=0 local26=00a2 ffd1c0=ff80->01fbb6 sleep=0 local26=01c2 ffd200=ff80->01fbb6 sleep=0 local26=02e2 ffd240=ff80->01902e sleep=0 local26=0000 ffd280=ff80->01ffe2 sleep=0 local26=0009 ffd2c0=ff80->020004 sleep=0 local26=0002 ffd300=ff80->020004 sleep=0 local26=0000 ffd340=ff80->01febe sleep=0 local26=0000 ffd380=ff80->01fedc sleep=0 local26=0000 ffd3c0=ff80->01febe sleep=0 local26=0000 ffd400=ff80->01fedc sleep=0 local26=0000
+[   7.011]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.011] [packet-accepted] total=136 seq=87 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.026] [protection-state] address=ffa020 data=0101 mask=ff00 pc=000948
+[   7.026] [protection-state] address=ffa020 data=0101 mask=00ff pc=000952
+[   7.033]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.033] [packet-accepted] total=137 seq=88 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.043] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[   7.045]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.045] [packet-accepted] total=138 seq=89 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.046]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.046] [packet-accepted] total=139 seq=8a flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.064]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.064] [packet-accepted] total=140 seq=8b flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.076] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[   7.079]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.079] [packet-accepted] total=141 seq=8c flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.112]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.112] [packet-accepted] total=142 seq=8d flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.129]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.129] [packet-accepted] total=143 seq=8e flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.146]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.146] [packet-accepted] total=144 seq=8f flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.162]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.162] [packet-accepted] total=145 seq=90 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.179]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.179] [packet-accepted] total=146 seq=91 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.196]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.196] [packet-accepted] total=147 seq=92 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.212]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.212] [packet-accepted] total=148 seq=93 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.229]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.229] [packet-accepted] total=149 seq=94 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.246]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.246] [packet-accepted] total=150 seq=95 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.262]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.262] [packet-accepted] total=151 seq=96 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.276] [protection-state] address=ffa020 data=0101 mask=ff00 pc=000948
+[   7.276] [protection-state] address=ffa020 data=0101 mask=00ff pc=000952
+[   7.281]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.281] [packet-accepted] total=152 seq=97 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.281]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.281] [packet-accepted] total=153 seq=98 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.293] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[   7.297]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.298] [packet-accepted] total=154 seq=99 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.314]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.314] [packet-accepted] total=155 seq=9a flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.326] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[   7.346]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.346] [packet-accepted] total=156 seq=9b flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.362]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.362] [packet-accepted] total=157 seq=9c flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.379]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.379] [packet-accepted] total=158 seq=9d flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.396]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.396] [packet-accepted] total=159 seq=9e flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.413]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.413] [packet-accepted] total=160 seq=9f flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.429]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.429] [packet-accepted] total=161 seq=a0 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.446]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.446] [packet-accepted] total=162 seq=a1 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.463]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.463] [packet-accepted] total=163 seq=a2 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.479]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.479] [packet-accepted] total=164 seq=a3 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.496]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.496] [packet-accepted] total=165 seq=a4 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.496]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.496] [packet-accepted] total=166 seq=a5 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.513]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.513] [packet-accepted] total=167 seq=a6 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.526] [protection-state] address=ffa020 data=0101 mask=ff00 pc=000948
+[   7.526] [protection-state] address=ffa020 data=0101 mask=00ff pc=000952
+[   7.532]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.532] [packet-accepted] total=168 seq=a7 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.543] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[   7.546]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.546] [packet-accepted] total=169 seq=a8 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.577] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[   7.579]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.579] [packet-accepted] total=170 seq=a9 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.597]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.597] [packet-accepted] total=171 seq=aa flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.613]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.613] [packet-accepted] total=172 seq=ab flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.630]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.630] [packet-accepted] total=173 seq=ac flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.646]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.646] [packet-accepted] total=174 seq=ad flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.663]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.663] [packet-accepted] total=175 seq=ae flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.680]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.680] [packet-accepted] total=176 seq=af flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.696]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.696] [packet-accepted] total=177 seq=b0 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.713]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.713] [packet-accepted] total=178 seq=b1 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.730]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.730] [packet-accepted] total=179 seq=b2 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.746]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.746] [packet-accepted] total=180 seq=b3 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.763]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.763] [packet-accepted] total=181 seq=b4 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.777] [protection-state] address=ffa020 data=0101 mask=ff00 pc=000948
+[   7.777] [protection-state] address=ffa020 data=0101 mask=00ff pc=000952
+[   7.784]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.784] [packet-accepted] total=182 seq=b5 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.784]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.784] [packet-accepted] total=183 seq=b6 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.794] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[   7.796]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.796] [packet-accepted] total=184 seq=b7 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.814]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.815] [packet-accepted] total=185 seq=b8 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.827] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[   7.847]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.847] [packet-accepted] total=186 seq=b9 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.847]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.847] [packet-accepted] total=187 seq=ba flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.880]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.880] [packet-accepted] total=188 seq=bb flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.896]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.896] [packet-accepted] total=189 seq=bc flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.913]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.913] [packet-accepted] total=190 seq=bd flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.930]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.930] [packet-accepted] total=191 seq=be flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.946]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.946] [packet-accepted] total=192 seq=bf flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.963]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.963] [packet-accepted] total=193 seq=c0 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.980]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.980] [packet-accepted] total=194 seq=c1 flags=04 status=13 pc=01845e command=33 arg=ff
+[   7.996]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   7.996] [packet-accepted] total=195 seq=c2 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.010] heartbeat frame=480 tx=909 rx=955 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0005 a525=05 a170=08 a17f=00 txtail=008d rxpend=0000
+[   8.010] [transport] captured=909 flushed=909 received=955 accepted=195 payload2=185 payload3=0 payload4=0 payload5=0 pump_reads=632 bursts=187 txcredit=0 outq=0 inq=0 watchdog=0 txseq=bc rxseq=c3 rxcredit=10 protection=00 checks=0000
+[   8.010] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[   8.010] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=0000 ffd040=ff80->018a40 sleep=0 local26=0300 ffd080=ff80->018ee4 sleep=0 local26=0000 ffd0c0=ff80->018ee4 sleep=0 local26=0000 ffd100=ff80->01fbb4 sleep=0 local26=0000 ffd140=ff80->01fbb6 sleep=0 local26=0002 ffd180=ff80->01fbb6 sleep=0 local26=00a2 ffd1c0=ff80->01fbb6 sleep=0 local26=01c2 ffd200=ff80->01fbb6 sleep=0 local26=02e2 ffd240=ff80->01902e sleep=0 local26=0000 ffd280=ff80->01ffe2 sleep=0 local26=0008 ffd2c0=ff80->020004 sleep=0 local26=0002 ffd300=ff80->020004 sleep=0 local26=0000 ffd340=ff80->01febe sleep=0 local26=0000 ffd380=ff80->01fedc sleep=0 local26=0000 ffd3c0=ff80->01febe sleep=0 local26=0000 ffd400=ff80->01fedc sleep=0 local26=0000
+[   8.013]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.013] [packet-accepted] total=196 seq=c3 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.013]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.013] [packet-accepted] total=197 seq=c4 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.030]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.030] [packet-accepted] total=198 seq=c5 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.047]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.047] [packet-accepted] total=199 seq=c6 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.080]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.080] [packet-accepted] total=200 seq=c7 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.097]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.097] [packet-accepted] total=201 seq=c8 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.113]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.113] [packet-accepted] total=202 seq=c9 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.130]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.130] [packet-accepted] total=203 seq=ca flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.147]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.147] [packet-accepted] total=204 seq=cb flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.163]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.163] [packet-accepted] total=205 seq=cc flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.180]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.180] [packet-accepted] total=206 seq=cd flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.196]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.196] [packet-accepted] total=207 seq=ce flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.213]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.213] [packet-accepted] total=208 seq=cf flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.230]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.230] [packet-accepted] total=209 seq=d0 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.248]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.248] [packet-accepted] total=210 seq=d1 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.263]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.263] [packet-accepted] total=211 seq=d2 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.263]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.263] [packet-accepted] total=212 seq=d3 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.280]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.280] [packet-accepted] total=213 seq=d4 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.296]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.296] [packet-accepted] total=214 seq=d5 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.330]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.330] [packet-accepted] total=215 seq=d6 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.346]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.346] [packet-accepted] total=216 seq=d7 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.363]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.363] [packet-accepted] total=217 seq=d8 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.380]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.380] [packet-accepted] total=218 seq=d9 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.396]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.396] [packet-accepted] total=219 seq=da flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.415]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.415] [packet-accepted] total=220 seq=db flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.430]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.430] [packet-accepted] total=221 seq=dc flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.446]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.446] [packet-accepted] total=222 seq=dd flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.463]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.463] [packet-accepted] total=223 seq=de flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.480]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.480] [packet-accepted] total=224 seq=df flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.496]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.496] [packet-accepted] total=225 seq=e0 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.496]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.496] [packet-accepted] total=226 seq=e1 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.513]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.513] [packet-accepted] total=227 seq=e2 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.528] [protection-state] address=ffa020 data=1010 mask=ff00 pc=000948
+[   8.528] [protection-state] address=ffa020 data=1010 mask=00ff pc=000952
+[   8.530]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.530] [packet-accepted] total=228 seq=e3 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.545] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[   8.548] [game-command] data=1313 mask=ff00 pc=018ae0 requests=00
+[   8.563]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.563] [packet-accepted] total=229 seq=e4 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.578] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[   8.580]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.580] [packet-accepted] total=230 seq=e5 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.597]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.597] [packet-accepted] total=231 seq=e6 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.613]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.613] [packet-accepted] total=232 seq=e7 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.630]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.630] [packet-accepted] total=233 seq=e8 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.647]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.647] [packet-accepted] total=234 seq=e9 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.664]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.664] [packet-accepted] total=235 seq=ea flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.680]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.680] [packet-accepted] total=236 seq=eb flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.697]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.697] [packet-accepted] total=237 seq=ec flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.713]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.713] [packet-accepted] total=238 seq=ed flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.733]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.733] [packet-accepted] total=239 seq=ee flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.733]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.733] [packet-accepted] total=240 seq=ef flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.747]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.747] [packet-accepted] total=241 seq=f0 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.764]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.764] [packet-accepted] total=242 seq=f1 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.797]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.797] [packet-accepted] total=243 seq=f2 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.814]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.814] [packet-accepted] total=244 seq=f3 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.831]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.831] [packet-accepted] total=245 seq=f4 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.847]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.847] [packet-accepted] total=246 seq=f5 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.864]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.864] [packet-accepted] total=247 seq=f6 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.883]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.883] [packet-accepted] total=248 seq=f7 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.897]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.897] [packet-accepted] total=249 seq=f8 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.914]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.914] [packet-accepted] total=250 seq=f9 flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.930]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.930] [packet-accepted] total=251 seq=fa flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.947]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.947] [packet-accepted] total=252 seq=fb flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.947]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.947] [packet-accepted] total=253 seq=fc flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.964]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.964] [packet-accepted] total=254 seq=fd flags=04 status=13 pc=01845e command=33 arg=ff
+[   8.981]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   8.981] [packet-accepted] total=255 seq=fe flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.012] heartbeat frame=540 tx=1209 rx=1255 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0005 a525=05 a170=08 a17f=00 txtail=00b9 rxpend=0000
+[   9.012] [transport] captured=1209 flushed=1209 received=1255 accepted=255 payload2=245 payload3=0 payload4=0 payload5=0 pump_reads=747 bursts=247 txcredit=0 outq=0 inq=0 watchdog=1 txseq=f8 rxseq=ff rxcredit=5 protection=00 checks=0000
+[   9.012] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[   9.012] [game-state] a142=04 a13e=01 a13f=01 a530=13ff a506=03 a507=00 a508=01 a7b0=0000 a7a6=33ff script=01a39e mode=01 rule=01 base=70 margin=6 difficulty=255 preset=0
+[   9.012] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=0000 ffd040=ff80->018a40 sleep=0 local26=0300 ffd0c0=ff80->018ee4 sleep=0 local26=0000 ffd100=ff80->01fbb4 sleep=0 local26=0000 ffd140=ff80->01fbb6 sleep=0 local26=0002 ffd180=ff80->01fbb6 sleep=0 local26=00a2 ffd1c0=ff80->01fbb6 sleep=0 local26=01c2 ffd200=ff80->01fbb6 sleep=0 local26=02e2 ffd240=ff80->01902e sleep=0 local26=0000 ffd280=ff80->01ffe2 sleep=0 local26=0007 ffd2c0=ff80->020004 sleep=0 local26=0002 ffd300=ff80->020004 sleep=0 local26=0000 ffd3c0=ff80->01febe sleep=0 local26=0000 ffd400=ff80->01fedc sleep=0 local26=0000
+[   9.014]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.014] [packet-accepted] total=256 seq=ff flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.031]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.031] [packet-accepted] total=257 seq=00 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.049]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.049] [packet-accepted] total=258 seq=01 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.064]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.064] [packet-accepted] total=259 seq=02 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.081]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.081] [packet-accepted] total=260 seq=03 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.098]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.098] [packet-accepted] total=261 seq=04 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.114]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.114] [packet-accepted] total=262 seq=05 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.131]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.131] [packet-accepted] total=263 seq=06 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.148]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.148] [packet-accepted] total=264 seq=07 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.164]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.164] [packet-accepted] total=265 seq=08 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.164]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.164] [packet-accepted] total=266 seq=09 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.181]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.181] [packet-accepted] total=267 seq=0a flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.199]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.199] [packet-accepted] total=268 seq=0b flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.214]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.214] [packet-accepted] total=269 seq=0c flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.248]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.248] [packet-accepted] total=270 seq=0d flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.264]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.264] [packet-accepted] total=271 seq=0e flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.281]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.281] [packet-accepted] total=272 seq=0f flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.298]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.298] [packet-accepted] total=273 seq=10 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.314]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.314] [packet-accepted] total=274 seq=11 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.331]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.331] [packet-accepted] total=275 seq=12 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.348]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.348] [packet-accepted] total=276 seq=13 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.367]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.367] [packet-accepted] total=277 seq=14 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.381]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.381] [packet-accepted] total=278 seq=15 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.398]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.398] [packet-accepted] total=279 seq=16 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.415]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.415] [packet-accepted] total=280 seq=17 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.431]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.431] [packet-accepted] total=281 seq=18 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.431]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.431] [packet-accepted] total=282 seq=19 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.448]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.448] [packet-accepted] total=283 seq=1a flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.465]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.465] [packet-accepted] total=284 seq=1b flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.481]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.481] [packet-accepted] total=285 seq=1c flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.515]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.515] [packet-accepted] total=286 seq=1d flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.529] [protection-state] address=ffa020 data=1010 mask=ff00 pc=000948
+[   9.529] [protection-state] address=ffa020 data=1010 mask=00ff pc=000952
+[   9.531]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.531] [packet-accepted] total=287 seq=1e flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.546] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[   9.548]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.548] [packet-accepted] total=288 seq=1f flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.565]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.565] [packet-accepted] total=289 seq=20 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.579] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[   9.582]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.582] [packet-accepted] total=290 seq=21 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.598]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.598] [packet-accepted] total=291 seq=22 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.615]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.615] [packet-accepted] total=292 seq=23 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.632]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.632] [packet-accepted] total=293 seq=24 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.648]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.648] [packet-accepted] total=294 seq=25 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.667]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.667] [packet-accepted] total=295 seq=26 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.682]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.682] [packet-accepted] total=296 seq=27 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.698]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.698] [packet-accepted] total=297 seq=28 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.715]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.715] [packet-accepted] total=298 seq=29 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.715]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.715] [packet-accepted] total=299 seq=2a flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.732]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.732] [packet-accepted] total=300 seq=2b flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.748]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.748] [packet-accepted] total=301 seq=2c flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.782]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.782] [packet-accepted] total=302 seq=2d flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.799]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.799] [packet-accepted] total=303 seq=2e flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.815]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.815] [packet-accepted] total=304 seq=2f flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.833]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.833] [packet-accepted] total=305 seq=30 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.848]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.848] [packet-accepted] total=306 seq=31 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.865]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.865] [packet-accepted] total=307 seq=32 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.882]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.882] [packet-accepted] total=308 seq=33 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.898]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.898] [packet-accepted] total=309 seq=34 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.915]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.915] [packet-accepted] total=310 seq=35 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.932]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.932] [packet-accepted] total=311 seq=36 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.949]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.949] [packet-accepted] total=312 seq=37 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.949]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.949] [packet-accepted] total=313 seq=38 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.965]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.965] [packet-accepted] total=314 seq=39 flags=04 status=13 pc=01845e command=33 arg=ff
+[   9.982]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[   9.982] [packet-accepted] total=315 seq=3a flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.013] heartbeat frame=600 tx=1509 rx=1555 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0005 a525=05 a170=08 a17f=00 txtail=00e5 rxpend=0000
+[  10.013] [transport] captured=1509 flushed=1509 received=1555 accepted=315 payload2=305 payload3=0 payload4=0 payload5=0 pump_reads=863 bursts=307 txcredit=0 outq=0 inq=0 watchdog=1 txseq=34 rxseq=3b rxcredit=5 protection=00 checks=0000
+[  10.013] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[  10.013] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=0000 ffd040=ff80->018a40 sleep=0 local26=0300 ffd0c0=ff80->018ee4 sleep=0 local26=0000 ffd100=ff80->01fbb4 sleep=0 local26=0000 ffd140=ff80->01fbb6 sleep=0 local26=0002 ffd180=ff80->01fbb6 sleep=0 local26=00a2 ffd1c0=ff80->01fbb6 sleep=0 local26=01c2 ffd200=ff80->01fbb6 sleep=0 local26=02e2 ffd240=ff80->01902e sleep=0 local26=0000 ffd280=ff80->01ffe2 sleep=0 local26=0006 ffd2c0=ff80->020004 sleep=0 local26=0002 ffd300=ff80->020004 sleep=0 local26=0000 ffd3c0=ff80->01febe sleep=0 local26=0000 ffd400=ff80->01fedc sleep=0 local26=0000
+[  10.015]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.015] [packet-accepted] total=316 seq=3b flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.032]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.032] [packet-accepted] total=317 seq=3c flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.048]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.048] [packet-accepted] total=318 seq=3d flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.065]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.065] [packet-accepted] total=319 seq=3e flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.082]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.082] [packet-accepted] total=320 seq=3f flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.098]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.098] [packet-accepted] total=321 seq=40 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.115]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.115] [packet-accepted] total=322 seq=41 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.132]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.132] [packet-accepted] total=323 seq=42 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.150]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.150] [packet-accepted] total=324 seq=43 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.165]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.165] [packet-accepted] total=325 seq=44 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.165]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.166] [packet-accepted] total=326 seq=45 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.182]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.182] [packet-accepted] total=327 seq=46 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.199]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.199] [packet-accepted] total=328 seq=47 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.232]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.232] [packet-accepted] total=329 seq=48 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.249]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.249] [packet-accepted] total=330 seq=49 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.266]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.266] [packet-accepted] total=331 seq=4a flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.282]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.282] [packet-accepted] total=332 seq=4b flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.301]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.301] [packet-accepted] total=333 seq=4c flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.316]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.316] [packet-accepted] total=334 seq=4d flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.332]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.332] [packet-accepted] total=335 seq=4e flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.349]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.349] [packet-accepted] total=336 seq=4f flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.366]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.366] [packet-accepted] total=337 seq=50 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.366]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.366] [packet-accepted] total=338 seq=51 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.382]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.382] [packet-accepted] total=339 seq=52 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.399]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.399] [packet-accepted] total=340 seq=53 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.433]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.433] [packet-accepted] total=341 seq=54 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.449]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.449] [packet-accepted] total=342 seq=55 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.466]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.466] [packet-accepted] total=343 seq=56 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.482]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.482] [packet-accepted] total=344 seq=57 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.499]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.499] [packet-accepted] total=345 seq=58 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.516]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.516] [packet-accepted] total=346 seq=59 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.530] [protection-state] address=ffa020 data=2020 mask=ff00 pc=000948
+[  10.530] [protection-state] address=ffa020 data=2020 mask=00ff pc=000952
+[  10.532]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.532] [packet-accepted] total=347 seq=5a flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.547] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[  10.551]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.551] [packet-accepted] total=348 seq=5b flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.551] [game-command] data=3333 mask=ff00 pc=018ae0 requests=00
+[  10.551] [game-command] data=7373 mask=ff00 pc=018b72 requests=04
+[  10.566]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.566] [packet-accepted] total=349 seq=5c flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.580] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[  10.583]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.583] [packet-accepted] total=350 seq=5d flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.583]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.583] [packet-accepted] total=351 seq=5e flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.583] [game-command] data=3434 mask=00ff pc=018c2c requests=00
+[  10.583] [game-command] data=8383 mask=ff00 pc=018c34 requests=00
+[  10.599]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.599] [packet-accepted] total=352 seq=5f flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.618]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.618] [packet-accepted] total=353 seq=60 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.633]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.633] [packet-accepted] total=354 seq=61 flags=04 status=13 pc=01845e command=33 arg=ff
+[  10.667]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.667] [packet-accepted] total=355 seq=62 flags=04 status=13 pc=01845e command=73 arg=ff
+[  10.700]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  10.700] [packet-accepted] total=356 seq=63 flags=04 status=13 pc=01845e command=83 arg=34
+[  11.014] heartbeat frame=660 tx=1684 rx=1760 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=08 a17f=00 txtail=0094 rxpend=0000
+[  11.014] [transport] captured=1684 flushed=1684 received=1760 accepted=356 payload2=346 payload3=0 payload4=0 payload5=0 pump_reads=961 bursts=342 txcredit=0 outq=0 inq=0 watchdog=18 txseq=56 rxseq=64 rxcredit=0 protection=00 checks=0000
+[  11.014] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[  11.014] [game-state] a142=04 a13e=04 a13f=0f a530=8334 a506=03 a507=01 a508=01 a7b0=0000 a7a6=8334 script=01a39e mode=01 rule=01 base=70 margin=6 difficulty=255 preset=0
+[  11.014] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1900 ffd040=ff80->018cc8 sleep=1 local26=0300 ffd100=ff80->01fbb4 sleep=0 local26=0000 ffd140=ff80->01fbb6 sleep=0 local26=0002 ffd180=ff80->01fbb6 sleep=0 local26=00a2 ffd1c0=ff80->01fbb6 sleep=0 local26=01c2 ffd200=ff80->01fbb6 sleep=0 local26=02e2 ffd240=ff80->01902e sleep=0 local26=0000
+[  11.200]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  11.532] [protection-state] address=ffa020 data=2020 mask=ff00 pc=000948
+[  11.532] [protection-state] address=ffa020 data=2020 mask=00ff pc=000952
+[  11.548] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[  11.582] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[  11.701]   [header-byte] write $ffa517 = 13 mask=00ff (pc=018446)
+[  12.015] heartbeat frame=720 tx=1690 rx=1766 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=08 a17f=00 txtail=009a rxpend=0000
+[  12.015] [transport] captured=1690 flushed=1690 received=1766 accepted=358 payload2=346 payload3=0 payload4=0 payload5=0 pump_reads=1023 bursts=344 txcredit=0 outq=0 inq=0 watchdog=18 txseq=58 rxseq=66 rxcredit=0 protection=00 checks=0000
+[  12.015] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[  12.015] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1900 ffd040=ff80->018d1a sleep=122 local26=0300 ffd100=ff80->01fbb4 sleep=0 local26=0000 ffd140=ff80->01fbb6 sleep=0 local26=0002 ffd180=ff80->01fbb6 sleep=0 local26=00a2 ffd1c0=ff80->01fbb6 sleep=0 local26=01c2 ffd200=ff80->01fbb6 sleep=0 local26=02e2 ffd240=ff80->01902e sleep=0 local26=0000 ffd280=ff80->027726 sleep=0 local26=0001
+[  12.051] [game-command] data=9393 mask=ff00 pc=018d36 requests=00
+[  12.051]   [header-byte] write $ffa513 = 10 mask=00ff (pc=018d50)
+[  12.067] [game-command] data=0404 mask=ff00 pc=018d6e requests=00
+[  12.067] [game-command] data=0000 mask=00ff pc=018d76 requests=00
+[  12.118]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[  12.118] [packet-accepted] total=359 seq=66 flags=04 status=10 pc=01845e command=93 arg=34
+[  12.158]   [menu-state] write $ffa170 = 0000 mask=ff00 (pc=01afb6)
+[  12.158]   [menu-state] write $ffa170 = 8282 mask=ff00 (pc=01afd8)
+[  12.158]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[  12.158]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[  12.158]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[  12.158]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[  12.158]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[  12.158]   [menu-state] write $ffa170 = c2c2 mask=ff00 (pc=01a87a)
+[  12.158]   [menu-state] write $ffa170 = c2c2 mask=ff00 (pc=01a87c)
+[  12.158]   [menu-state] write $ffa170 = 4040 mask=ff00 (pc=01afb6)
+[  12.158]   [menu-state] write $ffa170 = c2c2 mask=ff00 (pc=01afd8)
+[  12.158]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[  12.158]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[  12.158]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[  12.158]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[  12.158]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[  12.552]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  12.552] [packet-accepted] total=360 seq=67 flags=00 status=54 pc=01845e
+[  12.552]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  12.552] [packet-accepted] total=361 seq=68 flags=04 status=54 pc=01845e command=04 arg=00
+[  13.017] heartbeat frame=780 tx=1833 rx=1779 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0005 a525=05 a170=c2 a17f=00 txtail=0029 rxpend=0000
+[  13.017] [transport] captured=1833 flushed=1833 received=1779 accepted=361 payload2=348 payload3=0 payload4=0 payload5=0 pump_reads=1085 bursts=373 txcredit=0 outq=0 inq=0 watchdog=27 txseq=76 rxseq=69 rxcredit=0 protection=00 checks=0000
+[  13.017] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[  13.017] [game-state] a142=04 a13e=04 a13f=0f a530=0400 a506=03 a507=01 a508=01 a7b0=0000 a7a6=9334 script=01f7f6 mode=01 rule=01 base=70 margin=6 difficulty=0 preset=0
+[  13.017] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=0000 ffd100=ff80->0242d0 sleep=0 local26=0000 ffd140=ff80->023f9e sleep=0 local26=0000 ffd180=ff80->023c40 sleep=0 local26=0000 ffd1c0=ff80->023c70 sleep=0 local26=0002 ffd200=ff80->023c70 sleep=0 local26=0000 ffd240=ff80->023c08 sleep=0 local26=0000
+[  13.053]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  13.351] [transport-retry] LAN status temporarily unreadable: C:\Users\tbend\mame\puyo2-lan-runs\loopback_reset_drop_20260911_1957\20260911-195653-B-f92ac187b02847d7b52bf40441ff3d07\B_to_A.bin.status: Permission denied
+[  13.367] [transport-recovered] LAN status readable
+[  13.536] [game-command] data=8484 mask=ff00 pc=024322 requests=00
+[  13.553]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  13.553] [game-command] data=0404 mask=ff00 pc=02434e requests=00
+[  13.603]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  13.603] [packet-accepted] total=364 seq=6b flags=04 status=54 pc=01845e command=84 arg=00
+[  14.018] heartbeat frame=840 tx=2013 rx=1790 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=00dd rxpend=0000
+[  14.018] [transport] captured=2013 flushed=2013 received=1790 accepted=364 payload2=349 payload3=0 payload4=0 payload5=0 pump_reads=1148 bursts=409 txcredit=0 outq=0 inq=0 watchdog=24 txseq=99 rxseq=6c rxcredit=0 protection=00 checks=0000
+[  14.018] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[  14.018] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1900 ffd100=ff80->02437e sleep=0 local26=0000 ffd140=ff80->02415c sleep=2 local26=0000 ffd240=ff80->023c3e sleep=0 local26=0000
+[  14.104]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  14.605]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.019] heartbeat frame=900 tx=2019 rx=1796 fc=1 fd=10 fe=1 linkflag=82 pc=001ed4 a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=00e3 rxpend=0000
+[  15.019] [transport] captured=2019 flushed=2019 received=1796 accepted=366 payload2=349 payload3=0 payload4=0 payload5=0 pump_reads=1210 bursts=411 txcredit=0 outq=0 inq=0 watchdog=21 txseq=9b rxseq=6e rxcredit=0 protection=00 checks=0000
+[  15.019] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[  15.019] [game-state] a142=04 a13e=04 a13f=0f a530=0400 a506=03 a507=01 a508=01 a7b0=0000 a7a6=9334 script=01a4b0 mode=01 rule=01 base=120 margin=6 difficulty=2 preset=0
+[  15.019] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1600
+[  15.538] [game-command] data=1616 mask=ff00 pc=00655a requests=00
+[  15.538] [game-command] data=0101 mask=00ff pc=006562 requests=00
+[  15.589]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.639]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.639] [packet-accepted] total=368 seq=6f flags=20 status=54 pc=01845e
+[  15.673]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.673] [packet-accepted] total=369 seq=70 flags=20 status=54 pc=01845e
+[  15.673]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.673] [packet-accepted] total=370 seq=71 flags=20 status=54 pc=01845e
+[  15.706]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.706] [packet-accepted] total=371 seq=72 flags=20 status=54 pc=01845e
+[  15.706]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.706] [packet-accepted] total=372 seq=73 flags=20 status=54 pc=01845e
+[  15.740]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.740] [packet-accepted] total=373 seq=74 flags=20 status=54 pc=01845e
+[  15.756]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.756] [packet-accepted] total=374 seq=75 flags=20 status=54 pc=01845e
+[  15.774]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.774] [packet-accepted] total=375 seq=76 flags=20 status=54 pc=01845e
+[  15.789]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.790] [packet-accepted] total=376 seq=77 flags=20 status=54 pc=01845e
+[  15.806]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.806] [packet-accepted] total=377 seq=78 flags=20 status=54 pc=01845e
+[  15.823]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.823] [packet-accepted] total=378 seq=79 flags=20 status=54 pc=01845e
+[  15.840]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.840] [packet-accepted] total=379 seq=7a flags=20 status=54 pc=01845e
+[  15.856]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.856] [packet-accepted] total=380 seq=7b flags=20 status=54 pc=01845e
+[  15.873]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.873] [packet-accepted] total=381 seq=7c flags=20 status=54 pc=01845e
+[  15.890]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.890] [packet-accepted] total=382 seq=7d flags=20 status=54 pc=01845e
+[  15.890]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.890] [packet-accepted] total=383 seq=7e flags=20 status=54 pc=01845e
+[  15.906]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.906] [packet-accepted] total=384 seq=7f flags=20 status=54 pc=01845e
+[  15.923]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.923] [packet-accepted] total=385 seq=80 flags=20 status=54 pc=01845e
+[  15.956]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.956] [packet-accepted] total=386 seq=81 flags=20 status=54 pc=01845e
+[  15.973]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.973] [packet-accepted] total=387 seq=82 flags=20 status=54 pc=01845e
+[  15.990]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  15.990] [packet-accepted] total=388 seq=83 flags=20 status=54 pc=01845e
+[  16.008]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  16.008] [packet-accepted] total=389 seq=84 flags=20 status=54 pc=01845e
+[  16.021] heartbeat frame=960 tx=2024 rx=2239 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=00e8 rxpend=0000
+[  16.021] [transport] captured=2024 flushed=2024 received=2239 accepted=389 payload2=349 payload3=0 payload4=0 payload5=22 pump_reads=1290 bursts=412 txcredit=0 outq=0 inq=0 watchdog=0 txseq=9c rxseq=85 rxcredit=20 protection=00 checks=0000
+[  16.021] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[  16.021] [game-state] a142=04 a13e=04 a13f=0f a530=1601 a506=03 a507=01 a508=01 a7b0=0022 a7a6=9334 script=01a512 mode=01 rule=01 base=120 margin=6 difficulty=2 preset=0
+[  16.021] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1c00 ffd100=ff80->006570 sleep=0 local26=0000
+[  16.023]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  16.023] [packet-accepted] total=390 seq=85 flags=20 status=54 pc=01845e
+[  16.040]   [header-byte] write $ffa517 = 54 mask=00ff (pc=018446)
+[  16.040] [packet-accepted] total=391 seq=86 flags=24 status=54 pc=01845e command=26 arg=01
+[  16.106]   [header-byte] write $ffa517 = 04 mask=00ff (pc=018446)
+[  16.127]   [menu-state] write $ffa171 = 0000 mask=00ff (pc=019466)
+[  16.127]   [header-byte] write $ffa513 = 44 mask=00ff (pc=019e4a)
+[  16.127]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[  16.127]   [header-byte] write $ffa513 = 04 mask=00ff (pc=01b044)
+[  16.190]   [header-byte] write $ffa517 = 04 mask=00ff (pc=018446)
+[  16.190] [packet-accepted] total=393 seq=88 flags=04 status=04 pc=01845e command=28 arg=22
+[  16.192] [game-command] data=2828 mask=ff00 pc=005340 requests=00
+[  16.192] [game-command] data=2222 mask=00ff pc=005356 requests=00
+[  16.691]   [header-byte] write $ffa517 = 04 mask=00ff (pc=018446)
+[  17.022] heartbeat frame=1020 tx=2038 rx=2292 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=00f6 rxpend=0000
+[  17.022] [transport] captured=2038 flushed=2038 received=2292 accepted=394 payload2=351 payload3=0 payload4=0 payload5=24 pump_reads=1355 bursts=416 txcredit=0 outq=0 inq=0 watchdog=19 txseq=a0 rxseq=8a rxcredit=0 protection=00 checks=0000
+[  17.022] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[  17.022] [game-state] a142=04 a13e=04 a13f=0f a530=2822 a506=03 a507=01 a508=01 a7b0=2822 a7a6=9334 script=01a51a mode=01 rule=01 base=120 margin=6 difficulty=2 preset=0
+[  17.022] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1300 ffd000=ffc0->00d454 sleep=0 local26=0000 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->004f14 sleep=0 local26=0000 ffd0c0=ffc0->004f14 sleep=0 local26=0000 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->007f6e sleep=0 local26=0000 ffd180=ff80->0054b2 sleep=0 local26=0200 ffd240=ff80->0054b2 sleep=0 local26=0200 ffdfc0=ffc0->00d5ca sleep=0 local26=0000
+[  17.141] [game-command] data=3838 mask=ff00 pc=00d470 requests=00
+[  17.191]   [header-byte] write $ffa517 = 04 mask=00ff (pc=018446)
+[  17.191]   [header-byte] write $ffa517 = 04 mask=00ff (pc=018446)
+[  17.191] [packet-accepted] total=396 seq=8b flags=04 status=04 pc=01845e command=38 arg=22
+[  17.692]   [header-byte] write $ffa517 = 04 mask=00ff (pc=018446)
+[  18.023] heartbeat frame=1080 tx=2046 rx=2303 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=00fe rxpend=0000
+[  18.023] [transport] captured=2046 flushed=2046 received=2303 accepted=397 payload2=352 payload3=0 payload4=0 payload5=24 pump_reads=1417 bursts=418 txcredit=0 outq=0 inq=0 watchdog=19 txseq=a2 rxseq=8d rxcredit=0 protection=00 checks=0000
+[  18.023] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[  18.023] [game-state] a142=04 a13e=04 a13f=0f a530=3822 a506=03 a507=01 a508=01 a7b0=3822 a7a6=9334 script=01a51a mode=01 rule=01 base=120 margin=6 difficulty=2 preset=0
+[  18.023] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1600 ffd000=ffc0->00d47c sleep=0 local26=0000 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->004f30 sleep=0 local26=0000 ffd0c0=ffc0->004f30 sleep=0 local26=0000 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->007fb6 sleep=0 local26=0000 ffdfc0=ffc0->00d66e sleep=0 local26=0000
+[  18.042] [game-command] data=7878 mask=ff00 pc=007ffa requests=00
+[  18.093] [game-command] data=f8f8 mask=ff00 pc=008022 requests=00
+[  18.112]   [header-byte] write $ffa517 = 04 mask=00ff (pc=018446)
+[  18.112] [packet-accepted] total=398 seq=8d flags=04 status=04 pc=01845e command=78 arg=22
+[  18.112]   [header-byte] write $ffa517 = 04 mask=00ff (pc=018446)
+[  18.112] [packet-accepted] total=399 seq=8e flags=04 status=04 pc=01845e command=78 arg=22
+[  18.112] [game-command] data=0b0b mask=ff00 pc=00d49c requests=00
+[  18.126]   [header-byte] write $ffa517 = 04 mask=00ff (pc=018446)
+[  18.126] [packet-accepted] total=400 seq=8f flags=04 status=04 pc=01845e command=78 arg=22
+[  18.193]   [header-byte] write $ffa517 = 04 mask=00ff (pc=018446)
+[  18.193] [packet-accepted] total=401 seq=90 flags=10 status=04 pc=01845e
+[  18.209]   [header-byte] write $ffa517 = 04 mask=00ff (pc=018446)
+[  18.209] [packet-accepted] total=402 seq=91 flags=10 status=04 pc=01845e
+[  18.710]   [header-byte] write $ffa517 = 04 mask=00ff (pc=018446)
+[  19.024] heartbeat frame=1140 tx=2098 rx=2355 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=0032 rxpend=0000
+[  19.024] [transport] captured=2098 flushed=2098 received=2355 accepted=403 payload2=355 payload3=0 payload4=2 payload5=24 pump_reads=1482 bursts=424 txcredit=0 outq=0 inq=0 watchdog=18 txseq=a8 rxseq=93 rxcredit=0 protection=00 checks=0000
+[  19.024] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[  19.024] [game-state] a142=04 a13e=04 a13f=0f a530=0b22 a506=0b a507=01 a508=01 a7b0=7822 a7a6=9334 script=01a51a mode=01 rule=01 base=120 margin=6 difficulty=2 preset=0
+[  19.024] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1600 ffd000=ffc0->00d4b4 sleep=0 local26=0000 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00504e sleep=0 local26=3100 ffd0c0=ffc0->00504e sleep=0 local26=3100 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=031b ffd180=ff80->007944 sleep=0 local26=0000 ffd1c0=ff80->007d70 sleep=0 local26=0000 ffd200=ff80->007944 sleep=0 local26=0000 ffd240=ff80->007d70 sleep=0 local26=0000 ffdfc0=ffc0->00d6d0 sleep=0 local26=0000 ffe100=ff00->008362 sleep=0 local26=ffdc ffe140=ff00->008362 sleep=0 local26=ffdc ffe180=ff00->008362 sleep=0 local26=ffdc ffe1c0=ff00->008362 sleep=0 local26=ffdc ffe240=ff00->008362 sleep=0 local26=ffdc ffe280=ff00->008362 sleep=0 local26=ffdc ffe2c0=ff00->008362 sleep=0 local26=ffdc ffe500=ff00->008362 sleep=0 local26=ffdc ffe540=ff00->008362 sleep=0 local26=ffdc ffe580=ff00->008362 sleep=0 local26=ffdc ffe5c0=ff00->008362 sleep=0 local26=ffdc ffe600=ff00->008362 sleep=0 local26=ffdc ffe640=ff00->008362 sleep=0 local26=ffdc ffe680=ff00->008362 sleep=0 local26=ffdc ffe6c0=ff00->008362 sleep=0 local26=ffdc ffe700=ff00->008362 sleep=0 local26=ffdc
+[  19.210]   [header-byte] write $ffa517 = 04 mask=00ff (pc=018446)
+[  19.711]   [header-byte] write $ffa517 = 04 mask=00ff (pc=018446)
+[  20.026] heartbeat frame=1200 tx=2104 rx=2361 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=c2 a17f=00 txtail=0038 rxpend=0000
+[  20.026] [transport] captured=2104 flushed=2104 received=2361 accepted=405 payload2=355 payload3=0 payload4=2 payload5=24 pump_reads=1544 bursts=426 txcredit=0 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  20.026] [epochs] local=1 peer=1 ready=true discarded_rx=0
+[  20.026] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1600 ffd000=ffc0->00d4b4 sleep=0 local26=0000 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00504e sleep=0 local26=6d00 ffd0c0=ffc0->00504e sleep=0 local26=6d00 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=021b ffd180=ff80->007944 sleep=0 local26=0000 ffd1c0=ff80->007d70 sleep=0 local26=0000 ffd200=ff80->007944 sleep=0 local26=0000 ffd240=ff80->007d70 sleep=0 local26=0000 ffdfc0=ffc0->00d6d0 sleep=0 local26=0000
+[  20.026] === session start, version=0.7.0 side=B debug=true ===
+[  20.026] [rom-guards] cpld_compare=b202 garbage_divisor=323c,ffff
+[  20.026] taps installed; out=C:\Users\tbend\mame\puyo2-lan-runs\loopback_reset_drop_20260911_1957\20260911-195653-B-f92ac187b02847d7b52bf40441ff3d07\B_to_A.bin in=C:\Users\tbend\mame\puyo2-lan-runs\loopback_reset_drop_20260911_1957\20260911-195653-B-f92ac187b02847d7b52bf40441ff3d07\A_to_B.bin
+[  20.043] [link-state] data=0000 mask=ffff pc=0181ec watchdog=18 expect=95 rxhead=0039 rxtail=0039 rxpend=0000
+[  20.043] [protection-state] address=ffa020 data=ff00 mask=ffff pc=000932
+[  20.043]   [menu-state] write $ffa172 = 0000 mask=ffff (pc=019320)
+[  20.043]   [menu-state] write $ffa170 = 0000 mask=ffff (pc=019320)
+[  20.043]   [menu-state] write $ffa17c = 0000 mask=ff00 (pc=019326)
+[  20.043]   [menu-state] write $ffa17f = 0000 mask=00ff (pc=01932c)
+[  20.043]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[  20.043]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[  20.043] [protection-checksum] data=0000 mask=ff00 pc=00040e
+[  20.043] [protection-checksum] data=0000 mask=00ff pc=000414
+[  20.044] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[  20.053]   [menu-state] write $ffa170 = 0000 mask=ff00 (pc=018062)
+[  20.053]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[  20.053]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[  20.188] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[  20.188] [reset] discarded tx=0 rx=0
+[  20.188] [epoch-reset] local=2 peer=1 queued_rx=0
+[  20.444] [link-state] data=7f7f mask=ff00 pc=018334 watchdog=18 expect=95 rxhead=0000 rxtail=0000 rxpend=0000
+[  21.027] heartbeat frame=60 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=000288 a502=80 a524=0000 a525=00 a170=00 a17f=00 txtail=0000 rxpend=0000
+[  21.027] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  21.027] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  21.027] [game-state] a142=04 a13e=04 a13f=0f a530=0b22 a506=00 a507=00 a508=01 a7b0=0000 a7a6=0000 script=019f80 mode=01 rule=01 base=120 margin=6 difficulty=2 preset=0
+[  21.027] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd100=ff80->01b388 sleep=129 local26=0000
+[  22.028] heartbeat frame=120 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=000288 a502=80 a524=0000 a525=00 a170=00 a17f=00 txtail=0000 rxpend=0000
+[  22.028] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  22.028] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  22.028] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd100=ff80->01b388 sleep=69 local26=0000
+[  23.030] heartbeat frame=180 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=000288 a502=80 a524=0000 a525=00 a170=00 a17f=00 txtail=0000 rxpend=0000
+[  23.030] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  23.030] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  23.030] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd100=ff80->01b388 sleep=9 local26=0000
+[  23.288]   [menu-state] write $ffa170 = 0909 mask=ff00 (pc=018062)
+[  23.288]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[  23.288]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[  23.288]   [header-byte] write $ffa513 = 01 mask=00ff (pc=01b034)
+[  23.320] [protection-checksum] data=0101 mask=00ff pc=01b0bc
+[  23.320] [protection-checksum] data=0000 mask=00ff pc=01b11a
+[  24.031] heartbeat frame=240 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=000288 a502=80 a524=0000 a525=00 a170=09 a17f=00 txtail=0000 rxpend=0000
+[  24.031] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  24.031] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  24.031] [game-state] a142=04 a13e=04 a13f=0f a530=0b22 a506=00 a507=00 a508=01 a7b0=0000 a7a6=0000 script=01a004 mode=00 rule=01 base=120 margin=6 difficulty=2 preset=0
+[  24.031] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd100=ff80->01b4ee sleep=0 local26=0000 ffd140=ff80->00628e sleep=0 local26=008a
+[  25.032] heartbeat frame=300 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=000288 a502=80 a524=0000 a525=00 a170=09 a17f=00 txtail=0000 rxpend=0000
+[  25.032] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  25.032] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  25.032] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd100=ff80->01b4ee sleep=0 local26=0000 ffd140=ff80->00628e sleep=0 local26=004e
+[  26.034] heartbeat frame=360 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=00028a a502=80 a524=0000 a525=00 a170=09 a17f=00 txtail=0000 rxpend=0000
+[  26.034] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  26.034] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  26.034] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd100=ff80->01b4ee sleep=0 local26=0000 ffd140=ff80->00628e sleep=0 local26=0012
+[  27.035] heartbeat frame=420 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=00028a a502=80 a524=0000 a525=00 a170=09 a17f=00 txtail=0000 rxpend=0000
+[  27.035] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  27.035] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  27.035] [game-state] a142=04 a13e=04 a13f=0f a530=0b22 a506=00 a507=00 a508=01 a7b0=0000 a7a6=0000 script=01f582 mode=00 rule=01 base=120 margin=6 difficulty=2 preset=0
+[  27.035] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd100=ff80->018fcc sleep=0 local26=0000 ffd140=ff80->0250ba sleep=147 local26=0000 ffd180=ff80->024fe2 sleep=0 local26=0000
+[  27.052] [protection-state] address=ffa020 data=0101 mask=ff00 pc=000948
+[  27.052] [protection-state] address=ffa020 data=0101 mask=00ff pc=000952
+[  27.068] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[  27.102] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[  27.302] [protection-state] address=ffa020 data=0101 mask=ff00 pc=000948
+[  27.302] [protection-state] address=ffa020 data=0101 mask=00ff pc=000952
+[  27.319] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[  27.352] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[  27.552] [protection-state] address=ffa020 data=0101 mask=ff00 pc=000948
+[  27.552] [protection-state] address=ffa020 data=0101 mask=00ff pc=000952
+[  27.569] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[  27.602] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[  27.803] [protection-state] address=ffa020 data=0101 mask=ff00 pc=000948
+[  27.803] [protection-state] address=ffa020 data=0101 mask=00ff pc=000952
+[  27.819] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[  27.853] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[  28.036] heartbeat frame=480 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=000288 a502=80 a524=0000 a525=00 a170=09 a17f=00 txtail=0000 rxpend=0000
+[  28.036] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  28.036] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  28.036] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd100=ff80->018fcc sleep=0 local26=0000 ffd140=ff80->0250ba sleep=87 local26=0000 ffd180=ff80->024fe2 sleep=0 local26=0000
+[  28.554] [protection-state] address=ffa020 data=1010 mask=ff00 pc=000948
+[  28.554] [protection-state] address=ffa020 data=1010 mask=00ff pc=000952
+[  28.570] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[  28.604] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[  28.728]   [menu-state] write $ffa172 = 0101 mask=ff00 (pc=01b08e)
+[  28.728]   [menu-state] write $ffa170 = 0808 mask=ff00 (pc=018062)
+[  28.728]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[  28.728]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[  28.728]   [header-byte] write $ffa513 = 01 mask=00ff (pc=01b034)
+[  28.728] [game-command] data=0303 mask=ff00 pc=0188d8 requests=80
+[  28.755]   [header-byte] write $ffa513 = 03 mask=00ff (pc=0189b4)
+[  28.755]   [menu-state] write $ffa17f = 0000 mask=00ff (pc=0189c2)
+[  28.806]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=01936a)
+[  28.806]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019372)
+[  29.037] heartbeat frame=540 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=000ff4 a502=80 a524=0000 a525=00 a170=08 a17f=00 txtail=0000 rxpend=0000
+[  29.037] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  29.037] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  29.037] [game-state] a142=04 a13e=01 a13f=01 a530=0322 a506=03 a507=00 a508=00 a7b0=0000 a7a6=0000 script=01a3ee mode=01 rule=01 base=120 margin=6 difficulty=2 preset=0
+[  29.037] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd040=ff80->0189c6 sleep=0 local26=0001
+[  29.555] [protection-state] address=ffa020 data=1010 mask=ff00 pc=000948
+[  29.555] [protection-state] address=ffa020 data=1010 mask=00ff pc=000952
+[  29.572] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[  29.605] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[  30.039] heartbeat frame=600 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=00028a a502=80 a524=0000 a525=00 a170=08 a17f=00 txtail=0000 rxpend=0000
+[  30.039] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  30.039] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  30.039] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd040=ff80->018a40 sleep=0 local26=0000 ffd0c0=ff80->018ee4 sleep=0 local26=0000 ffd100=ff80->01fbb4 sleep=0 local26=0000 ffd140=ff80->01fbb6 sleep=0 local26=0002 ffd180=ff80->01fbb6 sleep=0 local26=00a2 ffd1c0=ff80->01fbb6 sleep=0 local26=01c2 ffd200=ff80->01fbb6 sleep=0 local26=02e2 ffd240=ff80->01902e sleep=0 local26=0000 ffd280=ff80->01ffe2 sleep=0 local26=0000 ffd2c0=ff80->020004 sleep=0 local26=0002 ffd300=ff80->020004 sleep=0 local26=0000 ffd340=ff80->01febe sleep=0 local26=0000 ffd380=ff80->01fedc sleep=0 local26=0000
+[  30.556] [protection-state] address=ffa020 data=2020 mask=ff00 pc=000948
+[  30.556] [protection-state] address=ffa020 data=2020 mask=00ff pc=000952
+[  30.573] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[  30.606] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[  31.040] heartbeat frame=660 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=000288 a502=80 a524=0000 a525=00 a170=08 a17f=00 txtail=0000 rxpend=0000
+[  31.040] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  31.040] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  31.040] [game-state] a142=04 a13e=02 a13f=03 a530=0322 a506=03 a507=00 a508=00 a7b0=0000 a7a6=0000 script=01a3ee mode=01 rule=01 base=120 margin=6 difficulty=2 preset=0
+[  31.040] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd040=ff80->018a40 sleep=0 local26=0000 ffd100=ff80->01fbb4 sleep=0 local26=0000 ffd140=ff80->01fbb6 sleep=0 local26=0002 ffd180=ff80->01fbb6 sleep=0 local26=00a2 ffd1c0=ff80->01fbb6 sleep=0 local26=01c2 ffd200=ff80->01fbb6 sleep=0 local26=02e2 ffd240=ff80->01902e sleep=0 local26=0000 ffd280=ff80->01ffe2 sleep=0 local26=0008 ffd2c0=ff80->020004 sleep=0 local26=0002 ffd300=ff80->020004 sleep=0 local26=0000
+[  31.557] [protection-state] address=ffa020 data=2020 mask=ff00 pc=000948
+[  31.557] [protection-state] address=ffa020 data=2020 mask=00ff pc=000952
+[  31.574] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[  31.576] [game-command] data=4343 mask=ff00 pc=018b72 requests=80
+[  31.593]   [header-byte] write $ffa513 = 00 mask=00ff (pc=018d88)
+[  31.607] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[  32.041] heartbeat frame=720 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=00028a a502=84 a524=0000 a525=00 a170=08 a17f=00 txtail=0000 rxpend=0000
+[  32.041] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  32.041] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  32.041] [game-state] a142=04 a13e=02 a13f=03 a530=4322 a506=03 a507=00 a508=00 a7b0=0000 a7a6=0000 script=01a3ee mode=01 rule=01 base=120 margin=6 difficulty=2 preset=0
+[  32.041] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd040=ff80->018e08 sleep=174 local26=0000 ffd100=ff80->01fbb4 sleep=0 local26=0000 ffd140=ff80->01fbb6 sleep=0 local26=0002 ffd180=ff80->01fbb6 sleep=0 local26=00a2 ffd1c0=ff80->01fbb6 sleep=0 local26=01c2 ffd200=ff80->01fbb6 sleep=0 local26=02e2 ffd240=ff80->01902e sleep=0 local26=0000 ffd280=ff80->027726 sleep=0 local26=0001
+[  32.167]   [menu-state] write $ffa170 = 0000 mask=ff00 (pc=01afb6)
+[  32.167]   [menu-state] write $ffa170 = 8282 mask=ff00 (pc=01afd8)
+[  32.167]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[  32.167]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[  32.167]   [header-byte] write $ffa513 = 40 mask=00ff (pc=01b022)
+[  32.167]   [header-byte] write $ffa513 = 44 mask=00ff (pc=01b044)
+[  32.167]   [menu-state] write $ffa170 = 8282 mask=ff00 (pc=018062)
+[  32.167]   [menu-state] write $ffa176 = 0000 mask=ff00 (pc=01afde)
+[  32.167]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[  32.167]   [header-byte] write $ffa513 = 40 mask=00ff (pc=01b022)
+[  32.167]   [header-byte] write $ffa513 = 44 mask=00ff (pc=01b044)
+[  33.043] heartbeat frame=780 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=000288 a502=84 a524=0000 a525=00 a170=82 a17f=00 txtail=0000 rxpend=0000
+[  33.043] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  33.043] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  33.043] [game-state] a142=02 a13e=02 a13f=03 a530=4322 a506=03 a507=00 a508=00 a7b0=0000 a7a6=0000 script=01f7f6 mode=01 rule=01 base=120 margin=6 difficulty=0 preset=0
+[  33.043] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd100=ff80->023daa sleep=0 local26=0000 ffd140=ff80->023c40 sleep=0 local26=0000 ffd180=ff80->023c70 sleep=0 local26=0002 ffd1c0=ff80->023c70 sleep=0 local26=0000 ffd200=ff80->023c08 sleep=0 local26=0000
+[  34.044] heartbeat frame=840 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=00028a a502=84 a524=0000 a525=00 a170=82 a17f=00 txtail=0000 rxpend=0000
+[  34.044] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  34.044] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  34.044] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd100=ff80->023f42 sleep=1 local26=0000 ffd200=ff80->023c3e sleep=0 local26=0000
+[  35.045] heartbeat frame=900 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=001e9e a502=84 a524=0000 a525=00 a170=82 a17f=00 txtail=0000 rxpend=0000
+[  35.045] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  35.045] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  35.045] [game-state] a142=02 a13e=02 a13f=03 a530=4322 a506=03 a507=00 a508=00 a7b0=0000 a7a6=0000 script=01a4b0 mode=01 rule=01 base=120 margin=6 difficulty=2 preset=0
+[  35.045] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000
+[  36.046] heartbeat frame=960 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=000288 a502=84 a524=0000 a525=00 a170=82 a17f=00 txtail=0000 rxpend=0000
+[  36.046] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  36.046] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  36.046] [game-state] a142=02 a13e=02 a13f=03 a530=4322 a506=03 a507=00 a508=00 a7b0=0022 a7a6=0000 script=01a51a mode=01 rule=01 base=120 margin=6 difficulty=2 preset=0
+[  36.046] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->004f14 sleep=0 local26=0000 ffd0c0=ffc0->004f14 sleep=0 local26=0000 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->007f6e sleep=0 local26=0000 ffd180=ff80->00539a sleep=0 local26=0200 ffd1c0=ff00->005660 sleep=0 local26=f002 ffd200=ff00->0056e4 sleep=0 local26=0000 ffd240=ff80->00539a sleep=0 local26=0200 ffd280=ff00->005660 sleep=0 local26=f002 ffd2c0=ff00->0056e4 sleep=0 local26=0000 ffd300=ff80->0086ee sleep=0 local26=0000 ffd340=ff80->0086ee sleep=0 local26=0000
+[  37.048] heartbeat frame=1020 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=00028a a502=84 a524=0000 a525=00 a170=82 a17f=00 txtail=0000 rxpend=0000
+[  37.048] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  37.048] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  37.048] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->004f14 sleep=0 local26=0000 ffd0c0=ffc0->004f14 sleep=0 local26=0000 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->007f6e sleep=0 local26=0000 ffd180=ff80->0054b2 sleep=0 local26=0200 ffd240=ff80->0054b2 sleep=0 local26=0200
+[  38.049] heartbeat frame=1080 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=00028a a502=84 a524=0000 a525=00 a170=82 a17f=00 txtail=0000 rxpend=0000
+[  38.049] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  38.049] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  38.049] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->004f30 sleep=0 local26=0000 ffd0c0=ffc0->004f30 sleep=0 local26=0000 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->007fb6 sleep=0 local26=0000
+[  38.071] [game-command] data=7878 mask=ff00 pc=007ffa requests=84
+[  38.119] [game-command] data=f8f8 mask=ff00 pc=008022 requests=84
+[  39.050] heartbeat frame=1140 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=000288 a502=84 a524=0000 a525=00 a170=82 a17f=00 txtail=0000 rxpend=0000
+[  39.050] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  39.050] [epochs] local=2 peer=1 ready=false discarded_rx=0
+[  39.050] [game-state] a142=02 a13e=02 a13f=03 a530=f822 a506=03 a507=00 a508=00 a7b0=0022 a7a6=0000 script=01a51a mode=01 rule=01 base=120 margin=6 difficulty=2 preset=0
+[  39.050] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00504e sleep=0 local26=3100 ffd0c0=ffc0->00504e sleep=0 local26=3100 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=031a ffd180=ff80->007944 sleep=0 local26=0000 ffd1c0=ff80->007d70 sleep=0 local26=0000 ffd200=ff80->007944 sleep=0 local26=0000 ffd240=ff80->007d70 sleep=0 local26=0000 ffe180=ff00->008362 sleep=0 local26=ffdc ffe240=ff00->008362 sleep=0 local26=ffdc ffe280=ff00->008362 sleep=0 local26=ffdc ffe2c0=ff00->008362 sleep=0 local26=ffdc ffe300=ff00->008362 sleep=0 local26=ffdc ffe340=ff00->008362 sleep=0 local26=ffdc ffe3c0=ff00->008362 sleep=0 local26=ffdc ffe400=ff00->008362 sleep=0 local26=ffdc ffe440=ff00->008362 sleep=0 local26=ffdc ffe480=ff00->008362 sleep=0 local26=ffdc ffe4c0=ff00->008362 sleep=0 local26=ffdc ffe500=ff00->008362 sleep=0 local26=ffdc ffe540=ff00->008362 sleep=0 local26=ffdc ffe580=ff00->008362 sleep=0 local26=ffdc ffe600=ff00->008362 sleep=0 local26=ffdc ffe640=ff00->008362 sleep=0 local26=ffdc
+[  39.751] [peer-reset] old=1 new=2 local=2 queued_rx=0
+[  40.052] heartbeat frame=1200 tx=0 rx=0 fc=1 fd=10 fe=0 linkflag=7f pc=00028a a502=84 a524=0000 a525=00 a170=82 a17f=00 txtail=0000 rxpend=0000
+[  40.052] [transport] captured=0 flushed=0 received=0 accepted=0 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=0 bursts=0 txcredit=255 outq=0 inq=0 watchdog=18 txseq=aa rxseq=95 rxcredit=0 protection=00 checks=0000
+[  40.052] [epochs] local=2 peer=2 ready=false discarded_rx=0
+[  40.052] [tcb-continuations] ffa580=ff80->01833a sleep=0 local26=7710 ffa5c0=0000->000000 sleep=0 local26=0000 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00504e sleep=0 local26=6d00 ffd0c0=ffc0->00504e sleep=0 local26=6d00 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=031a ffd180=ff80->007944 sleep=0 local26=0000 ffd1c0=ff80->007d70 sleep=0 local26=0000 ffd200=ff80->007944 sleep=0 local26=0000 ffd240=ff80->007d70 sleep=0 local26=0000
+[  40.137] [epoch-ready] local=2 peer=2
+[  40.137] CMD $FE -> cabinet role=2 (ROM linkflag=82)
+[  40.137] [link-state] data=8282 mask=ff00 pc=018358 watchdog=18 expect=95 rxhead=0000 rxtail=0000 rxpend=0000
+[  40.137]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[  40.137]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[  40.137]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[  40.137]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[  40.154]   [menu-state] write $ffa173 = 8080 mask=00ff (pc=01939c)
+[  40.172]   [menu-state] write $ffa171 = 0000 mask=00ff (pc=019466)
+[  40.172]   [header-byte] write $ffa513 = 44 mask=00ff (pc=019e4a)
+[  40.172]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[  40.172]   [header-byte] write $ffa513 = 04 mask=00ff (pc=01b044)
+[  40.172]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  40.172] [packet-accepted] total=1 seq=00 flags=00 status=00 pc=01845e
+[  40.187]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[  40.187] [packet-accepted] total=2 seq=01 flags=00 status=10 pc=01845e
+[  40.204]   [menu-state] write $ffa171 = 8080 mask=00ff (pc=019466)
+[  40.204]   [header-byte] write $ffa513 = 04 mask=00ff (pc=019e4a)
+[  40.204]   [header-byte] write $ffa513 = 14 mask=00ff (pc=019e5a)
+[  40.204]   [header-byte] write $ffa513 = 00 mask=00ff (pc=01afe6)
+[  40.204]   [header-byte] write $ffa513 = 10 mask=00ff (pc=01affe)
+[  40.204]   [header-byte] write $ffa513 = 50 mask=00ff (pc=01b022)
+[  40.204]   [header-byte] write $ffa513 = 54 mask=00ff (pc=01b044)
+[  40.688]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[  40.688] [packet-accepted] total=3 seq=02 flags=00 status=10 pc=01845e
+[  40.788] [attack-state] address=ffa7e0 data=8080 mask=ff00 pc=0050ce protection=00
+[  41.053] heartbeat frame=1260 tx=12 rx=9 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=000c rxpend=0000
+[  41.053] [transport] captured=12 flushed=12 received=9 accepted=3 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=57 bursts=4 txcredit=0 outq=0 inq=0 watchdog=21 txseq=04 rxseq=03 rxcredit=0 protection=00 checks=0000
+[  41.053] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  41.053] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00504e sleep=0 local26=0a00 ffd0c0=ffc0->00504e sleep=0 local26=a900 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=021a ffd180=ff00->007a16 sleep=0 local26=0001 ffd1c0=ff00->007a24 sleep=0 local26=0600 ffd200=ff80->007944 sleep=0 local26=0000 ffd240=ff80->007d70 sleep=0 local26=0000 ffd280=ff80->007944 sleep=0 local26=0000 ffd2c0=ff80->007d70 sleep=0 local26=0000
+[  41.189]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[  41.189] [packet-accepted] total=4 seq=03 flags=00 status=10 pc=01845e
+[  41.690]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[  42.054] heartbeat frame=1320 tx=18 rx=15 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0012 rxpend=0000
+[  42.054] [transport] captured=18 flushed=18 received=15 accepted=5 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=119 bursts=6 txcredit=0 outq=0 inq=0 watchdog=21 txseq=06 rxseq=05 rxcredit=0 protection=00 checks=0000
+[  42.054] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  42.054] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00504e sleep=0 local26=0600 ffd0c0=ffc0->005096 sleep=0 local26=0000 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=011a ffd180=ff80->007944 sleep=0 local26=0000 ffd1c0=ff80->007d70 sleep=0 local26=0000 ffd200=ff00->0079fe sleep=20 local26=0001 ffd240=ff00->0079fe sleep=21 local26=0000 ffd280=ff00->0079fe sleep=4 local26=0001 ffd2c0=ff00->0079fe sleep=2 local26=0000
+[  42.071] [protection-state] address=ffa020 data=2020 mask=ff00 pc=000948
+[  42.071] [protection-state] address=ffa020 data=2020 mask=00ff pc=000952
+[  42.073]   [menu-state] write $ffa172 = 0101 mask=ff00 (pc=0194b6)
+[  42.088] [protection-state] address=ffa020 data=0000 mask=00ff pc=000952
+[  42.090]   [menu-state] write $ffa172 = 0000 mask=ff00 (pc=019418)
+[  42.090]   [menu-state] write $ffa171 = 8888 mask=00ff (pc=019420)
+[  42.090]   [header-byte] write $ffa513 = 54 mask=00ff (pc=019432)
+[  42.090]   [header-byte] write $ffa513 = 5c mask=00ff (pc=019438)
+[  42.121] [protection-state] address=ffa020 data=0000 mask=ff00 pc=000948
+[  42.141] [attack-state] address=ffa7e4 data=8080 mask=ff00 pc=0050ce protection=00
+[  42.190]   [header-byte] write $ffa517 = 10 mask=00ff (pc=018446)
+[  42.190]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  42.207]   [menu-state] write $ffa171 = 0808 mask=00ff (pc=019466)
+[  42.207]   [header-byte] write $ffa513 = 4c mask=00ff (pc=019e4a)
+[  42.207]   [header-byte] write $ffa513 = 08 mask=00ff (pc=01afe6)
+[  42.207]   [header-byte] write $ffa513 = 0c mask=00ff (pc=01b044)
+[  42.707]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  43.055] heartbeat frame=1380 tx=27 rx=24 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=001b rxpend=0000
+[  43.055] [transport] captured=27 flushed=27 received=24 accepted=8 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=181 bursts=9 txcredit=0 outq=0 inq=0 watchdog=20 txseq=09 rxseq=08 rxcredit=0 protection=00 checks=0000
+[  43.055] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  43.055] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00504e sleep=0 local26=0900 ffd0c0=ffc0->00504e sleep=0 local26=3100 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=011a ffd180=ff00->0079fe sleep=1 local26=0001 ffd1c0=ff00->007a24 sleep=0 local26=0600 ffd200=ff80->007944 sleep=0 local26=0000 ffd240=ff80->007d70 sleep=0 local26=0000 ffd300=ff80->0079d4 sleep=0 local26=0001 ffd340=ff00->0079fe sleep=23 local26=0000
+[  43.208]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  43.709]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  44.057] heartbeat frame=1440 tx=33 rx=30 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0021 rxpend=0000
+[  44.057] [transport] captured=33 flushed=33 received=30 accepted=10 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=243 bursts=11 txcredit=0 outq=0 inq=0 watchdog=20 txseq=0b rxseq=0a rxcredit=0 protection=00 checks=0000
+[  44.057] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  44.057] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00504e sleep=0 local26=0c00 ffd0c0=ffc0->00508e sleep=0 local26=0000 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=001a ffd180=ff80->007944 sleep=0 local26=0000 ffd1c0=ff80->007d70 sleep=0 local26=0000 ffd200=ff00->007a24 sleep=0 local26=0601 ffd240=ff00->007a24 sleep=0 local26=0600 ffd280=ff00->0079fe sleep=22 local26=0001 ffd2c0=ff00->0079fe sleep=20 local26=0000
+[  44.209]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  44.711]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  45.058] heartbeat frame=1500 tx=39 rx=36 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0027 rxpend=0000
+[  45.058] [transport] captured=39 flushed=39 received=36 accepted=12 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=305 bursts=13 txcredit=0 outq=0 inq=0 watchdog=20 txseq=0d rxseq=0c rxcredit=0 protection=00 checks=0000
+[  45.058] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  45.058] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00504e sleep=0 local26=1100 ffd0c0=ffc0->0050b6 sleep=3 local26=0000 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=00ff ffd180=ff00->007a24 sleep=0 local26=0501 ffd1c0=ff00->007a24 sleep=0 local26=0400 ffd200=ff80->007944 sleep=0 local26=0000 ffd240=ff80->007d70 sleep=0 local26=0000 ffd300=ff00->0079fe sleep=19 local26=0001 ffd340=ff00->0079fe sleep=17 local26=0000
+[  45.211]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  45.711]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  45.928] [protection-state] address=ffa024 data=7878 mask=ff00 pc=007848
+[  45.928] [garbage-calculation] protection=00 score=00a7 divisor=0078 task=ffd080 pc=00784e players=2 rule=01 split_remainder=00 base=120 margin=6 seconds=7 mode=01 participants=03 chain=1 difficulty=2 preset=0
+[  45.928] [attack-state] address=ffa7e2 data=0001 mask=ffff pc=007564 protection=00
+[  46.059] heartbeat frame=1560 tx=45 rx=42 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=002d rxpend=0000
+[  46.059] [transport] captured=45 flushed=45 received=42 accepted=14 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=367 bursts=15 txcredit=0 outq=0 inq=0 watchdog=20 txseq=0f rxseq=0e rxcredit=0 protection=00 checks=0000
+[  46.059] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  46.059] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00514e sleep=17 local26=0001 ffd0c0=ffc0->004fac sleep=0 local26=0000 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=0319 ffd180=ff80->009390 sleep=2 local26=0000 ffd1c0=ff00->009950 sleep=0 local26=002b ffd200=ff00->007a24 sleep=0 local26=0301 ffd240=ff00->007a24 sleep=0 local26=0300 ffd280=ff00->0079fe sleep=14 local26=0001 ffd2c0=ff00->0079fe sleep=12 local26=0000 ffe000=ff00->0070c2 sleep=0 local26=2b00 ffe040=ff00->009ac0 sleep=0 local26=0000 ffe080=ff00->009ac0 sleep=0 local26=0000 ffe0c0=ff00->009ac0 sleep=0 local26=0000 ffe100=ff00->009ac0 sleep=0 local26=0000 ffe140=ff00->009ac0 sleep=0 local26=0000 ffe180=ff00->009ac0 sleep=0 local26=0000 ffe1c0=ff00->009ac0 sleep=0 local26=0000 ffe200=ff00->009ac0 sleep=0 local26=0000 ffe240=ff00->009ab6 sleep=0 local26=0000 ffe280=ff00->009ab6 sleep=0 local26=0000 ffe2c0=ff00->009ab6 sleep=0 local26=0000 ffe300=ff00->009ab6 sleep=0 local26=0000 ffe340=ff00->009ab2 sleep=4 local26=0000 ffe380=ff00->009ab2 sleep=4 local26=0000 ffe3c0=ff00->009ab2 sleep=4 local26=0000 ffe400=ff00->009ab2 sleep=4 local26=0000
+[  46.212]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  46.713]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  47.061] heartbeat frame=1620 tx=51 rx=48 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0033 rxpend=0000
+[  47.061] [transport] captured=51 flushed=51 received=48 accepted=16 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=429 bursts=17 txcredit=0 outq=0 inq=0 watchdog=20 txseq=11 rxseq=10 rxcredit=0 protection=00 checks=0000
+[  47.061] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  47.061] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00504e sleep=0 local26=0300 ffd0c0=ffc0->005120 sleep=13 local26=0001 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=0319 ffd180=ff80->00962a sleep=0 local26=ffff ffd1c0=ff80->007944 sleep=0 local26=0000 ffd200=ff80->007d70 sleep=0 local26=0000 ffd300=ff00->0079fe sleep=7 local26=0001 ffd340=ff00->0079fe sleep=5 local26=0000 ffe000=ff00->0070c2 sleep=0 local26=2b00 ffe040=ff00->0070c2 sleep=0 local26=3600 ffe140=ff00->0070c2 sleep=0 local26=2000
+[  47.213]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  47.280] [garbage-calculation] protection=00 score=00a2 divisor=0078 task=ffd0c0 pc=00784e players=2 rule=01 split_remainder=00 base=120 margin=6 seconds=9 mode=01 participants=03 chain=1 difficulty=2 preset=0
+[  47.714]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  48.062] heartbeat frame=1680 tx=57 rx=54 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0039 rxpend=0000
+[  48.062] [transport] captured=57 flushed=57 received=54 accepted=18 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=491 bursts=19 txcredit=0 outq=0 inq=0 watchdog=20 txseq=13 rxseq=12 rxcredit=0 protection=00 checks=0000
+[  48.062] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  48.062] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->005120 sleep=13 local26=0001 ffd0c0=ffc0->005164 sleep=0 local26=0001 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=0219 ffd180=ff80->00962a sleep=0 local26=ffff ffd1c0=ff00->0079fe sleep=7 local26=0001 ffd200=ff00->0079fe sleep=7 local26=0000 ffd240=ff00->009950 sleep=0 local26=0004 ffd280=ff00->00989e sleep=0 local26=0046 ffe040=ff00->0070c2 sleep=0 local26=3600 ffe540=ff00->0070c2 sleep=0 local26=2000 ffe580=ff00->009714 sleep=0 local26=0000 ffe5c0=ff00->009714 sleep=0 local26=0000 ffe600=ff00->009714 sleep=0 local26=0000 ffe640=ff00->009714 sleep=0 local26=0000 ffe680=ff00->009714 sleep=0 local26=0000 ffe6c0=ff00->009714 sleep=0 local26=0000 ffe700=ff00->009714 sleep=0 local26=0000 ffe740=ff00->009714 sleep=0 local26=0000
+[  48.215]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  48.282] [garbage-calculation] protection=00 score=009e divisor=0078 task=ffd080 pc=00784e players=2 rule=01 split_remainder=00 base=120 margin=6 seconds=10 mode=01 participants=03 chain=1 difficulty=2 preset=0
+[  48.282] [attack-state] address=ffa7e2 data=0002 mask=ffff pc=007564 protection=00
+[  48.715]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  49.063] heartbeat frame=1740 tx=63 rx=60 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=003f rxpend=0000
+[  49.063] [transport] captured=63 flushed=63 received=60 accepted=20 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=553 bursts=21 txcredit=0 outq=0 inq=0 watchdog=20 txseq=15 rxseq=14 rxcredit=0 protection=00 checks=0000
+[  49.063] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  49.063] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->005164 sleep=0 local26=0001 ffd0c0=ffc0->00504e sleep=0 local26=2a00 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=0119 ffd240=ff80->00962a sleep=0 local26=ffff ffd280=ff00->00989e sleep=0 local26=000a ffd2c0=ff00->009950 sleep=0 local26=0004 ffd300=ff80->0079d4 sleep=0 local26=0001 ffd340=ff80->007dfc sleep=0 local26=0000 ffe040=ff00->0070c2 sleep=0 local26=3600
+[  49.215]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  49.700] [garbage-calculation] protection=00 score=0099 divisor=0078 task=ffd0c0 pc=00784e players=2 rule=01 split_remainder=00 base=120 margin=6 seconds=11 mode=01 participants=03 chain=1 difficulty=2 preset=0
+[  49.719]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  50.064] heartbeat frame=1800 tx=69 rx=66 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0045 rxpend=0000
+[  50.064] [transport] captured=69 flushed=69 received=66 accepted=22 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=615 bursts=23 txcredit=0 outq=0 inq=0 watchdog=20 txseq=17 rxseq=16 rxcredit=0 protection=00 checks=0000
+[  50.064] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  50.064] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00504e sleep=0 local26=2a00 ffd0c0=ffc0->00514e sleep=3 local26=0001 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=0119 ffd180=ff80->0079d4 sleep=0 local26=0001 ffd1c0=ff00->0079fe sleep=23 local26=0000 ffd200=ff80->0093e6 sleep=0 local26=0004 ffd240=ff00->009950 sleep=0 local26=001d ffe000=ff00->009ac0 sleep=0 local26=0000 ffe040=ff00->0070c2 sleep=0 local26=3600 ffe080=ff00->009ac0 sleep=0 local26=0000 ffe0c0=ff00->009ac0 sleep=0 local26=0000 ffe140=ff00->009ac0 sleep=0 local26=0000 ffe180=ff00->009ac0 sleep=0 local26=0000 ffe1c0=ff00->009ac0 sleep=0 local26=0000 ffe240=ff00->009ac0 sleep=0 local26=0000 ffe280=ff00->009ac0 sleep=0 local26=0000 ffe2c0=ff00->009ac0 sleep=0 local26=0000 ffe300=ff00->009ac0 sleep=0 local26=0000 ffe340=ff00->009ac0 sleep=0 local26=0000 ffe380=ff00->009ac0 sleep=0 local26=0000 ffe3c0=ff00->009ac0 sleep=0 local26=0000 ffe400=ff00->009ac0 sleep=0 local26=0000 ffe440=ff00->009ac0 sleep=0 local26=0000 ffe480=ff00->009ac0 sleep=0 local26=0000 ffe4c0=ff00->009ac0 sleep=0 local26=0000 ffe500=ff00->009ac0 sleep=0 local26=0000
+[  50.218]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  50.719]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  51.066] heartbeat frame=1860 tx=75 rx=72 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=004b rxpend=0000
+[  51.066] [transport] captured=75 flushed=75 received=72 accepted=24 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=677 bursts=25 txcredit=0 outq=0 inq=0 watchdog=20 txseq=19 rxseq=18 rxcredit=0 protection=00 checks=0000
+[  51.066] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  51.066] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->005104 sleep=0 local26=0001 ffd0c0=ffc0->00504e sleep=0 local26=1100 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=0019 ffd240=ff80->007944 sleep=0 local26=0000 ffd280=ff00->00989e sleep=0 local26=0023 ffd2c0=ff00->0079fe sleep=20 local26=0001 ffd300=ff00->0079fe sleep=18 local26=0000 ffd340=ff80->007d70 sleep=0 local26=0000 ffe040=ff00->0070c2 sleep=0 local26=3600 ffe100=ff00->0070c2 sleep=0 local26=2000 ffe540=ff00->009714 sleep=0 local26=0000 ffe580=ff00->009714 sleep=0 local26=0000 ffe5c0=ff00->009714 sleep=0 local26=0000 ffe600=ff00->009714 sleep=0 local26=0000 ffe640=ff00->009714 sleep=0 local26=0000 ffe680=ff00->009714 sleep=0 local26=0000
+[  51.219]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  51.502] [garbage-calculation] protection=00 score=0067 divisor=0078 task=ffd080 pc=00784e players=2 rule=01 split_remainder=00 base=120 margin=6 seconds=13 mode=01 participants=03 chain=1 difficulty=2 preset=0
+[  51.703]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  52.067] heartbeat frame=1920 tx=81 rx=78 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0051 rxpend=0000
+[  52.067] [transport] captured=81 flushed=81 received=78 accepted=26 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=739 bursts=27 txcredit=0 outq=0 inq=0 watchdog=21 txseq=1b rxseq=1a rxcredit=0 protection=00 checks=0000
+[  52.067] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  52.067] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->0050b6 sleep=2 local26=0000 ffd0c0=ffc0->00504e sleep=0 local26=1400 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=00ff ffd180=ff80->00963c sleep=0 local26=0000 ffd1c0=ff00->009950 sleep=0 local26=0011 ffd200=ff80->007944 sleep=0 local26=0000 ffd240=ff00->007a24 sleep=0 local26=0401 ffd280=ff80->007d70 sleep=0 local26=0000 ffd340=ff00->007a24 sleep=0 local26=0400 ffe000=ff00->0070c2 sleep=0 local26=2000 ffe200=ff00->009ac0 sleep=0 local26=0000 ffe240=ff00->009ac0 sleep=0 local26=0000 ffe280=ff00->009ac0 sleep=0 local26=0000 ffe2c0=ff00->009ac0 sleep=0 local26=0000 ffe300=ff00->009ac0 sleep=0 local26=0000 ffe340=ff00->009ac0 sleep=0 local26=0000 ffe380=ff00->009ac0 sleep=0 local26=0000 ffe3c0=ff00->009ac0 sleep=0 local26=0000
+[  52.220]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  52.721]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  52.921] [garbage-calculation] protection=00 score=0062 divisor=0078 task=ffd0c0 pc=00784e players=2 rule=01 split_remainder=00 base=120 margin=6 seconds=14 mode=01 participants=03 chain=1 difficulty=2 preset=0
+[  53.068] heartbeat frame=1980 tx=87 rx=84 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0057 rxpend=0000
+[  53.068] [transport] captured=87 flushed=87 received=84 accepted=28 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=801 bursts=29 txcredit=0 outq=0 inq=0 watchdog=20 txseq=1d rxseq=1c rxcredit=0 protection=00 checks=0000
+[  53.068] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  53.068] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->004f7e sleep=0 local26=0000 ffd0c0=ffc0->00514e sleep=16 local26=0001 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=00ff ffd180=ff00->0079fe sleep=15 local26=0001 ffd1c0=ff80->00963c sleep=0 local26=0000 ffd200=ff00->007a24 sleep=0 local26=0301 ffd240=ff00->009950 sleep=0 local26=002a ffd280=ff00->007a24 sleep=0 local26=0200 ffd2c0=ff00->0079fe sleep=13 local26=0000 ffe000=ff00->0070c2 sleep=0 local26=2000 ffe040=ff00->009ac0 sleep=0 local26=0000 ffe080=ff00->009ac0 sleep=0 local26=0000 ffe0c0=ff00->009ac0 sleep=0 local26=0000 ffe100=ff00->009ac0 sleep=0 local26=0000 ffe140=ff00->009ac0 sleep=0 local26=0000 ffe180=ff00->009ac0 sleep=0 local26=0000 ffe1c0=ff00->009ac0 sleep=0 local26=0000 ffe200=ff00->009ac0 sleep=0 local26=0000 ffe240=ff00->009ab2 sleep=3 local26=0000 ffe280=ff00->009ab2 sleep=3 local26=0000 ffe2c0=ff00->009ab2 sleep=3 local26=0000 ffe300=ff00->009ab2 sleep=3 local26=0000
+[  53.223]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  53.722]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  54.070] heartbeat frame=2040 tx=93 rx=90 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=005d rxpend=0000
+[  54.070] [transport] captured=93 flushed=93 received=90 accepted=30 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=863 bursts=31 txcredit=0 outq=0 inq=0 watchdog=20 txseq=1f rxseq=1e rxcredit=0 protection=00 checks=0000
+[  54.070] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  54.070] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->0050b6 sleep=3 local26=0000 ffd0c0=ffc0->00504e sleep=0 local26=1b00 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=0316 ffd1c0=ff80->007944 sleep=0 local26=0001 ffd200=ff80->007d70 sleep=0 local26=0000 ffd300=ff00->0079fe sleep=19 local26=0001 ffd340=ff00->0079fe sleep=17 local26=0000 ffe000=ff00->0070c2 sleep=0 local26=2000
+[  54.222]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  54.723]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  55.071] heartbeat frame=2100 tx=99 rx=96 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0063 rxpend=0000
+[  55.071] [transport] captured=99 flushed=99 received=96 accepted=32 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=925 bursts=33 txcredit=0 outq=0 inq=0 watchdog=20 txseq=21 rxseq=20 rxcredit=0 protection=00 checks=0000
+[  55.071] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  55.071] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->005120 sleep=18 local26=0001 ffd0c0=ffc0->00504e sleep=0 local26=1e00 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=0216 ffd180=ff00->0079fe sleep=12 local26=0001 ffd1c0=ff00->007a24 sleep=0 local26=0201 ffd200=ff00->007a24 sleep=0 local26=0100 ffd240=ff00->0079fe sleep=10 local26=0000 ffd280=ff80->007944 sleep=0 local26=0000 ffd2c0=ff80->007d70 sleep=0 local26=0000
+[  55.207]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  55.374] [garbage-calculation] protection=00 score=00b4 divisor=0078 task=ffd080 pc=00784e players=2 rule=01 split_remainder=00 base=120 margin=6 seconds=17 mode=01 participants=03 chain=1 difficulty=2 preset=0
+[  55.374] [attack-state] address=ffa7e2 data=0003 mask=ffff pc=007564 protection=00
+[  55.724]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  56.072] heartbeat frame=2160 tx=105 rx=102 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0069 rxpend=0000
+[  56.072] [transport] captured=105 flushed=105 received=102 accepted=34 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=987 bursts=35 txcredit=0 outq=0 inq=0 watchdog=20 txseq=23 rxseq=22 rxcredit=0 protection=00 checks=0000
+[  56.072] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  56.072] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->005164 sleep=0 local26=0001 ffd0c0=ffc0->00504e sleep=0 local26=1a00 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=0116 ffd1c0=ff80->0095b6 sleep=0 local26=0000 ffd200=ff00->009950 sleep=0 local26=0009 ffd280=ff00->007a24 sleep=0 local26=0301 ffd2c0=ff00->007a24 sleep=0 local26=0200 ffd300=ff80->0079d4 sleep=0 local26=0001 ffd340=ff80->007dfc sleep=0 local26=0000 ffe000=ff00->0070c2 sleep=0 local26=2b00
+[  56.225]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  56.726]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  56.793] [garbage-calculation] protection=00 score=00af divisor=0078 task=ffd0c0 pc=00784e players=2 rule=01 split_remainder=00 base=120 margin=6 seconds=18 mode=01 participants=03 chain=1 difficulty=2 preset=0
+[  57.073] heartbeat frame=2220 tx=111 rx=108 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=006f rxpend=0000
+[  57.073] [transport] captured=111 flushed=111 received=108 accepted=36 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=1049 bursts=37 txcredit=0 outq=0 inq=0 watchdog=20 txseq=25 rxseq=24 rxcredit=0 protection=00 checks=0000
+[  57.073] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  57.073] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00504e sleep=0 local26=2300 ffd0c0=ffc0->00514e sleep=8 local26=0001 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=0016 ffd180=ff80->0079d4 sleep=0 local26=0001 ffd1c0=ff80->0093e6 sleep=0 local26=0009 ffd200=ff80->007dfc sleep=0 local26=0000 ffd240=ff00->009950 sleep=0 local26=0022 ffd300=ff00->007a24 sleep=0 local26=0101 ffe000=ff00->0070c2 sleep=0 local26=2b00 ffe040=ff00->009ac0 sleep=0 local26=0000 ffe080=ff00->009ac0 sleep=0 local26=0000 ffe0c0=ff00->009ac0 sleep=0 local26=0000 ffe100=ff00->009ac0 sleep=0 local26=0000 ffe140=ff00->009ac0 sleep=0 local26=0000 ffe180=ff00->009ac0 sleep=0 local26=0000 ffe1c0=ff00->009ac0 sleep=0 local26=0000 ffe200=ff00->009ac0 sleep=0 local26=0000 ffe240=ff00->009ac0 sleep=0 local26=0000 ffe280=ff00->009ac0 sleep=0 local26=0000 ffe2c0=ff00->009ac0 sleep=0 local26=0000 ffe300=ff00->009ac0 sleep=0 local26=0000 ffe340=ff00->009ac0 sleep=0 local26=0000 ffe380=ff00->009ac0 sleep=0 local26=0000 ffe3c0=ff00->009ac0 sleep=0 local26=0000 ffe400=ff00->009ac0 sleep=0 local26=0000
+[  57.226]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  57.727]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  58.075] heartbeat frame=2280 tx=117 rx=114 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0075 rxpend=0000
+[  58.075] [transport] captured=117 flushed=117 received=114 accepted=38 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=1111 bursts=39 txcredit=0 outq=0 inq=0 watchdog=20 txseq=27 rxseq=26 rxcredit=0 protection=00 checks=0000
+[  58.075] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  58.075] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00504e sleep=0 local26=2300 ffd0c0=ffc0->00504e sleep=0 local26=0a00 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=0016 ffd240=ff80->007944 sleep=0 local26=0000 ffd280=ff00->00989e sleep=0 local26=0028 ffd2c0=ff80->0079d4 sleep=0 local26=0001 ffd300=ff80->007dfc sleep=0 local26=0000 ffd340=ff80->007d70 sleep=0 local26=0000 ffe000=ff00->0070c2 sleep=0 local26=3600 ffe480=ff00->009714 sleep=0 local26=0000 ffe4c0=ff00->009714 sleep=0 local26=0000 ffe500=ff00->009714 sleep=0 local26=0000 ffe540=ff00->009714 sleep=0 local26=0000 ffe580=ff00->009714 sleep=0 local26=0000 ffe5c0=ff00->009714 sleep=0 local26=0000 ffe600=ff00->009714 sleep=0 local26=0000
+[  58.228]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  58.678] [garbage-calculation] protection=00 score=0143 divisor=0078 task=ffd080 pc=00784e players=2 rule=01 split_remainder=00 base=120 margin=6 seconds=20 mode=01 participants=03 chain=1 difficulty=2 preset=0
+[  58.678] [attack-state] address=ffa7e2 data=0005 mask=ffff pc=007564 protection=00
+[  58.728]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  59.076] heartbeat frame=2340 tx=123 rx=120 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=007b rxpend=0000
+[  59.076] [transport] captured=123 flushed=123 received=120 accepted=40 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=1173 bursts=41 txcredit=0 outq=0 inq=0 watchdog=20 txseq=29 rxseq=28 rxcredit=0 protection=00 checks=0000
+[  59.076] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  59.076] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00514e sleep=1 local26=0002 ffd0c0=ffc0->00504e sleep=0 local26=0a00 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=00ff ffd180=ff80->0095b6 sleep=0 local26=0012 ffd1c0=ff00->009950 sleep=0 local26=001b ffd200=ff80->007944 sleep=0 local26=0000 ffd240=ff00->007a16 sleep=0 local26=0001 ffd280=ff80->007d70 sleep=0 local26=0000 ffd340=ff00->007a16 sleep=0 local26=0000 ffe000=ff00->0070c2 sleep=0 local26=3600 ffe040=ff00->0070c2 sleep=0 local26=4c00 ffe0c0=ff00->009ac0 sleep=0 local26=0000 ffe100=ff00->009ac0 sleep=0 local26=0000 ffe140=ff00->009ac0 sleep=0 local26=0000 ffe1c0=ff00->009ac0 sleep=0 local26=0000 ffe200=ff00->009ac0 sleep=0 local26=0000 ffe240=ff00->009ac0 sleep=0 local26=0000 ffe280=ff00->009ac0 sleep=0 local26=0000 ffe2c0=ff00->009ac0 sleep=0 local26=0000 ffe300=ff00->009ac0 sleep=0 local26=0000 ffe340=ff00->009ac0 sleep=0 local26=0000 ffe380=ff00->009ac0 sleep=0 local26=0000 ffe3c0=ff00->009ac0 sleep=0 local26=0000 ffe400=ff00->009ac0 sleep=0 local26=0000 ffe440=ff00->009ac0 sleep=0 local26=0000 ffe480=ff00->009ac0 sleep=0 local26=0000 ffe4c0=ff00->009ac0 sleep=0 local26=0000 ffe500=ff00->009ac0 sleep=0 local26=0000 ffe540=ff00->009ac0 sleep=0 local26=0000 ffe580=ff00->009ac0 sleep=0 local26=0000 ffe5c0=ff00->009ac0 sleep=0 local26=0000 ffe600=ff00->009ac0 sleep=0 local26=0000 ffe640=ff00->009ac0 sleep=0 local26=0000 ffe680=ff00->009ac0 sleep=0 local26=0000 ffe6c0=ff00->009ac0 sleep=0 local26=0000 ffe700=ff00->009ac0 sleep=0 local26=0000 ffe740=ff00->009ac0 sleep=0 local26=0000 ffe780=ff00->009ac0 sleep=0 local26=0000 ffe7c0=ff00->009ac0 sleep=0 local26=0000 ffe800=ff00->009ac0 sleep=0 local26=0000 ffe840=ff00->009ac0 sleep=0 local26=0000
+[  59.229]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  59.730]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  60.077] heartbeat frame=2400 tx=129 rx=126 fc=1 fd=10 fe=1 linkflag=82 pc=000288 a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0081 rxpend=0000
+[  60.077] [transport] captured=129 flushed=129 received=126 accepted=42 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=1235 bursts=43 txcredit=0 outq=0 inq=0 watchdog=20 txseq=2b rxseq=2a rxcredit=0 protection=00 checks=0000
+[  60.077] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  60.077] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00504e sleep=0 local26=2a00 ffd0c0=ffc0->005120 sleep=1 local26=0002 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=0318 ffd200=ff00->007a24 sleep=0 local26=0501 ffd280=ff00->007a24 sleep=0 local26=0500 ffd2c0=ff80->0079d4 sleep=0 local26=0001 ffd300=ff00->0079fe sleep=23 local26=0000 ffe040=ff00->0070c2 sleep=0 local26=4c00
+[  60.098] [garbage-calculation] protection=00 score=013e divisor=0078 task=ffd0c0 pc=00784e players=2 rule=01 split_remainder=00 base=120 margin=6 seconds=21 mode=01 participants=03 chain=1 difficulty=2 preset=0
+[  60.230]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  60.732]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  61.079] heartbeat frame=2460 tx=135 rx=132 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0087 rxpend=0000
+[  61.079] [transport] captured=135 flushed=135 received=132 accepted=44 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=1297 bursts=45 txcredit=0 outq=0 inq=0 watchdog=20 txseq=2d rxseq=2c rxcredit=0 protection=00 checks=0000
+[  61.079] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  61.079] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->005104 sleep=0 local26=0001 ffd0c0=ffc0->00504e sleep=0 local26=1100 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=0318 ffd180=ff80->00962a sleep=0 local26=ffff ffd200=ff00->00989e sleep=0 local26=003a ffd240=ff00->0079fe sleep=20 local26=0001 ffd280=ff80->007944 sleep=0 local26=0000 ffd340=ff00->0079fe sleep=18 local26=0000 ffd380=ff80->007d70 sleep=0 local26=0000 ffe040=ff00->0070c2 sleep=0 local26=4c00 ffe880=ff00->009714 sleep=0 local26=0000 ffe8c0=ff00->009714 sleep=0 local26=0000 ffe900=ff00->009714 sleep=0 local26=0000 ffe940=ff00->009714 sleep=0 local26=0000 ffe980=ff00->009714 sleep=0 local26=0000 ffe9c0=ff00->009714 sleep=0 local26=0000 ffea00=ff00->009714 sleep=0 local26=0000
+[  61.215]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  61.515] [garbage-calculation] protection=00 score=0095 divisor=0078 task=ffd080 pc=00784e players=2 rule=01 split_remainder=00 base=120 margin=6 seconds=23 mode=01 participants=03 chain=1 difficulty=2 preset=0
+[  61.515] [attack-state] address=ffa7e2 data=0006 mask=ffff pc=007564 protection=00
+[  61.732]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  62.080] heartbeat frame=2520 tx=141 rx=138 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=008d rxpend=0000
+[  62.080] [transport] captured=141 flushed=141 received=138 accepted=46 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=1359 bursts=47 txcredit=0 outq=0 inq=0 watchdog=20 txseq=2f rxseq=2e rxcredit=0 protection=00 checks=0000
+[  62.080] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  62.080] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->005164 sleep=0 local26=0001 ffd0c0=ffc0->00504e sleep=0 local26=1400 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=0218 ffd180=ff80->0095b6 sleep=0 local26=0008 ffd1c0=ff00->009950 sleep=0 local26=0011 ffd280=ff00->007a24 sleep=0 local26=0401 ffd2c0=ff80->007944 sleep=0 local26=0000 ffd300=ff80->007d70 sleep=0 local26=0000 ffd380=ff00->007a24 sleep=0 local26=0400 ffe000=ff00->0070c2 sleep=0 local26=4100 ffe200=ff00->009ac0 sleep=0 local26=0000 ffe240=ff00->009ac0 sleep=0 local26=0000 ffe280=ff00->009ac0 sleep=0 local26=0000 ffe2c0=ff00->009ac0 sleep=0 local26=0000 ffe300=ff00->009ac0 sleep=0 local26=0000 ffe340=ff00->009ac0 sleep=0 local26=0000 ffe380=ff00->009ac0 sleep=0 local26=0000 ffe3c0=ff00->009ac0 sleep=0 local26=0000 ffe400=ff00->0070c2 sleep=0 local26=2000
+[  62.233]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  62.733]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  62.934] [garbage-calculation] protection=00 score=0090 divisor=0078 task=ffd0c0 pc=00784e players=2 rule=01 split_remainder=00 base=120 margin=6 seconds=24 mode=01 participants=03 chain=1 difficulty=2 preset=0
+[  63.081] heartbeat frame=2580 tx=147 rx=144 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0093 rxpend=0000
+[  63.081] [transport] captured=147 flushed=147 received=144 accepted=48 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=1421 bursts=49 txcredit=0 outq=0 inq=0 watchdog=20 txseq=31 rxseq=30 rxcredit=0 protection=00 checks=0000
+[  63.081] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  63.081] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00504e sleep=0 local26=1d00 ffd0c0=ffc0->00514e sleep=16 local26=0001 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=0018 ffd180=ff80->009390 sleep=1 local26=0000 ffd1c0=ff80->0079d4 sleep=0 local26=0001 ffd200=ff80->007dfc sleep=0 local26=0000 ffd240=ff00->009950 sleep=0 local26=002a ffd2c0=ff00->007a24 sleep=0 local26=0301 ffd300=ff00->007a24 sleep=0 local26=0200 ffe000=ff00->0070c2 sleep=0 local26=4100 ffe040=ff00->009ac0 sleep=0 local26=0000 ffe080=ff00->009ac0 sleep=0 local26=0000 ffe0c0=ff00->009ac0 sleep=0 local26=0000 ffe100=ff00->009ac0 sleep=0 local26=0000 ffe140=ff00->009ac0 sleep=0 local26=0000 ffe180=ff00->009ac0 sleep=0 local26=0000 ffe1c0=ff00->009ac0 sleep=0 local26=0000 ffe200=ff00->009ac0 sleep=0 local26=0000 ffe240=ff00->009ab2 sleep=3 local26=0000 ffe280=ff00->009ab2 sleep=3 local26=0000 ffe2c0=ff00->009ab2 sleep=3 local26=0000 ffe300=ff00->009ab2 sleep=3 local26=0000
+[  63.235]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  63.735]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  64.083] heartbeat frame=2640 tx=153 rx=150 fc=1 fd=10 fe=1 linkflag=82 pc=00028a a502=00 a524=0000 a525=00 a170=82 a17f=00 txtail=0099 rxpend=0000
+[  64.083] [transport] captured=153 flushed=153 received=150 accepted=50 payload2=0 payload3=0 payload4=0 payload5=0 pump_reads=1483 bursts=51 txcredit=0 outq=0 inq=0 watchdog=20 txseq=33 rxseq=32 rxcredit=0 protection=00 checks=0000
+[  64.083] [epochs] local=2 peer=2 ready=true discarded_rx=0
+[  64.083] [tcb-continuations] ffa580=ff80->018392 sleep=0 local26=7710 ffa5c0=ff80->01853c sleep=0 local26=1400 ffd040=ffc0->00daca sleep=0 local26=0000 ffd080=ffc0->00504e sleep=0 local26=2000 ffd0c0=ffc0->00504e sleep=0 local26=0400 ffd100=ff80->006782 sleep=0 local26=0000 ffd140=ffc0->008082 sleep=0 local26=0018 ffd1c0=ff00->007a24 sleep=0 local26=0101 ffd200=ff00->007a24 sleep=0 local26=0100 ffd240=ff80->007944 sleep=0 local26=0000 ffd280=ff00->00989e sleep=0 local26=0030 ffd2c0=ff80->007944 sleep=0 local26=0000 ffd300=ff80->007d70 sleep=0 local26=0000 ffd340=ff80->007d70 sleep=0 local26=0000 ffe440=ff00->0070c2 sleep=0 local26=2000 ffe4c0=ff00->009714 sleep=0 local26=0000 ffe500=ff00->009714 sleep=0 local26=0000 ffe540=ff00->009714 sleep=0 local26=0000 ffe580=ff00->009714 sleep=0 local26=0000 ffe5c0=ff00->009714 sleep=0 local26=0000 ffe600=ff00->009714 sleep=0 local26=0000 ffe640=ff00->009714 sleep=0 local26=0000
+[  64.235]   [header-byte] write $ffa517 = 00 mask=00ff (pc=018446)
+[  64.533] [transport-stop] LAN supervisor requested shutdown; see bridge.log for the reason
+[  64.533] === session stop ===

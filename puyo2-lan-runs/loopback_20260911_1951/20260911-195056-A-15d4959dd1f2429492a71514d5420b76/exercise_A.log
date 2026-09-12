@@ -1,0 +1,61 @@
+:COINAGE Coin B
+:COINAGE Coin A
+:DSW Demo Sounds
+:DSW Turn Direction
+:DSW VS Mode Match/1 Play
+:DSW Battle Start credit
+:DSW Difficulty
+:DSW Rannyu Off Button
+:P1 P1 Down
+:P1 P1 Button 2
+:P1 P1 Button 1
+:P1 P1 Right
+:P1 P1 Left
+:P1 P1 Up
+:P2 P2 Up
+:P2 P2 Down
+:P2 P2 Button 2
+:P2 P2 Button 1
+:P2 P2 Right
+:P2 P2 Left
+:SERVICE Coin 2
+:SERVICE 2 Players Start
+:SERVICE Service 1
+:SERVICE 1 Player Start
+:SERVICE Coin 1
+:SERVICE Service Mode
+60 :SERVICE Coin 1
+75 :SERVICE Coin 1
+90 :SERVICE Coin 1
+105 :SERVICE Coin 1
+150 :SERVICE 1 Player Start
+210 :SERVICE 1 Player Start
+270 :SERVICE 2 Players Start
+270 :P1 P1 Button 1
+270 :P2 P2 Button 1
+330 :SERVICE 2 Players Start
+360 :P1 P1 Button 1
+360 :P2 P2 Button 1
+450 :P1 P1 Button 1
+450 :P2 P2 Button 1
+540 :P1 P1 Button 1
+540 :P2 P2 Button 1
+state frame=600 mode=01 match=04 command=33ff protection=00
+630 :P1 P1 Button 1
+630 :P2 P2 Button 1
+720 :P1 P1 Button 1
+720 :P2 P2 Button 1
+810 :P1 P1 Button 1
+810 :P2 P2 Button 1
+900 :P1 P1 Button 1
+900 :P2 P2 Button 1
+960 :SERVICE 2 Players Start
+990 :P1 P1 Button 1
+990 :P2 P2 Button 1
+1080 :P1 P1 Button 1
+1080 :P2 P2 Button 1
+1170 :P1 P1 Button 1
+1170 :P2 P2 Button 1
+state frame=1200 mode=01 match=02 command=f8ff protection=00
+placement frame=1200 player=1 pair=1 colors=9,b target=1
+placement frame=1200 player=2 pair=1 colors=9,b target=2

@@ -1,0 +1,50 @@
+:COINAGE Coin B
+:COINAGE Coin A
+:DSW Demo Sounds
+:DSW VS Mode Match/1 Play
+:DSW Rannyu Off Button
+:DSW Turn Direction
+:DSW Difficulty
+:DSW Battle Start credit
+:P1 P1 Button 1
+:P1 P1 Left
+:P1 P1 Down
+:P1 P1 Right
+:P1 P1 Up
+:P1 P1 Button 2
+:P2 P2 Left
+:P2 P2 Button 1
+:P2 P2 Right
+:P2 P2 Down
+:P2 P2 Up
+:P2 P2 Button 2
+:SERVICE Coin 2
+:SERVICE 2 Players Start
+:SERVICE 1 Player Start
+:SERVICE Coin 1
+:SERVICE Service Mode
+:SERVICE Service 1
+420 :SERVICE Coin 1
+435 :SERVICE Coin 1
+450 :SERVICE Coin 1
+465 :SERVICE Coin 1
+510 :SERVICE 1 Player Start
+570 :SERVICE 1 Player Start
+state frame=600 mode=01 match=04 command=13ff protection=00
+630 :SERVICE 2 Players Start
+630 :P1 P1 Button 1
+630 :P2 P2 Button 1
+690 :SERVICE 2 Players Start
+720 :P1 P1 Button 1
+720 :P2 P2 Button 1
+810 :P1 P1 Button 1
+810 :P2 P2 Button 1
+900 :P1 P1 Button 1
+900 :P2 P2 Button 1
+990 :P1 P1 Button 1
+990 :P2 P2 Button 1
+1080 :P1 P1 Button 1
+1080 :P2 P2 Button 1
+1170 :P1 P1 Button 1
+1170 :P2 P2 Button 1
+state frame=1200 mode=01 match=04 command=c334 protection=00

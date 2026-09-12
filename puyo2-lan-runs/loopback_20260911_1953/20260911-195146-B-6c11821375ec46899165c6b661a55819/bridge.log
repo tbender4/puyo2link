@@ -1,0 +1,3 @@
+side=B local_session=6c11821375ec46899165c6b661a55819 endpoint=127.0.0.1:24873
+peer=('127.0.0.1', 24873) peer_session=5d4aed95962e49969614978ada4462d6 socket_send=65536 socket_receive=65536
+LAN FAILED: [WinError 10054] An existing connection was forcibly closed by the remote host. Fresh restart required on both PCs.

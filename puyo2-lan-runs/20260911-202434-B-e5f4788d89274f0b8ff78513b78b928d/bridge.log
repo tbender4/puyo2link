@@ -1,0 +1,3 @@
+side=B local_session=e5f4788d89274f0b8ff78513b78b928d endpoint=192.168.4.124:24872
+peer=('192.168.4.124', 24872) peer_session=13194b01f2ef4836aceaa07d4a3098bd socket_send=65536 socket_receive=65536
+LAN FAILED: [WinError 2] The system cannot find the file specified. Fresh restart required on both PCs.

@@ -30,15 +30,16 @@
 -- driver's own umask16(0x00ff)). So the real target byte address is
 -- always `offset + 1`, and the byte value is `data & 0xff` for writes.
 --
--- Environment variables (set before launching mame.exe):
+-- Environment variables (set before launching MAME):
 --   PUYO2_LINK_SIDE = "A" or "B"   (which cabinet this instance is)
 --   PUYO2_LINK_DIR  = shared folder both instances can read/write
 --                     (use a fresh folder for each process pair)
 --   PUYO2_LINK_DEBUG = "1" enables detailed game/protection/packet traces
+--   PUYO2_LINK_SESSION = reserved for lan.py; enables bounded LAN IPC/status
 
 local exports = {
 	name = 'puyo2link',
-	version = '0.6.2',
+	version = '0.7.0',
 	description = 'Puyo Puyo 2 (arcade) 4-player link emulation',
 	license = 'CC0',
 	author = { name = 'reverse-engineered, see PuyoPuyo2/re_notes' } }
@@ -89,7 +90,7 @@ local diagnostics_enabled = false
 -- FE success, rather than bank alone, separates handshake responses from
 -- runtime credit: the ROM selects CONTROL ($FF) immediately before RxCredit.
 local established_seen = false
-local out_queue = {}                -- exact mailbox payload bytes, waiting for durable file output
+local out_queue = {}                -- exact mailbox payload bytes, waiting for journal append acceptance
 local frame_count = 0
 local stats = {}
 local last_tasks, last_gameplay
@@ -274,9 +275,20 @@ local function on_read(offset, data, mem_mask)
 	return low(slot[idx])
 end
 
+local function transport_failed()
+	if link.failed then
+		-- LAN failures must reach the supervisor before an exit-code-zero
+		-- MAME shutdown. Keep polling only status until it answers down.
+		active = link.session ~= nil
+		if link.bridge_down then active = false; manager.machine:exit() end
+		return true
+	end
+	return false
+end
+
 local function flush_and_poll()
 	link:poll()
-	if link.failed then active = false; return end
+	if transport_failed() then return end
 	if #out_queue > 0 and link:valid() then
 		local sent = link:send(string.char(table.unpack(out_queue)))
 		if sent > 0 then
@@ -285,11 +297,11 @@ local function flush_and_poll()
 			out_queue = {}
 			io_error_seen = false
 		elseif not io_error_seen then
-			log('[transport-error] cannot open output; retaining bytes and TX credit')
+			log('[transport-wait] output unavailable/full; retaining bytes and TX credit')
 			io_error_seen = true
 		end
 	end
-	if link.failed then active = false end
+	transport_failed()
 end
 
 local function do_prestart()
@@ -309,14 +321,16 @@ local function do_prestart()
 	side = os.getenv('PUYO2_LINK_SIDE') or 'A'
 	if side ~= 'A' and side ~= 'B' then error('PUYO2_LINK_SIDE must be A or B') end
 	peer_side = (side == 'A') and 'B' or 'A'
-	link_dir = os.getenv('PUYO2_LINK_DIR') or 'C:\\Users\\tbend\\mame\\PuyoPuyo2\\link_ipc'
-	pcall(function() lfs.mkdir(link_dir) end)
-
-	out_path = link_dir .. '\\' .. side .. '_to_' .. peer_side .. '.bin'
-	in_path = link_dir .. '\\' .. peer_side .. '_to_' .. side .. '.bin'
+	local log_path
+	link_dir, out_path, in_path, log_path = transport_factory.paths(os.getenv('PUYO2_LINK_DIR'), side)
+	local made, mkdir_error = lfs.mkdir(link_dir)
+	if not made and lfs.attributes(link_dir, 'mode') ~= 'directory' then
+		error('PUYO2_LINK_DIR must be an existing writable directory (or have an existing parent): '
+			.. link_dir .. ': ' .. tostring(mkdir_error))
+	end
 
 	if logf then logf:close() end
-	logf = assert(io.open(link_dir .. '\\proto_' .. side .. '.log', 'a'))
+	logf = assert(io.open(log_path, 'a'))
 	log('=== session start, version=' .. exports.version .. ' side=' .. side
 		.. ' debug=' .. tostring(diagnostics_enabled) .. ' ===')
 
@@ -332,7 +346,7 @@ local function do_prestart()
 	end
 	if not link then
 		local err
-		link, err = transport_factory.new(out_path, in_path, log)
+		link, err = transport_factory.new(out_path, in_path, log, os.getenv('PUYO2_LINK_SESSION'))
 		if not link then
 			log('[transport-error] ' .. tostring(err))
 			active = false
@@ -501,7 +515,7 @@ local function do_frame()
 	if not active then return end
 	frame_count = frame_count + 1
 	flush_and_poll()
-	if not active then return end
+	if not active or link.failed then return end
 	fill_rx_banks()
 	if not diagnostics_enabled then
 		if (frame_count % 300) == 0 then

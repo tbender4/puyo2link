@@ -1,0 +1,141 @@
+:COINAGE Coin A
+:COINAGE Coin B
+:DSW Rannyu Off Button
+:DSW Turn Direction
+:DSW Demo Sounds
+:DSW Battle Start credit
+:DSW VS Mode Match/1 Play
+:DSW Difficulty
+:P1 P1 Button 2
+:P1 P1 Button 1
+:P1 P1 Down
+:P1 P1 Up
+:P1 P1 Left
+:P1 P1 Right
+:P2 P2 Button 2
+:P2 P2 Right
+:P2 P2 Button 1
+:P2 P2 Down
+:P2 P2 Up
+:P2 P2 Left
+:SERVICE 2 Players Start
+:SERVICE Service 1
+:SERVICE Coin 2
+:SERVICE Coin 1
+:SERVICE 1 Player Start
+:SERVICE Service Mode
+420 :SERVICE Coin 1
+435 :SERVICE Coin 1
+450 :SERVICE Coin 1
+465 :SERVICE Coin 1
+510 :SERVICE 1 Player Start
+570 :SERVICE 1 Player Start
+state frame=600 mode=01 match=04 command=13ff protection=00
+630 :SERVICE 2 Players Start
+630 :P1 P1 Button 1
+630 :P2 P2 Button 1
+690 :SERVICE 2 Players Start
+720 :P1 P1 Button 1
+720 :P2 P2 Button 1
+810 :P1 P1 Button 1
+810 :P2 P2 Button 1
+900 :P1 P1 Button 1
+900 :P2 P2 Button 1
+990 :P1 P1 Button 1
+990 :P2 P2 Button 1
+1080 :P1 P1 Button 1
+1080 :P2 P2 Button 1
+1170 :P1 P1 Button 1
+1170 :P2 P2 Button 1
+hardware soft reset at frame 1200
+state frame=1200 mode=01 match=04 command=0b22 protection=00
+placement frame=1200 player=1 pair=1 colors=9,b target=4
+placement frame=1200 player=2 pair=1 colors=9,b target=5
+:COINAGE Coin A
+:COINAGE Coin B
+:DSW Rannyu Off Button
+:DSW Turn Direction
+:DSW Demo Sounds
+:DSW Battle Start credit
+:DSW VS Mode Match/1 Play
+:DSW Difficulty
+:P1 P1 Button 2
+:P1 P1 Button 1
+:P1 P1 Down
+:P1 P1 Up
+:P1 P1 Left
+:P1 P1 Right
+:P2 P2 Button 2
+:P2 P2 Right
+:P2 P2 Button 1
+:P2 P2 Down
+:P2 P2 Up
+:P2 P2 Left
+:SERVICE 2 Players Start
+:SERVICE Service 1
+:SERVICE Coin 2
+:SERVICE Coin 1
+:SERVICE 1 Player Start
+:SERVICE Service Mode
+420 :SERVICE Coin 1
+435 :SERVICE Coin 1
+450 :SERVICE Coin 1
+465 :SERVICE Coin 1
+510 :SERVICE 1 Player Start
+570 :SERVICE 1 Player Start
+state frame=600 mode=01 match=04 command=0322 protection=00
+630 :SERVICE 2 Players Start
+630 :P1 P1 Button 1
+630 :P2 P2 Button 1
+690 :SERVICE 2 Players Start
+720 :P1 P1 Button 1
+720 :P2 P2 Button 1
+810 :P1 P1 Button 1
+810 :P2 P2 Button 1
+900 :P1 P1 Button 1
+900 :P2 P2 Button 1
+990 :P1 P1 Button 1
+990 :P2 P2 Button 1
+1080 :P1 P1 Button 1
+1080 :P2 P2 Button 1
+1170 :P1 P1 Button 1
+1170 :P2 P2 Button 1
+state frame=1200 mode=01 match=02 command=f822 protection=00
+placement frame=1200 player=1 pair=1 colors=9,9 target=4
+placement frame=1200 player=2 pair=1 colors=9,9 target=5
+placement frame=1250 player=1 pair=2 colors=b,8 target=0
+placement frame=1314 player=1 pair=3 colors=9,8 target=3
+1320 :SERVICE 2 Players Start
+placement frame=1331 player=2 pair=2 colors=b,8 target=0
+placement frame=1371 player=1 pair=4 colors=b,b target=1
+placement frame=1395 player=2 pair=3 colors=9,8 target=3
+placement frame=1428 player=1 pair=5 colors=c,8 target=2
+placement frame=1452 player=2 pair=4 colors=b,b target=1
+placement frame=1483 player=1 pair=6 colors=b,b target=1
+placement frame=1509 player=2 pair=5 colors=c,8 target=2
+placement frame=1564 player=2 pair=6 colors=b,b target=1
+placement frame=1617 player=1 pair=7 colors=9,9 target=4
+placement frame=1698 player=2 pair=7 colors=9,9 target=5
+placement frame=1758 player=1 pair=8 colors=c,9 target=1
+state frame=1800 mode=01 match=02 command=f822 protection=00
+placement frame=1815 player=1 pair=9 colors=8,8 target=3
+placement frame=1843 player=2 pair=8 colors=c,9 target=1
+placement frame=1900 player=2 pair=9 colors=8,8 target=3
+placement frame=1928 player=1 pair=10 colors=9,c target=3
+placement frame=1985 player=1 pair=11 colors=b,9 target=4
+placement frame=2013 player=2 pair=10 colors=9,c target=3
+placement frame=2049 player=1 pair=12 colors=c,9 target=2
+placement frame=2070 player=2 pair=11 colors=b,9 target=4
+placement frame=2134 player=2 pair=12 colors=c,9 target=2
+placement frame=2185 player=1 pair=13 colors=8,8 target=0
+placement frame=2245 player=1 pair=14 colors=9,8 target=1
+placement frame=2270 player=2 pair=13 colors=8,8 target=0
+placement frame=2330 player=2 pair=14 colors=9,8 target=1
+placement frame=2358 player=1 pair=15 colors=9,9 target=3
+state frame=2400 mode=01 match=02 command=f822 protection=00
+placement frame=2415 player=1 pair=16 colors=9,8 target=2
+placement frame=2443 player=2 pair=15 colors=9,9 target=3
+placement frame=2500 player=2 pair=16 colors=9,8 target=2
+placement frame=2551 player=1 pair=17 colors=c,8 target=3
+placement frame=2608 player=1 pair=18 colors=c,b target=5
+placement frame=2636 player=2 pair=17 colors=c,8 target=3

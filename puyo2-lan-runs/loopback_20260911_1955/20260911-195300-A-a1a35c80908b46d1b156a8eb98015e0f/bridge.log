@@ -1,0 +1,3 @@
+side=A local_session=a1a35c80908b46d1b156a8eb98015e0f endpoint=127.0.0.1:24873
+peer=('127.0.0.1', 61452) peer_session=be677426cf724e46a37d7085ce21a8f2 socket_send=65536 socket_receive=65536
+session ended: exit=0 tx_handled=17548 rx_appended=16167 rx_parsed=16167

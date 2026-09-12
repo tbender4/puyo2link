@@ -18,7 +18,39 @@ incrementally, testing live as we go.
 
 ## Where things stand (as of this handoff)
 
-**Latest: plugin 0.6.2 cleanup, spec Update 14 (section 19). Linked
+**Current software objective: wired-LAN release 0.7.0.** The Python
+standard-library launcher/bridge is implemented in
+`plugins/puyo2link/lan.py`; each PC owns its bridge and one current
+standalone MAME child, with two local controllers. A explicitly listens
+on its LAN IPv4 and B connects. See the README's exact Linux/Windows
+commands and **spec section 21** for framing, sessions, flow-control
+boundaries, limits, shutdown and tests. Existing same-machine file IPC
+remains supported without Python. Normal-speed Windows TCP loopback
+reached four-player gameplay with positive attacks both ways, recovered
+after a cabinet reset, and shut down both owned MAME children on normal
+quit and intentional connection failure. A Windows status-file rename
+race was reproduced and fixed with logged, bounded nonblocking retries.
+See section 21.6 for evidence under `puyo2-lan-runs`. Two physical
+PCs/Linux gameplay and LAN mid-match joining still need acceptance.
+
+**Hardware research is paused at the user's request (2026-09-11).**
+The deferred hardware objective is a real PCB linked to MAME on Windows, eventually two
+real PCBs with replacement daughterboards. Read **spec section 20** for the
+research, sources, uncertainties, and exact first steps. No hardware,
+firmware, or USB bridge has been implemented or demonstrated.
+
+Resume with the real PCB **powered off and disconnected**: photograph both
+sides, board/revision markings, and CN4 from above, the mating side, and
+underneath; measure contact count and spacing. Do not buy a mating connector,
+solder, bridge pins, or connect MCU/USB power before orientation and nets
+are established. Published CN4 notes enumerate **two rows of 20 contacts**;
+the old 12-pin identification was a confusion with CN2. The source
+contradicts itself on A19/B19, and physical bus timing remains unknown.
+RP2040 is a candidate, not a proven complete bus responder. Windows can
+remain the host. Await the user's new direction; do not resume hardware
+work or launch experiments automatically.
+
+**Last user-confirmed gameplay baseline: plugin 0.6.2 cleanup, spec Update 14 (section 19). Linked
 gameplay, garbage and normal-speed mid-match joining are user-confirmed
 working. Both reported gameplay issues are closed.**
 
@@ -98,7 +130,8 @@ working. Both reported gameplay issues are closed.**
 - Historical duplicate player-number reports are not independently
   explained by the garbage confirmation. Investigate only if reproduced.
 - Working gameplay does not prove every match progression, disconnect
-  edge case, or physical daughterboard timing. No real board is available.
+  edge case, or physical daughterboard timing. The user's real PCB has
+  not yet been characterized for this project; see section 20.
 
 The old reset-B invitation recipe is historical, not current advice.
 The user confirms starting both cabinets from attract works, including
@@ -133,7 +166,7 @@ each process pair; **do not delete old logs**. A new process refuses an
 existing nonempty outgoing stream. Service/F3 reset in the same process
 preserves append offsets. The legacy default `PuyoPuyo2\link_ipc` contains
 historical logs and should not be reused.
-Both cabinets should use 0.6.2. Preserve `.bin.wire` journals too: those are
+Both cabinets should use 0.7.0. Preserve `.bin.wire` journals too: those are
 now the authoritative generation-tagged transport, while `.bin` files
 retain the raw payload bytes for analysis. Missing peers leave FE waiting.
 
@@ -158,7 +191,7 @@ Callback-only regression command (does not launch MAME):
 ## Key files
 
 - `PuyoPuyo2/re_notes/COMM_PROTOCOL_SPEC.md` — the full technical record.
-  Read this fully; it has 19 numbered sections/updates, each documenting
+  Read this fully; it has sections through 21, each documenting
   what was found, what was wrong initially and corrected, and why. Keep
   appending new "Update N" sections here rather than starting fresh notes
   elsewhere — this is the project's memory across sessions.
@@ -181,6 +214,13 @@ Callback-only regression command (does not launch MAME):
 - `PuyoPuyo2\checkpoints\20260911_cleanup_0_6_1\` — pre-cleanup plugin,
   notes, handoff and the user-confirmed random-B run.
 - `plugins\puyo2link\transport.lua` — generation-aware IPC state machine.
+- `plugins\puyo2link\lan.py` — stdlib TCP bridge and owned-child launcher.
+  Run `py plugins\puyo2link\lan.py --help`; run
+  `py PuyoPuyo2\re_notes\test_lan.py` for socket/stub-child regression tests.
+  LAN sessions use fresh local journals, bounded unread backlogs and
+  explicit progress/status snapshots. Failure ends both cabinets, not
+  transparent reconnect. The same-process ROM reset-generation behavior
+  is preserved; hardware/serial work in section 20 remains paused.
 - `re_notes\analyze_link.py` — read-only journal/application packet audit:
   `py PuyoPuyo2\re_notes\analyze_link.py <run_directory>`.
 - `re_notes\exercise_link.lua` — optional input-only MAME exercise,

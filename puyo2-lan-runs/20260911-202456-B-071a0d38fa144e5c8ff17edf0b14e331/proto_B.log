@@ -1,0 +1,14 @@
+[   0.000] === session start, version=0.7.0 side=B debug=false ===
+[   0.000] taps installed; out=C:\Users\tbend\mame\puyo2-lan-runs\20260911-202456-B-071a0d38fa144e5c8ff17edf0b14e331\B_to_A.bin in=C:\Users\tbend\mame\puyo2-lan-runs\20260911-202456-B-071a0d38fa144e5c8ff17edf0b14e331\A_to_B.bin
+[   0.134] [peer-reset] old=0 new=1 local=0 queued_rx=0
+[   0.179] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[   0.179] [reset] discarded tx=0 rx=0
+[   0.179] [epoch-reset] local=1 peer=1 queued_rx=0
+[   0.435] [epoch-ready] local=1 peer=1
+[   0.435] CMD $FE -> cabinet role=2 (ROM linkflag=82)
+[   5.006] [transport] captured=39 flushed=39 received=33 accepted=11 ready=true txcredit=0 rxcredit=0
+[  10.013] [transport] captured=66 flushed=66 received=60 accepted=20 ready=true txcredit=0 rxcredit=0
+[  15.019] [transport] captured=90 flushed=90 received=84 accepted=28 ready=true txcredit=0 rxcredit=0
+[  20.026] [transport] captured=950 flushed=950 received=963 accepted=205 ready=true txcredit=0 rxcredit=5
+[  20.293] [transport-stop] LAN supervisor requested shutdown; see bridge.log for the reason
+[  20.293] === session stop ===

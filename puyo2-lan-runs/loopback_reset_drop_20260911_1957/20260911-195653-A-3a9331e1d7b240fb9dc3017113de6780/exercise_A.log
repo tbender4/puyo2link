@@ -1,0 +1,97 @@
+:COINAGE Coin B
+:COINAGE Coin A
+:DSW Turn Direction
+:DSW Rannyu Off Button
+:DSW Battle Start credit
+:DSW VS Mode Match/1 Play
+:DSW Difficulty
+:DSW Demo Sounds
+:P1 P1 Up
+:P1 P1 Button 2
+:P1 P1 Left
+:P1 P1 Right
+:P1 P1 Down
+:P1 P1 Button 1
+:P2 P2 Button 2
+:P2 P2 Up
+:P2 P2 Down
+:P2 P2 Left
+:P2 P2 Button 1
+:P2 P2 Right
+:SERVICE 1 Player Start
+:SERVICE Service Mode
+:SERVICE Service 1
+:SERVICE Coin 2
+:SERVICE 2 Players Start
+:SERVICE Coin 1
+60 :SERVICE Coin 1
+75 :SERVICE Coin 1
+90 :SERVICE Coin 1
+105 :SERVICE Coin 1
+150 :SERVICE 1 Player Start
+210 :SERVICE 1 Player Start
+270 :SERVICE 2 Players Start
+270 :P1 P1 Button 1
+270 :P2 P2 Button 1
+330 :SERVICE 2 Players Start
+360 :P1 P1 Button 1
+360 :P2 P2 Button 1
+450 :P1 P1 Button 1
+450 :P2 P2 Button 1
+540 :P1 P1 Button 1
+540 :P2 P2 Button 1
+state frame=600 mode=01 match=04 command=33ff protection=00
+630 :P1 P1 Button 1
+630 :P2 P2 Button 1
+720 :P1 P1 Button 1
+720 :P2 P2 Button 1
+810 :P1 P1 Button 1
+810 :P2 P2 Button 1
+900 :P1 P1 Button 1
+900 :P2 P2 Button 1
+960 :SERVICE 2 Players Start
+990 :P1 P1 Button 1
+990 :P2 P2 Button 1
+1080 :P1 P1 Button 1
+1080 :P2 P2 Button 1
+1170 :P1 P1 Button 1
+1170 :P2 P2 Button 1
+state frame=1200 mode=01 match=04 command=0b22 protection=00
+placement frame=1200 player=1 pair=1 colors=9,b target=1
+placement frame=1200 player=2 pair=1 colors=9,b target=2
+placement frame=1240 player=2 pair=2 colors=d,b target=4
+placement frame=1243 player=1 pair=2 colors=d,b target=3
+placement frame=1300 player=1 pair=3 colors=9,b target=4
+placement frame=1304 player=2 pair=3 colors=9,b target=5
+placement frame=1364 player=1 pair=4 colors=d,b target=5
+placement frame=1370 player=2 pair=4 colors=d,b target=0
+placement frame=1430 player=1 pair=5 colors=c,d target=0
+placement frame=1434 player=2 pair=5 colors=c,d target=1
+placement frame=1491 player=2 pair=6 colors=d,b target=2
+placement frame=1494 player=1 pair=6 colors=d,b target=1
+placement frame=1544 player=2 pair=7 colors=9,c target=3
+placement frame=1549 player=1 pair=7 colors=9,c target=2
+placement frame=1599 player=2 pair=8 colors=c,9 target=4
+placement frame=1602 player=1 pair=8 colors=c,9 target=3
+placement frame=1655 player=1 pair=9 colors=d,d target=0
+placement frame=1659 player=2 pair=9 colors=d,d target=1
+placement frame=1794 player=2 pair=10 colors=9,9 target=5
+placement frame=1797 player=1 pair=10 colors=9,9 target=4
+state frame=1800 mode=01 match=04 command=0b22 protection=00
+placement frame=1854 player=2 pair=11 colors=c,d target=1
+placement frame=1857 player=1 pair=11 colors=c,d target=0
+placement frame=1909 player=2 pair=12 colors=d,c target=2
+placement frame=1917 player=1 pair=12 colors=d,c target=1
+placement frame=1958 player=2 pair=13 colors=b,c target=0
+placement frame=1970 player=1 pair=13 colors=b,c target=5
+placement frame=2018 player=2 pair=14 colors=c,b target=3
+placement frame=2151 player=2 pair=15 colors=b,b target=3
+placement frame=2170 player=1 pair=14 colors=c,b target=3
+placement frame=2223 player=1 pair=15 colors=b,b target=4
+placement frame=2265 player=2 pair=16 colors=d,9 target=1
+placement frame=2287 player=1 pair=16 colors=d,9 target=0
+placement frame=2314 player=2 pair=17 colors=b,d target=2
+placement frame=2345 player=1 pair=17 colors=b,d target=4
+state frame=2400 mode=01 match=04 command=0b22 protection=00
+state frame=3000 mode=01 match=04 command=0b22 protection=00
+state frame=3600 mode=01 match=04 command=0b22 protection=00

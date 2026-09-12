@@ -1,0 +1,13 @@
+[   0.000] === session start, version=0.7.0 side=A debug=false ===
+[   0.000] taps installed; out=C:\Users\tbend\mame\puyo2-lan-runs\20260911-202451-A-3054064ccedd422e980a9c9dd043c834\A_to_B.bin in=C:\Users\tbend\mame\puyo2-lan-runs\20260911-202451-A-3054064ccedd422e980a9c9dd043c834\B_to_A.bin
+[   0.179] CONTROL reset pulse start (pc=01823e, prev_bank=cmd)
+[   0.179] [reset] discarded tx=0 rx=0
+[   0.179] [epoch-reset] local=1 peer=0 queued_rx=0
+[   0.234] [peer-reset] old=0 new=1 local=1 queued_rx=0
+[   0.485] [epoch-ready] local=1 peer=1
+[   0.485] CMD $FE -> cabinet role=1 (ROM linkflag=81)
+[   5.006] [transport] captured=33 flushed=33 received=39 accepted=13 ready=true txcredit=0 rxcredit=0
+[  10.013] [transport] captured=60 flushed=60 received=66 accepted=22 ready=true txcredit=0 rxcredit=0
+[  15.019] [transport] captured=84 flushed=84 received=90 accepted=30 ready=true txcredit=0 rxcredit=0
+[  20.026] [transport] captured=963 flushed=963 received=930 accepted=200 ready=true txcredit=0 rxcredit=5
+[  20.109] === session stop ===

@@ -1,0 +1,3 @@
+side=B local_session=ef2803d86fd748c388d27e82c33dacd7 endpoint=127.0.0.1:24873
+peer=('127.0.0.1', 24873) peer_session=15d4959dd1f2429492a71514d5420b76 socket_send=65536 socket_receive=65536
+LAN FAILED: Lua transport failed; see proto log. Fresh restart required on both PCs.

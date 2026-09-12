@@ -61,6 +61,7 @@ opcode(0x2496, '018c0a0401') -- Preset 4 uses base divisor 140.
 local function open_file(path, mode)
 	if failures[path] == 'open' then return nil, 'test open failure' end
 	if mode == 'rb' and not files[path] then return nil end
+	if mode == 'wb' then files[path] = '' end
 	files[path] = files[path] or ''
 	local pos = mode == 'ab' and #files[path] or 0
 	return {
@@ -89,12 +90,14 @@ local function journal(kind, epoch, peer, payload)
 	return string.pack('>c4I4I4I2', 'P2' .. kind .. '1', epoch, peer, #payload) .. payload
 end
 
-local function cabinet(side, directory, manual, diagnostics)
+local function cabinet(side, directory, manual, diagnostics, options)
+	options = options or {}
+	local separator = options.separator or '\\'
 	local c = { ram = {}, taps = {}, handles = {}, removed = 0, side = side, epoch = 0,
 		diagnostics = diagnostics == true, input_accesses = 0 }
-	c.out = directory .. '\\' .. side .. '_to_' .. (side == 'A' and 'B' or 'A') .. '.bin'
-	c.in_wire = directory .. '\\' .. (side == 'A' and 'B' or 'A') .. '_to_' .. side .. '.bin.wire'
-	c.log = directory .. '\\proto_' .. side .. '.log'
+	c.out = directory .. separator .. side .. '_to_' .. (side == 'A' and 'B' or 'A') .. '.bin'
+	c.in_wire = directory .. separator .. (side == 'A' and 'B' or 'A') .. '_to_' .. side .. '.bin.wire'
+	c.log = directory .. separator .. 'proto_' .. side .. '.log'
 	local space = {}
 	function space:read_u8(a) return c.ram[a] or 0 end
 	function space:read_u16(a) return self:read_u8(a) * 256 + self:read_u8(a + 1) end
@@ -127,9 +130,15 @@ local function cabinet(side, directory, manual, diagnostics)
 			if key == 'PUYO2_LINK_SIDE' then return side end
 			if key == 'PUYO2_LINK_DIR' then return directory end
 			if key == 'PUYO2_LINK_DEBUG' and c.diagnostics then return '1' end
+			if key == 'PUYO2_LINK_SESSION' then return options.session end
 		end },
-		lfs = { mkdir = function() return true end },
+		package = { config = separator .. '\n' },
+		lfs = {
+			mkdir = function() return not options.invalid_directory, 'test invalid directory' end,
+			attributes = function() return options.invalid_directory and 'file' or 'directory' end,
+		},
 		manager = { machine = {
+			exit = function() c.exited = true end,
 			devices = { [':maincpu'] = c.cpu },
 			ioport = setmetatable({}, { __index = function()
 				c.input_accesses = c.input_accesses + 1
@@ -522,6 +531,92 @@ failures[control.out .. '.wire'] = nil
 files[control.in_wire] = journal('R', 1, 0) .. journal('F', 1, 1)
 check(control:finish(), 'retryable control-open failure prevented recovery')
 
+-- Platform-native joins are shared by the real prestart path.
+local portable = assert(loadfile(root .. '\\plugins\\puyo2link\\transport.lua'))()
+local dir, outgoing, incoming, logfile = portable.paths(nil, 'A', '/')
+check(dir == 'puyo2-link' and outgoing == 'puyo2-link/A_to_B.bin', 'portable default directory')
+dir, outgoing, incoming, logfile = portable.paths('/home/pi/link/', 'B', '/')
+check(outgoing == '/home/pi/link/B_to_A.bin' and incoming == '/home/pi/link/A_to_B.bin'
+	and logfile == '/home/pi/link/proto_B.log', 'Linux joins or trailing separator')
+dir, outgoing = portable.paths('C:\\links\\', 'A', '\\')
+check(outgoing == 'C:\\links\\A_to_B.bin', 'Windows joins or trailing separator')
+local linux = cabinet('A', '/home/pi/link', nil, false, { separator = '/' })
+linux:enqueue('native'); linux:pump(); linux.frame()
+check(files[linux.out] == 'native', 'Linux prestart/transport path failed')
+ok = pcall(function() cabinet('A', 'not-a-directory', true, false, { invalid_directory = true }) end)
+check(not ok, 'explicit invalid directory silently accepted')
+
+local session = string.rep('a', 32)
+local function lan_status(directory, state, handled)
+	files[directory .. '\\A_to_B.bin.status'] = string.format('P2S1 %s %s %d\n', session, state, handled or 0)
+end
+lan_status('lan-credit', 'up')
+local net = cabinet('A', 'lan-credit', nil, false, { session = session })
+check(files[net.out .. '.progress'] == 'P2P1 ' .. session .. ' 28 0\n', 'LAN parsed progress')
+files[net.in_wire] = files[net.in_wire] .. journal('D', 1, 1, 'partial'):sub(1, 9)
+net.frame()
+check(files[net.out .. '.progress'] == 'P2P1 ' .. session .. ' 28 0\n', 'prefetch was falsely acknowledged')
+while #files[net.out .. '.wire'] + 269 <= 65536 do
+	net:enqueue(string.rep('x', 255))
+	for i = 1, 8 do net:pump() end
+	net.frame()
+end
+local accepted = files[net.out]
+net:enqueue(string.rep('y', 255))
+for i = 1, 8 do net:pump() end
+net.frame()
+check(files[net.out] == accepted and net:r(0x880105) == 255,
+	'LAN full backlog must reject the ENTIRE batch and retain TX credit')
+check(#files[net.out .. '.wire'] <= 65536, 'LAN outgoing unread limit exceeded')
+lan_status('lan-credit', 'up', #files[net.out .. '.wire'])
+net.frame()
+check(files[net.out] == accepted .. string.rep('y', 255) and net:r(0x880105) == 0,
+	'LAN progress failed to release the entire pending batch exactly once')
+lan_status('lan-credit', 'down', #files[net.out .. '.wire'])
+net.frame()
+check(net.exited and net:r(0x880105) == 255, 'LAN loss must gate credit and request MAME exit')
+check(files[net.out .. '.progress']:match(' 1\n$'), 'LAN failure not published to supervisor')
+
+lan_status('lan-queue', 'up')
+local bounded = cabinet('A', 'lan-queue', nil, false, { session = session })
+files[bounded.in_wire] = files[bounded.in_wire] .. string.rep(journal('D', 1, 1, string.rep('x', 255)), 17)
+bounded.frame()
+check(not bounded.exited and files[bounded.log]:find('LAN RX queue limit exceeded', 1, true)
+	and files[bounded.out .. '.progress']:match(' 1\n$'),
+	'LAN Lua queue overflow must fail closed, not grow indefinitely')
+lan_status('lan-queue', 'down')
+bounded.frame()
+check(bounded.exited, 'failed Lua transport must exit after supervisor acknowledges failure')
+lan_status('lan-bad-progress', 'up')
+local invalid_progress = cabinet('A', 'lan-bad-progress', nil, false, { session = session })
+lan_status('lan-bad-progress', 'up', 999999)
+invalid_progress.frame()
+check(files[invalid_progress.out .. '.progress']:match(' 1\n$'), 'LAN accepted impossible bridge progress')
+lan_status('lan-open-error', 'up')
+local lan_io = cabinet('A', 'lan-open-error', nil, false, { session = session })
+lan_io:enqueue('abc'); lan_io:pump()
+failures[lan_io.out] = 'open'
+lan_io.frame()
+check(files[lan_io.out .. '.progress']:match(' 1\n$') and lan_io:r(0x880105) == 255,
+	'LAN append-open error must fail closed rather than silently retry forever')
+
+lan_status('lan-status-replace', 'up')
+local replace_race = cabinet('A', 'lan-status-replace', nil, false, { session = session })
+failures[replace_race.out .. '.status'] = 'open'
+replace_race.frame()
+check(not files[replace_race.out .. '.progress']:match(' 1\n$')
+	and files[replace_race.log]:find('[transport-retry]', 1, true),
+	'transient Windows status replacement must retry without failing the session')
+failures[replace_race.out .. '.status'] = nil
+replace_race:enqueue('after rename'); replace_race:pump(); replace_race.frame()
+check(files[replace_race.out] == 'after rename'
+	and files[replace_race.log]:find('[transport-recovered]', 1, true),
+	'status replacement retry failed to recover')
+failures[replace_race.out .. '.status'] = 'open'
+for _ = 1, 120 do replace_race.frame() end
+check(files[replace_race.out .. '.progress']:match(' 1\n$'),
+	'persistent LAN status read failure must be bounded')
+
 local quiet = cabinet('A', 'quiet-default')
 local function active_taps(c)
 	local count = 0
@@ -534,6 +629,8 @@ quiet.taps.puyo2link_packets(0xffa514, 1, 255)
 quiet:enqueue('quiet'); quiet:pump()
 for _ = 1, 300 do quiet.frame() end
 check(files[quiet.out] == 'quiet', 'quiet mode changed transmitted bytes')
+check(files[quiet.out .. '.status'] == nil and files[quiet.out .. '.progress'] == nil,
+	'default same-PC mode must work without Python or LAN sidecars')
 check(files[quiet.log]:find('received=0 accepted=1 ready=true', 1, true),
 	'quiet mode lost accepted-packet summary')
 for _, tag in ipairs({ '[packet-accepted]', '[rom-guards]', '[game-state]', '[tcb-continuations]' }) do

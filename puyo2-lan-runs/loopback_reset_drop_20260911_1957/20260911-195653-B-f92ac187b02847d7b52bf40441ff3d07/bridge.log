@@ -1,0 +1,3 @@
+side=B local_session=f92ac187b02847d7b52bf40441ff3d07 endpoint=127.0.0.1:24873
+peer=('127.0.0.1', 24873) peer_session=3a9331e1d7b240fb9dc3017113de6780 socket_send=65536 socket_receive=65536
+LAN FAILED: peer disconnected without a normal quit; restart both launchers. Fresh restart required on both PCs.
