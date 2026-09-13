@@ -1,7 +1,8 @@
 # Working on puyo2link
 
 ## Scope and references
-- Runtime: `plugins/puyo2link/` (`init.lua`: mailbox, `transport.lua`: journals, `lan.py`: TCP bridge/launcher).
+- Runtime: `mame-bin/plugins/puyo2link/` (`init.lua`: mailbox, `transport.lua`: journals, `lan.py`: TCP bridge/launcher). Make plugin edits here only; do not recreate root `plugins/` or edit bundled/source/checkpoint copies.
+- Launch MAME and `plugins/puyo2link/lan.py` from `mame-bin/`; run repository regression commands below from the repository root.
 - Read `PuyoPuyo2/HANDOFF.md` for current status; consult relevant sections of `re_notes/COMM_PROTOCOL_SPEC.md`. Later updates supersede early conclusions. Do not load the entire historical record unnecessarily.
 - `README.md` contains user-facing setup. Keep documented commands and both Lua/JSON version fields consistent with changes.
 - Hardware work is paused unless explicitly resumed. TCP loopback evidence is not physical LAN/Linux acceptance.
@@ -19,8 +20,8 @@
 Use existing checks from the repository root:
 ```powershell
 py PuyoPuyo2\re_notes\test_lan.py
-.\src\3rdparty\bx\tools\bin\windows\genie.exe --file=PuyoPuyo2\re_notes\test_transport.lua
-.\src\3rdparty\bx\tools\bin\windows\genie.exe --file=PuyoPuyo2\re_notes\test_random_inputs.lua
+.\mame-src\3rdparty\bx\tools\bin\windows\genie.exe --file=PuyoPuyo2\re_notes\test_transport.lua
+.\mame-src\3rdparty\bx\tools\bin\windows\genie.exe --file=PuyoPuyo2\re_notes\test_random_inputs.lua
 ```
 - Run relevant checks; use `python3` for the Python check on Linux. Lua checks need the local GENie host and original merged ROM; report missing prerequisites rather than downloading ROMs.
 - Live experiments: announce scenario/directory, run **one pair at a time**, and wait for both processes to exit before another. Use normal speed unless specifically investigating accelerated behavior.
@@ -29,5 +30,5 @@ py PuyoPuyo2\re_notes\test_lan.py
 ## Repository hygiene
 - This checkout also contains untracked MAME, ROMs, and historical artifacts. Never use blanket staging; inspect and stage explicit project files only.
 - Do not add ROM archives, merged/patched images, emulator binaries, or incidental third-party downloads, including copies inside checkpoints.
-- Local MAME source is under `src/src/`; it is reference material, not part of this plugin's distribution. Avoid MAME C++ changes for plugin features.
+- Local MAME source is under `mame-src/src/`; `FBNeo/` is also reference material, not part of this plugin's distribution. Avoid MAME C++ changes for plugin features.
 - Preserve user edits to docs and existing logs. Record durable findings in the handoff/spec, not duplicated agent-instruction files.

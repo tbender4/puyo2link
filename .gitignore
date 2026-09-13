@@ -1,25 +1,28 @@
-# This checkout lives inside a MAME installation. Allow only project roots;
-# everything else (MAME binaries/assets/source, FBNeo, roms, etc.) stays local.
+# Allow project roots only. MAME source, FBNeo, and other installations stay local.
 /*
 !/.gitignore
 !/AGENTS.md
 !/README.md
 !/PuyoPuyo2/
-!/plugins/
+!/mame-bin/
 !/puyo2-lan-runs/
 !/puyo2-link/
 
-# Keep our plugin, not the plugins bundled with MAME.
-/plugins/*
-!/plugins/puyo2link/
+# The runtime lives inside MAME, but only our plugin and link evidence belong in Git.
+/mame-bin/*
+!/mame-bin/plugins/
+!/mame-bin/puyo2-lan-runs/
+!/mame-bin/puyo2-link/
+!/mame-bin/puyo2-session-*/
+/mame-bin/plugins/*
+!/mame-bin/plugins/puyo2link/
 
-# Known extracted ROM sets. Do not match every "puyopuy2" directory:
-# historical run artifacts include NVRAM directories with that name.
+# Extracted ROM sets; do not exclude game-named NVRAM directories.
 /PuyoPuyo2/puyopuy2/
 /PuyoPuyo2/puyopuy2_patched/
 roms/
 
-# ROM/media images and archives, including copies inside checkpoints.
+# ROM/media images and archives, including copies in historical checkpoints.
 *.[zZ][iI][pP]
 *.7[zZ]
 *.[rR][aA][rR]
@@ -32,18 +35,18 @@ roms/
 *.[cC][hH][dD]
 *.[iI][sS][oO]
 *.[iI][mM][gG]
+*.[cC][uU][eE]
 *.[iI][cC][0-9]*
 *.[uU][0-9]*
 *.[bB][iI][nN]
 
-# These are captured link traffic and work-RAM snapshots, NOT ROM images.
-# Other binary files require deliberate review before adding an exception.
+# Named link traffic and work-RAM captures are not ROM images.
 !A_to_B.bin
 !B_to_A.bin
 !ram_[aAbB]_*.bin
 !latejoin_[aAbB]_*.bin
 
-# Compiled programs/libraries and development caches are not artifacts.
+# Compiled programs/libraries and development caches are not project artifacts.
 *.[eE][xX][eE]
 *.[dD][lL][lL]
 *.so
@@ -63,5 +66,5 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Intentionally keep project logs, screenshots, .bin.wire journals,
-# .status/.progress snapshots, configuration, and research/checkpoint files.
+# Keep project logs, screenshots, journals, flow-control snapshots,
+# configuration, hardware plans, and research/checkpoint files.

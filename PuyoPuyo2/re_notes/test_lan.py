@@ -16,7 +16,7 @@ import uuid
 
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[2]
-spec = importlib.util.spec_from_file_location("puyo2_lan", ROOT / "plugins" / "puyo2link" / "lan.py")
+spec = importlib.util.spec_from_file_location("puyo2_lan", ROOT / "mame-bin" / "plugins" / "puyo2link" / "lan.py")
 lan = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(lan)
 A, B = b"a" * 16, b"b" * 16

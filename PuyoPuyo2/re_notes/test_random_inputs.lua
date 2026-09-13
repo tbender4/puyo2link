@@ -1,4 +1,4 @@
--- Run with the existing GENie Lua host, from the MAME directory.
+-- Run with the existing GENie Lua host, from the repository root.
 local root = (_WORKING_DIR or '.'):gsub('/', '\\')
 local exercise = assert(loadfile(root .. '\\PuyoPuyo2\\re_notes\\exercise_link.lua'))
 local original_open, original_getenv = io.open, os.getenv

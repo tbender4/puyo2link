@@ -19,34 +19,43 @@ the original arcade release of this wonderul game.
 
 ## Files
 
-The plugin is in `plugins\puyo2link`. Investigation notes, disassembly,
+The plugin is in `mame-bin\plugins\puyo2link`. Investigation notes, disassembly,
 logs and development artifacts are in `PuyoPuyo2` for reference.
 MAME and game ROM files are **not included**; supply your own installation
 and legally obtained ROM set.
+
+In this workspace, `mame-bin` contains the MAME installation; `mame-src`
+and `FBNeo` contain local reference source trees and are excluded from Git.
+Edit the live plugin only in `mame-bin\plugins\puyo2link`, not a root
+`plugins` directory or the historical checkpoint copies.
 
 ## Choose your setup
 
 | Setup | Requirements | Instructions |
 |-------|--------------|--------------|
 | Two cabinets on one PC | MAME and the plugin; no Python | [Same-PC launch](#launch-two-cabinets-on-one-pc) |
-| One cabinet on each of two PCs | MAME, the plugin and Python 3.8+ on both; wired LAN | [LAN launch for Windows and Linux](#wired-ethernet-lan-plugin-070) |
+| One cabinet on each of two PCs | MAME, the plugin and Python 3.8+ on both; wired LAN | [LAN launch for Windows and Linux](#connecting-via-lan-plugin-070) |
 
 ## Install
 
 Use current standalone MAME. The Windows setup was exercised with MAME
 0.289; the LAN section also includes Linux commands.
 
-1. Copy the entire `plugins\puyo2link` folder into your MAME installation's
+1. Copy the entire `mame-bin\plugins\puyo2link` folder into your MAME installation's
    `plugins` folder.
 2. Put your original `puyopuy2.zip` ROM set in MAME's `roms` folder.
 3. For same-PC play, open two PowerShell terminals in the **same MAME
    installation folder**. For LAN play, install on both PCs and use the
-   [LAN launcher](#wired-ethernet-lan-plugin-070) instead.
+   [LAN launcher](#connecting-via-lan-plugin-070) instead.
+
+For this checkout, run `Set-Location .\mame-bin` from the repository root
+in each PowerShell terminal before using the launch commands below.
+They are relative to the MAME installation, not the repository root.
 
 The resulting layout should include:
 
 ```text
-mame\
+mame-bin\
   mame.exe
   plugins\
     puyo2link\
@@ -126,8 +135,10 @@ between Ubuntu and Windows with MAME 0.284+.
 
 ### Installation
 
-On both PCs, copy the complete `plugins/puyo2link` folder (including `lan.py`)
-to the MAME directory.
+On both PCs, copy the complete `mame-bin\plugins\puyo2link` folder
+(including `lan.py`) into the MAME installation's `plugins` directory.
+Run the commands from that installation directory. For this checkout,
+that directory is `mame-bin`.
 
 ### Setup
 - Connect both PCs to the same LAN.
@@ -139,13 +150,13 @@ by SDLMAME):
 **Linux PC A (listener):**
 
 ```sh
-python3 ~/plugins/puyo2link/lan.py --side A --listen 192.168.1.10 --mame ./mame
+python3 plugins/puyo2link/lan.py --side A --listen 192.168.1.10 --mame mame
 ```
 
 **Linux PC B (connector):**
 
 ```sh
-python3 plugins/puyo2link/lan.py --side B --connect 192.168.1.10 --mame ./mame
+python3 plugins/puyo2link/lan.py --side B --connect 192.168.1.10 --mame mame
 ```
 
 

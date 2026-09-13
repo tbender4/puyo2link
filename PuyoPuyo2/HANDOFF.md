@@ -18,9 +18,16 @@ incrementally, testing live as we go.
 
 ## Where things stand (as of this handoff)
 
+**Workspace layout (2026-09-13):** MAME and the live plugin now reside in
+`mame-bin/` and `mame-bin/plugins/puyo2link/`; reference source is in
+`mame-src/src/` and `FBNeo/`. The README remains at repository root.
+Run emulator/launcher commands from `mame-bin`, but regression commands
+from the repository root. Historical paths in the spec/checkpoints are
+not current edit locations.
+
 **Current software objective: wired-LAN release 0.7.0.** The Python
 standard-library launcher/bridge is implemented in
-`plugins/puyo2link/lan.py`; each PC owns its bridge and one current
+`mame-bin/plugins/puyo2link/lan.py`; each PC owns its bridge and one current
 standalone MAME child, with two local controllers. A explicitly listens
 on its LAN IPv4 and B connects. See the README's exact Linux/Windows
 commands and **spec section 21** for framing, sessions, flow-control
@@ -153,7 +160,7 @@ finished normally; none remained to stop when this request was received.
 
 Two terminals, one per "cabinet" (PowerShell):
 ```powershell
-cd C:\Users\tbend\mame
+cd C:\Users\tbend\mame\mame-bin
 $env:PUYO2_LINK_SIDE = "A"          # "B" in the other terminal
 $env:PUYO2_LINK_DIR = "C:\Users\tbend\mame\PuyoPuyo2\run_manual_01" # SAME new folder in both terminals
 .\mame.exe puyopuy2 -plugin puyo2link -window -skip_gameinfo
@@ -177,15 +184,15 @@ are still retained. No debug switch changes protocol or gameplay.
 
 For manual A versus random inputs on B, set `PUYO2_EXERCISE_RANDOM_ONLY=1`
 on **B only**, and add
-`-autoboot_delay 0 -autoboot_script PuyoPuyo2\re_notes\exercise_link.lua`
+`-autoboot_delay 0 -autoboot_script ..\PuyoPuyo2\re_notes\exercise_link.lua`
 to B's launch. Both B players get random Left/Right/Button 1 during
 active piece control; coin/start, menus and Down stay manual. A must
 omit the script. Inputs are recorded in `exercise_B.log`. The helper
 does not play strategically or guarantee that random play clears puyos.
 
-Callback-only regression command (does not launch MAME):
+Callback-only regression command from the repository root (does not launch MAME):
 ```powershell
-.\src\3rdparty\bx\tools\bin\windows\genie.exe --file=PuyoPuyo2\re_notes\test_transport.lua
+.\mame-src\3rdparty\bx\tools\bin\windows\genie.exe --file=PuyoPuyo2\re_notes\test_transport.lua
 ```
 
 ## Key files
@@ -195,7 +202,7 @@ Callback-only regression command (does not launch MAME):
   what was found, what was wrong initially and corrected, and why. Keep
   appending new "Update N" sections here rather than starting fresh notes
   elsewhere — this is the project's memory across sessions.
-- `plugins/puyo2link/init.lua` — the actual working plugin. Heavily
+- `mame-bin/plugins/puyo2link/init.lua` — the actual working plugin. Heavily
   commented; comments explain *why*, especially around bugs that were
   found and fixed (several nasty ones — read them before changing this
   file, so you don't reintroduce something already fixed).
@@ -213,9 +220,9 @@ Callback-only regression command (does not launch MAME):
 - `PuyoPuyo2/checkpoints/20260911_130556/` — complete pre-0.5.0 checkpoint.
 - `PuyoPuyo2\checkpoints\20260911_cleanup_0_6_1\` — pre-cleanup plugin,
   notes, handoff and the user-confirmed random-B run.
-- `plugins\puyo2link\transport.lua` — generation-aware IPC state machine.
-- `plugins\puyo2link\lan.py` — stdlib TCP bridge and owned-child launcher.
-  Run `py plugins\puyo2link\lan.py --help`; run
+- `mame-bin\plugins\puyo2link\transport.lua` — generation-aware IPC state machine.
+- `mame-bin\plugins\puyo2link\lan.py` — stdlib TCP bridge and owned-child launcher.
+  From the repository root, run `py mame-bin\plugins\puyo2link\lan.py --help`; run
   `py PuyoPuyo2\re_notes\test_lan.py` for socket/stub-child regression tests.
   LAN sessions use fresh local journals, bounded unread backlogs and
   explicit progress/status snapshots. Failure ends both cabinets, not
@@ -225,7 +232,7 @@ Callback-only regression command (does not launch MAME):
   `py PuyoPuyo2\re_notes\analyze_link.py <run_directory>`.
 - `re_notes\exercise_link.lua` — optional input-only MAME exercise,
   screenshots and RAM snapshots. Add `-autoboot_delay 0 -autoboot_script
-  PuyoPuyo2\re_notes\exercise_link.lua` only for automated testing; omit
+  ..\PuyoPuyo2\re_notes\exercise_link.lua` from `mame-bin` only for automated testing; omit
   it for normal manual play. Never writes game memory.
   `PUYO2_EXERCISE_DIFFICULTY=2` optionally selects the recorded manual
   menu item through Left/Button 1 and native peer confirmation; no

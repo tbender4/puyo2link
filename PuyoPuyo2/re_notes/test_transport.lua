@@ -1,10 +1,10 @@
 -- Run with the existing Lua 5.3 GENie host, without MAME or dependencies:
--- .\src\3rdparty\bx\tools\bin\windows\genie.exe --file=PuyoPuyo2\re_notes\test_transport.lua
+-- .\mame-src\3rdparty\bx\tools\bin\windows\genie.exe --file=PuyoPuyo2\re_notes\test_transport.lua
 -- Exercises the actual plugin callbacks. The ROM pump below follows
 -- $186e0-$18812; this is NOT a substitute for paired emulator/gameplay tests.
 local files, failures = {}, {}
 local root = (_WORKING_DIR or '.'):gsub('/', '\\')
-local plugin_path = root .. '\\plugins\\puyo2link\\init.lua'
+local plugin_path = root .. '\\mame-bin\\plugins\\puyo2link\\init.lua'
 local checks = 0
 local function check(value, message)
 	assert(value, message)
@@ -155,7 +155,7 @@ local function cabinet(side, directory, manual, diagnostics, options)
 	}, { __index = _G })
 	env.require = function(name)
 		assert(name == 'puyo2link.transport')
-		return assert(loadfile(root .. '\\plugins\\puyo2link\\transport.lua', 't', env))()
+		return assert(loadfile(root .. '\\mame-bin\\plugins\\puyo2link\\transport.lua', 't', env))()
 	end
 	local plugin = assert(loadfile(plugin_path, 't', env))()
 	plugin.startplugin()
@@ -532,7 +532,7 @@ files[control.in_wire] = journal('R', 1, 0) .. journal('F', 1, 1)
 check(control:finish(), 'retryable control-open failure prevented recovery')
 
 -- Platform-native joins are shared by the real prestart path.
-local portable = assert(loadfile(root .. '\\plugins\\puyo2link\\transport.lua'))()
+local portable = assert(loadfile(root .. '\\mame-bin\\plugins\\puyo2link\\transport.lua'))()
 local dir, outgoing, incoming, logfile = portable.paths(nil, 'A', '/')
 check(dir == 'puyo2-link' and outgoing == 'puyo2-link/A_to_B.bin', 'portable default directory')
 dir, outgoing, incoming, logfile = portable.paths('/home/pi/link/', 'B', '/')

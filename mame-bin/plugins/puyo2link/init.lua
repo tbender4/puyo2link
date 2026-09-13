@@ -3,7 +3,7 @@
 -- Software emulation of the Puyo Puyo 2 (arcade, Sega System C2) 4-player
 -- link daughterboard, built purely from reverse-engineering the 68000
 -- program ROM (no real daughterboard hardware was available). See
--- ../../PuyoPuyo2/re_notes/COMM_PROTOCOL_SPEC.md for the full write-up.
+-- ../../../PuyoPuyo2/re_notes/COMM_PROTOCOL_SPEC.md for the full write-up.
 --
 -- This does NOT touch MAME's C++ source. It uses Lua memory taps
 -- (space:install_read_tap / install_write_tap) to intercept the CN4
