@@ -12,8 +12,8 @@ This run on an unmodified `puyopuy2.zip` rom on stock MAME.
 **This was AI-generated.** Not even AI-assisted; AI drove the whole development.
 I am not a MAME developer. I'm not even experienced in LUA so please temper your
 expectations. I encourage anyone to review and rewrite this by hand if you are
-so inclined to. This was spurred out of my own curiosity of an obsure feature in
-the original arcade release of this wonderul game.
+so inclined to. This was spurred out of my own curiosity of an obscure feature
+in the original arcade release of this wonderful game.
 
 ## Files
 
@@ -70,14 +70,16 @@ $env:PUYO2_LINK_DIR = "$PWD\puyo2-session-001"
 ```
 
 ## Starting a 4-player game
-
+11111111111111111111111111111111111111111111111111111111111111111111111111111111
 Pressing start on one machine will cause both machines to respond:
 ![wait-screen](<./PuyoPuyo2/images/Screenshot 2026-09-11 104558.png>)
 
-Press start on all four players. It will begin the 4-player mode. If only two
-players join, they will play on their respective machine. If a machine did not
-have a joined player, it will return to the attract demo. Starting a game on
-this machine mid-match will offer the player to interrupt the other machine
+Press start on all four players. It will begin the 4-player mode.
+- If only two players join, they will play on their respective machine.
+    - If the machine did not have a joined player, it will return to the attract
+      demo.
+    - Starting a game on a machine while the other machine is mid-match offers
+      the incoming player interrupt the other machine for a multiplayer game
 
 ## Joining a mid-game session
 
@@ -90,7 +92,7 @@ The join-screen has **No at the top** and **Yes at the bottom**.
 No is selected by default. On the joining cabinet, **press Down, release it,
 then press an action button**.
 
-Use the Start buttons again when the game asks players to join.
+Use the Start buttons once more when the game asks players to join.
 
 ## Diagnostics and reference
 
