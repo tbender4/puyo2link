@@ -70,7 +70,7 @@ $env:PUYO2_LINK_DIR = "$PWD\puyo2-session-001"
 ```
 
 ## Starting a 4-player game
-11111111111111111111111111111111111111111111111111111111111111111111111111111111
+
 Pressing start on one machine will cause both machines to respond:
 ![wait-screen](<./PuyoPuyo2/images/Screenshot 2026-09-11 104558.png>)
 
